@@ -1,0 +1,172 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fees &amp; Pricing — IJMEER</title>
+  <meta name="description" content="IJMEER Article Processing Charges: ₹3,000+GST for Indian authors, $75+GST international. Fast-track option available. No submission fee.">
+  <link rel="canonical" href="https://www.ijmeer.com/fees-pricing.html">
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-NWHDPZRK');</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-2FNJ68WF8J"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-2FNJ68WF8J');</script>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); gap: 24px; align-items: start; }
+    .pricing-card { background:var(--bg); border:2px solid var(--border); border-radius:var(--r-xl); padding:36px; position:relative; transition:var(--t); }
+    .pricing-card.featured { border-color:var(--blue); box-shadow:var(--sh-glow-blue); }
+    .pricing-card.featured::before { content:'Most Popular'; position:absolute; top:-13px; left:50%; transform:translateX(-50%); background:var(--grad-brand); color:#fff; font-size:0.7rem; font-weight:800; padding:4px 18px; border-radius:var(--r-full); white-space:nowrap; }
+    .pricing-amount { font-family:var(--font-serif); font-size:3rem; font-weight:900; line-height:1; margin-bottom:6px; background:var(--grad-brand); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
+    .pricing-amount sup { font-size:1.5rem; }
+    .pricing-region { font-size:0.78rem; font-weight:800; text-transform:uppercase; letter-spacing:0.8px; color:var(--text-3); margin-bottom:14px; }
+    .pricing-note { font-size:0.8rem; color:var(--text-3); margin-bottom:24px; }
+    .pricing-features { list-style:none; display:flex; flex-direction:column; gap:10px; margin-bottom:28px; }
+    .pricing-features li { display:flex; align-items:center; gap:10px; font-size:0.875rem; color:var(--text-2); }
+    .pricing-features li::before { content:'✓'; width:20px; height:20px; flex-shrink:0; background:rgba(5,150,105,0.1); color:var(--emerald); border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:0.65rem; font-weight:800; }
+    .currency-toggle { display:flex; gap:0; margin:0 auto 36px; border:2px solid var(--border); border-radius:var(--r-full); width:fit-content; overflow:hidden; }
+    .currency-btn { padding:10px 24px; font-size:0.85rem; font-weight:700; background:transparent; border:none; cursor:pointer; color:var(--text-3); transition:var(--t); font-family:var(--font-sans); }
+    .currency-btn.active { background:var(--blue); color:#fff; }
+    .page-header { padding: 60px 0; }
+  </style>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NWHDPZRK" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="progress-bar"></div>
+<div id="site-header-inject"></div>
+
+<main>
+  <section class="page-header">
+    <div class="container">
+      <nav class="breadcrumb"><a href="index.html">Home</a><span class="breadcrumb-sep">›</span><a href="fees-pricing.html">Author Instructions</a><span class="breadcrumb-sep">›</span><span>Fees and pricing</span></nav>
+      <h1 class="page-title">Fees &amp; Pricing</h1>
+      <p class="page-subtitle">Transparent, affordable Article Processing Charges (APC) to make open-access publishing accessible to all researchers.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="alert-box info reveal" style="max-width:760px;margin:0 auto 40px;">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+        <span>All fees are <strong>Article Processing Charges (APC)</strong> — there are no submission fees, no fees for rejected articles, and no hidden costs. GST applicable for Indian authors.</span>
+      </div>
+
+      <!-- Currency toggle -->
+      <div style="text-align:center;" class="reveal">
+        <div class="currency-toggle">
+          <button class="currency-btn active" id="btn-inr" onclick="showCurrency('inr')">🇮🇳 Indian (INR)</button>
+          <button class="currency-btn" id="btn-usd" onclick="showCurrency('usd')">🌍 International (USD)</button>
+        </div>
+      </div>
+
+      <!-- Pricing cards -->
+      <div class="pricing-grid reveal" style="margin-top:36px;">
+        <!-- Standard INR -->
+        <div class="pricing-card inr-card featured">
+          <div class="pricing-region">🇮🇳 Indian Authors</div>
+          <div class="pricing-amount"><sup>₹</sup>3,000</div>
+          <div class="pricing-note">+ 18% GST · Standard Review</div>
+          <ul class="pricing-features">
+            <li>Full peer review (4–6 weeks)</li>
+            <li>DOI assignment</li>
+            <li>Open access publication</li>
+            <li>PDF + HTML article</li>
+            <li>Indexing in major databases</li>
+            <li>Author certificate</li>
+          </ul>
+          <a href="https://rzp.io/rzp/ijmeer" class="btn btn-razorpay" style="width:100%;justify-content:center;" target="_blank" rel="noopener">
+            💳 Pay Now (Razorpay)
+          </a>
+        </div>
+        <!-- Fast Track INR -->
+        <div class="pricing-card inr-card">
+          <div class="pricing-region">🇮🇳 Indian Authors — Fast Track</div>
+          <div class="pricing-amount"><sup>₹</sup>2,000</div>
+          <div class="pricing-note">+ 18% GST · Additional Charge</div>
+          <ul class="pricing-features">
+            <li>Expedited review (2–3 weeks)</li>
+            <li>Priority scheduling</li>
+            <li>Same standard benefits</li>
+          </ul>
+          <a href="https://rzp.io/rzp/ijmeer" class="btn btn-razorpay" style="width:100%;justify-content:center;" target="_blank" rel="noopener">
+            💳 Pay Fast Track Fee
+          </a>
+        </div>
+
+        <!-- Standard USD -->
+        <div class="pricing-card usd-card featured" style="display:none;">
+          <div class="pricing-region">🌍 International Authors</div>
+          <div class="pricing-amount"><sup>$</sup>75</div>
+          <div class="pricing-note">+ Taxes if applicable · Standard Review</div>
+          <ul class="pricing-features">
+            <li>Full peer review (4–6 weeks)</li>
+            <li>DOI assignment</li>
+            <li>Open access publication</li>
+            <li>PDF + HTML article</li>
+            <li>Indexing in major databases</li>
+            <li>Author certificate</li>
+          </ul>
+          <a href="https://rzp.io/rzp/ijmeer" class="btn btn-razorpay" style="width:100%;justify-content:center;" target="_blank" rel="noopener">💳 Pay Now</a>
+        </div>
+        <!-- Fast Track USD -->
+        <div class="pricing-card usd-card" style="display:none;">
+          <div class="pricing-region">🌍 International — Fast Track</div>
+          <div class="pricing-amount"><sup>$</sup>50</div>
+          <div class="pricing-note">+ Taxes if applicable · Additional Charge</div>
+          <ul class="pricing-features">
+            <li>Expedited review (2–3 weeks)</li>
+            <li>Priority scheduling</li>
+            <li>Same standard benefits</li>
+          </ul>
+          <a href="https://rzp.io/rzp/ijmeer" class="btn btn-razorpay" style="width:100%;justify-content:center;" target="_blank" rel="noopener">💳 Pay Fast Track Fee</a>
+        </div>
+      </div>
+
+      <!-- Payment instructions -->
+      <div class="card reveal" style="margin-top:48px;max-width:760px;margin-left:auto;margin-right:auto;">
+        <div class="card-body">
+          <h2 style="font-family:var(--font-serif);font-size:1.4rem;font-weight:700;color:var(--navy);margin-bottom:16px;">Payment Instructions</h2>
+          <div class="process-steps">
+            <div class="process-step"><div class="process-step-num">1</div><div class="process-step-content"><div class="process-step-title">Submit Manuscript</div><div class="process-step-desc">First submit your manuscript via our Google Form. Do NOT pay before receiving an acceptance decision.</div></div></div>
+            <div class="process-step"><div class="process-step-num">2</div><div class="process-step-content"><div class="process-step-title">Receive Decision</div><div class="process-step-desc">After peer review, you will receive an acceptance letter via email (typically 4–6 weeks after submission).</div></div></div>
+            <div class="process-step"><div class="process-step-num">3</div><div class="process-step-content"><div class="process-step-title">Pay APC</div><div class="process-step-desc">Upon acceptance, pay the APC via Razorpay (credit/debit card, UPI, net banking) or contact us for bank transfer details.</div></div></div>
+            <div class="process-step"><div class="process-step-num">4</div><div class="process-step-content"><div class="process-step-title">Publication</div><div class="process-step-desc">After payment confirmation, your article is scheduled for publication.</div></div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ -->
+      <div style="max-width:760px;margin:48px auto 0;" class="reveal">
+        <h2 style="font-family:var(--font-serif);font-size:1.75rem;font-weight:700;color:var(--navy);margin-bottom:28px;text-align:center;">Frequently Asked Questions</h2>
+        <div class="accordion">
+          <div class="accordion-item open">
+            <button class="accordion-header">Is there a submission fee?<svg class="accordion-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
+            <div class="accordion-body">No. There is <strong>no fee to submit</strong> a manuscript. APC is only charged upon acceptance of your paper after peer review.</div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-header">What if my paper is rejected?<svg class="accordion-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
+            <div class="accordion-body">If your paper is rejected after peer review, <strong>no fee is charged</strong>. You only pay upon acceptance.</div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-header">Are APC waivers available?<svg class="accordion-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
+            <div class="accordion-body">We consider waiver requests on a case-by-case basis for researchers from low-income countries or those with demonstrated financial hardship. Contact <a href="mailto:editor@ijmeer.com">editor@ijmeer.com</a>.</div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-header">What payment methods are accepted?<svg class="accordion-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
+            <div class="accordion-body">We accept Credit/Debit Cards, UPI, Net Banking, and Wallets via Razorpay.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div id="site-footer-inject"></div>
+<script src="assets/js/components.js"></script>
+<script src="assets/js/core.js"></script>
+<script>
+function showCurrency(c) {
+  document.querySelectorAll('.inr-card').forEach(el => el.style.display = c==='inr' ? 'block' : 'none');
+  document.querySelectorAll('.usd-card').forEach(el => el.style.display = c==='usd' ? 'block' : 'none');
+  document.getElementById('btn-inr').classList.toggle('active', c==='inr');
+  document.getElementById('btn-usd').classList.toggle('active', c==='usd');
+}
+</script>
+</body></html>

@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "volume": 1,
+    "issue": 1,
+    "quarter": "Jan-Mar",
+    "year": 2026,
+    "title": "Volume 1, Issue 1 (January–March 2026)",
+    "theme": "Rural Development and Multidisciplinary Applications",
+    "submission_deadline": "2026-03-15",
+    "publication_date": "2026-04-01",
+    "status": "published",
+    "cover_image": "assets/images/cover-v1i1.jpg",
+    "papers": [1, 2, 3, 4, 5],
+    "description": "The inaugural issue of IJMEER focuses on local grounded research in rural Chhattisgarh, exploring education, water quality, economics, and traditional medicinal knowledge."
+  }
+]

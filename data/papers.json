@@ -1,0 +1,64 @@
+{
+  "papers": [
+    {
+      "id": 1,
+      "title": "Challenges of Online Teaching in Rural Government Colleges of Chhattisgarh",
+      "authors": "Rahul Sahu",
+      "abstract": "The transition to online education has presented unique hurdles for rural academic institutions. This study investigates the specific challenges faced by faculty and students in government colleges located in the Dhamtari district, identifying connectivity and skill gaps as primary barriers.",
+      "citations": 0,
+      "subject": "Education",
+      "issue": "Vol. 1, Issue 1",
+      "year": 2026,
+      "pdfUrl": "assets/pdf/vol1-issue1/1.pdf",
+      "doi": "10.5281/ijmeer.2026.101"
+    },
+    {
+      "id": 2,
+      "title": "A Study of Groundwater Quality in Hatkeshar Block, Dhamtari District",
+      "authors": "Neha Verma & Amit Kumar",
+      "abstract": "This study assesses chemical properties of groundwater across ten sites in Hatkeshar. While most parameters remain within BIS limits, marginal rises in Fluoride and Nitrate suggest agricultural runoff and geological influence.",
+      "citations": 0,
+      "subject": "Environmental Science",
+      "issue": "Vol. 1, Issue 1",
+      "year": 2026,
+      "pdfUrl": "assets/pdf/vol1-issue1/2.pdf",
+      "doi": "10.5281/ijmeer.2026.102"
+    },
+    {
+      "id": 3,
+      "title": "Micro-Entrepreneurship Among Women in Rural Dhamtari: A Field Study",
+      "authors": "Seema Patel",
+      "abstract": "Analyzing women-led micro-enterprises, this field study finds that micro-finance provides capital but lack of market linkage hinders scale. Recommendations for branding support are provided.",
+      "citations": 0,
+      "subject": "Economics",
+      "issue": "Vol. 1, Issue 1",
+      "year": 2026,
+      "pdfUrl": "assets/pdf/vol1-issue1/3.pdf",
+      "doi": "10.5281/ijmeer.2026.103"
+    },
+    {
+      "id": 4,
+      "title": "Awareness of Digital Payment Systems Among Small Farmers in Chhattisgarh",
+      "authors": "Pankaj Yadav & Rekha Soni",
+      "abstract": "Despite high smartphone ownership, digital payment adoption among small farmers remains low due to trust issues and technical barriers. Field results from Nagri block are analyzed.",
+      "citations": 0,
+      "subject": "Commerce",
+      "issue": "Vol. 1, Issue 1",
+      "year": 2026,
+      "pdfUrl": "assets/pdf/vol1-issue1/4.pdf",
+      "doi": "10.5281/ijmeer.2026.104"
+    },
+    {
+      "id": 5,
+      "title": "Traditional Knowledge of Medicinal Plants Used in Villages Around Dhamtari",
+      "authors": "Kiran Dhruv",
+      "abstract": "An ethno-botanical survey of medicinal flora used by traditional healers in rural Dhamtari. The study documents 22 species and emphasizes local knowledge preservation.",
+      "citations": 0,
+      "subject": "Biotechnology",
+      "issue": "Vol. 1, Issue 1",
+      "year": 2026,
+      "pdfUrl": "assets/pdf/vol1-issue1/5.pdf",
+      "doi": "10.5281/ijmeer.2026.105"
+    }
+  ]
+}

@@ -1,0 +1,294 @@
+/* ============================================================
+   IJMEER — components.js  (v3 — Premium Edition)
+   Injects header + footer into all pages.
+   ============================================================ */
+(function () {
+  'use strict';
+
+  const S = 'https://docs.google.com/forms/d/e/1FAIpQLSeLAeEVTKRf18Qks4Z_QXDYWUPiNAZirDUKz_TWLBIiiMMPtw/viewform?usp=publish-editor';
+
+
+
+  /* ────────────────────────────────────────────────────────────
+     HEADER
+  ──────────────────────────────────────────────────────────── */
+  const HEADER = `
+<header class="site-header" id="site-header" role="banner">
+  <div class="container header-inner">
+    <a href="index.html" class="brand" aria-label="IJMEER Home">
+      <div class="brand-mark" aria-hidden="true">IJ</div>
+      <div class="brand-text">
+        <span class="brand-name">IJMEER</span>
+        <span class="brand-sub">Open Access Journal</span>
+      </div>
+    </a>
+
+    <nav class="main-nav" id="main-nav" aria-label="Main navigation">
+      <div class="nav-item has-dropdown">
+        <a href="about-this-journal.html" class="nav-link" aria-haspopup="true">
+          Journal
+          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+        </a>
+        <div class="dropdown" role="menu">
+          <a href="about-this-journal.html" role="menuitem">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+            About this journal
+          </a>
+          <a href="editorial-board.html" role="menuitem">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            Editorial board
+          </a>
+          <a href="abstracting-indexing.html" role="menuitem">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            Abstracting &amp; Indexing
+          </a>
+          <a href="book-reviews.html" role="menuitem">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+            Book reviews
+          </a>
+        </div>
+      </div>
+
+      <div class="nav-item has-dropdown">
+        <a href="preparing-materials.html" class="nav-link" aria-haspopup="true">
+          Authors
+          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+        </a>
+        <div class="dropdown" role="menu">
+          <a href="preparing-materials.html" role="menuitem">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            Preparing your materials
+          </a>
+          <a href="submitting-materials.html" role="menuitem">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+            Submitting your materials
+          </a>
+          <a href="fees-pricing.html" role="menuitem">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+            Fees &amp; Pricing
+          </a>
+          <a href="publishing-agreement.html" role="menuitem">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+            Publishing agreement
+          </a>
+          <a href="post-publication-impact.html" role="menuitem">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            Post publication impact
+          </a>
+        </div>
+      </div>
+
+      <div class="nav-item has-dropdown">
+        <a href="review-process.html" class="nav-link" aria-haspopup="true">
+          Peer Review
+          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+        </a>
+        <div class="dropdown" role="menu">
+          <a href="review-process.html" role="menuitem">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            Review process
+          </a>
+          <a href="instructions-reviewers.html" role="menuitem">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+            Instructions for reviewers
+          </a>
+          <a href="reviewer-benefits.html" role="menuitem">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            Reviewer benefits
+          </a>
+          <a href="join-as-reviewer.html" role="menuitem">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><line x1="20" y1="8" x2="20" y2="14"/><line x1="23" y1="11" x2="17" y2="11"/></svg>
+            Join as Reviewer
+          </a>
+        </div>
+      </div>
+
+      <div class="nav-item">
+        <a href="issues.html" class="nav-link">Issues</a>
+      </div>
+
+      <div class="nav-item">
+        <a href="citations.html" class="nav-link">Articles</a>
+      </div>
+
+      <div class="nav-item">
+        <a href="contact.html" class="nav-link">Contact</a>
+      </div>
+
+      <!-- Mobile submit -->
+      <div class="nav-item mobile-only" style="margin-top:12px;">
+        <a href="${S}" class="btn btn-primary" style="width:100%;justify-content:center;" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:15px;height:15px;"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+          Submit Manuscript
+        </a>
+      </div>
+    </nav>
+
+    <div class="header-actions">
+      <a href="${S}" class="btn-submit desktop-only" target="_blank" rel="noopener" id="nav-submit-btn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+        Submit
+      </a>
+      <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="main-nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>`;
+
+  /* ────────────────────────────────────────────────────────────
+     FOOTER
+  ──────────────────────────────────────────────────────────── */
+  const FOOTER = `
+<footer class="site-footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <!-- Brand column -->
+      <div class="footer-brand">
+        <a href="index.html" class="brand" style="margin-bottom:16px;" aria-label="IJMEER Home">
+          <div class="brand-mark">IJ</div>
+          <div class="brand-text">
+            <span class="brand-name">IJMEER</span>
+            <span class="brand-sub">Open Access Journal</span>
+          </div>
+        </a>
+        <p class="footer-desc">INTERNATIONAL JOURNAL OF MULTIDISCIPLINARY EXPLICATION AND EMERGING RESEARCH (IJMEER) by <a href="https://www.meerfoundation.co.in/" target="_blank" rel="noopener noreferrer" style="color:rgba(255,255,255,0.8);text-decoration:underline;text-underline-offset:3px;">Meer Foundation</a></p>
+        <div style="margin-top:14px;padding:14px;background:rgba(255,255,255,0.06);border-radius:var(--r-sm);border:1px solid rgba(255,255,255,0.1);">
+          <div style="font-size:0.68rem;font-weight:700;color:rgba(255,255,255,0.45);text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;">Publisher Address</div>
+          <div style="font-size:0.78rem;color:rgba(255,255,255,0.6);line-height:1.8;">
+            House No. 103, Housing Board Colony,<br>
+            Hatkeshar, Dhamtari – 493773,<br>
+            Chhattisgarh, India
+          </div>
+        </div>
+        <div class="social-links" aria-label="Social media links">
+          <a href="https://facebook.com/ijmeerj" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="IJMEER on Facebook">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="https://instagram.com/ijmeerj" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="IJMEER on Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="https://twitter.com/ijmeerj" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="IJMEER on X (Twitter)">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+          <a href="https://linkedin.com/company/ijmeerj" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="IJMEER on LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+          <a href="https://youtube.com/@ijmeerj" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="IJMEER on YouTube">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon fill="white" points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg>
+          </a>
+          <a href="https://chat.whatsapp.com/EpVXdvvrbKc9HlyXKDfftB" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Join IJMEER WhatsApp Community">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a6.98 6.98 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.09.537 4.056 1.475 5.768L0 24l6.395-1.682A11.942 11.942 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.802 9.802 0 0 1-5.092-1.424l-.364-.216-3.78.994.99-3.696-.236-.38A9.808 9.808 0 0 1 2.182 12c0-5.42 4.398-9.818 9.818-9.818 5.42 0 9.818 4.398 9.818 9.818 0 5.42-4.398 9.818-9.818 9.818z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Journal column -->
+      <div>
+        <h3 class="footer-head">Journal</h3>
+        <nav class="footer-links" aria-label="Journal links">
+          <a href="about-this-journal.html">About IJMEER</a>
+          <a href="editorial-board.html">Editorial Board</a>
+          <a href="book-reviews.html">Book Reviews</a>
+          <a href="abstracting-indexing.html">Indexing</a>
+          <a href="issues.html">All Issues (Archive)</a>
+          <a href="citations.html">Articles &amp; Citations</a>
+        </nav>
+      </div>
+
+      <!-- Author Resources column -->
+      <div>
+        <h3 class="footer-head">Authors</h3>
+        <nav class="footer-links" aria-label="Author resources">
+          <a href="${S}" target="_blank" rel="noopener">Submit Paper</a>
+          <a href="fees-pricing.html">Fees &amp; Pricing</a>
+          <a href="preparing-materials.html">Author Guidelines</a>
+          <a href="submitting-materials.html">Submission Guide</a>
+          <a href="publication-process.html">Publication Process</a>
+          <a href="post-publication-impact.html">Post-Publication</a>
+        </nav>
+      </div>
+
+      <!-- Policies column -->
+      <div>
+        <h3 class="footer-head">Policies &amp; Contact</h3>
+        <nav class="footer-links" aria-label="Policy and contact links">
+          <a href="open-access-options.html">Open Access</a>
+          <a href="publishing-ethics.html">Publishing Ethics</a>
+          <a href="research-transparency.html">Transparency</a>
+          <a href="rights-permissions.html">Rights &amp; Permissions</a>
+          <a href="privacy-policy.html">Privacy Policy</a>
+          <a href="contact.html">Contact Us</a>
+        </nav>
+        <div class="footer-newsletter" style="margin-top:24px;">
+          <div style="font-size:0.75rem;font-weight:700;color:rgba(255,255,255,0.45);text-transform:uppercase;letter-spacing:1px;margin-bottom:10px;">Quick Contact</div>
+          <a href="mailto:ijmeerj@gmail.com" style="display:flex;align-items:center;gap:8px;color:rgba(255,255,255,0.65);font-size:0.82rem;margin-bottom:6px;transition:color 0.25s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,0.65)'">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            ijmeerj@gmail.com
+          </a>
+          <a href="mailto:editor@ijmeer.com" style="display:flex;align-items:center;gap:8px;color:rgba(255,255,255,0.65);font-size:0.82rem;margin-bottom:6px;transition:color 0.25s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,0.65)'">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            editor@ijmeer.com
+          </a>
+          <a href="https://wa.me/919826121177" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:8px;color:rgba(255,255,255,0.65);font-size:0.82rem;transition:color 0.25s;" onmouseover="this.style.color='#25D366'" onmouseout="this.style.color='rgba(255,255,255,0.65)'">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a6.98 6.98 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.09.537 4.056 1.475 5.768L0 24l6.395-1.682A11.942 11.942 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.802 9.802 0 0 1-5.092-1.424l-.364-.216-3.78.994.99-3.696-.236-.38A9.808 9.808 0 0 1 2.182 12c0-5.42 4.398-9.818 9.818-9.818 5.42 0 9.818 4.398 9.818 9.818 0 5.42-4.398 9.818-9.818 9.818z"/></svg>
+            WhatsApp Us
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>
+        © <span data-year></span> IJMEER. Published by
+        <a href="https://www.meerfoundation.co.in/" target="_blank" rel="noopener noreferrer">Meer Foundation</a>.
+        All rights reserved. &nbsp;|&nbsp; ISSN (Print): XXXX-XXXX &nbsp;|&nbsp; ISSN (Online): XXXX-XXXX &nbsp;|&nbsp; Since 2026 &nbsp;|&nbsp; Language: English &nbsp;|&nbsp;
+        <a href="privacy-policy.html">Privacy Policy</a> &nbsp;|&nbsp;
+        <a href="publishing-ethics.html">Ethics</a> &nbsp;|&nbsp;
+        <a href="sitemap.xml" target="_blank" rel="noopener">Sitemap</a>
+      </p>
+    </div>
+  </div>
+</footer>
+<div id="toast-container" class="toast-container" aria-live="polite" aria-atomic="false"></div>
+<button id="scroll-top" aria-label="Scroll to top of page" title="Back to top">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="18 15 12 9 6 15"/></svg>
+</button>`;
+
+  /* ────────────────────────────────────────────────────────────
+     INJECT HTML
+  ──────────────────────────────────────────────────────────── */
+  function inject(id, html, position = 'before') {
+    const placeholder = document.getElementById(id);
+    if (!placeholder) return;
+    const tmp = document.createElement('div');
+    tmp.innerHTML = html;
+    const parent = placeholder.parentNode;
+    while (tmp.firstChild) {
+      if (position === 'before') parent.insertBefore(tmp.firstChild, placeholder);
+      else parent.insertBefore(tmp.firstChild, placeholder.nextSibling);
+    }
+    placeholder.remove();
+  }
+
+  inject('site-header-inject', HEADER);
+  inject('site-footer-inject', FOOTER);
+
+  /* ────────────────────────────────────────────────────────────
+     TOAST NOTIFICATION UTILITY
+  ──────────────────────────────────────────────────────────── */
+  window.showToast = function(message, type = 'success') {
+    const container = document.getElementById('toast-container');
+    if (!container) return;
+    const icon = type === 'success'
+      ? '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>'
+      : '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>';
+    const toast = document.createElement('div');
+    toast.className = 'toast';
+    toast.style.borderLeftColor = type === 'success' ? 'var(--emerald)' : 'var(--gold)';
+    toast.innerHTML = `${icon}<span>${message}</span>`;
+    container.appendChild(toast);
+    setTimeout(() => toast.remove(), 3000);
+  };
+
+})();
