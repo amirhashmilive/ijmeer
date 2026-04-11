@@ -152,10 +152,10 @@
             <span class="brand-sub">Open Access Journal</span>
           </div>
         </a>
-        <p class="footer-desc">INTERNATIONAL JOURNAL OF MULTIDISCIPLINARY EXPLICATION AND EMERGING RESEARCH (IJMEER) by <a href="https://www.meerfoundation.co.in/" target="_blank" rel="noopener noreferrer" style="color:rgba(255,255,255,0.8);text-decoration:underline;text-underline-offset:3px;">Meer Foundation</a></p>
-        <div style="margin-top:14px;padding:14px;background:rgba(255,255,255,0.06);border-radius:var(--r-sm);border:1px solid rgba(255,255,255,0.1);">
-          <div style="font-size:0.68rem;font-weight:700;color:rgba(255,255,255,0.45);text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;">Publisher Address</div>
-          <div style="font-size:0.78rem;color:rgba(255,255,255,0.6);line-height:1.8;">
+        <p class="footer-desc">INTERNATIONAL JOURNAL OF MULTIDISCIPLINARY EXPLICATION AND EMERGING RESEARCH (IJMEER) by <a href="https://www.meerfoundation.co.in/" target="_blank" rel="noopener noreferrer" style="color:rgba(255,255,255,0.8);text-decoration:none;">Meer Foundation</a></p>
+        <div style="margin-top:20px;">
+          <div style="font-size:0.72rem;font-weight:700;color:rgba(255,255,255,0.5);text-transform:uppercase;letter-spacing:1px;margin-bottom:6px;">Publisher Address</div>
+          <div style="font-size:0.82rem;color:rgba(255,255,255,0.7);line-height:1.7;">
             House No. 103, Housing Board Colony,<br>
             Hatkeshar, Dhamtari – 493773,<br>
             Chhattisgarh, India

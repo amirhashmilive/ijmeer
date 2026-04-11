@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -166,13 +166,14 @@ function setFormat(f) {
 function formatCitation(p, format) {
   const doi = p.doi || `10.5281/ijmeer.${p.id}`;
   const journalName = 'INTERNATIONAL JOURNAL OF MULTIDISCIPLINARY EXPLICATION AND EMERGING RESEARCH (IJMEER)';
+  const issueStr = `Vol. ${p.volume}, Issue ${p.issue}`;
   if (format === 'APA') {
-    return `${p.authors} (${p.year}). ${p.title}. <em>${journalName}</em>, ${p.issue}. https://${doi}`;
+    return `${p.authors} (${p.year}). ${p.title}. <em>${journalName}</em>, ${issueStr}. https://${doi}`;
   } else if (format === 'MLA') {
-    return `${p.authors}. "${p.title}." <em>${journalName}</em>, ${p.issue}, ${p.year}, https://${doi}`;
+    return `${p.authors}. "${p.title}." <em>${journalName}</em>, ${issueStr}, ${p.year}, https://${doi}`;
   } else { // BibTeX
     const key = p.authors.split(',')[0].split(' ').pop().toLowerCase() + p.year;
-    return `@article{${key},\n  author  = {${p.authors}},\n  title   = {${p.title}},\n  journal = {IJMEER},\n  year    = {${p.year}},\n  volume  = {${p.issue}},\n  doi     = {${doi}}\n}`;
+    return `@article{${key},\n  author  = {${p.authors}},\n  title   = {${p.title}},\n  journal = {IJMEER},\n  year    = {${p.year}},\n  volume  = {${p.volume}},\n  number  = {${p.issue}},\n  doi     = {${doi}}\n}`;
   }
 }
 
@@ -238,16 +239,16 @@ function makeCiteCard(p) {
     <div class="citation-paper-title">${p.title}</div>
     <div class="citation-text" id="cite-${p.id}">${citeText}</div>
     <div class="citation-actions">
-      <button class="cite-btn" onclick="copySingle(${p.id}, this)" aria-label="Copy ${currentFormat} citation for ${p.title}">
+      <button class="cite-btn" onclick="copySingle('${p.id}', this)" aria-label="Copy ${currentFormat} citation for ${p.title}">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:13px;height:13px;" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
         Copy ${currentFormat}
       </button>
-      ${p.pdfUrl ? `<a href="${p.pdfUrl}" target="_blank" rel="noopener" class="cite-btn" aria-label="Download PDF of ${p.title}">
+      ${p.pdf_url ? `<a href="${p.pdf_url}" target="_blank" rel="noopener" class="cite-btn" aria-label="Download PDF of ${p.title}">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:13px;height:13px;" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
         PDF
       </a>` : ''}
       <span class="cite-meta">
-        ${p.subject} &nbsp;·&nbsp; ${p.issue} &nbsp;·&nbsp;
+        ${p.subject} &nbsp;·&nbsp; Vol. ${p.volume}, Issue ${p.issue} &nbsp;·&nbsp;
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="width:12px;height:12px;display:inline;vertical-align:middle;" aria-hidden="true"><path d="M3 15v4c0 1.1.9 2 2 2h14a2 2 0 0 0 2-2v-4M17 9l-5 5-5-5M12 12.8V2.5"/></svg>
         ${p.citations} cited
       </span>
