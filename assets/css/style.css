@@ -1757,6 +1757,54 @@ input, textarea, select { font-family: var(--font-sans); }
   }
 }
 
+/* ============================================================
+   MOBILE-ONLY FIXES (max-width: 768px)
+   ============================================================ */
+@media (max-width: 768px) {
+  /* Fix header layout: brand left, hamburger right */
+  .header-inner {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 12px;
+  }
+
+  /* Hamburger always on the RIGHT */
+  .header-actions {
+    margin-left: auto;
+    display: flex !important;
+    align-items: center;
+    gap: 8px;
+    order: 3;
+  }
+
+  /* Menu toggle visible and functional */
+  .menu-toggle {
+    display: flex !important;
+    order: 3;
+    flex-direction: column;
+    gap: 5px;
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    min-height: 44px;
+    border-radius: var(--r-sm);
+    background: var(--bg-2);
+    border: 1.5px solid var(--border);
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+    z-index: calc(var(--z-header) + 1);
+  }
+
+  /* Hide the 70+ Subject Areas section on mobile */
+  #subjects {
+    display: none !important;
+  }
+}
+
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
