@@ -52,11 +52,12 @@
   const mainNav = document.getElementById('main-nav');
 
   if (menuToggle && mainNav) {
-    menuToggle.addEventListener('click', () => {
+    menuToggle.addEventListener('click', (e) => {
+      e.stopPropagation();
       const isOpen = mainNav.classList.toggle('open');
-      menuToggle.setAttribute('aria-expanded', isOpen);
-      document.body.style.overflow = isOpen ? 'hidden' : '';
       menuToggle.setAttribute('aria-expanded', String(isOpen));
+      document.body.style.overflow = isOpen ? 'hidden' : '';
+      document.body.classList.toggle('nav-open', isOpen);
     });
 
     // Mobile dropdown toggle
@@ -69,12 +70,13 @@
       });
     });
 
-    // Close on outside click
+    // Close via overlay backdrop click
     document.addEventListener('click', (e) => {
       if (!header?.contains(e.target) && mainNav.classList.contains('open')) {
         mainNav.classList.remove('open');
         menuToggle.setAttribute('aria-expanded', 'false');
         document.body.style.overflow = '';
+        document.body.classList.remove('nav-open');
       }
     });
 
@@ -84,10 +86,22 @@
         mainNav.classList.remove('open');
         menuToggle.setAttribute('aria-expanded', 'false');
         document.body.style.overflow = '';
+        document.body.classList.remove('nav-open');
         menuToggle.focus();
       }
     });
+
+    // Reset on resize to desktop
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 768 && mainNav.classList.contains('open')) {
+        mainNav.classList.remove('open');
+        menuToggle.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+        document.body.classList.remove('nav-open');
+      }
+    });
   }
+
 
   // ── Accordion ─────────────────────────────────────────────
   document.querySelectorAll('.accordion-header').forEach(btn => {

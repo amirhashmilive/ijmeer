@@ -161,7 +161,7 @@
             Chhattisgarh, India
           </div>
         </div>
-        <div class="social-links" aria-label="Social media links">
+        <div class="social-links" style="margin-top:28px;" aria-label="Social media links">
           <a href="https://facebook.com/ijmeerj" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="IJMEER on Facebook">
             <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
           </a>
@@ -220,32 +220,14 @@
           <a href="privacy-policy.html">Privacy Policy</a>
           <a href="contact.html">Contact Us</a>
         </nav>
-        <div class="footer-newsletter" style="margin-top:24px;">
-          <div style="font-size:0.75rem;font-weight:700;color:rgba(255,255,255,0.45);text-transform:uppercase;letter-spacing:1px;margin-bottom:10px;">Quick Contact</div>
-          <a href="mailto:ijmeerj@gmail.com" style="display:flex;align-items:center;gap:8px;color:rgba(255,255,255,0.65);font-size:0.82rem;margin-bottom:6px;transition:color 0.25s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,0.65)'">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-            ijmeerj@gmail.com
-          </a>
-          <a href="mailto:editor@ijmeer.com" style="display:flex;align-items:center;gap:8px;color:rgba(255,255,255,0.65);font-size:0.82rem;margin-bottom:6px;transition:color 0.25s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,0.65)'">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-            editor@ijmeer.com
-          </a>
-          <a href="https://wa.me/919826121177" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:8px;color:rgba(255,255,255,0.65);font-size:0.82rem;transition:color 0.25s;" onmouseover="this.style.color='#25D366'" onmouseout="this.style.color='rgba(255,255,255,0.65)'">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a6.98 6.98 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.09.537 4.056 1.475 5.768L0 24l6.395-1.682A11.942 11.942 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.802 9.802 0 0 1-5.092-1.424l-.364-.216-3.78.994.99-3.696-.236-.38A9.808 9.808 0 0 1 2.182 12c0-5.42 4.398-9.818 9.818-9.818 5.42 0 9.818 4.398 9.818 9.818 0 5.42-4.398 9.818-9.818 9.818z"/></svg>
-            WhatsApp Us
-          </a>
-        </div>
       </div>
     </div>
 
     <div class="footer-bottom">
       <p>
-        © <span data-year></span> IJMEER. Published by
+        &copy; <span data-year></span> IJMEER. Published by
         <a href="https://www.meerfoundation.co.in/" target="_blank" rel="noopener noreferrer">Meer Foundation</a>.
-        All rights reserved. &nbsp;|&nbsp; ISSN (Print): XXXX-XXXX &nbsp;|&nbsp; ISSN (Online): XXXX-XXXX &nbsp;|&nbsp; Since 2026 &nbsp;|&nbsp; Language: English &nbsp;|&nbsp;
-        <a href="privacy-policy.html">Privacy Policy</a> &nbsp;|&nbsp;
-        <a href="publishing-ethics.html">Ethics</a> &nbsp;|&nbsp;
-        <a href="sitemap.xml" target="_blank" rel="noopener">Sitemap</a>
+        All rights reserved. &nbsp;|&nbsp; ISSN (Print): XXXX-XXXX &nbsp;|&nbsp; ISSN (Online): XXXX-XXXX &nbsp;|&nbsp; Since 2026
       </p>
     </div>
   </div>
