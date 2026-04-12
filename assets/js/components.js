@@ -256,6 +256,9 @@
   inject('site-header-inject', HEADER);
   inject('site-footer-inject', FOOTER);
 
+  // Notify core.js that the header is now in the DOM so it can bind mobile menu
+  document.dispatchEvent(new CustomEvent('headerInjected'));
+
   /* ────────────────────────────────────────────────────────────
      TOAST NOTIFICATION UTILITY
   ──────────────────────────────────────────────────────────── */

@@ -48,10 +48,24 @@
   revealEls.forEach(el => window.revealObserver.observe(el));
 
   // ── Mobile menu ───────────────────────────────────────────
-  const menuToggle = document.getElementById('menu-toggle');
-  const mainNav = document.getElementById('main-nav');
+  // Exposed globally so components.js can call it after injecting the header.
+  window.initMobileMenu = function () {
+    const menuToggle = document.getElementById('menu-toggle');
+    const mainNav    = document.getElementById('main-nav');
+    const siteHeader = document.getElementById('site-header');
 
-  if (menuToggle && mainNav) {
+    if (!menuToggle || !mainNav) return; // header not in DOM yet
+    if (menuToggle._mobileMenuBound) return; // already bound, don't double-up
+    menuToggle._mobileMenuBound = true;
+
+    function closeMenu() {
+      mainNav.classList.remove('open');
+      menuToggle.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+      document.body.classList.remove('nav-open');
+    }
+
+    // Toggle on hamburger click
     menuToggle.addEventListener('click', (e) => {
       e.stopPropagation();
       const isOpen = mainNav.classList.toggle('open');
@@ -60,7 +74,7 @@
       document.body.classList.toggle('nav-open', isOpen);
     });
 
-    // Mobile dropdown toggle
+    // Mobile sub-menu (dropdown) expand on tap
     mainNav.querySelectorAll('.nav-item.has-dropdown > .nav-link').forEach(link => {
       link.addEventListener('click', (e) => {
         if (window.innerWidth <= 768) {
@@ -70,23 +84,24 @@
       });
     });
 
-    // Close via overlay backdrop click
+    // Close when a leaf link inside the nav is tapped
+    mainNav.querySelectorAll('a[role="menuitem"], .nav-item:not(.has-dropdown) .nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        if (window.innerWidth <= 768) closeMenu();
+      });
+    });
+
+    // Close via backdrop click (outside the header)
     document.addEventListener('click', (e) => {
-      if (!header?.contains(e.target) && mainNav.classList.contains('open')) {
-        mainNav.classList.remove('open');
-        menuToggle.setAttribute('aria-expanded', 'false');
-        document.body.style.overflow = '';
-        document.body.classList.remove('nav-open');
+      if (siteHeader && !siteHeader.contains(e.target) && mainNav.classList.contains('open')) {
+        closeMenu();
       }
     });
 
     // Close on ESC
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape' && mainNav.classList.contains('open')) {
-        mainNav.classList.remove('open');
-        menuToggle.setAttribute('aria-expanded', 'false');
-        document.body.style.overflow = '';
-        document.body.classList.remove('nav-open');
+        closeMenu();
         menuToggle.focus();
       }
     });
@@ -94,13 +109,16 @@
     // Reset on resize to desktop
     window.addEventListener('resize', () => {
       if (window.innerWidth > 768 && mainNav.classList.contains('open')) {
-        mainNav.classList.remove('open');
-        menuToggle.setAttribute('aria-expanded', 'false');
-        document.body.style.overflow = '';
-        document.body.classList.remove('nav-open');
+        closeMenu();
       }
     });
-  }
+  };
+
+  // Try to init immediately (covers pages where header is already in HTML)
+  window.initMobileMenu();
+
+  // Also init when components.js fires 'headerInjected' (dynamic injection)
+  document.addEventListener('headerInjected', () => window.initMobileMenu());
 
 
   // ── Accordion ─────────────────────────────────────────────

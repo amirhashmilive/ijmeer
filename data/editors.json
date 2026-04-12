@@ -11,6 +11,19 @@
       "link": "https://in.linkedin.com/in/drnusrathashmi"
     },
     {
+      "id": 10,
+      "role": "Editorial Board Member",
+      "name": "Prof. (Dr.) Karuna Akshay Malviya",
+      "designation": "Director, D Y Patil University School of Law Navi Mumbai",
+      "affiliation": "D Y Patil University School of Law Navi Mumbai",
+      "email": "Karuna.malviya@dypatil.edu",
+      "expertise": ["Law", "Legal Education", "Academic Leadership"],
+      "experience": "15 years",
+      "initials": "KM",
+      "color": "#2563EB",
+      "link": "https://dypatil.edu/schools/school-of-law/dean"
+    },
+    {
       "id": 2,
       "role": "Managing Editor",
       "name": "Sayed Amir Mustafa Hashmi",
