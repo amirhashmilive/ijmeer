@@ -118,6 +118,59 @@
       from { opacity: 0; transform: translateY(-8px); }
       to { opacity: 1; transform: translateY(0); }
     }
+
+    /* Custom Article Section Styling (for hardcoded HTML) */
+    .articles-container {
+      max-width: 900px; margin: 0 auto; padding: 0 20px;
+    }
+    .articles-container h3 {
+      font-family: var(--font-serif); font-size: 2rem; font-weight: 800; color: var(--navy); margin-bottom: 8px; text-align: center;
+    }
+    .articles-container .volume-info {
+      font-size: 0.85rem; font-weight: 700; color: var(--blue); text-transform: uppercase; letter-spacing: 1px; text-align: center; margin-bottom: 12px;
+    }
+    .articles-container .description {
+      text-align: center; color: var(--text-3); font-size: 1rem; margin-bottom: 40px;
+    }
+    .article-card {
+      position: relative;
+      background: var(--bg); border: 1px solid var(--border);
+      border-radius: var(--r-xl); padding: 32px;
+      margin-bottom: 24px; transition: var(--t);
+      box-shadow: var(--sh-sm);
+    }
+    .article-card:hover { box-shadow: var(--sh-lg); transform: translateY(-3px); border-color: rgba(37,99,235,0.2); }
+    .article-number {
+      position: absolute; top: 20px; right: 20px;
+      width: 32px; height: 32px; border-radius: 50%;
+      background: var(--bg-3); display: flex; align-items: center; justify-content: center;
+      font-size: 0.7rem; font-weight: 800; color: var(--text-3); font-family: var(--font-mono);
+    }
+    .subject-tags {
+      display: inline-block; padding: 5px 14px; background: rgba(37,99,235,0.08); color: var(--blue);
+      border-radius: var(--r-full); font-size: 0.72rem; font-weight: 800; text-transform: uppercase; margin-bottom: 16px;
+      border: 1px solid rgba(37,99,235,0.15);
+    }
+    .article-card h4 {
+      font-family: var(--font-serif); font-size: 1.4rem; font-weight: 700; color: var(--navy); margin-bottom: 10px; line-height: 1.4;
+    }
+    .article-card .authors {
+      font-size: 0.95rem; font-weight: 600; color: var(--text-2); margin-bottom: 16px;
+    }
+    .article-card .abstract {
+      font-size: 0.88rem; color: var(--text-2); line-height: 1.6; padding: 16px; background: var(--bg-2);
+      border-radius: var(--r-sm); border-left: 4px solid var(--blue); margin-bottom: 20px;
+    }
+    .article-meta {
+      display: flex; flex-wrap: wrap; gap: 16px; font-size: 0.8rem; font-weight: 600; color: var(--text-3); align-items: center; margin-bottom: 20px;
+    }
+    .article-meta span { display: flex; align-items: center; gap: 6px; }
+    .pdf-button {
+      display: inline-flex; align-items: center; gap: 8px; padding: 10px 20px; border-radius: var(--r-sm);
+      font-weight: 700; font-size: 0.85rem; background: var(--blue); color: #fff !important; transition: var(--t);
+      text-decoration: none; box-shadow: 0 4px 14px rgba(37,99,235,0.3); font-family: var(--font-sans);
+    }
+    .pdf-button:hover { background: var(--blue-dark); transform: translateY(-2px); box-shadow: 0 6px 20px rgba(37,99,235,0.4); }
   </style>
 </head>
 <body>
@@ -169,25 +222,85 @@
 
   <!-- ══ LATEST PAPERS ══ -->
   <section class="section" id="latest-papers" style="background:var(--bg);" aria-labelledby="latest-papers-heading">
-    <div class="container">
-      <div class="section-header reveal">
-        <div class="section-tag">Current Release</div>
-        <h2 class="section-title" id="latest-papers-heading">Articles in Vol. 1, Issue 1 (2026)</h2>
-        <p class="section-subtitle">All articles are open-access with DOI. Click the PDF button to download any article.</p>
+    <!-- 5 Articles Section -->
+    <div class="articles-container">
+      <h3>5 Articles</h3>
+      <p class="volume-info">Vol. 1, Issue 1 | Current Release</p>
+      <p class="description">All articles are open-access. Click PDF button to view or download any article.</p>
+
+      <!-- Article 1 -->
+      <div class="article-card">
+        <span class="article-number">01</span>
+        <span class="subject-tags">Law / Political Science</span>
+        <h4>Implementation of Three New Criminal Laws in India: A Study of Police Preparedness in Uttar Pradesh</h4>
+        <p class="authors">Arjun Singh</p>
+        <p class="abstract">The enactment of the Bharatiya Nyaya Sanhita (BNS) 2023, the Bharatiya Nagarik Suraksha Sanhita (BNSS) 2023, and the Bharatiya Sakshya Adhiniyam (BSA) 2023, which replaced the Indian Penal Code, the Code of Criminal Procedure, and the Indian Evidence Act respectively, marks the most comprehensive overhaul of India's criminal justice system since independence. This paper examines the state of preparedness among the Uttar Pradesh Police—India's largest state police force—in implementing these transformative legislations. The study reveals significant gaps in awareness, infrastructure, and inter-agency coordination, recommending a phased capacity-building approach and enhanced digital infrastructure.</p>
+        <div class="article-meta">
+          <span>Vol. 1, Issue 1</span>
+          <span>0 cited</span>
+          <span>DOI: 10.5281/ijmeer.2026.01</span>
+        </div>
+        <a href="/pdfs/vol1-issue1-article1.pdf" class="pdf-button" target="_blank">📄 PDF</a>
       </div>
 
-      <!-- Search + filter -->
-      <div class="reveal" style="max-width:560px;margin:0 auto 36px;">
-        <div class="search-wrap" role="search">
-          <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-          <input type="search" class="search-input" id="paper-search" placeholder="Search articles by title, author, or subject…" aria-label="Search articles">
+      <!-- Article 2 -->
+      <div class="article-card">
+        <span class="article-number">02</span>
+        <span class="subject-tags">Public Health / Psychology</span>
+        <h4>Mental Health Awareness Among College Students in Kerala Post-COVID: Prevalence, Perceptions, and Help-Seeking Behaviour</h4>
+        <p class="authors">Priya Menon & Anitha Krishnan</p>
+        <p class="abstract">This paper investigates mental health awareness levels, perceived stigma toward help-seeking, and the prevalence of self-reported psychological distress among college students in Kerala in the post-COVID period. A survey of 340 students revealed that 41.2% showed moderate to severe psychological distress, with stigma remaining a major barrier to seeking professional help. The study recommends strengthening college counselling infrastructure and community-level de-stigmatisation campaigns.</p>
+        <div class="article-meta">
+          <span>Vol. 1, Issue 1</span>
+          <span>0 cited</span>
+          <span>DOI: 10.5281/ijmeer.2026.02</span>
         </div>
+        <a href="/pdfs/vol1-issue1-article2.pdf" class="pdf-button" target="_blank">📄 PDF</a>
       </div>
 
-      <div id="latest-papers-grid" style="max-width:900px;margin:0 auto;" role="list" aria-label="Latest issue articles">
-        <div class="paper-card" style="justify-content:center;align-items:center;">
-          <p style="color:var(--text-3);padding:20px;">Loading articles…</p>
+      <!-- Article 3 -->
+      <div class="article-card">
+        <span class="article-number">03</span>
+        <span class="subject-tags">Agriculture / Environmental Science</span>
+        <h4>Farmers' Adoption of Sustainable Agricultural Practices in Punjab: Barriers, Motivators, and Policy Implications</h4>
+        <p class="authors">Gurpreet Kaur</p>
+        <p class="abstract">Punjab faces a severe agrarian crisis characterised by depleting groundwater and soil health degradation. This paper examines the factors influencing farmers' adoption of sustainable agricultural practices (SAPs) in three agro-ecological zones of Punjab. Analysis of survey data from 280 farm households identifies knowledge access, farm size, and peer influence as significant positive predictors of adoption, while debt burden and fragmented holdings are negative predictors.</p>
+        <div class="article-meta">
+          <span>Vol. 1, Issue 1</span>
+          <span>0 cited</span>
+          <span>DOI: 10.5281/ijmeer.2026.03</span>
         </div>
+        <a href="/pdfs/vol1-issue1-article3.pdf" class="pdf-button" target="_blank">📄 PDF</a>
+      </div>
+
+      <!-- Article 4 -->
+      <div class="article-card">
+        <span class="article-number">04</span>
+        <span class="subject-tags">Education / Sociology</span>
+        <h4>Digital Literacy and Access to Online Education in Rural Maharashtra: A Study of Learner Experiences and Infrastructural Gaps</h4>
+        <p class="authors">Rajesh Deshmukh & Sunita Wagh</p>
+        <p class="abstract">Evidence from rural Maharashtra suggests that the 'digital divide' remains a profound barrier to equitable learning. This survey-based study involving 380 students reveals significant intra-state disparities in internet access and digital literacy. Fewer than 30% of rural students met basic digital competency thresholds. The study identifies gaps between policy intent and ground reality, recommending improved device access and teacher training.</p>
+        <div class="article-meta">
+          <span>Vol. 1, Issue 1</span>
+          <span>0 cited</span>
+          <span>DOI: 10.5281/ijmeer.2026.04</span>
+        </div>
+        <a href="/pdfs/vol1-issue1-article4.pdf" class="pdf-button" target="_blank">📄 PDF</a>
+      </div>
+
+      <!-- Article 5 -->
+      <div class="article-card">
+        <span class="article-number">05</span>
+        <span class="subject-tags">Economics / Management Studies</span>
+        <h4>Impact of MSME Schemes on Women Entrepreneurs in Tamil Nadu: Evidence from Madurai and Tirunelveli Districts</h4>
+        <p class="authors">Meena Rajan</p>
+        <p class="abstract">Women entrepreneurs in India's MSME sector remain significantly underrepresented. This paper examines the impact of various government schemes on women-led enterprises in Madurai and Tirunelveli districts. Findings indicate that while scheme participation has a positive impact on short-term business establishment, it has limited impact on long-term sustainability. Mentorship and market access emerge as the most critical unmet needs.</p>
+        <div class="article-meta">
+          <span>Vol. 1, Issue 1</span>
+          <span>0 cited</span>
+          <span>DOI: 10.5281/ijmeer.2026.05</span>
+        </div>
+        <a href="/pdfs/vol1-issue1-article5.pdf" class="pdf-button" target="_blank">📄 PDF</a>
       </div>
     </div>
   </section>
@@ -230,8 +343,11 @@ async function loadIssuesData() {
     // ── Latest Issue Identification ──
     const latestIssue = sortedIssues[0];
     if (latestIssue) {
-      document.getElementById('latest-heading').textContent = latestIssue.title;
-      document.getElementById('latest-papers-heading').textContent = `Articles in ${latestIssue.title.split(' (')[0]}`;
+      const headingEl = document.getElementById('latest-heading');
+      if (headingEl) headingEl.textContent = latestIssue.title;
+      
+      const papersHeading = document.getElementById('latest-papers-heading');
+      if (papersHeading) papersHeading.textContent = `Articles in ${latestIssue.title.split(' (')[0]}`;
       
       const papersInIssue = allPapers.filter(p => p.volume === latestIssue.volume && p.issue === latestIssue.issue);
       
@@ -245,7 +361,7 @@ async function loadIssuesData() {
       const tagLarge = document.getElementById('latest-tag-large');
       if (tagLarge) tagLarge.textContent = `Vol. ${latestIssue.volume}, Issue ${latestIssue.issue}`;
 
-      renderLatestPapers(papersInIssue);
+      // renderLatestPapers(papersInIssue); // Disabled as we are hardcoding the latest section
     }
 
     // ── Archive ──
@@ -273,8 +389,10 @@ async function loadIssuesData() {
 
   } catch (e) {
     console.error('Error loading issues data:', e);
-    document.getElementById('latest-papers-grid').innerHTML =
-      '<div class="paper-card" style="text-align:center;padding:32px;color:var(--text-3);">Failed to load articles. Please try refreshing.</div>';
+    const gridEl = document.getElementById('latest-papers-grid');
+    if (gridEl) {
+      gridEl.innerHTML = '<div class="paper-card" style="text-align:center;padding:32px;color:var(--text-3);">Failed to load articles. Please try refreshing.</div>';
+    }
   }
 }
 
