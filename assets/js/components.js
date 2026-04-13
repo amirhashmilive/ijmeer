@@ -78,37 +78,16 @@
         </div>
       </div>
 
-      <div class="nav-item has-dropdown">
-        <a href="review-process.html" class="nav-link" aria-haspopup="true">
-          Peer Review
-          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
-        </a>
-        <div class="dropdown" role="menu">
-          <a href="review-process.html" role="menuitem">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-            Review process
-          </a>
-          <a href="instructions-reviewers.html" role="menuitem">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
-            Instructions for reviewers
-          </a>
-          <a href="reviewer-benefits.html" role="menuitem">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-            Reviewer benefits
-          </a>
-          <a href="join-as-reviewer.html" role="menuitem">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><line x1="20" y1="8" x2="20" y2="14"/><line x1="23" y1="11" x2="17" y2="11"/></svg>
-            Join as Reviewer
-          </a>
-        </div>
+      <div class="nav-item">
+        <a href="peer-review.html" class="nav-link">Peer Review</a>
       </div>
 
       <div class="nav-item">
-        <a href="issues.html" class="nav-link">Issues</a>
+        <a href="archive.html" class="nav-link">Archives</a>
       </div>
 
       <div class="nav-item">
-        <a href="citations.html" class="nav-link">Articles</a>
+        <a href="citations.html" class="nav-link">Citations</a>
       </div>
 
       <div class="nav-item">
@@ -152,13 +131,19 @@
             <span class="brand-sub">Open Access Journal</span>
           </div>
         </a>
-        <p class="footer-desc">INTERNATIONAL JOURNAL OF MULTIDISCIPLINARY EXPLICATION AND EMERGING RESEARCH (IJMEER) by <a href="https://www.meerfoundation.co.in/" target="_blank" rel="noopener noreferrer" style="color:rgba(255,255,255,0.8);text-decoration:none;">Meer Foundation</a></p>
+        <p class="footer-desc">INTERNATIONAL JOURNAL OF MULTIDISCIPLINARY EXPLICATION AND EMERGING RESEARCH (IJMEER). Published by <a href="https://www.meerfoundation.co.in/" target="_blank" rel="noopener noreferrer" style="color:rgba(255,255,255,0.8);text-decoration:none;">Meer Foundation</a></p>
         <div style="margin-top:20px;">
-          <div style="font-size:0.72rem;font-weight:700;color:rgba(255,255,255,0.5);text-transform:uppercase;letter-spacing:1px;margin-bottom:6px;">Publisher Address</div>
+          <div style="font-size:0.72rem;font-weight:700;color:rgba(255,255,255,0.5);text-transform:uppercase;letter-spacing:1px;margin-bottom:6px;">PUBLISHER: Meer Foundation</div>
           <div style="font-size:0.82rem;color:rgba(255,255,255,0.7);line-height:1.7;">
-            House No. 103, Housing Board Colony,<br>
-            Hatkeshar, Dhamtari – 493773,<br>
-            Chhattisgarh, India
+            Address: House No. 103, Housing Board Colony, Hatkeshar, Dhamtari – 493773, Chhattisgarh, India<br>
+            Email: meercare@live.com<br>
+            Phone: 9826121177
+          </div>
+        </div>
+        <div style="margin-top:16px;">
+          <div style="font-size:0.72rem;font-weight:700;color:rgba(255,255,255,0.5);text-transform:uppercase;letter-spacing:1px;margin-bottom:6px;">JOURNAL: IJMEER</div>
+          <div style="font-size:0.82rem;color:rgba(255,255,255,0.7);line-height:1.7;">
+            Email: ijmeerj@gmail.com, editor@ijmeer.com
           </div>
         </div>
         <div class="social-links" style="margin-top:36px;" aria-label="Social media links">
@@ -191,7 +176,7 @@
           <a href="editorial-board.html">Editorial Board</a>
           <a href="book-reviews.html">Book Reviews</a>
           <a href="abstracting-indexing.html">Indexing</a>
-          <a href="issues.html">All Issues (Archive)</a>
+          <a href="archive.html">Archives</a>
           <a href="citations.html">Articles &amp; Citations</a>
         </nav>
       </div>
