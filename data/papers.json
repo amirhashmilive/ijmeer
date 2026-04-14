@@ -1,4 +1,4 @@
-{
+﻿{
   "papers": [
     {
       "id": "IJMEER_1_1_01",
@@ -19,8 +19,7 @@
       "citation_count": 0,
       "published_date": "2026-04-30",
       "subject": "Law / Political Science",
-      "citations": 0,
-      "doi": "10.5281/ijmeer.2026.01"
+      "citations": 0
     },
     {
       "id": "IJMEER_1_1_02",
@@ -41,8 +40,7 @@
       "citation_count": 0,
       "published_date": "2026-04-30",
       "subject": "Public Health / Psychology",
-      "citations": 0,
-      "doi": "10.5281/ijmeer.2026.02"
+      "citations": 0
     },
     {
       "id": "IJMEER_1_1_03",
@@ -63,8 +61,7 @@
       "citation_count": 0,
       "published_date": "2026-04-30",
       "subject": "Agriculture / Environmental Science",
-      "citations": 0,
-      "doi": "10.5281/ijmeer.2026.03"
+      "citations": 0
     },
     {
       "id": "IJMEER_1_1_04",
@@ -85,8 +82,7 @@
       "citation_count": 0,
       "published_date": "2026-04-30",
       "subject": "Education / Sociology",
-      "citations": 0,
-      "doi": "10.5281/ijmeer.2026.04"
+      "citations": 0
     },
     {
       "id": "IJMEER_1_1_05",
@@ -107,8 +103,7 @@
       "citation_count": 0,
       "published_date": "2026-04-30",
       "subject": "Economics / Management Studies",
-      "citations": 0,
-      "doi": "10.5281/ijmeer.2026.05"
+      "citations": 0
     }
   ]
 }

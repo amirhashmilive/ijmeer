@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -45,11 +45,6 @@
       background: var(--bg-3); display: flex; align-items: center; justify-content: center;
       font-size: 0.7rem; font-weight: 800; color: var(--text-3);
       font-family: var(--font-mono);
-    }
-    .paper-doi {
-      font-family: var(--font-mono); font-size: 0.72rem; color: var(--text-4);
-      background: var(--bg-2); padding: 3px 10px; border-radius: var(--r-sm);
-      border: 1px solid var(--border);
     }
 
     /* Issue card with volume/theme */
@@ -430,7 +425,6 @@ function renderLatestPapers(papers) {
           ${p.citations} cited
         </span>
         <span style="flex:1;"></span>
-        <span class="paper-doi">${p.doi}</span>
         <a href="${p.pdf_url}" class="download-btn" target="_blank" rel="noopener" aria-label="Download PDF of ${p.title}">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
           PDF

@@ -24,58 +24,16 @@
     </a>
 
     <nav class="main-nav" id="main-nav" aria-label="Main navigation">
-      <div class="nav-item has-dropdown">
-        <a href="about-this-journal.html" class="nav-link" aria-haspopup="true">
-          Journal
-          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
-        </a>
-        <div class="dropdown" role="menu">
-          <a href="about-this-journal.html" role="menuitem">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
-            About this journal
-          </a>
-          <a href="editorial-board.html" role="menuitem">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-            Editorial board
-          </a>
-          <a href="abstracting-indexing.html" role="menuitem">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-            Abstracting &amp; Indexing
-          </a>
-          <a href="book-reviews.html" role="menuitem">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
-            Book reviews
-          </a>
-        </div>
+      <div class="nav-item">
+        <a href="journal.html" class="nav-link">Journal</a>
       </div>
 
-      <div class="nav-item has-dropdown">
-        <a href="preparing-materials.html" class="nav-link" aria-haspopup="true">
-          Authors
-          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
-        </a>
-        <div class="dropdown" role="menu">
-          <a href="preparing-materials.html" role="menuitem">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-            Preparing your materials
-          </a>
-          <a href="submitting-materials.html" role="menuitem">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
-            Submitting your materials
-          </a>
-          <a href="fees-pricing.html" role="menuitem">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-            Fees &amp; Pricing
-          </a>
-          <a href="publishing-agreement.html" role="menuitem">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
-            Publishing agreement
-          </a>
-          <a href="post-publication-impact.html" role="menuitem">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-            Post publication impact
-          </a>
-        </div>
+      <div class="nav-item">
+        <a href="editorial-board.html" class="nav-link">Editorial Board</a>
+      </div>
+
+      <div class="nav-item">
+        <a href="authors.html" class="nav-link">Authors</a>
       </div>
 
       <div class="nav-item">
@@ -131,19 +89,20 @@
             <span class="brand-sub">Open Access Journal</span>
           </div>
         </a>
-        <p class="footer-desc">INTERNATIONAL JOURNAL OF MULTIDISCIPLINARY EXPLICATION AND EMERGING RESEARCH (IJMEER). Published by <a href="https://www.meerfoundation.co.in/" target="_blank" rel="noopener noreferrer" style="color:rgba(255,255,255,0.8);text-decoration:none;">Meer Foundation</a></p>
+        <p class="footer-desc">INTERNATIONAL JOURNAL OF MULTIDISCIPLINARY EXPLICATION AND EMERGING RESEARCH (IJMEER).</p>
         <div style="margin-top:20px;">
-          <div style="font-size:0.72rem;font-weight:700;color:rgba(255,255,255,0.5);text-transform:uppercase;letter-spacing:1px;margin-bottom:6px;">PUBLISHER: Meer Foundation</div>
+          <div style="font-size:0.82rem;font-weight:700;color:rgba(255,255,255,0.5);text-transform:uppercase;letter-spacing:1px;margin-bottom:6px;">
+            Publisher: <a href="https://www.meerfoundation.co.in/" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;">Meer Foundation</a>
+          </div>
           <div style="font-size:0.82rem;color:rgba(255,255,255,0.7);line-height:1.7;">
-            Address: House No. 103, Housing Board Colony, Hatkeshar, Dhamtari – 493773, Chhattisgarh, India<br>
-            Email: meercare@live.com<br>
-            Phone: 9826121177
+            Address: House No. 103, Housing Board Colony, Hatkeshar, Dhamtari – 493773, Chhattisgarh, India
           </div>
         </div>
         <div style="margin-top:16px;">
-          <div style="font-size:0.72rem;font-weight:700;color:rgba(255,255,255,0.5);text-transform:uppercase;letter-spacing:1px;margin-bottom:6px;">JOURNAL: IJMEER</div>
+          <div style="font-size:0.72rem;font-weight:700;color:rgba(255,255,255,0.5);text-transform:uppercase;letter-spacing:1px;margin-bottom:6px;">Contact IJMEER</div>
           <div style="font-size:0.82rem;color:rgba(255,255,255,0.7);line-height:1.7;">
-            Email: ijmeerj@gmail.com, editor@ijmeer.com
+            Email: <a href="mailto:ijmeerj@gmail.com" style="color:inherit;">ijmeerj@gmail.com</a><br>
+            Email: <a href="mailto:editor@ijmeer.com" style="color:inherit;">editor@ijmeer.com</a>
           </div>
         </div>
         <div class="social-links" style="margin-top:36px;" aria-label="Social media links">
@@ -172,12 +131,13 @@
       <div>
         <h3 class="footer-head">Journal</h3>
         <nav class="footer-links" aria-label="Journal links">
-          <a href="about-this-journal.html">About IJMEER</a>
+          <a href="journal.html">About IJMEER</a>
           <a href="editorial-board.html">Editorial Board</a>
-          <a href="book-reviews.html">Book Reviews</a>
-          <a href="abstracting-indexing.html">Indexing</a>
+          <a href="journal.html#book-reviews">Book Reviews</a>
+          <a href="journal.html#indexing">Indexing</a>
           <a href="archive.html">Archives</a>
           <a href="citations.html">Articles &amp; Citations</a>
+          <a href="library.html">Library Access</a>
         </nav>
       </div>
 
@@ -186,11 +146,11 @@
         <h3 class="footer-head">Authors</h3>
         <nav class="footer-links" aria-label="Author resources">
           <a href="${S}" target="_blank" rel="noopener">Submit Paper</a>
-          <a href="fees-pricing.html">Fees &amp; Pricing</a>
-          <a href="preparing-materials.html">Author Guidelines</a>
-          <a href="submitting-materials.html">Submission Guide</a>
-          <a href="publication-process.html">Publication Process</a>
-          <a href="post-publication-impact.html">Post-Publication</a>
+          <a href="authors.html">Author Instructions</a>
+          <a href="authors.html#preparing">Preparing Materials</a>
+          <a href="authors.html#fees">Fees &amp; Pricing</a>
+          <a href="authors.html#agreement">Publishing Agreement</a>
+          <a href="authors.html#impact">Post-Publication</a>
         </nav>
       </div>
 

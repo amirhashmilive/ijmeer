@@ -1,4 +1,4 @@
-{
+﻿{
   "journal": {
     "name": "International Journal of Multidisciplinary Explication and Emerging Research",
     "abbreviation": "IJMEER",
@@ -60,15 +60,14 @@
   "fees": {
     "indian_apc": 3000,
     "indian_apc_currency": "INR",
-    "international_apc": 75,
-    "international_apc_currency": "USD",
-    "fast_track_indian": 2000,
-    "fast_track_international": 50,
+    "indian_apc": 3000,
+    
+    
     "late_submission_fee": 500,
     "late_fee_currency": "INR",
     "payment_url": "https://rzp.io/rzp/ijmeer",
     "payment_button_color": "#0072B2",
-    "gst_applicable": true
+    "gst_applicable": false
   },
   "analytics": {
     "gtm_id": "GTM-NWHDPZRK",

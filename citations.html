@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -164,13 +164,12 @@ function setFormat(f) {
 }
 
 function formatCitation(p, format) {
-  const doi = p.doi || `10.5281/ijmeer.${p.id}`;
   const journalName = 'INTERNATIONAL JOURNAL OF MULTIDISCIPLINARY EXPLICATION AND EMERGING RESEARCH (IJMEER)';
   const issueStr = `Vol. ${p.volume}, Issue ${p.issue}`;
   if (format === 'APA') {
-    return `${p.authors} (${p.year}). ${p.title}. <em>${journalName}</em>, ${issueStr}. https://${doi}`;
+    return `${p.authors} (${p.year}). ${p.title}. <em>${journalName}</em>, ${issueStr}.`;
   } else if (format === 'MLA') {
-    return `${p.authors}. "${p.title}." <em>${journalName}</em>, ${issueStr}, ${p.year}, https://${doi}`;
+    return `${p.authors}. "${p.title}." <em>${journalName}</em>, ${issueStr}, ${p.year}.`;
   } else { // BibTeX
     const key = p.authors.split(',')[0].split(' ').pop().toLowerCase() + p.year;
     return `@article{${key},\n  author  = {${p.authors}},\n  title   = {${p.title}},\n  journal = {IJMEER},\n  year    = {${p.year}},\n  volume  = {${p.volume}},\n  number  = {${p.issue}},\n  doi     = {${doi}}\n}`;
@@ -190,7 +189,7 @@ function renderCitations() {
       p.title.toLowerCase().includes(query) ||
       p.authors.toLowerCase().includes(query) ||
       p.subject.toLowerCase().includes(query) ||
-      (p.doi || '').toLowerCase().includes(query)
+      (p.title || "").toLowerCase().includes(query)
     );
   }
 
