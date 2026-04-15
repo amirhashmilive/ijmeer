@@ -1,4 +1,4 @@
-﻿{
+{
   "papers": [
     {
       "id": "IJMEER_1_1_01",
@@ -15,7 +15,7 @@
       "last_page": 6,
       "page_range": "1-6",
       "pdf_filename": "vol1-issue1-article1.pdf",
-      "pdf_url": "/pdfs/vol1-issue1-article1.pdf",
+      "pdf_url": "pdfs/vol1-issue1-article1.pdf",
       "citation_count": 0,
       "published_date": "2026-04-30",
       "subject": "Law / Political Science",
@@ -36,7 +36,7 @@
       "last_page": 10,
       "page_range": "7-10",
       "pdf_filename": "vol1-issue1-article2.pdf",
-      "pdf_url": "/pdfs/vol1-issue1-article2.pdf",
+      "pdf_url": "pdfs/vol1-issue1-article2.pdf",
       "citation_count": 0,
       "published_date": "2026-04-30",
       "subject": "Public Health / Psychology",
@@ -57,7 +57,7 @@
       "last_page": 14,
       "page_range": "11-14",
       "pdf_filename": "vol1-issue1-article3.pdf",
-      "pdf_url": "/pdfs/vol1-issue1-article3.pdf",
+      "pdf_url": "pdfs/vol1-issue1-article3.pdf",
       "citation_count": 0,
       "published_date": "2026-04-30",
       "subject": "Agriculture / Environmental Science",
@@ -78,7 +78,7 @@
       "last_page": 20,
       "page_range": "15-20",
       "pdf_filename": "vol1-issue1-article4.pdf",
-      "pdf_url": "/pdfs/vol1-issue1-article4.pdf",
+      "pdf_url": "pdfs/vol1-issue1-article4.pdf",
       "citation_count": 0,
       "published_date": "2026-04-30",
       "subject": "Education / Sociology",
@@ -99,7 +99,7 @@
       "last_page": 25,
       "page_range": "21-25",
       "pdf_filename": "vol1-issue1-article5.pdf",
-      "pdf_url": "/pdfs/vol1-issue1-article5.pdf",
+      "pdf_url": "pdfs/vol1-issue1-article5.pdf",
       "citation_count": 0,
       "published_date": "2026-04-30",
       "subject": "Economics / Management Studies",

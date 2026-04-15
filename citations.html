@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -172,7 +172,7 @@ function formatCitation(p, format) {
     return `${p.authors}. "${p.title}." <em>${journalName}</em>, ${issueStr}, ${p.year}.`;
   } else { // BibTeX
     const key = p.authors.split(',')[0].split(' ').pop().toLowerCase() + p.year;
-    return `@article{${key},\n  author  = {${p.authors}},\n  title   = {${p.title}},\n  journal = {IJMEER},\n  year    = {${p.year}},\n  volume  = {${p.volume}},\n  number  = {${p.issue}},\n  doi     = {${doi}}\n}`;
+    return `@article{${key},\n  author  = {${p.authors}},\n  title   = {${p.title}},\n  journal = {IJMEER},\n  year    = {${p.year}},\n  volume  = {${p.volume}},\n  number  = {${p.issue}},\n  doi     = {${p.doi || 'N/A'}}\n}`;
   }
 }
 

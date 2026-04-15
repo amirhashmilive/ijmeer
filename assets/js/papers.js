@@ -1,4 +1,4 @@
-﻿/* ============================================================
+/* ============================================================
    IJMEER — papers.js
    Powers paper search, filtering, and citation tools
    across Issues, Citations, and Articles pages
@@ -41,7 +41,7 @@
         return `${paper.authors}. "${paper.title}." <em>${journal}</em>, ${issueStr}, ${paper.year}.`;
       case 'BibTeX': {
         const key = (paper.authors.split(',')[0].split(' ').pop() || 'author').toLowerCase() + paper.year;
-        return `@article{${key},\n  author  = {${paper.authors}},\n  title   = {${paper.title}},\n  journal = {IJMEER},\n  year    = {${paper.year}},\n  volume  = {${paper.volume}},\n  number  = {${paper.issue}},\n  doi     = {${doi}}\n}`;
+        return `@article{${key},\n  author  = {${paper.authors}},\n  title   = {${paper.title}},\n  journal = {IJMEER},\n  year    = {${paper.year}},\n  volume  = {${paper.volume}},\n  number  = {${paper.issue}},\n  doi     = {${paper.doi || 'N/A'}}\n}`;
       }
       default: // APA
         return `${paper.authors} (${paper.year}). ${paper.title}. <em>${journal}</em>, ${issueStr}.`;
