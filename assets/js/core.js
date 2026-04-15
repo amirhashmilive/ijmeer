@@ -47,84 +47,43 @@
   );
   revealEls.forEach(el => window.revealObserver.observe(el));
 
-  // ── Mobile menu ───────────────────────────────────────────
-  // Exposed globally so components.js can call it after injecting the header.
+  // ── Mobile Menu System (Premium Slide-in Redesign) ─────────────────────
   window.initMobileMenu = function () {
-    const menuToggle = document.getElementById('menu-toggle');
-    const mainNav    = document.getElementById('main-nav');
-    const siteHeader = document.getElementById('site-header');
+    const toggle = document.querySelector('.mobile-menu-toggle');
+    const nav = document.querySelector('.mobile-nav');
+    const overlay = document.querySelector('.overlay');
+    const closeBtn = document.querySelector('.close-menu');
 
-    if (!menuToggle || !mainNav) return; // header not in DOM yet
-    if (menuToggle._mobileMenuBound) return; // already bound, don't double-up
-    menuToggle._mobileMenuBound = true;
+    if (!toggle || !nav || !overlay) return;
+    if (toggle._bound) return;
+    toggle._bound = true;
+
+    function openMenu() {
+      nav.classList.add('active');
+      overlay.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
 
     function closeMenu() {
-      mainNav.classList.remove('open');
-      menuToggle.setAttribute('aria-expanded', 'false');
+      nav.classList.remove('active');
+      overlay.classList.remove('active');
       document.body.style.overflow = '';
-      document.body.classList.remove('nav-open');
     }
 
-    function toggleMenu(e) {
-      if (e) {
-        e.preventDefault();
-        e.stopPropagation();
-      }
-      const isOpen = mainNav.classList.toggle('open');
-      menuToggle.setAttribute('aria-expanded', String(isOpen));
-      document.body.style.overflow = isOpen ? 'hidden' : '';
-      document.body.classList.toggle('nav-open', isOpen);
-    }
+    toggle.addEventListener('click', openMenu);
+    if (closeBtn) closeBtn.addEventListener('click', closeMenu);
+    overlay.addEventListener('click', closeMenu);
 
-    // Attach to both to satisfy debug checklist requirements
-    menuToggle.onclick = toggleMenu;
-
-    // Mobile sub-menu (dropdown) expand on tap
-    mainNav.querySelectorAll('.nav-item.has-dropdown > .nav-link').forEach(link => {
-      link.addEventListener('click', (e) => {
-        if (window.innerWidth <= 768) {
-          e.preventDefault();
-          e.stopPropagation();
-          link.closest('.nav-item').classList.toggle('open');
-        }
-      });
-    });
-
-    // Close when a leaf link inside the nav is tapped
-    mainNav.querySelectorAll('a.nav-link:not(.has-dropdown > .nav-link), .mobile-only a').forEach(link => {
-      link.addEventListener('click', () => {
-        if (window.innerWidth <= 768) closeMenu();
-      });
-    });
-
-    // Close via backdrop click (outside the header)
-    document.addEventListener('click', (e) => {
-      if (siteHeader && !siteHeader.contains(e.target) && mainNav.classList.contains('open')) {
-        closeMenu();
-      }
-    });
-
-    // Close on ESC
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && mainNav.classList.contains('open')) {
-        closeMenu();
-        menuToggle.focus();
-      }
-    });
-
-    // Reset on resize to desktop
-    window.addEventListener('resize', () => {
-      if (window.innerWidth > 768 && mainNav.classList.contains('open')) {
-        closeMenu();
-      }
+    // Close menu when clicking a link
+    nav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', closeMenu);
     });
   };
 
-  // Try to init immediately (covers pages where header is already in HTML)
-  window.initMobileMenu();
-
-  // Also init when components.js fires 'headerInjected' (dynamic injection)
+  // Bind to injection event
   document.addEventListener('headerInjected', () => window.initMobileMenu());
+  // Also try immediate in case it's hardcoded
+  window.initMobileMenu();
 
 
   // ── Accordion ─────────────────────────────────────────────

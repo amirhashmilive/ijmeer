@@ -24,41 +24,13 @@
     </a>
 
     <nav class="main-nav" id="main-nav" aria-label="Main navigation">
-      <div class="nav-item">
-        <a href="journal.html" class="nav-link">Journal</a>
-      </div>
-
-      <div class="nav-item">
-        <a href="editorial-board.html" class="nav-link">Editorial Board</a>
-      </div>
-
-      <div class="nav-item">
-        <a href="authors.html" class="nav-link">Authors</a>
-      </div>
-
-      <div class="nav-item">
-        <a href="peer-review.html" class="nav-link">Peer Review</a>
-      </div>
-
-      <div class="nav-item">
-        <a href="archive.html" class="nav-link">Archives</a>
-      </div>
-
-      <div class="nav-item">
-        <a href="citations.html" class="nav-link">Citations</a>
-      </div>
-
-      <div class="nav-item">
-        <a href="contact.html" class="nav-link">Contact</a>
-      </div>
-
-      <!-- Mobile submit -->
-      <div class="nav-item mobile-only" style="margin-top:12px;">
-        <a href="${S}" class="btn btn-primary" style="width:100%;justify-content:center;" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:15px;height:15px;"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
-          Submit Manuscript
-        </a>
-      </div>
+      <div class="nav-item"><a href="journal.html" class="nav-link">Journal</a></div>
+      <div class="nav-item"><a href="editorial-board.html" class="nav-link">Editorial Board</a></div>
+      <div class="nav-item"><a href="authors.html" class="nav-link">Authors</a></div>
+      <div class="nav-item"><a href="peer-review.html" class="nav-link">Peer Review</a></div>
+      <div class="nav-item transition-all"><a href="archive.html" class="nav-link">Archives</a></div>
+      <div class="nav-item"><a href="citations.html" class="nav-link">Citations</a></div>
+      <div class="nav-item"><a href="contact.html" class="nav-link">Contact</a></div>
     </nav>
 
     <div class="header-actions">
@@ -66,11 +38,24 @@
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
         Submit
       </a>
-      <button class="menu-toggle hamburger" id="menu-toggle" type="button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="main-nav">
-        <span></span><span></span><span></span>
-      </button>
+      <button class="mobile-menu-toggle" aria-label="Open menu">☰</button>
     </div>
   </div>
+
+  <div class="overlay"></div>
+
+  <nav class="mobile-nav">
+    <button class="close-menu" aria-label="Close menu">&times;</button>
+    <ul>
+      <li><a href="journal.html">Journal</a></li>
+      <li><a href="editorial-board.html">Editorial Board</a></li>
+      <li><a href="authors.html">Authors</a></li>
+      <li><a href="peer-review.html">Peer Review</a></li>
+      <li><a href="archive.html">Archives</a></li>
+      <li><a href="citations.html">Citations</a></li>
+      <li style="margin-top: 30px;"><a href="${S}" class="submit-btn" target="_blank" rel="noopener">Submit Manuscript</a></li>
+    </ul>
+  </nav>
 </header>`;
 
   /* ────────────────────────────────────────────────────────────

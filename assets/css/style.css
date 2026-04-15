@@ -366,11 +366,14 @@ input, textarea, select { font-family: var(--font-sans); }
 /* Visibility Utilities */
 .desktop-only { display: flex !important; }
 .mobile-only  { display: none !important; }
+.mobile-menu-toggle, .mobile-nav, .overlay { display: none; }
 
-@media (max-width: 1024px) {
-  .desktop-only { display: none !important; }
+@media (max-width: 768px) {
+  .desktop-only, .main-nav { display: none !important; }
   .mobile-only  { display: flex !important; }
 }
+
+
 
 /* ============================================================
    HERO SECTION — PREMIUM REDESIGN
@@ -1584,24 +1587,7 @@ input, textarea, select { font-family: var(--font-sans); }
 @media (max-width: 768px) {
   :root { --header-h: 70px; }
   .announcement-bar { display: none; }
-  .menu-toggle { display: flex; }
-  .main-nav {
-    position: fixed; top: var(--header-h); left: 0; right: 0; bottom: 0;
-    background: var(--bg); flex-direction: column; align-items: flex-start;
-    padding: 20px; gap: 4px; transform: translateX(-100%);
-    transition: transform var(--t); overflow-y: auto; z-index: var(--z-overlay);
-    border-right: 1px solid var(--border);
-  }
-  .main-nav.open { transform: translateX(0); box-shadow: var(--sh-xl); }
-  .nav-item { width: 100%; }
-  .nav-link { width: 100%; padding: 12px 16px; font-size: 0.95rem; }
-  .dropdown {
-    position: static; opacity: 1; visibility: visible;
-    transform: none; box-shadow: none; border: none;
-    background: var(--bg-2); border-radius: var(--r); padding: 4px 0 4px 16px;
-    margin-top: 4px; display: none;
-  }
-  .nav-item.open .dropdown { display: block !important; }
+
   .hero { padding-top: calc(var(--header-h) + 32px + 64px); padding-bottom: 64px; min-height: auto; }
   .hero-stats { grid-template-columns: 1fr 1fr; }
   .section { padding: 64px 0; }
@@ -1627,88 +1613,135 @@ input, textarea, select { font-family: var(--font-sans); }
   .footer-newsletter-form { flex-direction: column; }
 }
 
-/* ============================================================
-   MOBILE MENU — CRITICAL FIX (Section 7)
-   ============================================================ */
 @media (max-width: 768px) {
-  /* Ensure hamburger is always visible and large enough */
-  .menu-toggle {
-    display: flex !important;
-    width: 44px; height: 44px;
-    min-width: 44px; min-height: 44px;
-    border-radius: var(--r-sm);
-    background: var(--bg-2);
-    border: 1.5px solid var(--border);
-    cursor: pointer;
-    -webkit-tap-highlight-color: transparent;
-    touch-action: manipulation;
-  }
-
-  /* Mobile nav drawer */
-  .main-nav {
+  /* PREMIUM SLIDE-IN MOBILE MENU */
+  .mobile-menu-toggle {
+    display: block;
     position: fixed;
-    top: var(--header-h);
-    left: 0; right: 0; bottom: 0;
-    background: var(--bg);
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 16px;
-    gap: 2px;
-    /* Default: hidden off-screen LEFT */
-    transform: translateX(-100%);
-    transition: transform 0.3s cubic-bezier(0.4,0,0.2,1);
+    top: 20px;
+    right: 20px;
+    z-index: 1001;
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    width: 44px;
+    height: 44px;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: var(--sh-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .mobile-nav {
+    display: block; /* Overrides global display: none */
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 80%;
+    max-width: 350px;
+    height: 100%;
+    background: #ffffff;
+    box-shadow: -10px 0 40px rgba(0,0,0,0.15);
+    z-index: 1000;
+    transition: right 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     overflow-y: auto;
-    -webkit-overflow-scrolling: touch;
-    z-index: var(--z-overlay);
-    border-right: 1px solid var(--border);
-    box-shadow: none;
+    padding: 80px 30px 40px;
+    border-left: 1px solid var(--border);
   }
 
-  /* When open: slide in from left */
-  .main-nav.open {
-    transform: translateX(0) !important;
-    box-shadow: 4px 0 32px rgba(0,0,0,0.15);
+  .mobile-nav.active {
+    right: 0;
   }
 
-  /* Full-width nav items */
-  .nav-item { width: 100%; }
-  .nav-link {
-    width: 100%;
-    padding: 14px 16px;
-    font-size: 1rem;
-    border-radius: var(--r-sm);
-    min-height: 44px;
-    display: flex; align-items: center;
+  .mobile-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
   }
 
-  /* Dropdown inside mobile drawer */
-  .dropdown {
-    position: static !important;
-    opacity: 1 !important;
-    visibility: visible !important;
-    transform: none !important;
-    box-shadow: none !important;
-    border: none !important;
-    background: var(--bg-2);
-    border-radius: var(--r);
-    padding: 4px 0 4px 16px;
-    margin-top: 4px;
+  .mobile-nav li {
+    margin: 20px 0;
+    opacity: 0;
+    transform: translateX(20px);
+    transition: all 0.3s ease;
+  }
+
+  .mobile-nav.active li {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  /* Staggered entrance for menu items */
+  .mobile-nav.active li:nth-child(1) { transition-delay: 0.1s; }
+  .mobile-nav.active li:nth-child(2) { transition-delay: 0.15s; }
+  .mobile-nav.active li:nth-child(3) { transition-delay: 0.2s; }
+  .mobile-nav.active li:nth-child(4) { transition-delay: 0.25s; }
+  .mobile-nav.active li:nth-child(5) { transition-delay: 0.3s; }
+  .mobile-nav.active li:nth-child(6) { transition-delay: 0.35s; }
+  .mobile-nav.active li:nth-child(7) { transition-delay: 0.4s; }
+
+  .mobile-nav a {
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--navy);
+    transition: color 0.2s;
+    display: block;
+    padding: 8px 0;
+    font-family: var(--font-serif);
+  }
+
+  .mobile-nav a:active {
+    color: var(--blue);
+  }
+
+  .mobile-nav .submit-btn {
+    background: var(--grad-brand);
+    color: white !important;
+    padding: 14px 20px;
+    border-radius: 12px;
+    text-align: center;
+    display: block;
+    font-family: var(--font-sans);
+    font-weight: 700;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+  }
+
+  .close-menu {
+    position: absolute;
+    top: 20px;
+    right: 24px;
+    font-size: 32px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--text-3);
+    line-height: 1;
+  }
+
+  .overlay {
     display: none;
-  }
-  .nav-item.open .dropdown { display: block !important; }
-  .dropdown a {
-    padding: 12px 14px;
-    font-size: 0.9rem;
-    min-height: 44px;
-    display: flex; align-items: center;
+    /* display: block is handled via .overlay.active */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(10, 22, 40, 0.4);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    z-index: 999;
   }
 
-  /* Mobile-only submit button full width */
-  .mobile-only { display: flex !important; }
-  .desktop-only { display: none !important; }
+  .overlay.active {
+    display: block;
+  }
 
   /* Fix hero on mobile */
-  .hero { padding-top: calc(var(--header-h) + 32px + 64px); padding-bottom: 64px; min-height: auto; }
+  .hero { padding-top: calc(var(--header-h) + 16px); }
+
   .hero-stats { grid-template-columns: 1fr 1fr; }
   .hero-actions { flex-direction: column; gap: 10px; }
   .hero-actions .btn { width: 100%; justify-content: center; }
@@ -1740,70 +1773,12 @@ input, textarea, select { font-family: var(--font-sans); }
   .paper-meta { flex-direction: column; gap: 8px; align-items: flex-start; }
   .paper-meta .paper-doi { width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 
-  /* Dropdowns revealed via chevron only on desktop */
-  .nav-item:hover > .dropdown { display: none; }
-  .nav-item.open > .dropdown { display: block !important; }
+
 }
 
-/* Overlay backdrop for mobile menu */
-@media (max-width: 768px) {
-  body.nav-open::after {
-    content: '';
-    position: fixed;
-    inset: 0;
-    background: rgba(0,0,0,0.4);
-    z-index: calc(var(--z-overlay) - 1);
-    backdrop-filter: blur(2px);
-  }
-}
 
-/* ============================================================
-   MOBILE-ONLY FIXES (max-width: 768px)
-   ============================================================ */
-@media (max-width: 768px) {
-  /* Fix header layout: brand left, hamburger right */
-  .header-inner {
-    display: flex !important;
-    align-items: center !important;
-    justify-content: space-between !important;
-    gap: 12px;
-  }
 
-  /* Hamburger always on the RIGHT */
-  .header-actions {
-    margin-left: auto;
-    display: flex !important;
-    align-items: center;
-    gap: 8px;
-    order: 3;
-  }
 
-  /* Menu toggle visible and functional */
-  .menu-toggle {
-    display: flex !important;
-    order: 3;
-    flex-direction: column;
-    gap: 5px;
-    width: 44px;
-    height: 44px;
-    min-width: 44px;
-    min-height: 44px;
-    border-radius: var(--r-sm);
-    background: var(--bg-2);
-    border: 1.5px solid var(--border);
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    -webkit-tap-highlight-color: transparent;
-    touch-action: manipulation;
-    z-index: calc(var(--z-header) + 1);
-  }
-
-  /* Hide the 70+ Subject Areas section on mobile */
-  #subjects {
-    display: none !important;
-  }
-}
 
 
 @media (prefers-reduced-motion: reduce) {
