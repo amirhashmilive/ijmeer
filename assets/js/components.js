@@ -116,13 +116,13 @@
       <div>
         <h3 class="footer-head">Journal</h3>
         <nav class="footer-links" aria-label="Journal links">
-          <a href="journal.html">About IJMEER</a>
+          <a href="journal.html">Journal</a>
           <a href="editorial-board.html">Editorial Board</a>
-          <a href="journal.html#book-reviews">Book Reviews</a>
-          <a href="journal.html#indexing">Indexing</a>
+          <a href="authors.html">Authors</a>
+          <a href="peer-review.html">Peer Review</a>
           <a href="archive.html">Archives</a>
-          <a href="citations.html">Articles &amp; Citations</a>
-          <a href="library.html">Library Access</a>
+          <a href="citations.html">Citations</a>
+          <a href="library.html">Library Subscription</a>
         </nav>
       </div>
 
