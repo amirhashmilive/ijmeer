@@ -1,36 +1,88 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-          http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-
-  <!-- Core pages -->
-  <url><loc>https://www.ijmeer.com/</loc><priority>1.0</priority><changefreq>weekly</changefreq></url>
-  <url><loc>https://www.ijmeer.com/archive.html</loc><priority>0.9</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://www.ijmeer.com/citations.html</loc><priority>0.9</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://www.ijmeer.com/editorial-board.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://www.ijmeer.com/editorial-portfolio.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://www.ijmeer.com/contact.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
-
-  <!-- Journal information -->
-  <url><loc>https://www.ijmeer.com/journal.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
-
-  <!-- Author resources -->
-  <url><loc>https://www.ijmeer.com/authors.html</loc><priority>0.9</priority><changefreq>monthly</changefreq></url>
-
-  <!-- Peer review -->
-  <url><loc>https://www.ijmeer.com/peer-review.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://www.ijmeer.com/join-reviewer.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
-
-  <!-- Policies -->
-  <url><loc>https://www.ijmeer.com/open-access-options.html</loc><priority>0.6</priority><changefreq>yearly</changefreq></url>
-  <url><loc>https://www.ijmeer.com/publishing-ethics.html</loc><priority>0.6</priority><changefreq>yearly</changefreq></url>
-  <url><loc>https://www.ijmeer.com/research-transparency.html</loc><priority>0.5</priority><changefreq>yearly</changefreq></url>
-  <url><loc>https://www.ijmeer.com/rights-permissions.html</loc><priority>0.5</priority><changefreq>yearly</changefreq></url>
-  <url><loc>https://www.ijmeer.com/privacy-policy.html</loc><priority>0.4</priority><changefreq>yearly</changefreq></url>
-
-  <!-- Other -->
-  <url><loc>https://www.ijmeer.com/library.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://www.ijmeer.com/publication-process.html</loc><priority>0.6</priority><changefreq>yearly</changefreq></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://www.ijmeer.com/</loc>
+    <lastmod>2026-04-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.ijmeer.com/index.html</loc>
+    <lastmod>2026-04-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.ijmeer.com/journal.html</loc>
+    <lastmod>2026-04-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.ijmeer.com/archive.html</loc>
+    <lastmod>2026-04-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.ijmeer.com/citations.html</loc>
+    <lastmod>2026-04-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.ijmeer.com/editorial-board.html</loc>
+    <lastmod>2026-04-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.ijmeer.com/authors.html</loc>
+    <lastmod>2026-04-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.ijmeer.com/peer-review.html</loc>
+    <lastmod>2026-04-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.ijmeer.com/contact.html</loc>
+    <lastmod>2026-04-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <!-- PDF URLs for articles -->
+  <url>
+    <loc>https://www.ijmeer.com/papers/volume_1/issue_1/IJMEER_V1_I1_P01_2026.pdf</loc>
+    <lastmod>2026-04-16</lastmod>
+    <changefreq>never</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.ijmeer.com/papers/volume_1/issue_1/IJMEER_V1_I1_P02_2026.pdf</loc>
+    <lastmod>2026-04-16</lastmod>
+    <changefreq>never</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.ijmeer.com/papers/volume_1/issue_1/IJMEER_V1_I1_P03_2026.pdf</loc>
+    <lastmod>2026-04-16</lastmod>
+    <changefreq>never</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.ijmeer.com/papers/volume_1/issue_1/IJMEER_V1_I1_P04_2026.pdf</loc>
+    <lastmod>2026-04-16</lastmod>
+    <changefreq>never</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.ijmeer.com/papers/volume_1/issue_1/IJMEER_V1_I1_P05_2026.pdf</loc>
+    <lastmod>2026-04-16</lastmod>
+    <changefreq>never</changefreq>
+    <priority>0.6</priority>
+  </url>
 </urlset>
-
