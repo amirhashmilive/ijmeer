@@ -61,12 +61,14 @@
     function openMenu() {
       nav.classList.add('active');
       overlay.classList.add('active');
+      toggle.setAttribute('aria-expanded', 'true');
       document.body.style.overflow = 'hidden';
     }
 
     function closeMenu() {
       nav.classList.remove('active');
       overlay.classList.remove('active');
+      toggle.setAttribute('aria-expanded', 'false');
       document.body.style.overflow = '';
     }
 
