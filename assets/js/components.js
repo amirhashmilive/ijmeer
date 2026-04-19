@@ -15,7 +15,7 @@
   const HEADER = `
 <header class="site-header" id="site-header" role="banner">
   <div class="container header-inner">
-    <a href="index.html" class="brand" aria-label="IJMEER Home">
+    <a href="/" class="brand" aria-label="IJMEER Home">
       <div class="brand-mark" aria-hidden="true">IJ</div>
       <div class="brand-text">
         <span class="brand-name">IJMEER</span>
@@ -71,7 +71,7 @@
     <div class="footer-grid">
       <!-- Brand column -->
       <div class="footer-brand">
-        <a href="index.html" class="brand" style="margin-bottom:16px;" aria-label="IJMEER Home">
+        <a href="/" class="brand" style="margin-bottom:16px;" aria-label="IJMEER Home">
           <div class="brand-mark">IJ</div>
           <div class="brand-text">
             <span class="brand-name">IJMEER</span>
