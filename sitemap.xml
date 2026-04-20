@@ -60,18 +60,7 @@
   </url>
 
   <!-- ── JOURNAL INFORMATION ── -->
-  <url>
-    <loc>https://www.ijmeer.com/about-this-journal.html</loc>
-    <lastmod>2026-04-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.ijmeer.com/abstracting-indexing.html</loc>
-    <lastmod>2026-04-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
+
   <url>
     <loc>https://www.ijmeer.com/library.html</loc>
     <lastmod>2026-04-20</lastmod>
@@ -199,49 +188,7 @@
     <priority>0.7</priority>
   </url>
 
-  <!-- ── STUB / PLACEHOLDER PAGES (indexed for future content) ── -->
-  <url>
-    <loc>https://www.ijmeer.com/book-reviews.html</loc>
-    <lastmod>2026-04-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://www.ijmeer.com/fees-pricing.html</loc>
-    <lastmod>2026-04-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://www.ijmeer.com/metrics.html</loc>
-    <lastmod>2026-04-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://www.ijmeer.com/post-publication-impact.html</loc>
-    <lastmod>2026-04-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://www.ijmeer.com/preparing-materials.html</loc>
-    <lastmod>2026-04-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://www.ijmeer.com/publishing-agreement.html</loc>
-    <lastmod>2026-04-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://www.ijmeer.com/submitting-materials.html</loc>
-    <lastmod>2026-04-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
+
 
   <!-- ── PDF ARTICLES — Vol. 1, Issue 1 ── -->
   <url>
