@@ -171,6 +171,10 @@
   <!-- Instant theme apply (prevents flash) -->
   
 
+  <!-- Swiper.js -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
   <link rel="stylesheet" href="assets/css/style.css">
   <style>
     /* Homepage-specific enhancements */
@@ -316,147 +320,111 @@
       <div class="hero-panel" aria-hidden="true">
         <div class="hero-card">
           <style>
-            .rotating-announcement-container {
-              min-height: 190px;
-              position: relative;
+            .mySwiper {
+              height: 200px; /* FIXED HEIGHT */
             }
-            .announcement-item {
-              transition: opacity 0.5s ease-in-out;
-              opacity: 0;
-              position: absolute;
-              top: 0;
-              left: 0;
-              width: 100%;
-              pointer-events: none;
-              z-index: 0;
-            }
-            .announcement-item.active {
-              opacity: 1;
-              pointer-events: auto;
-              z-index: 1;
-              position: relative;
-            }
-            .announcement-item a {
+            .swiper-slide a {
               text-decoration: none;
               color: inherit;
               display: block;
+              height: 100%;
             }
-            .announcement-item a:hover .hero-card-title {
+            .swiper-slide a:hover .hero-card-title {
               color: var(--blue);
             }
-            .announcement-dots {
-              display: flex;
-              justify-content: center;
-              gap: 8px;
+            .mySwiper .swiper-pagination {
+              position: relative;
               margin-top: 8px;
-              margin-bottom: 4px;
+              bottom: 0 !important;
             }
-            .announcement-dot {
+            .mySwiper .swiper-pagination-bullet {
               width: 8px;
               height: 8px;
-              border-radius: 50%;
               background-color: var(--border, #e2e8f0);
-              cursor: pointer;
+              opacity: 1;
               transition: background-color 0.3s;
             }
-            .announcement-dot.active {
-              background-color: var(--blue, #2563eb);
+            .mySwiper .swiper-pagination-bullet-active {
+              background-color: var(--blue, #2563eb) !important;
             }
           </style>
 
-          <div class="rotating-announcement-container" id="announcement-container"></div>
-          <div class="announcement-dots" id="announcement-dots"></div>
+          <!-- Swiper -->
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              
+              <!-- Item 1 -->
+              <div class="swiper-slide">
+                <a href="/pdfs/vol1-issue1-article1.pdf">
+                  <div class="hero-card-label">📄 PAPER 1</div>
+                  <div class="hero-card-title">Implementation of Three New Criminal Laws in India: A Study of Police Preparedness in Uttar Pradesh</div>
+                  <div class="hero-card-meta">Arjun Singh &nbsp;·&nbsp; Vol. 1, Issue 1 (2026) &nbsp;·&nbsp; pp. 1&ndash;5</div>
+                  <div class="hero-card-badge">Open Access &nbsp;·&nbsp; Law / Political Science</div>
+                </a>
+              </div>
 
+              <!-- Item 2 -->
+              <div class="swiper-slide">
+                <a href="/pdfs/vol1-issue1-article2.pdf">
+                  <div class="hero-card-label">📄 PAPER 2</div>
+                  <div class="hero-card-title">Mental Health Awareness Among College Students in Kerala Post-COVID</div>
+                  <div class="hero-card-meta">Priya Menon &amp; Anitha Krishnan &nbsp;·&nbsp; Vol. 1, Issue 1 (2026) &nbsp;·&nbsp; pp. 6&ndash;18</div>
+                  <div class="hero-card-badge">Open Access &nbsp;·&nbsp; Public Health / Psychology</div>
+                </a>
+              </div>
+
+              <!-- Item 3 -->
+              <div class="swiper-slide">
+                <a href="/pdfs/vol1-issue1-article3.pdf">
+                  <div class="hero-card-label">📄 PAPER 3</div>
+                  <div class="hero-card-title">Farmers' Adoption of Sustainable Agricultural Practices in Punjab</div>
+                  <div class="hero-card-meta">Gurpreet Kaur &nbsp;·&nbsp; Vol. 1, Issue 1 (2026) &nbsp;·&nbsp; pp. 19&ndash;35</div>
+                  <div class="hero-card-badge">Open Access &nbsp;·&nbsp; Agriculture / Environmental Science</div>
+                </a>
+              </div>
+
+              <!-- Item 4 -->
+              <div class="swiper-slide">
+                <a href="/call-for-papers.html">
+                  <div class="hero-card-label">📢 CALL FOR PAPERS</div>
+                  <div class="hero-card-title">Call for Papers &mdash; July&ndash;September 2026</div>
+                  <div class="hero-card-meta">Sustainable Development: Livelihood &amp; Skill Development, Health, Education, Environment, and Women Empowerment<br>Deadline: September 15, 2026 &nbsp;·&nbsp; Publication: October 2026</div>
+                  <div class="hero-card-badge">Open Access &nbsp;·&nbsp; Call for Papers</div>
+                </a>
+              </div>
+
+              <!-- Item 5 -->
+              <div class="swiper-slide">
+                <a href="/library.html">
+                  <div class="hero-card-label">📚 LIBRARY OFFER</div>
+                  <div class="hero-card-title">Free Library Subscription for Institutions</div>
+                  <div class="hero-card-meta">Register your library for free digital access, print copies, and quarterly citation reports</div>
+                  <div class="hero-card-badge">No Cost &nbsp;·&nbsp; Open Access</div>
+                </a>
+              </div>
+
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+
+          <!-- Initialize Swiper -->
           <script>
             document.addEventListener("DOMContentLoaded", function() {
-              const announcements = [
-                {
-                  label: "📄 PAPER",
-                  title: "Implementation of Three New Criminal Laws in India: A Study of Police Preparedness in Uttar Pradesh",
-                  meta: "Arjun Singh &nbsp;·&nbsp; Vol. 1, Issue 1 (2026) &nbsp;·&nbsp; pp. 1&ndash;5",
-                  badge: "Open Access &nbsp;·&nbsp; Law / Political Science",
-                  link: "/pdfs/vol1-issue1-article1.pdf"
+              var swiper = new Swiper(".mySwiper", {
+                autoplay: {
+                  delay: 8000,
+                  disableOnInteraction: false,
                 },
-                {
-                  label: "📄 PAPER",
-                  title: "Mental Health Awareness Among College Students in Kerala Post-COVID: Prevalence, Perceptions, and Help-Seeking Behaviour",
-                  meta: "Priya Menon &amp; Anitha Krishnan &nbsp;·&nbsp; Vol. 1, Issue 1 (2026) &nbsp;·&nbsp; pp. 6&ndash;18",
-                  badge: "Open Access &nbsp;·&nbsp; Public Health / Psychology",
-                  link: "/pdfs/vol1-issue1-article2.pdf"
+                loop: true,
+                effect: 'fade',
+                fadeEffect: {
+                  crossFade: true
                 },
-                {
-                  label: "📢 CALL FOR PAPERS",
-                  title: "Call for Papers &mdash; July&ndash;September 2026",
-                  meta: "Theme: Sustainable Development: Livelihood &amp; Skill Development, Health, Education, Environment, and Women Empowerment",
-                  badge: "Deadline: September 15, 2026 &nbsp;·&nbsp; Open Access",
-                  link: "/call-for-papers.html"
+                pagination: {
+                  el: ".swiper-pagination",
+                  clickable: true,
                 },
-                {
-                  label: "📚 LIBRARY OFFER",
-                  title: "Free Library Subscription for Institutions",
-                  meta: "Register your library for free digital access, print copies, and quarterly citation reports",
-                  badge: "No cost &nbsp;·&nbsp; Open Access",
-                  link: "/library.html"
-                },
-                {
-                  label: "⏰ DEADLINE REMINDER",
-                  title: "Next Submission Deadline: June 15, 2026",
-                  meta: "Submit your manuscript for Q2 2026 (April&ndash;June) &nbsp;·&nbsp; Publication: July 2026",
-                  badge: "Open Access",
-                  link: "/submitting.html"
-                }
-              ];
-
-              const container = document.getElementById("announcement-container");
-              const dotsContainer = document.getElementById("announcement-dots");
-              let currentIndex = 0;
-              let intervalId;
-
-              announcements.forEach((item, index) => {
-                const div = document.createElement("div");
-                div.className = "announcement-item" + (index === 0 ? " active" : "");
-                div.innerHTML = \`
-                  <a href="\${item.link}" style="text-decoration:none; color:inherit; display:block;">
-                    <div class="hero-card-label">\${item.label}</div>
-                    <div class="hero-card-title">\${item.title}</div>
-                    <div class="hero-card-meta">\${item.meta}</div>
-                    <div class="hero-card-badge">\${item.badge}</div>
-                  </a>
-                \`;
-                container.appendChild(div);
-
-                const dot = document.createElement("div");
-                dot.className = "announcement-dot" + (index === 0 ? " active" : "");
-                dot.addEventListener("click", () => goToSlide(index));
-                dotsContainer.appendChild(dot);
               });
-
-              const items = container.querySelectorAll(".announcement-item");
-              const dots = dotsContainer.querySelectorAll(".announcement-dot");
-
-              function goToSlide(index) {
-                if (items.length === 0) return;
-                items[currentIndex].classList.remove("active");
-                dots[currentIndex].classList.remove("active");
-                items[currentIndex].style.position = "absolute";
-                currentIndex = index;
-                items[currentIndex].classList.add("active");
-                dots[currentIndex].classList.add("active");
-                items[currentIndex].style.position = "relative";
-                resetInterval();
-              }
-
-              function nextSlide() {
-                let nextIndex = (currentIndex + 1) % items.length;
-                goToSlide(nextIndex);
-              }
-
-              function resetInterval() {
-                clearInterval(intervalId);
-                intervalId = setInterval(nextSlide, 8000);
-              }
-
-              resetInterval();
             });
           </script>
 
