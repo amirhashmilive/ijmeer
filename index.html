@@ -171,10 +171,6 @@
   <!-- Instant theme apply (prevents flash) -->
   
 
-  <!-- Swiper.js -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
   <link rel="stylesheet" href="assets/css/style.css">
   <style>
     /* Homepage-specific enhancements */
@@ -320,112 +316,155 @@
       <div class="hero-panel" aria-hidden="true">
         <div class="hero-card">
           <style>
-            .mySwiper {
-              height: 200px; /* FIXED HEIGHT */
+            /* ── Announcement rotator – flicker-free ── */
+            .ann-rotator {
+              position: relative;
+              height: 200px; /* fixed – never shifts layout */
+              overflow: hidden;
             }
-            .swiper-slide a {
+            .ann-slide {
+              position: absolute;
+              inset: 0;
+              opacity: 0;
+              /* GPU-composited fade – no reflow */
+              transition: opacity 600ms ease;
+              will-change: opacity;
+              pointer-events: none;
+            }
+            .ann-slide.ann-active {
+              opacity: 1;
+              pointer-events: auto;
+            }
+            .ann-slide a {
+              display: block;
               text-decoration: none;
               color: inherit;
-              display: block;
               height: 100%;
             }
-            .swiper-slide a:hover .hero-card-title {
+            .ann-slide a:hover .hero-card-title {
               color: var(--blue);
             }
-            .mySwiper .swiper-pagination {
-              position: relative;
-              margin-top: 8px;
-              bottom: 0 !important;
+            /* Dot indicators */
+            .ann-dots {
+              display: flex;
+              justify-content: center;
+              gap: 7px;
+              margin-top: 10px;
             }
-            .mySwiper .swiper-pagination-bullet {
-              width: 8px;
-              height: 8px;
-              background-color: var(--border, #e2e8f0);
-              opacity: 1;
-              transition: background-color 0.3s;
+            .ann-dot {
+              width: 7px;
+              height: 7px;
+              border-radius: 50%;
+              background: var(--border, #d1d5db);
+              cursor: pointer;
+              transition: background 0.3s;
+              border: none;
+              padding: 0;
             }
-            .mySwiper .swiper-pagination-bullet-active {
-              background-color: var(--blue, #2563eb) !important;
+            .ann-dot.ann-dot-active {
+              background: var(--blue, #2563eb);
             }
           </style>
 
-          <!-- Swiper -->
-          <div class="swiper mySwiper">
-            <div class="swiper-wrapper">
-              
-              <!-- Item 1 -->
-              <div class="swiper-slide">
-                <a href="/pdfs/vol1-issue1-article1.pdf">
-                  <div class="hero-card-label">📄 PAPER 1</div>
-                  <div class="hero-card-title">Implementation of Three New Criminal Laws in India: A Study of Police Preparedness in Uttar Pradesh</div>
-                  <div class="hero-card-meta">Arjun Singh &nbsp;·&nbsp; Vol. 1, Issue 1 (2026) &nbsp;·&nbsp; pp. 1&ndash;5</div>
-                  <div class="hero-card-badge">Open Access &nbsp;·&nbsp; Law / Political Science</div>
-                </a>
-              </div>
+          <!-- Rotating Announcement Banner -->
+          <div class="ann-rotator" id="ann-rotator">
 
-              <!-- Item 2 -->
-              <div class="swiper-slide">
-                <a href="/pdfs/vol1-issue1-article2.pdf">
-                  <div class="hero-card-label">📄 PAPER 2</div>
-                  <div class="hero-card-title">Mental Health Awareness Among College Students in Kerala Post-COVID</div>
-                  <div class="hero-card-meta">Priya Menon &amp; Anitha Krishnan &nbsp;·&nbsp; Vol. 1, Issue 1 (2026) &nbsp;·&nbsp; pp. 6&ndash;18</div>
-                  <div class="hero-card-badge">Open Access &nbsp;·&nbsp; Public Health / Psychology</div>
-                </a>
-              </div>
-
-              <!-- Item 3 -->
-              <div class="swiper-slide">
-                <a href="/pdfs/vol1-issue1-article3.pdf">
-                  <div class="hero-card-label">📄 PAPER 3</div>
-                  <div class="hero-card-title">Farmers' Adoption of Sustainable Agricultural Practices in Punjab</div>
-                  <div class="hero-card-meta">Gurpreet Kaur &nbsp;·&nbsp; Vol. 1, Issue 1 (2026) &nbsp;·&nbsp; pp. 19&ndash;35</div>
-                  <div class="hero-card-badge">Open Access &nbsp;·&nbsp; Agriculture / Environmental Science</div>
-                </a>
-              </div>
-
-              <!-- Item 4 -->
-              <div class="swiper-slide">
-                <a href="/call-for-papers.html">
-                  <div class="hero-card-label">📢 CALL FOR PAPERS</div>
-                  <div class="hero-card-title">Call for Papers &mdash; July&ndash;September 2026</div>
-                  <div class="hero-card-meta">Sustainable Development: Livelihood &amp; Skill Development, Health, Education, Environment, and Women Empowerment<br>Deadline: September 15, 2026 &nbsp;·&nbsp; Publication: October 2026</div>
-                  <div class="hero-card-badge">Open Access &nbsp;·&nbsp; Call for Papers</div>
-                </a>
-              </div>
-
-              <!-- Item 5 -->
-              <div class="swiper-slide">
-                <a href="/library.html">
-                  <div class="hero-card-label">📚 LIBRARY OFFER</div>
-                  <div class="hero-card-title">Free Library Subscription for Institutions</div>
-                  <div class="hero-card-meta">Register your library for free digital access, print copies, and quarterly citation reports</div>
-                  <div class="hero-card-badge">No Cost &nbsp;·&nbsp; Open Access</div>
-                </a>
-              </div>
-
+            <!-- Item 1 -->
+            <div class="ann-slide ann-active">
+              <a href="/pdfs/vol1-issue1-article1.pdf">
+                <div class="hero-card-label">📄 PAPER 1</div>
+                <div class="hero-card-title">Implementation of Three New Criminal Laws in India: A Study of Police Preparedness in Uttar Pradesh</div>
+                <div class="hero-card-meta">Arjun Singh &nbsp;·&nbsp; Vol. 1, Issue 1 (2026) &nbsp;·&nbsp; pp. 1&ndash;5</div>
+                <div class="hero-card-badge">Open Access &nbsp;·&nbsp; Law / Political Science</div>
+              </a>
             </div>
-            <div class="swiper-pagination"></div>
-          </div>
 
-          <!-- Initialize Swiper -->
+            <!-- Item 2 -->
+            <div class="ann-slide">
+              <a href="/pdfs/vol1-issue1-article2.pdf">
+                <div class="hero-card-label">📄 PAPER 2</div>
+                <div class="hero-card-title">Mental Health Awareness Among College Students in Kerala Post-COVID</div>
+                <div class="hero-card-meta">Priya Menon &amp; Anitha Krishnan &nbsp;·&nbsp; Vol. 1, Issue 1 (2026) &nbsp;·&nbsp; pp. 6&ndash;18</div>
+                <div class="hero-card-badge">Open Access &nbsp;·&nbsp; Public Health / Psychology</div>
+              </a>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="ann-slide">
+              <a href="/pdfs/vol1-issue1-article3.pdf">
+                <div class="hero-card-label">📄 PAPER 3</div>
+                <div class="hero-card-title">Farmers&#39; Adoption of Sustainable Agricultural Practices in Punjab</div>
+                <div class="hero-card-meta">Gurpreet Kaur &nbsp;·&nbsp; Vol. 1, Issue 1 (2026) &nbsp;·&nbsp; pp. 19&ndash;35</div>
+                <div class="hero-card-badge">Open Access &nbsp;·&nbsp; Agriculture / Environmental Science</div>
+              </a>
+            </div>
+
+            <!-- Item 4 -->
+            <div class="ann-slide">
+              <a href="/call-for-papers.html">
+                <div class="hero-card-label">📢 CALL FOR PAPERS</div>
+                <div class="hero-card-title">Call for Papers &mdash; July&ndash;September 2026</div>
+                <div class="hero-card-meta">Sustainable Development: Livelihood &amp; Skill Development, Health, Education, Environment &amp; Women Empowerment &mdash; Deadline: Sep 15, 2026</div>
+                <div class="hero-card-badge">Open Access &nbsp;·&nbsp; Call for Papers</div>
+              </a>
+            </div>
+
+            <!-- Item 5 -->
+            <div class="ann-slide">
+              <a href="/library.html">
+                <div class="hero-card-label">📚 LIBRARY OFFER</div>
+                <div class="hero-card-title">Free Library Subscription for Institutions</div>
+                <div class="hero-card-meta">Register your library for free digital access, print copies, and quarterly citation reports</div>
+                <div class="hero-card-badge">No Cost &nbsp;·&nbsp; Open Access</div>
+              </a>
+            </div>
+
+          </div><!-- /.ann-rotator -->
+
+          <!-- Dot navigation -->
+          <div class="ann-dots" id="ann-dots" role="tablist" aria-label="Announcement navigation"></div>
+
           <script>
-            document.addEventListener("DOMContentLoaded", function() {
-              var swiper = new Swiper(".mySwiper", {
-                autoplay: {
-                  delay: 8000,
-                  disableOnInteraction: false,
-                },
-                loop: true,
-                effect: 'fade',
-                fadeEffect: {
-                  crossFade: true
-                },
-                pagination: {
-                  el: ".swiper-pagination",
-                  clickable: true,
-                },
+            (function () {
+              var slides = document.querySelectorAll('#ann-rotator .ann-slide');
+              var dotsWrap = document.getElementById('ann-dots');
+              var current = 0;
+              var timer;
+              var dots = [];
+
+              /* Build dots */
+              slides.forEach(function (_, i) {
+                var btn = document.createElement('button');
+                btn.className = 'ann-dot' + (i === 0 ? ' ann-dot-active' : '');
+                btn.setAttribute('aria-label', 'Announcement ' + (i + 1));
+                btn.addEventListener('click', function () { go(i); });
+                dotsWrap.appendChild(btn);
+                dots.push(btn);
               });
-            });
+
+              function go(idx) {
+                slides[current].classList.remove('ann-active');
+                dots[current].classList.remove('ann-dot-active');
+                current = idx;
+                slides[current].classList.add('ann-active');
+                dots[current].classList.add('ann-dot-active');
+              }
+
+              function next() {
+                go((current + 1) % slides.length);
+              }
+
+              function startTimer() {
+                clearInterval(timer);
+                timer = setInterval(next, 8000);
+              }
+
+              /* Pause on hover */
+              document.getElementById('ann-rotator').addEventListener('mouseenter', function () { clearInterval(timer); });
+              document.getElementById('ann-rotator').addEventListener('mouseleave', startTimer);
+
+              startTimer();
+            })();
           </script>
 
           <div style="margin-top:20px;padding-top:18px;border-top:1px solid var(--border);">
