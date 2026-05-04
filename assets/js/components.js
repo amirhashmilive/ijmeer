@@ -16,7 +16,7 @@
 <header class="site-header" id="site-header" role="banner">
   <div class="container header-inner">
     <a href="/" class="brand" aria-label="IJMEER Home">
-      <div class="brand-mark" aria-hidden="true">IJ</div>
+      <img src="assets/images/logo/ijmeer-favicon.png" alt="" class="brand-mark-img" aria-hidden="true" width="40" height="40" style="border-radius:6px;object-fit:contain;">
       <div class="brand-text">
         <span class="brand-name">IJMEER</span>
         <span class="brand-sub">Open Access Journal</span>
@@ -72,7 +72,7 @@
       <!-- Brand column -->
       <div class="footer-brand">
         <a href="/" class="brand" style="margin-bottom:16px;" aria-label="IJMEER Home">
-          <div class="brand-mark">IJ</div>
+          <img src="assets/images/logo/ijmeer-favicon.png" alt="" class="brand-mark-img" aria-hidden="true" width="40" height="40" style="border-radius:6px;object-fit:contain;">
           <div class="brand-text">
             <span class="brand-name">IJMEER</span>
             <span class="brand-sub">Open Access Journal</span>
