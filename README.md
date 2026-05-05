@@ -15,6 +15,9 @@ A world-class, production-ready academic journal website built with pure HTML, C
 - ✅ **Citation Management** - APA, MLA, Chicago formats with copy functionality
 - ✅ **Google Analytics & Tag Manager** - Integrated on all pages
 - ✅ **Social Media Links** - All active profiles linked
+- ✅ **Tiered Pricing** - ₹2,000–₹5,000 / $50
+- ✅ **Dynamic Rotating Announcement Banner** - Swiper.js integration
+- ✅ **Ministry–SDG Integrated CfP Framework**
 
 ### Deployment
 
@@ -95,14 +98,15 @@ ijmeer/
 ├── editorial-board.html
 ├── most-cited.html
 ├── contact.html
-├── all-issues.html
-├── latest-issue.html
-├── fees.html
-├── submitting.html
-├── review-process.html
-├── ethics.html
+├── archive.html
+├── authors.html
+├── peer-review.html
+├── publishing-ethics.html
+├── privacy-policy.html
+├── call-for-papers.html
+├── library.html
+├── editorial-portfolio.html
 ├── open-access.html
-├── privacy.html
 ├── data/
 │   ├── papers.json
 │   ├── issues.json
@@ -144,4 +148,4 @@ https://www.meerfoundation.co.in/
 
 ---
 
-© 2025 IJMEER - International Journal of Multidisciplinary Explication and Emerging Research
+© 2026 IJMEER - International Journal of Multidisciplinary Explication and Emerging Research
