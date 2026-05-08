@@ -1,0 +1,15 @@
+#!/bin/sh
+# Agent pre-tool-use hook
+# Ensures policy compliance before any automated edit or tool use is allowed.
+
+echo "[AGENT HOOK] Running policy check..."
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File scratch/check-policy.ps1 --strict
+
+if [ $? -ne 0 ]; then
+  echo ""
+  echo "Policy violation — fix before committing"
+  echo "ABORTING TOOL USE."
+  exit 1
+fi
+
+exit 0
