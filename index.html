@@ -461,10 +461,6 @@
                 timer = setInterval(next, 8000);
               }
 
-              /* Pause on hover */
-              document.getElementById('ann-rotator').addEventListener('mouseenter', function () { clearInterval(timer); });
-              document.getElementById('ann-rotator').addEventListener('mouseleave', startTimer);
-
               startTimer();
             })();
           </script>
