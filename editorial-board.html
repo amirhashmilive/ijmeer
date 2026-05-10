@@ -102,6 +102,44 @@
     }
     .orcid-link:hover { background: #a6ce39; color: #fff !important; }
     .orcid-link svg { width: 14px; height: 14px; fill: currentColor; }
+
+    /* ── Email copy button ── */
+    .email-copy-wrap {
+      display: inline-flex; align-items: center; gap: 5px;
+    }
+    .copy-email-btn {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 22px; height: 22px;
+      background: rgba(37,99,235,0.08);
+      border: 1px solid rgba(37,99,235,0.2);
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 12px;
+      color: var(--blue, #2563eb);
+      padding: 0;
+      line-height: 1;
+      position: relative;
+      transition: background 0.15s, border-color 0.15s;
+      vertical-align: middle;
+    }
+    .copy-email-btn:hover {
+      background: rgba(37,99,235,0.15);
+      border-color: rgba(37,99,235,0.4);
+    }
+    .copy-email-btn .copy-tip {
+      visibility: hidden; opacity: 0;
+      position: absolute; bottom: calc(100% + 5px); left: 50%;
+      transform: translateX(-50%);
+      background: #1e293b; color: #fff;
+      font-size: 10px; font-family: sans-serif; font-weight: 600;
+      white-space: nowrap;
+      padding: 2px 7px; border-radius: 3px;
+      pointer-events: none;
+      transition: opacity 0.15s;
+    }
+    .copy-email-btn.copied .copy-tip {
+      visibility: visible; opacity: 1;
+    }
   </style>
 </head>
 <body>
@@ -209,7 +247,7 @@
             </div>
             <div class="board-detail">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-              <a href="mailto:marylou.frank@mga.edu">marylou.frank@mga.edu</a>
+              <span class="email-copy-wrap"><a href="mailto:marylou.frank@mga.edu">marylou.frank@mga.edu</a><button class="copy-email-btn" data-email="marylou.frank@mga.edu" aria-label="Copy marylou.frank@mga.edu" title="Copy email">&#x1F4CB;<span class="copy-tip">Copied!</span></button></span>
             </div>
             <div class="expertise-tag">Psychology · Mediation</div>
               <a href="https://www.mga.edu/directory/people.php?name=frank-marylou" target="_blank" rel="noopener noreferrer" class="board-link" style="margin-top:14px;" aria-label="View Dr. Mary Lou Frank institutional profile">
@@ -243,7 +281,7 @@
             </div>
             <div class="board-detail">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-              <a href="mailto:principal@siddharthasc.edu.in">principal@siddharthasc.edu.in</a>
+              <span class="email-copy-wrap"><a href="mailto:principal@siddharthasc.edu.in">principal@siddharthasc.edu.in</a><button class="copy-email-btn" data-email="principal@siddharthasc.edu.in" aria-label="Copy principal@siddharthasc.edu.in" title="Copy email">&#x1F4CB;<span class="copy-tip">Copied!</span></button></span>
             </div>
             <div class="expertise-tag">Physics · Academic Administration</div>
             <a href="https://siddharthasc.edu.in/principal-desk/" target="_blank" rel="noopener noreferrer" class="board-link" style="margin-top:14px;" aria-label="View Prof. Ashok Sunatkari institutional profile">
@@ -271,7 +309,7 @@
             </div>
             <div class="board-detail">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-              <a href="mailto:ashok.yende@atlasuniversity.edu.in">ashok.yende@atlasuniversity.edu.in</a>
+              <span class="email-copy-wrap"><a href="mailto:ashok.yende@atlasuniversity.edu.in">ashok.yende@atlasuniversity.edu.in</a><button class="copy-email-btn" data-email="ashok.yende@atlasuniversity.edu.in" aria-label="Copy ashok.yende@atlasuniversity.edu.in" title="Copy email">&#x1F4CB;<span class="copy-tip">Copied!</span></button></span>
             </div>
             <div class="expertise-tag">Law · Legal Education · Mediation</div>
             <a href="https://atlasuniversity.edu.in/schools/law/" target="_blank" rel="noopener noreferrer" class="board-link" style="margin-top:14px;" aria-label="View Adv. (Dr.) Ashok Yende institutional profile">
@@ -299,7 +337,7 @@
             </div>
             <div class="board-detail">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-              <a href="mailto:karuna.malviya@dypatil.edu">karuna.malviya@dypatil.edu</a>
+              <span class="email-copy-wrap"><a href="mailto:karuna.malviya@dypatil.edu">karuna.malviya@dypatil.edu</a><button class="copy-email-btn" data-email="karuna.malviya@dypatil.edu" aria-label="Copy karuna.malviya@dypatil.edu" title="Copy email">&#x1F4CB;<span class="copy-tip">Copied!</span></button></span>
             </div>
             <div class="board-detail">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
@@ -331,7 +369,7 @@
             </div>
             <div class="board-detail">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-              <a href="mailto:mohammed.salim@presidencyuniversity.in">mohammed.salim@presidencyuniversity.in</a>
+              <span class="email-copy-wrap"><a href="mailto:mohammed.salim@presidencyuniversity.in">mohammed.salim@presidencyuniversity.in</a><button class="copy-email-btn" data-email="mohammed.salim@presidencyuniversity.in" aria-label="Copy mohammed.salim@presidencyuniversity.in" title="Copy email">&#x1F4CB;<span class="copy-tip">Copied!</span></button></span>
             </div>
             <div class="expertise-tag">Law · Legal Research</div>
             <a href="https://presidencyuniversity.in/faculty-staff/mohammed-salim-khan" target="_blank" rel="noopener noreferrer" class="board-link" style="margin-top:14px;" aria-label="View Dr. Mohammed Salim Khan institutional profile">
@@ -363,7 +401,7 @@
             </div>
             <div class="board-detail">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-              <a href="mailto:mominali@mlrit.ac.in">mominali@mlrit.ac.in</a>
+              <span class="email-copy-wrap"><a href="mailto:mominali@mlrit.ac.in">mominali@mlrit.ac.in</a><button class="copy-email-btn" data-email="mominali@mlrit.ac.in" aria-label="Copy mominali@mlrit.ac.in" title="Copy email">&#x1F4CB;<span class="copy-tip">Copied!</span></button></span>
             </div>
             <div class="expertise-tag">ELT · Applied Linguistics · Teacher Education</div>
             <a href="https://mlrit.ac.in/faculty/mr-momin-ali/" target="_blank" rel="noopener noreferrer" class="board-link" style="margin-top:14px;" aria-label="View Dr. Momin Ali institutional profile">
@@ -537,5 +575,28 @@
 <div id="site-footer-inject"></div>
 <script defer src="assets/js/components.js"></script>
 <script defer src="assets/js/core.js"></script>
+<script>
+(function(){
+  document.querySelectorAll('.copy-email-btn').forEach(function(btn){
+    btn.addEventListener('click', function(e){
+      e.preventDefault(); e.stopPropagation();
+      var email = btn.getAttribute('data-email');
+      if (!email) return;
+      navigator.clipboard.writeText(email).then(function(){
+        btn.classList.add('copied');
+        setTimeout(function(){ btn.classList.remove('copied'); }, 1800);
+      }).catch(function(){
+        var ta = document.createElement('textarea');
+        ta.value = email; ta.style.position='fixed'; ta.style.opacity='0';
+        document.body.appendChild(ta); ta.select();
+        document.execCommand('copy');
+        document.body.removeChild(ta);
+        btn.classList.add('copied');
+        setTimeout(function(){ btn.classList.remove('copied'); }, 1800);
+      });
+    });
+  });
+})();
+</script>
 </body>
 </html>
