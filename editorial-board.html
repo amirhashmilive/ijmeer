@@ -105,9 +105,10 @@
 
     /* ── Email copy button ── */
     .email-copy-wrap {
-      display: inline-flex; align-items: center; gap: 5px;
+      display: inline-flex; align-items: center; gap: 5px; flex-wrap: wrap; word-break: break-all;
     }
     .copy-email-btn {
+      flex-shrink: 0;
       display: inline-flex; align-items: center; justify-content: center;
       width: 22px; height: 22px;
       background: rgba(37,99,235,0.08);
