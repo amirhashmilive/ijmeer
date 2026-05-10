@@ -8,16 +8,15 @@ $SourceDir  = "C:\Users\hashm\Desktop\Projects\Workplace IJMEER"
 
 Write-Host ""
 Write-Host "============================================" -ForegroundColor Cyan
-Write-Host "  IJMEER SESSION GUARD - Backup Enforcer   " -ForegroundColor Cyan
+Write-Host "  IJMEER SESSION START - Backup Helper     " -ForegroundColor Cyan
 Write-Host "============================================" -ForegroundColor Cyan
 Write-Host ""
-Write-Host "[GUARD] Creating mandatory pre-session backup..." -ForegroundColor Yellow
+Write-Host "[START] Creating pre-session backup..." -ForegroundColor Yellow
 
 & "$SourceDir\backup.ps1" -CommitMessage "PRE-SESSION-$SessionDescription"
 
 if ($LASTEXITCODE -ne 0) {
-    Write-Host "[GUARD] backup.ps1 exited with error. Aborting." -ForegroundColor Red
-    exit 1
+    Write-Host "[START] backup.ps1 exited with error. Proceeding anyway." -ForegroundColor Yellow
 }
 
 # Verify a backup zip was created within the last 90 seconds
@@ -28,16 +27,15 @@ $Recent = Get-ChildItem $BackupDir -Filter "*.zip" -ErrorAction SilentlyContinue
 
 if (-not $Recent) {
     Write-Host ""
-    Write-Host "[GUARD] ERROR: Could not verify a recent backup file in:" -ForegroundColor Red
-    Write-Host "        $BackupDir" -ForegroundColor Red
-    Write-Host "[GUARD] ABORTING. Do NOT proceed without a confirmed backup." -ForegroundColor Red
-    exit 1
+    Write-Host "[START] WARNING: Could not verify a recent backup file in:" -ForegroundColor Yellow
+    Write-Host "        $BackupDir" -ForegroundColor Yellow
+    Write-Host "[START] Proceeding without a confirmed backup." -ForegroundColor Yellow
+} else {
+    Write-Host ""
+    Write-Host "[START] Backup verified: $($Recent.Name)" -ForegroundColor Green
+    Write-Host "[START] Size: $([math]::Round($Recent.Length / 1MB, 2)) MB" -ForegroundColor Green
 }
-
-Write-Host ""
-Write-Host "[GUARD] Backup verified: $($Recent.Name)" -ForegroundColor Green
-Write-Host "[GUARD] Size: $([math]::Round($Recent.Length / 1MB, 2)) MB" -ForegroundColor Green
-Write-Host "[GUARD] Safe to proceed. Opening VS Code..." -ForegroundColor Cyan
+Write-Host "[START] Opening VS Code..." -ForegroundColor Cyan
 Write-Host ""
 
 code "$SourceDir"

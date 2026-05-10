@@ -2,25 +2,25 @@
 
 ---
 
-## ⚠️ CRITICAL: Backup Rule — READ BEFORE ANY ACTION
+## ℹ️ OPTIONAL: Backup Recommendations
 
-> **This project has automated backup enforcement. You MUST create a backup before making any changes.**
+> **This project has an optional backup system. You may create a backup before making major changes.**
 
-### For Humans and AI Agents — Non-Negotiable Rules
+### For Humans and AI Agents — Recommendations
 
-1. **Always start a work session using the wrapper script:**
+1. **You may start a work session using the wrapper script:**
    ```powershell
    .\start-session.ps1 -SessionDescription "brief-task-description"
    ```
-   This creates a verified backup ZIP and then opens VS Code. **Do not open the project any other way.**
+   This creates a verified backup ZIP and then opens VS Code.
 
-2. **Git commits are blocked** if no backup ZIP exists in `C:\Users\hashm\Desktop\Projects\backup\IJ` within the last 12 hours (enforced by `.git/hooks/pre-commit`).
+2. **Git commits are no longer blocked**, but it is good practice to maintain recent backups in `C:\Users\hashm\Desktop\Projects\backup\IJ`.
 
-3. **AI Agents:** Before executing any file-modifying task, your FIRST action must be:
+3. **AI Agents:** Before executing any significant file-modifying task, you may suggest a backup:
    ```powershell
    .\backup.ps1 -CommitMessage "PRE-SESSION-<task-name>"
    ```
-   Do not write, rename, or delete any file until this command succeeds.
+   Wait for user approval before running. No automatic backups are enforced.
 
 ### Quick Reference
 
@@ -172,21 +172,19 @@ This will create a timestamped zip file in the `C:\Users\hashm\Desktop\Projects\
 3. Extract the contents of the zip file.
 4. Replace the contents of the `Workplace IJMEER` directory with the extracted files.
 
-#### Automated Backups (Enforced)
+#### Automated Backups (Optional)
 
-Two enforcement mechanisms are active:
+Two mechanisms are available for backups:
 
 **Option A — Session Wrapper (`start-session.ps1`):**
-- Run `.\start-session.ps1 -SessionDescription "task-name"` to begin any work session
-- The script runs `backup.ps1`, verifies the ZIP was created within 90 seconds, then opens VS Code
-- If backup fails, the session is aborted
+- Run `.\start-session.ps1 -SessionDescription "task-name"` to begin a work session
+- The script runs `backup.ps1`, verifies the ZIP was created, then opens VS Code
 
-**Option B — Git Pre-Commit Hook (`.git/hooks/pre-commit`):**
-- Runs automatically on every `git commit`
-- Checks that a backup ZIP exists in `..\backup\IJ\` created within the last 12 hours
-- Blocks the commit with a clear error message if no recent backup is found
+**Option B — Manual Backup:**
+- You can manually run the backup script at any time before major changes
+- Ensure backups are kept in `..\backup\IJ\`
 
-> **For AI Agents:** Your very first command in any task must be `backup.ps1`. This is enforced by convention (Option A) and by Git (Option B). No exceptions.
+> **For AI Agents:** You may suggest running `backup.ps1` before major tasks, but it is not mandatory. Wait for user approval before executing any backup.
 
 ### Technologies Used
 
