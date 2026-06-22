@@ -273,10 +273,24 @@
       margin-top: 3px;
     }
 
-    /* ── Profile Card ── */
+    .profiles-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+      gap: 40px;
+    }
+
+    @media (max-width: 768px) {
+      .profiles-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
     .profile-section {
-      margin-bottom: 80px;
+      margin-bottom: 0;
       scroll-margin-top: calc(var(--header-h) + 90px);
+      display: flex;
+      flex-direction: column;
+      height: 100%;
     }
 
     .profile-card {
@@ -287,6 +301,11 @@
       box-shadow: var(--sh);
       transition: box-shadow var(--t);
       position: relative;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
     }
 
     .profile-card:hover {
@@ -344,6 +363,9 @@
 
     .profile-body {
       padding: 40px 44px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
     }
 
     /* Top row: photo + identity */
@@ -353,6 +375,23 @@
       gap: 36px;
       align-items: start;
       margin-bottom: 36px;
+    }
+
+    @media (max-width: 640px) {
+      .profile-top {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+      .profile-institution,
+      .profile-roles {
+        justify-content: center;
+      }
+      .profile-stats {
+        justify-content: center;
+      }
+      .profile-photo-wrap {
+        margin: 0 auto;
+      }
     }
 
     /* Photo */
@@ -1109,6 +1148,8 @@
             </div>
           </div>
         </div>
+
+        <div class="profiles-grid">
 
         <!-- ═══════════════════════════════════════
            1. DR. NUSRAT ALI HASHMI
@@ -3599,6 +3640,8 @@
             </div>
           </div>
         </div>
+
+        </div> <!-- End .profiles-grid -->
 
         <!-- CTA -->
         <div class="portfolio-reveal" style="text-align:center;padding:40px 0 20px;">
