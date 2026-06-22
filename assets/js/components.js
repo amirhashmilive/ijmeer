@@ -94,6 +94,13 @@
             Email: <a href="mailto:editor@ijmeer.com" style="color:inherit;">editor@ijmeer.com</a>
           </div>
         </div>
+        <div style="margin-top:16px;">
+          <div style="font-size:0.72rem;font-weight:700;color:rgba(255,255,255,0.5);text-transform:uppercase;letter-spacing:1px;margin-bottom:6px;">Grievance Officer</div>
+          <div style="font-size:0.82rem;color:rgba(255,255,255,0.7);line-height:1.7;">
+            Grievance Officer: Deputy Secretary, Meer Foundation<br>
+            Email: <a href="mailto:grievance@ijmeer.com" style="color:inherit;">grievance@ijmeer.com</a>
+          </div>
+        </div>
         <div class="social-links" style="margin-top:36px;" aria-label="Social media links">
           <a href="https://facebook.com/ijmeerj" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="IJMEER on Facebook">
             <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
@@ -161,7 +168,7 @@
       <p>
         &copy; <span data-year></span> IJMEER. Published by
         <a href="https://www.meerfoundation.co.in/" target="_blank" rel="noopener noreferrer">Meer Foundation</a>.
-        All rights reserved. &nbsp;|&nbsp; ISSN (Print): XXXX-XXXX &nbsp;|&nbsp; ISSN (Online): XXXX-XXXX &nbsp;|&nbsp; Since 2025
+        All rights reserved. &nbsp;|&nbsp; ISSN (Print): XXXX-XXXX &nbsp;|&nbsp; ISSN (Online): XXXX-XXXX &nbsp;|&nbsp; Since 2026
       </p>
     </div>
   </div>
