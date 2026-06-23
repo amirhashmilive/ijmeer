@@ -7,18 +7,19 @@
 
 ## Current Task
 
-**Task:** Add Dr. Shivaji Dhondiram Sargar to the editorial board
+**Task:** URGENT: ISSN compliance fixes for Editorial Board
 **Status:** [x] Done
 **Started:** 2026-06-23
 **Completed:** 2026-06-23
 **Agent:** Antigravity (Gemini 3.1 Pro (Low))
 
 ### Steps:
-- [x] Convert profile picture to WebP
-- [x] Update EDITORIAL_BOARD.md
-- [x] Update editorial-board.html
-- [x] Update editorial-portfolio.html
-- [x] Commit changes
+- [x] Remove "International & Special Board Members" section completely.
+- [x] Move Prof. (Dr.) Jyotirmaya Thakur (UK) and Dr. Anupama Patel to the Advisory Board section (update classes, role badges, styling).
+- [x] Move Managing Editor to be displayed alongside Editor-in-Chief using a 3-card/1-card flex layout.
+- [x] Confirm international members (Frank and Akkaya) satisfy ISSN requirements and are structurally compliant.
+- [x] Standardize all founding year references to 2026 across `privacy-policy.html`, `rights-permissions.html`, and `data/config.json`.
+- [x] Commit changes.
 
 ---
 

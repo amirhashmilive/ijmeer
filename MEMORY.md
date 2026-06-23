@@ -25,6 +25,14 @@
 
 ## Recent Changes (Reverse Chronological)
 
+### 2026-06-23 — URGENT ISSN Compliance Fixes
+- Standardized founding year to 2026 across `privacy-policy.html`, `rights-permissions.html`, and `data/config.json` to prevent ISSN application rejection.
+- Restructured `editorial-board.html` and `editorial-portfolio.html` for ISSN compliance:
+  - Removed "International & Special Board Members" section completely.
+  - Moved Prof. (Dr.) Jyotirmaya Thakur and Dr. Anupama Patel to the Advisory Board.
+  - Restructured the Leadership section: Managing Editor is now displayed alongside Editor-in-Chief in a 3-card/1-card layout.
+- Verified Dr. Mary Lou Frank and Lect. Ayşegül Akkaya fulfill the 2-international-member requirement.
+
 ### 2026-06-23 — Add Dr. Shivaji Dhondiram Sargar to editorial board
 - **Changed:** Added full profile for Dr. Shivaji Dhondiram Sargar to editorial board.
 - **Reason:** User request.
