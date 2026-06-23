@@ -7,7 +7,7 @@
 
 ## Current Task
 
-**Task:** Add Lect. (Dr.) Ayşegül Akkaya to the editorial board
+**Task:** Add Lect. Ayşegül Akkaya to the editorial board
 **Status:** [x] Done
 **Started:** 2026-06-23
 **Completed:** 2026-06-23

@@ -71,7 +71,7 @@
 
 | Field | Value |
 |---|---|
-| **Full Name** | Lect. (Dr.) AYŞEGÜL AKKAYA |
+| **Full Name** | Lect. AYŞEGÜL AKKAYA |
 | **Designation** | Lecturer |
 | **Institution** | İstanbul University |
 | **Postal Address** | İstanbul University Main Campus 34452, Beyazıt, Istanbul, Türkiye |
