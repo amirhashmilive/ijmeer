@@ -25,11 +25,17 @@
 
 ## Recent Changes (Reverse Chronological)
 
+### 2026-06-23 — Update Dr. Nusrat Ali Hashmi's designation
+- **Changed:** Updated her designation to "Bombay High Court Advocate"
+- **Reason:** Content refinement request
+- **Files:** `editorial-portfolio.html`
+- **Commit:** *Pending*
+
 ### 2026-06-23 — Update Dr. Nusrat Ali Hashmi's experience
 - **Changed:** Updated her experience from "30+ Yrs" to "20+ Yrs"
 - **Reason:** Corrected information request
 - **Files:** `editorial-portfolio.html`, `EDITORIAL_BOARD.md`
-- **Commit:** *Pending*
+- **Commit:** `1248336`
 
 ### 2026-06-23 — Correct Prof. Nuzhat Parveen Khan's name
 - **Changed:** Updated her name from "Prof. Nuzhat Parveen Khan" to "Prof. (Dr.) Nuzhat Parveen Khan"
