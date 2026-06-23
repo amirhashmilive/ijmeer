@@ -7,17 +7,16 @@
 
 ## Current Task
 
-**Task:** Update Dr. Nusrat Ali Hashmi's designation to Bombay High Court Advocate.
+**Task:** Create updated professional resume PDF for Dr. Nusrat Ali Hashmi on Desktop.
 **Status:** ✅ Done
 **Started:** 2026-06-23
 **Completed:** 2026-06-23
 **Agent:** Antigravity (Gemini 3.5 Flash (Low))
 
 ### Steps:
-- [x] Search for her designation in the project workspace
-- [x] Replace "High Court Advocate · Ph.D. in Law · Author · Legal Academic" with "Bombay High Court Advocate · Ph.D. in Law · Author · Legal Academic"
-- [x] Verify website changes
-- [x] Update MEMORY.md and commit / push changes
+- [x] Write updated resume HTML containing merged old details and new details
+- [x] Compile the HTML to `C:\Users\hashm\Desktop\Dr_Nusrat_Ali_Hashmi_Resume_Updated.pdf`
+- [x] Clean up temporary files
 
 ---
 
