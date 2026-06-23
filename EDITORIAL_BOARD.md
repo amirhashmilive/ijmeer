@@ -212,6 +212,25 @@
 
 | Field | Value |
 |---|---|
+| **Full Name** | Dr. Shivaji Dhondiram Sargar |
+| **Designation** | Senior Professor |
+| **Institution** | University of Mumbai |
+| **Postal Address** | Department of English, University of Mumbai, Santa Cruz East, Mumbai-400098 |
+| **Personal Email** | sdsargar@yahoo.in |
+| **Institutional Email** | shivajisargar@english.mu.ac.in |
+| **Institutional Profile** | https://mu.ac.in |
+| **Mobile/WhatsApp** | 9869028056 |
+| **Photo** | `assets/images/editorial-board/shivaji-sargar.webp` |
+| **Profile ID** | `shivaji-sargar` |
+| **Expertise** | Indian Literature |
+| **Stats** | 33 Yrs Experience |
+
+---
+
+### 13. Editorial Board Member
+
+| Field | Value |
+|---|---|
 | **Full Name** | Dr. Momin Ali |
 | **Designation** | Assistant Professor of English; Ph.D. in ELT; TS-SET Qualified; Director of Collaborations & International Partnerships |
 | **Institution** | Department of Humanities and Sciences, MLR Institute of Technology, Dundigal, Hyderabad, Telangana — 500043, India |
@@ -228,7 +247,7 @@
 
 ## Category 4: Advisory Board
 
-### 13. Advisory Board Member
+### 14. Advisory Board Member
 
 | Field | Value |
 |---|---|
@@ -245,7 +264,7 @@
 
 ---
 
-### 14. Advisory Board Member
+### 15. Advisory Board Member
 
 | Field | Value |
 |---|---|
@@ -270,9 +289,9 @@
 | Managing Editor | 1 | Sayed Amir Mustafa Hashmi |
 | International Board | 3 | Dr. Mary Lou Frank 🇺🇸, Lect. Ayşegül Akkaya 🇹🇷, Prof. Jyotirmaya Thakur 🇬🇧 |
 | Special Board | 2 | Prof. (Dr.) Nuzhat Parveen Khan, Dr. Anupama Patel |
-| Editorial Board | 5 | Sunatkari, Yende, Malviya, Salim Khan, Momin Ali |
+| Editorial Board | 6 | Sunatkari, Yende, Malviya, Salim Khan, Sargar, Momin Ali |
 | Advisory Board | 2 | Prof. Mona Purohit, Dr. Ranu Shukla |
-| **Total** | **14** | |
+| **Total** | **15** | |
 
 ---
 
@@ -287,6 +306,7 @@
 { id: 'ashok-yende',       pill: 'pill-5' },
 { id: 'karuna-malviya',    pill: 'pill-6' },
 { id: 'salim-khan',        pill: 'pill-7' },
+{ id: 'shivaji-sargar',    pill: 'pill-shivaji' },
 { id: 'momin-ali',         pill: 'pill-8' },
 { id: 'jyotirmaya-thakur', pill: 'pill-9' },
 { id: 'anupama-patel',     pill: 'pill-10' },

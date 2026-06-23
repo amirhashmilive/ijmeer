@@ -7,11 +7,11 @@
 
 ## Current Task
 
-**Task:** Add Lect. Ayşegül Akkaya to the editorial board
+**Task:** Add Dr. Shivaji Dhondiram Sargar to the editorial board
 **Status:** [x] Done
 **Started:** 2026-06-23
 **Completed:** 2026-06-23
-**Agent:** Antigravity (Gemini 3.1 Pro (High))
+**Agent:** Antigravity (Gemini 3.1 Pro (Low))
 
 ### Steps:
 - [x] Convert profile picture to WebP

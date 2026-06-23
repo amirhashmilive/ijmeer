@@ -25,6 +25,12 @@
 
 ## Recent Changes (Reverse Chronological)
 
+### 2026-06-23 — Add Dr. Shivaji Dhondiram Sargar to editorial board
+- **Changed:** Added full profile for Dr. Shivaji Dhondiram Sargar to editorial board.
+- **Reason:** User request.
+- **Files:** `EDITORIAL_BOARD.md`, `editorial-board.html`, `editorial-portfolio.html`, `assets/images/editorial-board/shivaji-sargar.webp`
+- **Commit:** *Pending*
+
 ### 2026-06-23 — Update Dr. Nusrat Ali Hashmi's designation
 - **Changed:** Updated her designation to "Bombay High Court Advocate"
 - **Reason:** Content refinement request
@@ -115,6 +121,6 @@
 | **ISSN Application** | Submitted; hard copy received April 24, 2026 | 2026-04-24 |
 | **ISSN Expected** | ~30 working days from April 24 (approx. June 2026) | — |
 | **Google Pages Indexed** | 7 / 27 discovered | 2026-06-22 |
-| **International Members** | 2 (Dr. Mary Lou Frank 🇺🇸, Prof. Jyotirmaya Thakur 🇬🇧) | 2026-06-22 |
-| **Board Members Total** | 13 | 2026-06-22 |
+| **International Members** | 3 (Dr. Mary Lou Frank 🇺🇸, Prof. Jyotirmaya Thakur 🇬🇧, Lect. Ayşegül Akkaya 🇹🇷) | 2026-06-23 |
+| **Board Members Total** | 15 | 2026-06-23 |
 | **Volume 1 Issue 1** | Published April 2026 | 2026-04-01 |
