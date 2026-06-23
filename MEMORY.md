@@ -25,11 +25,17 @@
 
 ## Recent Changes (Reverse Chronological)
 
+### 2026-06-23 — Update Dr. Nusrat Ali Hashmi's experience
+- **Changed:** Updated her experience from "30+ Yrs" to "20+ Yrs"
+- **Reason:** Corrected information request
+- **Files:** `editorial-portfolio.html`, `EDITORIAL_BOARD.md`
+- **Commit:** *Pending*
+
 ### 2026-06-23 — Correct Prof. Nuzhat Parveen Khan's name
 - **Changed:** Updated her name from "Prof. Nuzhat Parveen Khan" to "Prof. (Dr.) Nuzhat Parveen Khan"
 - **Reason:** Name correction request
 - **Files:** `editorial-board.html`, `editorial-portfolio.html`, `EDITORIAL_BOARD.md`
-- **Commit:** *Pending*
+- **Commit:** `50910b0`
 
 ### 2026-06-22 — Fix editorial portfolio horizontal card layout
 - **Changed:** `.profiles-grid` CSS from `repeat(auto-fit, minmax(400px, 1fr))` to `1fr`

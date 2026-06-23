@@ -23,7 +23,7 @@
 | **Photo** | `images/editorial/drnusratalihashmi.webp` |
 | **Profile ID** | `nusrat-hashmi` |
 | **Expertise** | Law, Legal Education, Judicial Studies, Academic Administration |
-| **Stats** | 25+ Research Papers, 5+ Books, 30+ Yrs Experience |
+| **Stats** | 25+ Research Papers, 5+ Books, 20+ Yrs Experience |
 
 ---
 
