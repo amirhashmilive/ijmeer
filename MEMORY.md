@@ -29,13 +29,13 @@
 - **Changed:** Added full profile for Dr. Shivaji Dhondiram Sargar to editorial board.
 - **Reason:** User request.
 - **Files:** `EDITORIAL_BOARD.md`, `editorial-board.html`, `editorial-portfolio.html`, `assets/images/editorial-board/shivaji-sargar.webp`
-- **Commit:** *Pending*
+- **Commit:** `cc2ccb3` (fix: `6076a28`)
 
 ### 2026-06-23 — Update Dr. Nusrat Ali Hashmi's designation
 - **Changed:** Updated her designation to "Bombay High Court Advocate"
 - **Reason:** Content refinement request
 - **Files:** `editorial-portfolio.html`
-- **Commit:** *Pending*
+- **Commit:** `3e76e62`
 
 ### 2026-06-23 — Update Dr. Nusrat Ali Hashmi's experience
 - **Changed:** Updated her experience from "30+ Yrs" to "20+ Yrs"
