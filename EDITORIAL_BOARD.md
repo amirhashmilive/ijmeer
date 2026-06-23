@@ -90,7 +90,7 @@
 
 | Field | Value |
 |---|---|
-| **Full Name** | Prof. Nuzhat Parveen Khan |
+| **Full Name** | Prof. (Dr.) Nuzhat Parveen Khan |
 | **Designation** | Professor & Former Dean, Faculty of Arts; Ph.D. |
 | **Institution** | Barkatullah University, Bhopal, Madhya Pradesh |
 | **Postal Address** | Barkatullah University, Bhopal, Madhya Pradesh — 462026, India |
@@ -251,7 +251,7 @@
 | Editor-in-Chief | 1 | Dr. Nusrat Ali Hashmi |
 | Managing Editor | 1 | Sayed Amir Mustafa Hashmi |
 | International Board | 2 | Dr. Mary Lou Frank 🇺🇸, Prof. Jyotirmaya Thakur 🇬🇧 |
-| Special Board | 2 | Prof. Nuzhat Khan, Dr. Anupama Patel |
+| Special Board | 2 | Prof. (Dr.) Nuzhat Parveen Khan, Dr. Anupama Patel |
 | Editorial Board | 5 | Sunatkari, Yende, Malviya, Salim Khan, Momin Ali |
 | Advisory Board | 2 | Prof. Mona Purohit, Dr. Ranu Shukla |
 | **Total** | **13** | |

@@ -7,16 +7,17 @@
 
 ## Current Task
 
-**Task:** Create complete project memory system (14 files)  
-**Status:** ✅ Done  
-**Started:** 2026-06-22  
-**Completed:** 2026-06-22  
-**Agent:** Antigravity (Gemini/Claude)
+**Task:** Correct the name of Prof. Nuzhat Parveen Khan to Prof. (Dr.) Nuzhat Parveen Khan across the website.
+**Status:** ✅ Done
+**Started:** 2026-06-23
+**Completed:** 2026-06-23
+**Agent:** Antigravity (Gemini 3.5 Flash (Low))
 
-### What was done:
-- Created 14 structured Markdown memory files in project root
-- Files cover: agent rules, architecture, workflow, UI guidelines, content policy, project history, ISSN compliance, editorial board, social media, deployment, reminders, and post-ISSN roadmap
-- Committed and pushed to main
+### Steps:
+- [x] Search for "Prof. Nuzhat Parveen Khan" across all codebase files
+- [x] Correct the name to "Prof. (Dr.) Nuzhat Parveen Khan" in all occurrences
+- [x] Verify pages where the name appears
+- [x] Update MEMORY.md and commit / push changes
 
 ---
 
@@ -32,31 +33,4 @@
 
 ## Blockers
 
-- ISSN numbers not yet received (waiting)
-- Institutional emails for EIC and ME not yet confirmed
-
----
-
-## Template for New Sessions
-
-When starting a new session, replace this file with:
-
-```markdown
-## Current Task
-
-**Task:** [Description]
-**Status:** 🔄 In Progress / ⏳ Pending / ✅ Done
-**Started:** YYYY-MM-DD
-**Deadline:** YYYY-MM-DD (if applicable)
-
-### Steps:
-- [ ] Step 1
-- [ ] Step 2
-- [x] Step 3 (done)
-
-### Next Actions:
-- 
-
-### Blockers:
-- None / [describe blocker]
-```
+- None

@@ -25,6 +25,12 @@
 
 ## Recent Changes (Reverse Chronological)
 
+### 2026-06-23 — Correct Prof. Nuzhat Parveen Khan's name
+- **Changed:** Updated her name from "Prof. Nuzhat Parveen Khan" to "Prof. (Dr.) Nuzhat Parveen Khan"
+- **Reason:** Name correction request
+- **Files:** `editorial-board.html`, `editorial-portfolio.html`, `EDITORIAL_BOARD.md`
+- **Commit:** *Pending*
+
 ### 2026-06-22 — Fix editorial portfolio horizontal card layout
 - **Changed:** `.profiles-grid` CSS from `repeat(auto-fit, minmax(400px, 1fr))` to `1fr`
 - **Reason:** Dr. Nusrat Ali Hashmi and Sayed Amir Mustafa Hashmi were appearing as vertical side-by-side cards instead of horizontal cards like all other members
