@@ -67,7 +67,25 @@
 
 ---
 
-### 4. International Member — UK
+### 4. International Member — Türkiye
+
+| Field | Value |
+|---|---|
+| **Full Name** | Lect. (Dr.) AYŞEGÜL AKKAYA |
+| **Designation** | Lecturer |
+| **Institution** | İstanbul University |
+| **Postal Address** | İstanbul University Main Campus 34452, Beyazıt, Istanbul, Türkiye |
+| **Institutional Email** | aysegulunal@istanbul.edu.tr |
+| **Institutional Profile** | https://avesis.istanbul.edu.tr/aysegulunal |
+| **ORCID** | 0000-0001-9662-6267 |
+| **Photo** | `assets/images/editorial-board/aysegul-akkaya.webp` |
+| **Profile ID** | `aysegul-akkaya` |
+| **Country** | 🇹🇷 Türkiye |
+| **Expertise** | 17th Century Ottoman History, Modern History, History of Ottoman Institutions |
+
+---
+
+### 5. International Member — UK
 
 | Field | Value |
 |---|---|
@@ -86,7 +104,7 @@
 
 ---
 
-### 5. Special Board Member
+### 6. Special Board Member
 
 | Field | Value |
 |---|---|
@@ -103,7 +121,7 @@
 
 ---
 
-### 6. Special Board Member
+### 7. Special Board Member
 
 | Field | Value |
 |---|---|
@@ -122,7 +140,7 @@
 
 ## Category 3: Editorial Board Members
 
-### 7. Editorial Board Member
+### 8. Editorial Board Member
 
 | Field | Value |
 |---|---|
@@ -140,7 +158,7 @@
 
 ---
 
-### 8. Editorial Board Member
+### 9. Editorial Board Member
 
 | Field | Value |
 |---|---|
@@ -157,7 +175,7 @@
 
 ---
 
-### 9. Editorial Board Member
+### 10. Editorial Board Member
 
 | Field | Value |
 |---|---|
@@ -173,7 +191,7 @@
 
 ---
 
-### 10. Editorial Board Member
+### 11. Editorial Board Member
 
 | Field | Value |
 |---|---|
@@ -190,7 +208,7 @@
 
 ---
 
-### 11. Editorial Board Member
+### 12. Editorial Board Member
 
 | Field | Value |
 |---|---|
@@ -210,7 +228,7 @@
 
 ## Category 4: Advisory Board
 
-### 12. Advisory Board Member
+### 13. Advisory Board Member
 
 | Field | Value |
 |---|---|
@@ -227,7 +245,7 @@
 
 ---
 
-### 13. Advisory Board Member
+### 14. Advisory Board Member
 
 | Field | Value |
 |---|---|
@@ -250,11 +268,11 @@
 |---|---|---|
 | Editor-in-Chief | 1 | Dr. Nusrat Ali Hashmi |
 | Managing Editor | 1 | Sayed Amir Mustafa Hashmi |
-| International Board | 2 | Dr. Mary Lou Frank 🇺🇸, Prof. Jyotirmaya Thakur 🇬🇧 |
+| International Board | 3 | Dr. Mary Lou Frank 🇺🇸, Lect. Ayşegül Akkaya 🇹🇷, Prof. Jyotirmaya Thakur 🇬🇧 |
 | Special Board | 2 | Prof. (Dr.) Nuzhat Parveen Khan, Dr. Anupama Patel |
 | Editorial Board | 5 | Sunatkari, Yende, Malviya, Salim Khan, Momin Ali |
 | Advisory Board | 2 | Prof. Mona Purohit, Dr. Ranu Shukla |
-| **Total** | **13** | |
+| **Total** | **14** | |
 
 ---
 
@@ -264,6 +282,7 @@
 { id: 'nusrat-hashmi',     pill: 'pill-1' },
 { id: 'amir-hashmi',       pill: 'pill-2' },
 { id: 'mary-frank',        pill: 'pill-3' },
+{ id: 'aysegul-akkaya',    pill: 'pill-aysegul' },
 { id: 'ashok-sunatkari',   pill: 'pill-4' },
 { id: 'ashok-yende',       pill: 'pill-5' },
 { id: 'karuna-malviya',    pill: 'pill-6' },
@@ -273,5 +292,5 @@
 { id: 'anupama-patel',     pill: 'pill-10' },
 { id: 'mona-purohit',      pill: 'pill-11' },
 { id: 'ranu-shukla',       pill: 'pill-12' }
-// nuzhat-khan: pill-nuzhat (inserted after mary-frank in nav)
+// aysegul-akkaya: pill-aysegul, nuzhat-khan: pill-nuzhat (inserted after mary-frank in nav)
 ```
