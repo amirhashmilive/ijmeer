@@ -26,7 +26,7 @@
 ## Recent Changes (Reverse Chronological)
 
 ### 2026-06-24 — Update editorial board profiles and advisory board
-- **Changed:** Added key achievements with book hyperlinks for Editor-in-Chief Dr. Nusrat Ali Hashmi. Added Rajhans Yeshwant Gaikwad to the Advisory Board in the first position. Upgraded Managing Editor Sayed Amir Mustafa Hashmi's profile to match the EIC card format, including expanded layout and key achievements. Updated board statistics. Removed SINTA profile and updated institutional link for Dr. Hafid Zakariya.
+- **Changed:** Added key achievements with book hyperlinks for Editor-in-Chief Dr. Nusrat Ali Hashmi. Added Rajhans Yeshwant Gaikwad to the Advisory Board in the first position. Upgraded Managing Editor Sayed Amir Mustafa Hashmi's profile to match the EIC card format, including expanded layout and key achievements. Updated board statistics. Removed SINTA profile and updated institutional link for Dr. Hafid Zakariya. Redesigned Sayed Amir's card to use badges and added a bio and personal website link.
 - **Reason:** User request for profile enhancements and new board member addition.
 - **Files:** `editorial-board.html`, `images/editorial/rajhans-gaikwad.webp`
 - **Commit:** Pending

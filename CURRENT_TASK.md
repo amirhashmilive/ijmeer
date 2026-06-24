@@ -16,10 +16,12 @@
 ### Steps:
 - [x] Convert Rajhans Gaikwad image to `.webp` format
 - [x] Add Key Achievements with book hyperlinks to Dr. Nusrat Ali Hashmi's profile in `editorial-board.html`
-- [x] Add Rajhans Yeshwant Gaikwad to Advisory Board in `editorial-board.html`
-- [x] Upgrade Sayed Amir Mustafa Hashmi's profile with Key Achievements in `editorial-board.html`
+### Steps:
+- [x] Update Board stats to 15 Members
+- [x] Hyperlink "Bolti Nadi" in Sayed Amir's Key Achievements
+- [x] Redesign Sayed Amir's profile card to match EIC clean layout
 - [x] Update MEMORY.md and CURRENT_TASK.md
-- [x] Commit and push changes
+- [ ] Commit and push changes
 
 ---
 
