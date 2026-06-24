@@ -25,6 +25,12 @@
 
 ## Recent Changes (Reverse Chronological)
 
+### 2026-06-24 — Update editorial board profiles and advisory board
+- **Changed:** Added key achievements with book hyperlinks for Editor-in-Chief Dr. Nusrat Ali Hashmi. Added Rajhans Yeshwant Gaikwad to the Advisory Board in the first position. Upgraded Managing Editor Sayed Amir Mustafa Hashmi's profile to match the EIC card format, including expanded layout and key achievements.
+- **Reason:** User request for profile enhancements and new board member addition.
+- **Files:** `editorial-board.html`, `images/editorial/rajhans-gaikwad.webp`
+- **Commit:** Pending
+
 ### 2026-06-24 — Add Dr. Hafid Zakariya, remove Prof. Mona Purohit
 - **Changed:** Removed Prof. (Dr.) Mona Purohit from the Advisory Board. Added Dr. Hafid Zakariya to the Editorial Board Members.
 - **Reason:** User request.

@@ -14,11 +14,10 @@
 **Agent:** Antigravity (Gemini 3.1 Pro)
 
 ### Steps:
-- [x] Remove Prof. Mona Purohit from `editorial-board.html`
-- [x] Add Dr. Hafid Zakariya to `editorial-board.html`
-- [x] Convert Dr. Hafid Zakariya image to `.webp` format
-- [x] Remove Prof. Mona Purohit from `editorial-portfolio.html`
-- [x] Add Dr. Hafid Zakariya to `editorial-portfolio.html`
+- [x] Convert Rajhans Gaikwad image to `.webp` format
+- [x] Add Key Achievements with book hyperlinks to Dr. Nusrat Ali Hashmi's profile in `editorial-board.html`
+- [x] Add Rajhans Yeshwant Gaikwad to Advisory Board in `editorial-board.html`
+- [x] Upgrade Sayed Amir Mustafa Hashmi's profile with Key Achievements in `editorial-board.html`
 - [x] Update MEMORY.md and CURRENT_TASK.md
 - [ ] Commit and push changes
 
