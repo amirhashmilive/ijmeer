@@ -21,6 +21,7 @@
 - [x] Hyperlink "Bolti Nadi" in Sayed Amir's Key Achievements
 - [x] Redesign Sayed Amir's profile card to match EIC clean layout
 - [x] Update Sayed Amir's "National Film Award" to "National Film Award Winner"
+- [x] Remove "PhD Scholar" from Sayed Amir's designation and badges
 - [x] Update MEMORY.md and CURRENT_TASK.md
 - [ ] Commit and push changes
 
