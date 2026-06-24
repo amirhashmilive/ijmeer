@@ -1,0 +1,205 @@
+name: Media Kit — Quarterly Archive & Setup
+
+on:
+  schedule:
+    # Runs on the 1st of January, April, July, October at 00:00 UTC
+    - cron: '0 0 1 1,4,7,10 *'
+  workflow_dispatch:
+    inputs:
+      archive_quarter:
+        description: 'Quarter to archive (e.g., 2026-Q3)'
+        required: false
+        type: string
+      new_quarter:
+        description: 'New quarter to create (e.g., 2026-Q4)'
+        required: false
+        type: string
+
+permissions:
+  contents: write
+
+jobs:
+  quarterly-rotation:
+    runs-on: ubuntu-latest
+    env:
+      GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: pip install requests google-generativeai
+
+      - name: Determine quarters
+        id: quarters
+        run: |
+          python3 << 'PYEOF'
+          import datetime, os
+
+          now = datetime.datetime.utcnow()
+          year = now.year
+          month = now.month
+
+          # Current quarter (the one starting now)
+          if month in [1, 2, 3]:
+              new_q = f"{year}-Q1"
+              old_q = f"{year-1}-Q4"
+          elif month in [4, 5, 6]:
+              new_q = f"{year}-Q2"
+              old_q = f"{year}-Q1"
+          elif month in [7, 8, 9]:
+              new_q = f"{year}-Q3"
+              old_q = f"{year}-Q2"
+          else:
+              new_q = f"{year}-Q4"
+              old_q = f"{year}-Q3"
+
+          # Allow overrides
+          override_archive = os.environ.get('INPUT_ARCHIVE_QUARTER', '')
+          override_new = os.environ.get('INPUT_NEW_QUARTER', '')
+
+          if override_archive:
+              old_q = override_archive
+          if override_new:
+              new_q = override_new
+
+          with open(os.environ['GITHUB_OUTPUT'], 'a') as f:
+              f.write(f"old_quarter={old_q}\n")
+              f.write(f"new_quarter={new_q}\n")
+
+          print(f"Archiving: {old_q}, Creating: {new_q}")
+          PYEOF
+        env:
+          INPUT_ARCHIVE_QUARTER: ${{ github.event.inputs.archive_quarter }}
+          INPUT_NEW_QUARTER: ${{ github.event.inputs.new_quarter }}
+
+      - name: Archive previous quarter
+        run: |
+          OLD_Q="${{ steps.quarters.outputs.old_quarter }}"
+          OLD_DIR="media-kit/quarter-${OLD_Q}"
+          ARCHIVE_DIR="media-kit/archive/quarter-${OLD_Q}"
+
+          if [ -d "$OLD_DIR" ]; then
+            echo "Archiving ${OLD_DIR} → ${ARCHIVE_DIR}"
+            mkdir -p "media-kit/archive"
+            mv "$OLD_DIR" "$ARCHIVE_DIR"
+          else
+            echo "No directory found for ${OLD_Q}, skipping archive."
+          fi
+
+      - name: Create new quarter structure
+        run: |
+          NEW_Q="${{ steps.quarters.outputs.new_quarter }}"
+          NEW_DIR="media-kit/quarter-${NEW_Q}"
+
+          echo "Creating directory structure for ${NEW_Q}"
+          mkdir -p "${NEW_DIR}/social-posts"
+          mkdir -p "${NEW_DIR}/images"
+
+          # Create empty post files
+          for platform in linkedin twitter instagram facebook whatsapp; do
+            touch "${NEW_DIR}/social-posts/${platform}-posts.txt"
+          done
+
+      - name: Generate press release and newsletter
+        run: |
+          python3 << 'PYEOF'
+          import os, datetime
+          import google.generativeai as genai
+
+          NEW_Q = "${{ steps.quarters.outputs.new_quarter }}"
+          api_key = os.environ.get("GEMINI_API_KEY", "")
+
+          new_dir = f"media-kit/quarter-{NEW_Q}"
+
+          if not api_key:
+              # Create template files without AI
+              press_release = f"""# IJMEER — Press Release | {NEW_Q}
+
+          **FOR IMMEDIATE RELEASE**
+
+          ## IJMEER Announces New Quarter — {NEW_Q}
+
+          [Press release content to be generated]
+
+          ---
+          *IJMEER — Diamond Open Access | Est. 2026*
+          """
+              newsletter = f"""# IJMEER Newsletter Draft | {NEW_Q}
+
+          ## From the Editor's Desk
+
+          [Newsletter content to be generated]
+
+          ---
+          *IJMEER — Diamond Open Access | Est. 2026*
+          """
+          else:
+              genai.configure(api_key=api_key)
+              model = genai.GenerativeModel("gemini-2.0-flash")
+
+              # Generate press release
+              pr_prompt = f"""Generate a professional press release for IJMEER (International Journal of Multidisciplinary Educational Excellence and Research) for quarter {NEW_Q}.
+
+              IJMEER details:
+              - Diamond Open Access, peer-reviewed, multidisciplinary journal
+              - Published by Meer Foundation (NGO), Raipur, Chhattisgarh, India
+              - Editor-in-Chief: Dr. Nusrat Ali Hashmi
+              - Managing Editor: Sayed Amir Mustafa Hashmi
+              - Website: www.ijmeer.com
+              - Address: House No. 103, Housing Board Colony, Hatkeshar, Dhamtari – 493773, Chhattisgarh, India
+              - Email: ijmeerj@gmail.com / editor@ijmeer.com
+              - Est. 2026, Bi-Annual (April & October)
+              - ISSN: XXXX-XXXX (pending)
+
+              Format as a markdown document with proper press release structure.
+              Include Call for Papers details if applicable."""
+
+              try:
+                  response = model.generate_content(pr_prompt)
+                  press_release = response.text
+              except:
+                  press_release = f"# Press Release — {NEW_Q}\n\n[To be generated]\n"
+
+              # Generate newsletter
+              nl_prompt = f"""Generate a quarterly newsletter draft for IJMEER for quarter {NEW_Q}.
+
+              Include sections: Editor's Desk, Call for Papers, Recent Highlights, Editorial Board, Important Dates, Connect With Us.
+
+              IJMEER details: Diamond Open Access, peer-reviewed, multidisciplinary journal. Published by Meer Foundation. Est. 2026.
+              Website: www.ijmeer.com | Email: ijmeerj@gmail.com | Handle: @ijmeerj
+
+              Format as markdown."""
+
+              try:
+                  response = model.generate_content(nl_prompt)
+                  newsletter = response.text
+              except:
+                  newsletter = f"# Newsletter Draft — {NEW_Q}\n\n[To be generated]\n"
+
+          with open(f"{new_dir}/press-release.md", "w", encoding="utf-8") as f:
+              f.write(press_release)
+          with open(f"{new_dir}/newsletter-draft.md", "w", encoding="utf-8") as f:
+              f.write(newsletter)
+
+          print(f"Press release and newsletter created for {NEW_Q}")
+          PYEOF
+
+      - name: Commit and push changes
+        run: |
+          git config user.name "IJMEER Media Bot"
+          git config user.email "ijmeerj@gmail.com"
+          git add media-kit/
+          git diff --cached --quiet && echo "No changes to commit" && exit 0
+          OLD_Q="${{ steps.quarters.outputs.old_quarter }}"
+          NEW_Q="${{ steps.quarters.outputs.new_quarter }}"
+          git commit -m "add: quarterly rotation — archive ${OLD_Q}, create ${NEW_Q}"
+          git push origin HEAD:main

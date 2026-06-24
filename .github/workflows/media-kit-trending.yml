@@ -1,0 +1,249 @@
+name: Media Kit — Daily Trending Detection
+
+on:
+  schedule:
+    # Runs daily at 08:00 UTC
+    - cron: '0 8 * * *'
+  workflow_dispatch:
+    inputs:
+      force_topic:
+        description: 'Force a specific topic (e.g., "World Science Day")'
+        required: false
+        type: string
+
+permissions:
+  contents: write
+
+jobs:
+  check-trending:
+    runs-on: ubuntu-latest
+    env:
+      GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+      NANO_BANANA_API_KEY: ${{ secrets.NANO_BANANA_API_KEY }}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: pip install requests google-generativeai
+
+      - name: Check for trending topics
+        id: trending
+        run: |
+          python3 << 'PYEOF'
+          import datetime, os, json
+          import google.generativeai as genai
+
+          today = datetime.date.today()
+          today_str = today.strftime("%Y-%m-%d")
+          month_day = today.strftime("%B %d")
+
+          api_key = os.environ.get("GEMINI_API_KEY", "")
+          force_topic = os.environ.get("INPUT_FORCE_TOPIC", "")
+
+          if not api_key:
+              print("No GEMINI_API_KEY set. Exiting.")
+              with open(os.environ['GITHUB_OUTPUT'], 'a') as f:
+                  f.write("has_trending=false\n")
+              exit(0)
+
+          genai.configure(api_key=api_key)
+          model = genai.GenerativeModel("gemini-2.0-flash")
+
+          # Calendar of important dates (same as trending-tracker.md)
+          CALENDAR = {
+              "01-04": "Isaac Newton Birthday",
+              "01-07": "Nikola Tesla Death Anniversary",
+              "01-08": "Galileo Galilei Death Anniversary / Stephen Hawking Birthday",
+              "01-24": "International Day of Education",
+              "02-11": "International Day of Women and Girls in Science",
+              "02-12": "Charles Darwin Birthday",
+              "02-15": "Galileo Galilei Birthday",
+              "02-18": "Nasir al-Din al-Tusi Birthday",
+              "02-28": "National Science Day India (Raman Effect)",
+              "03-14": "Pi Day / Albert Einstein Birthday",
+              "03-17": "Ibn Khaldun Death Anniversary",
+              "03-21": "World Poetry Day",
+              "03-31": "Isaac Newton Death Anniversary",
+              "04-14": "Ibn Rushd (Averroes) Birthday",
+              "04-18": "Albert Einstein Death Anniversary",
+              "04-19": "Charles Darwin Death Anniversary",
+              "04-23": "World Book and Copyright Day",
+              "04-26": "World Intellectual Property Day / Srinivasa Ramanujan Death Anniversary",
+              "05-03": "World Press Freedom Day",
+              "05-18": "Omar Khayyam Birthday",
+              "05-27": "Ibn Khaldun Birthday",
+              "06-05": "World Environment Day",
+              "06-26": "Nasir al-Din al-Tusi Death Anniversary",
+              "07-01": "Ibn al-Haytham Birthday",
+              "07-04": "Marie Curie Death Anniversary",
+              "07-10": "Nikola Tesla Birthday",
+              "07-11": "World Population Day",
+              "07-15": "World Youth Skills Day",
+              "07-27": "APJ Abdul Kalam Death Anniversary",
+              "08-12": "International Youth Day",
+              "08-26": "Al-Razi (Rhazes) Birthday",
+              "09-04": "Al-Biruni Birthday",
+              "09-08": "International Literacy Day",
+              "09-21": "International Day of Peace",
+              "09-28": "International Day for Universal Access to Information",
+              "10-05": "World Teachers Day",
+              "10-15": "APJ Abdul Kalam Birthday",
+              "10-30": "Homi J. Bhabha Birthday",
+              "11-07": "Marie Curie Birthday / C.V. Raman Birthday",
+              "11-10": "World Science Day for Peace and Development",
+              "11-14": "Childrens Day India",
+              "11-21": "C.V. Raman Death Anniversary",
+              "12-04": "Omar Khayyam Death Anniversary",
+              "12-10": "Human Rights Day / Nobel Prize Ceremony / Ibn Rushd Death Anniversary",
+              "12-13": "Al-Biruni Death Anniversary",
+              "12-22": "Srinivasa Ramanujan Birthday"
+          }
+
+          mm_dd = today.strftime("%m-%d")
+          calendar_match = CALENDAR.get(mm_dd, "")
+
+          if force_topic:
+              topic_to_post = force_topic
+              has_trending = True
+          elif calendar_match:
+              topic_to_post = calendar_match
+              has_trending = True
+          else:
+              # Use Gemini to check if there's a noteworthy academic event today
+              check_prompt = f"""Today is {month_day}, {today.year}. Is there any significant academic, scientific, or educational event, anniversary, or celebration today that a multidisciplinary academic journal (IJMEER) should acknowledge?
+
+              Consider: scholar birthdays/death anniversaries, international days, academic conferences, Nobel announcements, major discoveries.
+
+              Respond with ONLY a JSON object:
+              {{"has_event": true/false, "event_name": "Event Name", "category": "scholar|event|festival|breaking"}}
+
+              If no significant event, respond: {{"has_event": false}}"""
+
+              try:
+                  response = model.generate_content(check_prompt)
+                  text = response.text.strip()
+                  # Extract JSON from response
+                  if "{" in text:
+                      json_str = text[text.index("{"):text.rindex("}")+1]
+                      result = json.loads(json_str)
+                      has_trending = result.get("has_event", False)
+                      topic_to_post = result.get("event_name", "")
+                  else:
+                      has_trending = False
+                      topic_to_post = ""
+              except Exception as e:
+                  print(f"Error checking trends: {e}")
+                  has_trending = False
+                  topic_to_post = ""
+
+          with open(os.environ['GITHUB_OUTPUT'], 'a') as f:
+              f.write(f"has_trending={'true' if has_trending else 'false'}\n")
+              f.write(f"topic={topic_to_post}\n")
+              f.write(f"date={today_str}\n")
+              slug = topic_to_post.lower().replace(" ", "-").replace("(", "").replace(")", "").replace("/", "-")[:50] if topic_to_post else "none"
+              f.write(f"slug={slug}\n")
+
+          print(f"Trending: {has_trending}, Topic: {topic_to_post}")
+          PYEOF
+        env:
+          INPUT_FORCE_TOPIC: ${{ github.event.inputs.force_topic }}
+
+      - name: Generate trending posts
+        if: steps.trending.outputs.has_trending == 'true'
+        run: |
+          python3 << 'PYEOF'
+          import os, json, datetime
+          import google.generativeai as genai
+
+          TOPIC = "${{ steps.trending.outputs.topic }}"
+          DATE = "${{ steps.trending.outputs.date }}"
+          SLUG = "${{ steps.trending.outputs.slug }}"
+
+          api_key = os.environ.get("GEMINI_API_KEY", "")
+          genai.configure(api_key=api_key)
+          model = genai.GenerativeModel("gemini-2.0-flash")
+
+          prompt = f"""You are a social media manager for IJMEER (International Journal of Multidisciplinary Educational Excellence and Research).
+
+          Today's trending topic: {TOPIC}
+          Date: {DATE}
+
+          IJMEER details:
+          - Diamond Open Access, peer-reviewed, multidisciplinary journal
+          - Published by Meer Foundation (NGO), Raipur, Chhattisgarh, India
+          - Editor-in-Chief: Dr. Nusrat Ali Hashmi
+          - Website: www.ijmeer.com | Handle: @ijmeerj
+          - Est. 2026, Bi-Annual (April & October)
+
+          Generate posts for ALL 5 platforms. The posts should:
+          1. Acknowledge the trending topic professionally
+          2. Connect it to IJMEER's multidisciplinary mission
+          3. Include relevant hashtags
+          4. Be respectful and scholarly in tone
+
+          Format your response EXACTLY as follows:
+
+          ---
+          date: {DATE}
+          topic: "{TOPIC}"
+          category: "scholar|event|festival|breaking"
+          platforms: linkedin,twitter,instagram,facebook,whatsapp
+          ---
+
+          ## LinkedIn Post
+          [Professional post]
+
+          ## Twitter Post 1
+          [Under 280 chars]
+
+          ## Twitter Post 2
+          [Under 280 chars]
+
+          ## Instagram Post
+          [Visual caption with hashtags]
+
+          ## Facebook Post
+          [Shareable post]
+
+          ## WhatsApp Post
+          [Short update with *bold* formatting]"""
+
+          try:
+              response = model.generate_content(prompt)
+              content = response.text
+
+              # Save trending post
+              trending_dir = "media-kit/trending"
+              os.makedirs(trending_dir, exist_ok=True)
+
+              filename = f"{DATE}-{SLUG}.md"
+              filepath = os.path.join(trending_dir, filename)
+
+              with open(filepath, "w", encoding="utf-8") as f:
+                  f.write(content)
+
+              print(f"Trending post saved: {filepath}")
+          except Exception as e:
+              print(f"Error generating trending post: {e}")
+              exit(1)
+          PYEOF
+
+      - name: Commit and push trending post
+        if: steps.trending.outputs.has_trending == 'true'
+        run: |
+          git config user.name "IJMEER Media Bot"
+          git config user.email "ijmeerj@gmail.com"
+          git add media-kit/trending/
+          git diff --cached --quiet && echo "No changes to commit" && exit 0
+          TOPIC="${{ steps.trending.outputs.topic }}"
+          git commit -m "add: trending post — ${TOPIC}"
+          git push origin HEAD:main

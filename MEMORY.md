@@ -25,6 +25,19 @@
 
 ## Recent Changes (Reverse Chronological)
 
+### 2026-06-24 — Add complete Media Kit system
+- **Changed:** Created entire Media Kit system with 16 new files across 3 components:
+  - `media-kit.html` — New page matching site design with 6 sections (press release, social posts, trending, assets, archive, download)
+  - `media-kit/` — Content folder with `memory.md` (agent guidelines), `trending-tracker.md` (detection logic + scholar calendar)
+  - `media-kit/quarter-2026-Q3/` — Full Q3 content: social posts for all 5 platforms (LinkedIn, Twitter/X, Instagram, Facebook, WhatsApp), press release, newsletter draft
+  - `media-kit/quarter-2026-Q3/images/` — 3 sample Week 1 images in WebP (LinkedIn 16:9, Instagram 4:3, Story 9:16)
+  - `.github/workflows/` — 3 GitHub Actions workflows: weekly post generation, daily trending detection, quarterly archive rotation
+  - `media-kit/trending/` and `media-kit/archive/` — Empty directories with .gitkeep (populated by workflows)
+- **Reason:** User requested automated media kit system with AI-powered content generation.
+- **Files:** `media-kit.html`, `media-kit/memory.md`, `media-kit/trending-tracker.md`, `media-kit/quarter-2026-Q3/social-posts/*.txt`, `media-kit/quarter-2026-Q3/press-release.md`, `media-kit/quarter-2026-Q3/newsletter-draft.md`, `media-kit/quarter-2026-Q3/images/*.webp`, `.github/workflows/media-kit-*.yml`
+- **Commit:** Pending
+- **Note:** No existing files were modified. Footer link to Media Kit was NOT added (user rule: "DO NOT change any existing page"). API keys must be stored in GitHub Secrets only.
+
 ### 2026-06-24 — Update editorial board profiles and advisory board
 - **Changed:** Added key achievements with book hyperlinks for Editor-in-Chief Dr. Nusrat Ali Hashmi. Added Rajhans Yeshwant Gaikwad to the Advisory Board in the first position. Upgraded Managing Editor Sayed Amir Mustafa Hashmi's profile to match the EIC card format, including expanded layout and key achievements. Updated board statistics. Removed SINTA profile and updated institutional link for Dr. Hafid Zakariya. Redesigned Sayed Amir's card to use badges and added a bio and personal website link.
 - **Reason:** User request for profile enhancements and new board member addition.

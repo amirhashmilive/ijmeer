@@ -1,0 +1,272 @@
+name: Media Kit — Weekly Post Generation
+
+on:
+  schedule:
+    # Runs every Sunday at midnight UTC
+    - cron: '0 0 * * 0'
+  workflow_dispatch:
+    inputs:
+      week_number:
+        description: 'Override week number (1-8)'
+        required: false
+        type: string
+      quarter:
+        description: 'Override quarter (e.g., 2026-Q3)'
+        required: false
+        type: string
+
+permissions:
+  contents: write
+
+jobs:
+  generate-weekly-posts:
+    runs-on: ubuntu-latest
+    env:
+      GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+      NANO_BANANA_API_KEY: ${{ secrets.NANO_BANANA_API_KEY }}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: pip install requests google-generativeai Pillow
+
+      - name: Determine current week and quarter
+        id: schedule
+        run: |
+          python3 << 'PYEOF'
+          import datetime, os, json
+
+          now = datetime.datetime.utcnow()
+          year = now.year
+          month = now.month
+
+          # Determine quarter
+          if month in [1, 2, 3]:
+              quarter = f"{year}-Q1"
+              q_start = datetime.date(year, 1, 1)
+          elif month in [4, 5, 6]:
+              quarter = f"{year}-Q2"
+              q_start = datetime.date(year, 4, 1)
+          elif month in [7, 8, 9]:
+              quarter = f"{year}-Q3"
+              q_start = datetime.date(year, 7, 1)
+          else:
+              quarter = f"{year}-Q4"
+              q_start = datetime.date(year, 10, 1)
+
+          # Calculate week number within quarter (1-indexed)
+          days_in = (now.date() - q_start).days
+          week_num = min((days_in // 7) + 1, 8)
+
+          # Allow overrides from workflow_dispatch
+          override_week = os.environ.get('INPUT_WEEK_NUMBER', '')
+          override_quarter = os.environ.get('INPUT_QUARTER', '')
+
+          if override_week:
+              week_num = int(override_week)
+          if override_quarter:
+              quarter = override_quarter
+
+          with open(os.environ['GITHUB_OUTPUT'], 'a') as f:
+              f.write(f"quarter={quarter}\n")
+              f.write(f"week={week_num}\n")
+
+          print(f"Quarter: {quarter}, Week: {week_num}")
+          PYEOF
+        env:
+          INPUT_WEEK_NUMBER: ${{ github.event.inputs.week_number }}
+          INPUT_QUARTER: ${{ github.event.inputs.quarter }}
+
+      - name: Generate social media posts via Gemini API
+        run: |
+          python3 << 'PYEOF'
+          import os, json
+          import google.generativeai as genai
+
+          QUARTER = "${{ steps.schedule.outputs.quarter }}"
+          WEEK = int("${{ steps.schedule.outputs.week }}")
+
+          TOPICS = {
+              1: "Call for Papers (current quarter)",
+              2: "Latest Published Paper Highlight",
+              3: "Editorial Board Spotlight (1 member)",
+              4: "Upcoming Events / Important Dates",
+              5: "Festival / Cultural Post",
+              6: "Important Personality (scholar/scientist)",
+              7: "Journal Metrics / Milestones",
+              8: "Call for Papers (reminder)"
+          }
+
+          topic = TOPICS.get(WEEK, TOPICS[1])
+
+          api_key = os.environ.get("GEMINI_API_KEY", "")
+          if not api_key:
+              print("WARNING: No GEMINI_API_KEY set. Using template posts.")
+              exit(0)
+
+          genai.configure(api_key=api_key)
+          model = genai.GenerativeModel("gemini-2.0-flash")
+
+          prompt = f"""You are a social media manager for IJMEER (International Journal of Multidisciplinary Educational Excellence and Research).
+
+          Generate Week {WEEK} social media posts for Quarter {QUARTER}.
+          Topic: {topic}
+
+          IJMEER details:
+          - Diamond Open Access, peer-reviewed, multidisciplinary journal
+          - Published by Meer Foundation (NGO), Raipur, Chhattisgarh, India
+          - Editor-in-Chief: Dr. Nusrat Ali Hashmi
+          - Website: www.ijmeer.com
+          - Social handle: @ijmeerj
+          - Est. 2026, Bi-Annual (April & October)
+          - Brand colors: Deep Navy (#1a2a3a), Gold (#c9a03d)
+
+          Generate posts for ALL 5 platforms in this exact format:
+
+          === LINKEDIN ===
+          [1 professional post]
+
+          === TWITTER 1 ===
+          [tweet under 280 chars]
+
+          === TWITTER 2 ===
+          [tweet under 280 chars]
+
+          === INSTAGRAM ===
+          [1 visual/carousel caption with hashtags]
+
+          === FACEBOOK ===
+          [1 shareable post]
+
+          === WHATSAPP ===
+          [1 short update with WhatsApp formatting (*bold*)]
+
+          Use professional academic tone. Include relevant hashtags. Include links to www.ijmeer.com where appropriate."""
+
+          try:
+              response = model.generate_content(prompt)
+              post_content = response.text
+
+              # Save generated posts
+              base_dir = f"media-kit/quarter-{QUARTER}/social-posts"
+              os.makedirs(base_dir, exist_ok=True)
+
+              output_file = f"{base_dir}/week-{WEEK}-generated.txt"
+              with open(output_file, "w", encoding="utf-8") as f:
+                  f.write(f"# Auto-generated posts — Week {WEEK}, {QUARTER}\n")
+                  f.write(f"# Topic: {topic}\n")
+                  f.write(f"# Generated: {__import__('datetime').datetime.utcnow().isoformat()}\n\n")
+                  f.write(post_content)
+
+              print(f"Posts saved to {output_file}")
+          except Exception as e:
+              print(f"Error generating posts: {e}")
+              exit(1)
+          PYEOF
+
+      - name: Generate platform images via API
+        run: |
+          python3 << 'PYEOF'
+          import os, requests, time
+
+          QUARTER = "${{ steps.schedule.outputs.quarter }}"
+          WEEK = int("${{ steps.schedule.outputs.week }}")
+
+          TOPICS = {
+              1: "Call for Papers for academic journal",
+              2: "Research paper spotlight for academic journal",
+              3: "Editorial board member spotlight",
+              4: "Academic calendar and important dates",
+              5: "Academic festival celebration",
+              6: "Historical scholar tribute",
+              7: "Journal milestones and metrics",
+              8: "Call for Papers deadline reminder"
+          }
+
+          topic = TOPICS.get(WEEK, TOPICS[1])
+          api_key = os.environ.get("NANO_BANANA_API_KEY", "")
+
+          if not api_key:
+              print("WARNING: No NANO_BANANA_API_KEY set. Skipping image generation.")
+              exit(0)
+
+          base_dir = f"media-kit/quarter-{QUARTER}/images"
+          os.makedirs(base_dir, exist_ok=True)
+
+          SIZES = {
+              "linkedin-16x9": {"width": 1200, "height": 675},
+              "twitter-16x9": {"width": 1200, "height": 675},
+              "facebook-16x9": {"width": 1200, "height": 675},
+              "instagram-4x3": {"width": 1200, "height": 900},
+              "whatsapp-4x3": {"width": 1200, "height": 900},
+              "story-9x16": {"width": 1080, "height": 1920},
+          }
+
+          base_prompt = f"Clean academic design, professional typography, deep navy (#1a2a3a) and gold (#c9a03d) color scheme, IJMEER journal branding, modern academic aesthetic, {topic}"
+
+          for size_name, dims in SIZES.items():
+              filename = f"week-{WEEK}-{size_name}.webp"
+              filepath = os.path.join(base_dir, filename)
+
+              print(f"Generating {filename}...")
+
+              try:
+                  # Using Nano Banana API for image generation
+                  response = requests.post(
+                      "https://api.nanobanana.com/v1/images/generations",
+                      headers={
+                          "Authorization": f"Bearer {api_key}",
+                          "Content-Type": "application/json"
+                      },
+                      json={
+                          "prompt": base_prompt,
+                          "width": dims["width"],
+                          "height": dims["height"],
+                          "format": "webp"
+                      },
+                      timeout=120
+                  )
+
+                  if response.status_code == 200:
+                      data = response.json()
+                      if "data" in data and len(data["data"]) > 0:
+                          img_url = data["data"][0].get("url", "")
+                          if img_url:
+                              img_response = requests.get(img_url, timeout=60)
+                              with open(filepath, "wb") as f:
+                                  f.write(img_response.content)
+                              print(f"  Saved: {filepath}")
+                          else:
+                              print(f"  No image URL in response for {filename}")
+                      else:
+                          print(f"  Unexpected response format for {filename}")
+                  else:
+                      print(f"  API error {response.status_code} for {filename}: {response.text[:200]}")
+
+                  time.sleep(2)  # Rate limiting
+
+              except Exception as e:
+                  print(f"  Error generating {filename}: {e}")
+                  continue
+
+          PYEOF
+
+      - name: Commit and push changes
+        run: |
+          git config user.name "IJMEER Media Bot"
+          git config user.email "ijmeerj@gmail.com"
+          git add media-kit/
+          git diff --cached --quiet && echo "No changes to commit" && exit 0
+          QUARTER="${{ steps.schedule.outputs.quarter }}"
+          WEEK="${{ steps.schedule.outputs.week }}"
+          git commit -m "add: media-kit week ${WEEK} posts for ${QUARTER}"
+          git push origin HEAD:main
