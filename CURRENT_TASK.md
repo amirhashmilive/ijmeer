@@ -20,6 +20,7 @@
 - [x] Update Board stats to 15 Members
 - [x] Hyperlink "Bolti Nadi" in Sayed Amir's Key Achievements
 - [x] Redesign Sayed Amir's profile card to match EIC clean layout
+- [x] Update Sayed Amir's "National Film Award" to "National Film Award Winner"
 - [x] Update MEMORY.md and CURRENT_TASK.md
 - [ ] Commit and push changes
 
