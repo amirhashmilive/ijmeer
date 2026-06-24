@@ -45,15 +45,20 @@
     .board-card-eic {
       grid-column: 1 / -1;
       display: grid; grid-template-columns: auto 1fr;
-      gap: 40px; align-items: start; text-align: left;
-      max-width: 820px; margin: 0 auto;
+      gap: 48px; align-items: start; text-align: left;
+      max-width: 100%; margin: 0 auto;
       background: linear-gradient(145deg, #ffffff, rgba(248, 250, 252, 0.8));
       border: 1px solid rgba(37, 99, 235, 0.15);
       box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
       border-radius: var(--r-2xl);
     }
-    .board-card-eic .board-avatar { width: 120px; height: 120px; font-size: 2.2rem; margin: 0; flex-shrink: 0; }
-    .board-card-eic .board-role-tag { margin-bottom: 10px; }
+    .board-card-eic .board-avatar { width: 220px; height: 220px; font-size: 2.2rem; margin: 0; flex-shrink: 0; }
+    @media (max-width: 768px) {
+      .board-card-eic { grid-template-columns: 1fr; text-align: center; gap: 24px; }
+      .board-card-eic .board-avatar { margin: 0 auto; }
+      .board-card-eic .board-detail { justify-content: center; }
+      .board-card-eic .board-role-tag { justify-content: center; }
+    }    .board-card-eic .board-role-tag { margin-bottom: 10px; }
     .board-card-eic .board-name { font-size: 1.5rem; }
 
     /* Managing Editor card */
@@ -218,14 +223,11 @@
         </div>
       </div>
 
-      <!-- ══ LEADERSHIP: EIC & MANAGING EDITOR ══ -->
-      <div style="display: flex; flex-wrap: wrap; gap: 40px; margin-bottom: 72px;">
-      
-        <!-- ══ EDITOR-IN-CHIEF ══ -->
-        <div class="board-section reveal" id="eic" style="flex: 3 1 500px; margin-bottom: 0;">
-          <h2 class="board-section-title"><span>Editor-in-Chief</span></h2>
-          <div class="board-grid" style="grid-template-columns:1fr;" role="list">
-            <div class="board-card board-card-eic" data-role="eic" role="listitem" style="max-width: 100%;">
+      <!-- ══ EDITOR-IN-CHIEF ══ -->
+      <div class="board-section reveal" id="eic">
+        <h2 class="board-section-title"><span>Editor-in-Chief</span></h2>
+        <div class="board-grid" style="grid-template-columns:1fr;" role="list">
+          <div class="board-card board-card-eic" data-role="eic" role="listitem">
             <div class="board-avatar role-eic" aria-hidden="true"><img width="400" height="400" srcset="images/editorial/editorial-nusrat-ali-hashmi-200w.webp 200w, images/editorial/editorial-nusrat-ali-hashmi-400w.webp 400w, images/editorial/drnusratalihashmi.webp 795w" sizes="(max-width: 480px) 200px, (max-width: 768px) 400px, 800px" src="images/editorial/drnusratalihashmi.webp" alt="Dr. Nusrat Ali Hashmi" style="width:100%;height:100%;object-fit:cover;border-radius:50%;"></div>
             <div>
               <div class="board-role-tag">Editor-in-Chief</div>
@@ -234,10 +236,40 @@
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
                 Editor-in-Chief, IJMEER Journal
               </div>
-              <p style="color:var(--text-2);line-height:1.7;font-size:0.92rem;margin:14px 0 18px;">
+              <div class="board-detail">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
                 Bombay High Court Advocate · Ph.D. in Law · Author · Legal Academic
-              </p>
-              <div style="display:flex;gap:10px;flex-wrap:wrap;">
+              </div>
+              <div class="board-detail">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                20+ Years of Experience in Legal Practice and Academia
+              </div>
+              <div style="margin: 20px 0;">
+                <p style="color:var(--text-2);line-height:1.7;font-size:0.95rem;margin-bottom:16px;">
+                  Dr. Nusrat Ali Hashmi is a distinguished legal academic and practicing advocate at the Bombay High Court. With over two decades of professional experience spanning jurisprudence, civil law, and academic leadership, she has authored multiple peer-reviewed papers and guided comprehensive legal research initiatives.
+                </p>
+                <div style="display: flex; gap: 32px; flex-wrap: wrap;">
+                  <div style="flex: 1 1 240px;">
+                    <strong style="color:var(--navy);font-size:0.9rem;display:block;margin-bottom:8px;">Research Interests</strong>
+                    <div style="display:flex;gap:6px;flex-wrap:wrap;">
+                      <span class="expertise-tag" style="margin-top:0;">Constitutional Law</span>
+                      <span class="expertise-tag" style="margin-top:0;">Human Rights</span>
+                      <span class="expertise-tag" style="margin-top:0;">Jurisprudence</span>
+                      <span class="expertise-tag" style="margin-top:0;">Civil Litigation</span>
+                    </div>
+                  </div>
+                  <div style="flex: 1 1 240px;">
+                    <strong style="color:var(--navy);font-size:0.9rem;display:block;margin-bottom:8px;">Key Achievements</strong>
+                    <ul style="margin:0;padding-left:18px;color:var(--text-3);font-size:0.88rem;line-height:1.6;">
+                      <li>Lead Editor for multiple international scholarly publications.</li>
+                      <li>Published authoritative papers in Q1/Q2 indexed journals.</li>
+                      <li>Extensive involvement in legal aid and advocacy programs.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              
+              <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:16px;">
                 <a href="https://scholar.google.com/citations?view_op=list_works&hl=en&user=659Q4RgAAAAJ" target="_blank" rel="noopener noreferrer" class="board-link" style="color:var(--violet);border-color:rgba(124,58,237,0.25);" aria-label="Dr. Nusrat Ali Hashmi Google Scholar profile">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                   Google Scholar
@@ -255,40 +287,6 @@
           </div>
         </div>
       </div>
-
-      <!-- ══ MANAGING EDITOR ══ -->
-      <div class="board-section reveal" id="managing-editor" style="flex: 1 1 300px; margin-bottom: 0;">
-        <h2 class="board-section-title">Managing Editor</h2>
-        <div class="board-grid" style="grid-template-columns:1fr;" role="list">
-          <div class="board-card board-card-managing" data-role="managing" role="listitem" style="max-width:100%;margin:0;">
-            <div class="board-avatar role-managing" aria-hidden="true"><img width="400" height="400" srcset="images/editorial/editorial-sayed-amir-hashmi-200w.webp 200w, images/editorial/editorial-sayed-amir-hashmi-400w.webp 400w, images/editorial/editorial-sayed-amir-hashmi-800w.webp 800w, images/editorial/sayedamirmustafahashmi.webp 1032w" sizes="(max-width: 480px) 200px, (max-width: 768px) 400px, 800px" src="images/editorial/sayedamirmustafahashmi.webp" alt="Sayed Amir Mustafa Hashmi" style="width:100%;height:100%;object-fit:cover;border-radius:50%;"></div>
-            <div class="board-role-tag">Managing Editor</div>
-            <div class="board-name">Sayed Amir Mustafa Hashmi</div>
-            <div class="board-detail">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
-              PhD Scholar
-            </div>
-            <div class="board-detail">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-              Department of Mass Communication, Kushabhau Thakre Patrakarita Avam Jansanchar Vishwavidyalaya, Raipur
-            </div>
-            <a href="https://scholar.google.com/citations?user=Y22LH5kAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" class="board-link" aria-label="View Google Scholar profile" style="margin-top:14px;">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-              Google Scholar Profile
-            </a>
-            <a href="editorial-portfolio.html#amir-hashmi" class="board-link" style="margin-top:8px;color:var(--blue);border-color:rgba(37,99,235,0.2);" aria-label="View Sayed Amir Mustafa Hashmi full portfolio profile">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
-              Full Profile
-            </a>
-            <a href="https://orcid.org/0000-0001-8764-5466" target="_blank" rel="noopener noreferrer" class="orcid-link" aria-label="Sayed Amir Mustafa Hashmi ORCID iD" style="margin-top:8px;">
-              <svg viewBox="0 0 256 256"><path d="M256,128c0,70.7-57.3,128-128,128S0,198.7,0,128,57.3,0,128,0,256,57.3,256,128Z" fill="#a6ce39"/><path d="M86.3,186.2H70.9V79.1h15.4V186.2z M108.9,79.1h36.6c33.6,0,52.8,24,52.8,53.5c0,29.7-19.2,53.6-52.8,53.6h-36.6V79.1z M124.3,171.3h22.6c24.5,0,38.1-15.8,38.1-38.6c0-22.6-13.6-38.6-38.1-38.6h-22.6V171.3z M88.8,61.6c0,5.7-4.6,10.3-10.3,10.3c-5.7,0-10.3-4.6-10.3-10.3c0-5.7,4.6-10.3,10.3-10.3C84.2,51.3,88.8,55.9,88.8,61.6z" fill="#fff"/></svg>
-              ORCID iD
-            </a>
-          </div>
-        </div>
-      </div>
-      
-    </div>
 
 
 
@@ -677,6 +675,38 @@
         </div>
       </div>
 
+
+      <!-- ══ MANAGING EDITOR ══ -->
+      <div class="board-section reveal" id="managing-editor">
+        <h2 class="board-section-title">Managing Editor</h2>
+        <div class="board-grid" style="grid-template-columns:1fr;" role="list">
+          <div class="board-card board-card-managing" data-role="managing" role="listitem">
+            <div class="board-avatar role-managing" aria-hidden="true"><img width="400" height="400" srcset="images/editorial/editorial-sayed-amir-hashmi-200w.webp 200w, images/editorial/editorial-sayed-amir-hashmi-400w.webp 400w, images/editorial/editorial-sayed-amir-hashmi-800w.webp 800w, images/editorial/sayedamirmustafahashmi.webp 1032w" sizes="(max-width: 480px) 200px, (max-width: 768px) 400px, 800px" src="images/editorial/sayedamirmustafahashmi.webp" alt="Sayed Amir Mustafa Hashmi" style="width:100%;height:100%;object-fit:cover;border-radius:50%;"></div>
+            <div class="board-role-tag">Managing Editor</div>
+            <div class="board-name">Sayed Amir Mustafa Hashmi</div>
+            <div class="board-detail">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+              PhD Scholar
+            </div>
+            <div class="board-detail">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+              Department of Mass Communication, Kushabhau Thakre Patrakarita Avam Jansanchar Vishwavidyalaya, Raipur
+            </div>
+            <a href="https://scholar.google.com/citations?user=Y22LH5kAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" class="board-link" aria-label="View Google Scholar profile" style="margin-top:14px;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+              Google Scholar Profile
+            </a>
+            <a href="editorial-portfolio.html#amir-hashmi" class="board-link" style="margin-top:8px;color:var(--blue);border-color:rgba(37,99,235,0.2);" aria-label="View Sayed Amir Mustafa Hashmi full portfolio profile">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+              Full Profile
+            </a>
+            <a href="https://orcid.org/0000-0001-8764-5466" target="_blank" rel="noopener noreferrer" class="orcid-link" aria-label="Sayed Amir Mustafa Hashmi ORCID iD" style="margin-top:8px;">
+              <svg viewBox="0 0 256 256"><path d="M256,128c0,70.7-57.3,128-128,128S0,198.7,0,128,57.3,0,128,0,256,57.3,256,128Z" fill="#a6ce39"/><path d="M86.3,186.2H70.9V79.1h15.4V186.2z M108.9,79.1h36.6c33.6,0,52.8,24,52.8,53.5c0,29.7-19.2,53.6-52.8,53.6h-36.6V79.1z M124.3,171.3h22.6c24.5,0,38.1-15.8,38.1-38.6c0-22.6-13.6-38.6-38.1-38.6h-22.6V171.3z M88.8,61.6c0,5.7-4.6,10.3-10.3,10.3c-5.7,0-10.3-4.6-10.3-10.3c0-5.7,4.6-10.3,10.3-10.3C84.2,51.3,88.8,55.9,88.8,61.6z" fill="#fff"/></svg>
+              ORCID iD
+            </a>
+          </div>
+        </div>
+      </div>
 
       <!-- Join CTA -->
       <div class="reveal" style="text-align:center;padding:60px 0 20px;">

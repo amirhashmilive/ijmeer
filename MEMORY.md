@@ -25,6 +25,12 @@
 
 ## Recent Changes (Reverse Chronological)
 
+### 2026-06-24 — Restructure editorial board layout
+- **Changed:** Expanded Editor-in-Chief card to occupy full width and enhanced profile details. Moved Managing Editor to the bottom of the page, after the Advisory Board.
+- **Reason:** User request for layout adjustments.
+- **Files:** `editorial-board.html`
+- **Commit:** Pending
+
 ### 2026-06-23 — URGENT ISSN Compliance Fixes
 - Standardized founding year to 2026 across `privacy-policy.html`, `rights-permissions.html`, and `data/config.json` to prevent ISSN application rejection.
 - Restructured `editorial-board.html` and `editorial-portfolio.html` for ISSN compliance:

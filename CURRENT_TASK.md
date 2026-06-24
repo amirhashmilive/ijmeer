@@ -7,19 +7,30 @@
 
 ## Current Task
 
+**Task:** Restructure editorial board layout: move Managing Editor to bottom, expand EIC card with enhanced profile content
+**Status:** [x] Done
+**Started:** 2026-06-24
+**Completed:** 2026-06-24
+**Agent:** Antigravity (Gemini 3.1 Pro (High))
+
+### Steps:
+- [x] Move Sayed Amir Mustafa Hashmi (Managing Editor) from the top to the BOTTOM of the page.
+- [x] Expand Dr. Nusrat Ali Hashmi (EIC) card to full width.
+- [x] Increase EIC avatar image size.
+- [x] Add more content to Dr. Nusrat's profile (bio, research interests, achievements).
+- [x] Work ONLY on editorial-board.html.
+- [x] Update MEMORY.md and CURRENT_TASK.md.
+- [x] Commit and push changes.
+
+---
+
+## Previous Task
+
 **Task:** URGENT: ISSN compliance fixes for Editorial Board
 **Status:** [x] Done
 **Started:** 2026-06-23
 **Completed:** 2026-06-23
 **Agent:** Antigravity (Gemini 3.1 Pro (Low))
-
-### Steps:
-- [x] Remove "International & Special Board Members" section completely.
-- [x] Move Prof. (Dr.) Jyotirmaya Thakur (UK) and Dr. Anupama Patel to the Advisory Board section (update classes, role badges, styling).
-- [x] Move Managing Editor to be displayed alongside Editor-in-Chief using a 3-card/1-card flex layout.
-- [x] Confirm international members (Frank and Akkaya) satisfy ISSN requirements and are structurally compliant.
-- [x] Standardize all founding year references to 2026 across `privacy-policy.html`, `rights-permissions.html`, and `data/config.json`.
-- [x] Commit changes.
 
 ---
 
