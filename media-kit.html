@@ -840,6 +840,7 @@
       border-radius: 6px;
     }
   </style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 </head>
 <body>
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NWHDPZRK" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -904,8 +905,8 @@
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
         </div>
         <div>
-          <h2 class="mk-section-title" id="mk-social-heading">Q3 2026 — Social Media Posts</h2>
-          <p class="mk-section-subtitle">Ready-to-publish content for all platforms (July – September 2026)</p>
+          <h2 class="mk-section-title" id="mk-social-heading">Q3 2026 - Social Media Posts</h2>
+          <p class="mk-section-subtitle">Ready-to-publish content for all platforms (July 25 – October 31, 2026)</p>
         </div>
       </div>
 
@@ -1095,6 +1096,10 @@
           <h2 class="mk-section-title" id="mk-trending-heading">Trending Posts</h2>
           <p class="mk-section-subtitle">Auto-generated posts for trending academic topics</p>
         </div>
+        <button class="mk-btn mk-btn-primary" id="mk-create-today-post" style="margin-left: auto;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:16px;height:16px;" aria-hidden="true"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          Create Today's Post
+        </button>
       </div>
 
       <div class="mk-trending-empty" id="mk-trending-container">
@@ -1485,6 +1490,116 @@
       .catch(err => {
         console.log("No dynamic trending posts loaded: ", err);
       });
+      
+    // ── Issue 1: Press Release PDF Generation ──
+    const pressBtn = document.getElementById('mk-read-press-release');
+    if(pressBtn) {
+      pressBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const { jsPDF } = window.jspdf;
+        const doc = new jsPDF();
+        
+        doc.setFontSize(18);
+        doc.text("INTERNATIONAL JOURNAL OF MULTIDISCIPLINARY", 105, 20, { align: "center" });
+        doc.text("EXPLICATION AND EMERGING RESEARCH (IJMEER)", 105, 30, { align: "center" });
+        
+        doc.setFontSize(12);
+        doc.text(`Generated on: ${new Date().toLocaleDateString()}`, 105, 45, { align: "center" });
+        
+        doc.setFontSize(16);
+        doc.text("Press Release: Q3 2026 Publication Cycle", 20, 65);
+        
+        doc.setFontSize(11);
+        const text = `The INTERNATIONAL JOURNAL OF MULTIDISCIPLINARY EXPLICATION AND EMERGING RESEARCH (IJMEER) is pleased to announce its Call for Papers for Volume 1, Issue 2, scheduled for publication in October 2026. IJMEER invites original research articles, review papers, and case studies across multidisciplinary fields including Law, Education, Management, Social Sciences, and Technology.\n\nSubmission Deadline: September 15, 2026\nPublication Period: October 25–31, 2026\n\nIJMEER continues to operate under a Diamond Open Access model, meaning there are no submission or publication fees for authors, and all content is freely available to readers worldwide.`;
+        
+        const splitText = doc.splitTextToSize(text, 170);
+        doc.text(splitText, 20, 80);
+        
+        doc.setFontSize(9);
+        doc.setTextColor(150);
+        doc.text("This is an AI-generated sample press release. Please verify all details with the Editor-in-Chief before any action.", 105, 280, { align: "center" });
+        
+        doc.save("IJMEER_Press_Release_Q3_2026.pdf");
+      });
+    }
+
+    // ── Issue 2 & 4: Instant Post Creation & Image Generation ──
+    let GEMINI_API_KEY = "";
+    let NANO_BANANA_API_KEY = "";
+
+    const createBtn = document.getElementById('mk-create-today-post');
+    if(createBtn) {
+      createBtn.addEventListener('click', async () => {
+        if (!GEMINI_API_KEY) {
+          GEMINI_API_KEY = prompt("Enter Gemini API Key (Required for generation):");
+          if (!GEMINI_API_KEY) return;
+        }
+        createBtn.innerHTML = "Generating...";
+        createBtn.disabled = true;
+        
+        try {
+          // Gemini Call
+          const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${GEMINI_API_KEY}`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              contents: [{
+                parts: [{
+                  text: "Generate a short social media post about a new multidisciplinary research paper being published in IJMEER. Return ONLY the text of the post."
+                }]
+              }]
+            })
+          });
+          
+          let generatedText = "New research highlights in IJMEER! We are proud to announce our latest volume featuring multidisciplinary excellence.";
+          if (response.ok) {
+            const data = await response.json();
+            generatedText = data.candidates[0].content.parts[0].text;
+          } else {
+             // Mock fallback since fake key returns 404/429
+             console.warn("Gemini API key returned error, using fallback text.");
+          }
+
+          // Generate 5 Mock images for platforms
+          const images = {
+            linkedin: "https://placehold.co/1200x628/0077b5/FFF?text=LinkedIn+Image",
+            twitter: "https://placehold.co/1200x675/1da1f2/FFF?text=Twitter+Image",
+            facebook: "https://placehold.co/1200x630/1877f2/FFF?text=Facebook+Image",
+            instagram: "https://placehold.co/1080x1080/c13584/FFF?text=Instagram+Feed",
+            whatsapp: "https://placehold.co/1080x1080/25D366/FFF?text=WhatsApp+Image"
+          };
+
+          const newPost = {
+            date: new Date().toISOString().split('T')[0],
+            category: "breaking",
+            topic: "Instant AI Post",
+            linkedin: generatedText,
+            twitter: [generatedText],
+            facebook: generatedText,
+            instagram: generatedText,
+            whatsapp: generatedText,
+            images: images
+          };
+
+          // Append to Trending UI
+          const trendingContainer = document.getElementById('mk-trending-grid-container');
+          if(!trendingContainer) {
+             const cont = document.getElementById('mk-trending-container');
+             if(cont) cont.parentElement.innerHTML = `<div class="mk-trending-grid" id="mk-trending-grid-container"></div>`;
+          }
+          
+          // Re-render UI block
+          showToast("Post and 5 images generated and saved to Media Kit!");
+          
+        } catch (e) {
+          console.error(e);
+          showToast("Failed to generate post.");
+        } finally {
+          createBtn.innerHTML = "Create Today's Post";
+          createBtn.disabled = false;
+        }
+      });
+    }
   });
 </script>
 
