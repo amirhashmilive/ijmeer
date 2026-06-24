@@ -89,7 +89,7 @@ jobs:
       - name: Generate social media posts via Gemini API
         run: |
           python3 << 'PYEOF'
-          import os, json
+          import os, json, datetime
           import google.generativeai as genai
 
           QUARTER = "${{ steps.schedule.outputs.quarter }}"
@@ -168,6 +168,59 @@ jobs:
                   f.write(post_content)
 
               print(f"Posts saved to {output_file}")
+
+              # Parse post content and update social-posts.json
+              import re
+              platforms_content = {}
+              current_platform = None
+              current_lines = []
+              
+              lines = post_content.split('\n')
+              for line in lines:
+                  line_stripped = line.strip()
+                  header_match = re.match(r'^(?:={2,}\s*|#+\s*|)(LINKEDIN|TWITTER\s*1|TWITTER\s*2|INSTAGRAM|FACEBOOK|WHATSAPP)(?:\s*={2,}|:|\s*)$', line_stripped, re.IGNORECASE)
+                  if header_match:
+                      if current_platform:
+                          platforms_content[current_platform] = "\n".join(current_lines).strip()
+                      current_platform = header_match.group(1).lower().replace(" ", "")
+                      current_lines = []
+                  else:
+                      if current_platform is not None:
+                          current_lines.append(line)
+              if current_platform:
+                  platforms_content[current_platform] = "\n".join(current_lines).strip()
+
+              tweets = []
+              if "twitter1" in platforms_content:
+                  tweets.append(platforms_content["twitter1"])
+              if "twitter2" in platforms_content:
+                  tweets.append(platforms_content["twitter2"])
+              if not tweets and "twitter" in platforms_content:
+                  tweets = [platforms_content["twitter"]]
+
+              json_file = f"{base_dir}/social-posts.json"
+              posts_data = {}
+              if os.path.exists(json_file):
+                  try:
+                      with open(json_file, "r", encoding="utf-8") as jf:
+                          posts_data = json.load(jf)
+                  except Exception as ex:
+                      print(f"Error loading existing JSON: {ex}")
+
+              posts_data[str(WEEK)] = {
+                  "topic": topic,
+                  "post_date": f"Week of {datetime.date.today().strftime('%B %d, %Y')}" if 'datetime' in locals() else f"Week {WEEK}",
+                  "linkedin": platforms_content.get("linkedin", ""),
+                  "twitter": tweets,
+                  "instagram": platforms_content.get("instagram", ""),
+                  "facebook": platforms_content.get("facebook", ""),
+                  "whatsapp": platforms_content.get("whatsapp", "")
+              }
+
+              with open(json_file, "w", encoding="utf-8") as jf:
+                  json.dump(posts_data, jf, indent=2, ensure_ascii=False)
+
+              print(f"Updated unified JSON at {json_file}")
           except Exception as e:
               print(f"Error generating posts: {e}")
               exit(1)

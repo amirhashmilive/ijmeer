@@ -449,8 +449,395 @@
       .mk-hero { padding: 60px 0 40px; }
       .mk-section { padding: 40px 0; }
       .mk-press-card { padding: 24px; }
-      .mk-platforms-grid { grid-template-columns: 1fr; }
       .mk-download-card { padding: 32px 24px; }
+    }
+
+    /* ── Interactive Post Viewer Styles ── */
+    .mk-viewer-card {
+      background: #ffffff;
+      border: 1px solid rgba(26,42,58,0.1);
+      border-radius: 16px;
+      box-shadow: 0 4px 24px rgba(26,42,58,0.06);
+      overflow: hidden;
+      margin-bottom: 30px;
+      display: flex;
+      flex-direction: column;
+      animation: mkFadeIn 0.4s ease;
+    }
+    @keyframes mkFadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .mk-viewer-header {
+      background: #f8f9fb;
+      border-bottom: 1px solid rgba(26,42,58,0.08);
+      padding: 20px 24px;
+    }
+    .mk-week-selector {
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      padding-bottom: 8px;
+      scrollbar-width: thin;
+    }
+    .mk-week-selector::-webkit-scrollbar {
+      height: 4px;
+    }
+    .mk-week-selector::-webkit-scrollbar-thumb {
+      background: rgba(26,42,58,0.15);
+      border-radius: 2px;
+    }
+    .mk-week-btn {
+      background: #ffffff;
+      border: 1px solid rgba(26,42,58,0.15);
+      border-radius: 100px;
+      color: rgba(26,42,58,0.7);
+      padding: 8px 18px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      white-space: nowrap;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .mk-week-btn:hover {
+      border-color: rgba(26,42,58,0.3);
+      color: #1a2a3a;
+    }
+    .mk-week-btn.active {
+      background: #1a2a3a;
+      border-color: #1a2a3a;
+      color: #ffffff;
+    }
+    
+    .mk-viewer-body {
+      display: grid;
+      grid-template-columns: 240px 1fr;
+      min-height: 450px;
+    }
+    @media (max-width: 992px) {
+      .mk-viewer-body {
+        grid-template-columns: 1fr;
+      }
+    }
+    
+    .mk-platform-tabs {
+      background: #f8f9fb;
+      border-right: 1px solid rgba(26,42,58,0.08);
+      display: flex;
+      flex-direction: column;
+      padding: 16px 12px;
+      gap: 6px;
+    }
+    @media (max-width: 992px) {
+      .mk-platform-tabs {
+        border-right: none;
+        border-bottom: 1px solid rgba(26,42,58,0.08);
+        flex-direction: row;
+        overflow-x: auto;
+        padding: 12px 16px;
+      }
+    }
+    
+    .mk-tab-btn {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 12px 16px;
+      border-radius: 8px;
+      background: transparent;
+      border: none;
+      color: rgba(26,42,58,0.65);
+      font-size: 0.88rem;
+      font-weight: 600;
+      cursor: pointer;
+      text-align: left;
+      transition: all 0.2s ease;
+      width: 100%;
+    }
+    .mk-tab-btn svg {
+      width: 18px;
+      height: 18px;
+      transition: transform 0.2s ease;
+    }
+    .mk-tab-btn:hover {
+      background: rgba(26,42,58,0.04);
+      color: #1a2a3a;
+    }
+    .mk-tab-btn.active {
+      background: #ffffff;
+      color: #1a2a3a;
+      box-shadow: 0 2px 8px rgba(26,42,58,0.06);
+      border: 1px solid rgba(26,42,58,0.08);
+    }
+    
+    /* Active platform colors */
+    .mk-tab-btn.active.tab-linkedin { color: #0077b5; }
+    .mk-tab-btn.active.tab-twitter { color: #1a2a3a; }
+    .mk-tab-btn.active.tab-instagram { color: #dc2743; }
+    .mk-tab-btn.active.tab-facebook { color: #1877f2; }
+    .mk-tab-btn.active.tab-whatsapp { color: #25d366; }
+    
+    .mk-viewer-content {
+      padding: 30px;
+      display: grid;
+      grid-template-columns: 1fr 320px;
+      gap: 30px;
+    }
+    @media (max-width: 1200px) {
+      .mk-viewer-content {
+        grid-template-columns: 1fr;
+      }
+    }
+    
+    .mk-post-text-area {
+      display: flex;
+      flex-direction: column;
+    }
+    .mk-post-topic-header {
+      font-size: 0.8rem;
+      color: #c9a03d;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 8px;
+    }
+    .mk-post-topic-title {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: #1a2a3a;
+      margin: 0 0 16px;
+    }
+    .mk-post-textbox-container {
+      position: relative;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .mk-post-textbox {
+      background: #f8f9fb;
+      border: 1px solid rgba(26,42,58,0.08);
+      border-radius: 10px;
+      padding: 20px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.9rem;
+      line-height: 1.65;
+      color: rgba(26,42,58,0.85);
+      white-space: pre-wrap;
+      overflow-y: auto;
+      max-height: 350px;
+      min-height: 250px;
+      flex: 1;
+    }
+    .mk-post-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-top: 20px;
+    }
+    
+    .mk-media-preview-area {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .mk-media-title {
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: rgba(26,42,58,0.5);
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .mk-media-aspect-badge {
+      background: rgba(26,42,58,0.06);
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 0.7rem;
+      text-transform: none;
+    }
+    .mk-media-box {
+      border: 1px solid rgba(26,42,58,0.08);
+      border-radius: 12px;
+      overflow: hidden;
+      width: 100%;
+      background: #f8f9fb;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+    .mk-media-box.aspect-16x9 { aspect-ratio: 16/9; }
+    .mk-media-box.aspect-4x3 { aspect-ratio: 4/3; }
+    .mk-media-box.aspect-9x16 { aspect-ratio: 9/16; max-height: 400px; }
+    
+    .mk-media-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+    .mk-media-box:hover img {
+      transform: scale(1.02);
+    }
+    .mk-media-placeholder {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 30px 20px;
+      color: rgba(26,42,58,0.4);
+      height: 100%;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    .mk-media-placeholder-icon {
+      font-size: 2.2rem;
+      margin-bottom: 8px;
+    }
+    .mk-media-placeholder-text {
+      font-size: 0.75rem;
+      font-weight: 500;
+      max-width: 200px;
+      line-height: 1.45;
+    }
+    
+    /* Toast Notification for Clipboard Copy */
+    .mk-toast {
+      position: fixed;
+      bottom: -100px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #1a2a3a;
+      color: #ffffff;
+      padding: 12px 28px;
+      border-radius: 100px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+      z-index: 10000;
+      transition: bottom 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      pointer-events: none;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .mk-toast.show {
+      bottom: 40px;
+    }
+    
+    /* Trending Cards Styling */
+    .mk-trending-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 24px;
+      margin-top: 10px;
+    }
+    .mk-trending-card {
+      background: #ffffff;
+      border: 1px solid rgba(26,42,58,0.08);
+      border-radius: 14px;
+      box-shadow: 0 4px 16px rgba(26,42,58,0.03);
+      padding: 24px;
+      transition: all 0.25s ease;
+      display: flex;
+      flex-direction: column;
+      animation: mkFadeIn 0.3s ease;
+    }
+    .mk-trending-card:hover {
+      box-shadow: 0 10px 30px rgba(26,42,58,0.08);
+      transform: translateY(-2px);
+    }
+    .mk-trending-meta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 12px;
+    }
+    .mk-trending-date {
+      font-size: 0.8rem;
+      color: rgba(26,42,58,0.5);
+      font-weight: 500;
+    }
+    .mk-trending-badge {
+      font-size: 0.68rem;
+      font-weight: 600;
+      padding: 3px 10px;
+      border-radius: 100px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .mk-trending-badge.cat-scholar { background: rgba(201, 160, 61, 0.1); color: #c9a03d; }
+    .mk-trending-badge.cat-event { background: rgba(37, 99, 235, 0.1); color: #2563EB; }
+    .mk-trending-badge.cat-festival { background: rgba(124, 58, 237, 0.1); color: #7c3aed; }
+    .mk-trending-badge.cat-breaking { background: rgba(220, 38, 38, 0.1); color: #dc2626; }
+    
+    .mk-trending-title {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #1a2a3a;
+      margin: 0 0 14px;
+      line-height: 1.4;
+    }
+    .mk-trending-tabs {
+      display: flex;
+      gap: 4px;
+      margin-bottom: 12px;
+      border-bottom: 1px solid rgba(26,42,58,0.06);
+      padding-bottom: 4px;
+      overflow-x: auto;
+    }
+    .mk-trend-tab-btn {
+      background: transparent;
+      border: none;
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: rgba(26,42,58,0.5);
+      padding: 6px 10px;
+      cursor: pointer;
+      border-radius: 4px;
+      white-space: nowrap;
+      transition: all 0.2s ease;
+    }
+    .mk-trend-tab-btn:hover {
+      color: #1a2a3a;
+      background: rgba(26,42,58,0.03);
+    }
+    .mk-trend-tab-btn.active {
+      color: #1a2a3a;
+      background: rgba(26,42,58,0.06);
+    }
+    .mk-trending-box {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+    .mk-trending-body {
+      font-size: 0.85rem;
+      line-height: 1.6;
+      color: rgba(26,42,58,0.75);
+      white-space: pre-wrap;
+      max-height: 180px;
+      overflow-y: auto;
+      background: #f8f9fb;
+      padding: 16px;
+      border-radius: 8px;
+      flex: 1;
+      border: 1px solid rgba(26,42,58,0.05);
+    }
+    .mk-trending-actions {
+      display: flex;
+      gap: 10px;
+      margin-top: 12px;
+    }
+    .mk-btn-sm {
+      padding: 6px 12px;
+      font-size: 0.75rem;
+      border-radius: 6px;
     }
   </style>
 </head>
@@ -521,7 +908,69 @@
         </div>
       </div>
 
-      <div class="mk-platforms-grid">
+      <!-- Interactive Post Viewer -->
+      <div id="mk-interactive-viewer" class="mk-viewer-card" style="display: none;">
+        <div class="mk-viewer-header">
+          <div class="mk-week-selector" id="mk-week-selector">
+            <!-- Dynamically populated week buttons -->
+          </div>
+        </div>
+        <div class="mk-viewer-body">
+          <div class="mk-platform-tabs" id="mk-platform-tabs">
+            <button class="mk-tab-btn tab-linkedin active" data-platform="linkedin">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+              LinkedIn
+            </button>
+            <button class="mk-tab-btn tab-twitter" data-platform="twitter">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+              Twitter / X
+            </button>
+            <button class="mk-tab-btn tab-instagram" data-platform="instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+              Instagram
+            </button>
+            <button class="mk-tab-btn tab-facebook" data-platform="facebook">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/></svg>
+              Facebook
+            </button>
+            <button class="mk-tab-btn tab-whatsapp" data-platform="whatsapp">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.513 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.457L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.42 9.863-9.858.002-2.634-1.02-5.11-2.883-6.975C16.592 1.906 14.122.882 11.5.882 6.066.882 1.64 5.304 1.637 10.74c-.001 1.661.432 3.284 1.255 4.717L1.879 21.9l6.536-1.714c.001-.001.001-.001.001 0z"/></svg>
+              WhatsApp
+            </button>
+          </div>
+          <div class="mk-viewer-content">
+            <div class="mk-post-text-area">
+              <div class="mk-post-topic-header" id="mk-post-topic-header">Week 1</div>
+              <h4 class="mk-post-topic-title" id="mk-post-topic-title">Loading topic...</h4>
+              <div class="mk-post-textbox-container">
+                <div class="mk-post-textbox" id="mk-post-textbox" tabindex="0">Select a week and platform to load post.</div>
+              </div>
+              <div class="mk-post-actions">
+                <button class="mk-btn mk-btn-primary" id="mk-copy-btn">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                  <span>Copy Post Text</span>
+                </button>
+              </div>
+            </div>
+            
+            <div class="mk-media-preview-area">
+              <div class="mk-media-title">
+                <span>Visual Asset Preview</span>
+                <span class="mk-media-aspect-badge" id="mk-aspect-badge">16:9</span>
+              </div>
+              <div class="mk-media-box" id="mk-media-box">
+                <!-- Loaded dynamically -->
+              </div>
+              <div class="mk-post-actions" style="margin-top: 0; justify-content: center; width: 100%;" id="mk-media-actions">
+                <!-- Loaded dynamically -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Fallback Social Links Grid -->
+      <div class="mk-platforms-grid" id="mk-fallback-posts">
         <!-- LinkedIn -->
         <div class="mk-platform-card card-linkedin" id="mk-card-linkedin">
           <div class="mk-platform-head">
@@ -739,6 +1188,291 @@
   </div>
 
 </main>
+
+<!-- Toast notification element -->
+<div id="mk-toast" class="mk-toast">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:16px;height:16px;" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+  <span>Copied to clipboard!</span>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    // ── Interactive Social Post Viewer Logic ──
+    const viewer = document.getElementById('mk-interactive-viewer');
+    const fallback = document.getElementById('mk-fallback-posts');
+    const weekSelector = document.getElementById('mk-week-selector');
+    const platformTabs = document.getElementById('mk-platform-tabs');
+    const topicHeader = document.getElementById('mk-post-topic-header');
+    const topicTitle = document.getElementById('mk-post-topic-title');
+    const textbox = document.getElementById('mk-post-textbox');
+    const copyBtn = document.getElementById('mk-copy-btn');
+    const aspectBadge = document.getElementById('mk-aspect-badge');
+    const mediaBox = document.getElementById('mk-media-box');
+    const mediaActions = document.getElementById('mk-media-actions');
+    const toast = document.getElementById('mk-toast');
+
+    let postsData = null;
+    let activeWeek = "1";
+    let activePlatform = "linkedin";
+
+    const platformAspects = {
+      linkedin: { label: "LinkedIn 16:9 Feed", size: "linkedin-16x9", aspect: "aspect-16x9" },
+      twitter: { label: "Twitter 16:9 Image", size: "twitter-16x9", aspect: "aspect-16x9" },
+      instagram: { label: "Instagram 4:3 Feed / 9:16 Story", size: "instagram-4x3", aspect: "aspect-4x3" },
+      facebook: { label: "Facebook 16:9 Image", size: "facebook-16x9", aspect: "aspect-16x9" },
+      whatsapp: { label: "WhatsApp 4:3 Image", size: "whatsapp-4x3", aspect: "aspect-4x3" }
+    };
+
+    // Helper for toast notifications
+    function showToast(message) {
+      toast.querySelector('span').textContent = message;
+      toast.classList.add('show');
+      setTimeout(() => toast.classList.remove('show'), 2500);
+    }
+
+    // Copy to clipboard helper
+    function copyToClipboard(text) {
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(() => {
+          showToast("Copied to clipboard!");
+        }).catch(err => {
+          console.error("Clipboard copy failed: ", err);
+          fallbackCopy(text);
+        });
+      } else {
+        fallbackCopy(text);
+      }
+    }
+
+    function fallbackCopy(text) {
+      const textarea = document.createElement('textarea');
+      textarea.value = text;
+      textarea.style.position = 'fixed';
+      document.body.appendChild(textarea);
+      textarea.select();
+      try {
+        document.execCommand('copy');
+        showToast("Copied to clipboard!");
+      } catch (err) {
+        console.error("Fallback copy failed: ", err);
+      }
+      document.body.removeChild(textarea);
+    }
+
+    // Load social posts JSON
+    fetch('media-kit/quarter-2026-Q3/social-posts/social-posts.json')
+      .then(res => {
+        if (!res.ok) throw new Error("JSON load failed");
+        return res.json();
+      })
+      .then(data => {
+        postsData = data;
+        
+        // Hide fallback, show interactive viewer
+        fallback.style.display = 'none';
+        viewer.style.display = 'flex';
+
+        // Render week buttons
+        const sortedWeeks = Object.keys(data).sort((a,b) => parseInt(a) - parseInt(b));
+        sortedWeeks.forEach(week => {
+          const btn = document.createElement('button');
+          btn.className = `mk-week-btn ${week === activeWeek ? 'active' : ''}`;
+          btn.dataset.week = week;
+          btn.textContent = `Week ${week}`;
+          btn.addEventListener('click', (e) => {
+            document.querySelectorAll('.mk-week-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            activeWeek = week;
+            renderPostContent();
+          });
+          weekSelector.appendChild(btn);
+        });
+
+        // Initialize content
+        renderPostContent();
+      })
+      .catch(err => {
+        console.warn("Dynamic social posts viewer fallback to static list: ", err);
+        // Fallback grid remains visible, interactive stays hidden
+      });
+
+    // Set up platform tab clicks
+    platformTabs.querySelectorAll('.mk-tab-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        platformTabs.querySelectorAll('.mk-tab-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        activePlatform = btn.dataset.platform;
+        renderPostContent();
+      });
+    });
+
+    // Set up copy button click
+    copyBtn.addEventListener('click', () => {
+      const textToCopy = textbox.textContent;
+      copyToClipboard(textToCopy);
+    });
+
+    function renderPostContent() {
+      if (!postsData || !postsData[activeWeek]) return;
+
+      const weekData = postsData[activeWeek];
+      topicHeader.textContent = `Week ${activeWeek} — ${activePlatform.toUpperCase()}`;
+      topicTitle.textContent = weekData.topic || "Media Update";
+
+      let textContent = "";
+      const rawVal = weekData[activePlatform];
+
+      if (activePlatform === "twitter") {
+        if (Array.isArray(rawVal)) {
+          textContent = rawVal.map((t, idx) => `TWEET ${idx + 1}:\n${t}`).join('\n\n───────────────────────────────────\n\n');
+        } else {
+          textContent = rawVal || "";
+        }
+      } else {
+        textContent = rawVal || "";
+      }
+
+      textbox.textContent = textContent;
+
+      // Render media preview
+      const aspectInfo = platformAspects[activePlatform];
+      aspectBadge.textContent = activePlatform === "instagram" ? "4:3 Feed" : aspectInfo.label.split(" ").slice(-1)[0];
+      
+      mediaBox.className = `mk-media-box ${aspectInfo.aspect}`;
+      mediaBox.innerHTML = '';
+      mediaActions.innerHTML = '';
+
+      const imgUrl = `media-kit/quarter-2026-Q3/images/week-${activeWeek}-${activePlatform === 'instagram' ? 'instagram-4x3' : activePlatform === 'whatsapp' ? 'instagram-4x3' : 'linkedin-16x9'}.webp`;
+      
+      const img = document.createElement('img');
+      img.src = imgUrl;
+      img.alt = `Week ${activeWeek} ${activePlatform} Graphic`;
+      
+      img.onload = function() {
+        mediaBox.appendChild(img);
+        
+        // Add download button if image successfully loaded
+        const dlBtn = document.createElement('a');
+        dlBtn.className = 'mk-btn mk-btn-primary mk-btn-sm';
+        dlBtn.href = imgUrl;
+        dlBtn.download = `week-${activeWeek}-${activePlatform}.webp`;
+        dlBtn.innerHTML = `
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px;" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Download Graphic
+        `;
+        mediaActions.appendChild(dlBtn);
+      };
+      
+      img.onerror = function() {
+        // Render fallback placeholder
+        mediaBox.innerHTML = `
+          <div class="mk-media-placeholder">
+            <div class="mk-media-placeholder-icon">🎨</div>
+            <div class="mk-media-placeholder-text">Weekly graphic is scheduled for automated generation.</div>
+          </div>
+        `;
+        
+        // Render disabled button or template link
+        const emptyBtn = document.createElement('button');
+        emptyBtn.className = 'mk-btn mk-btn-outline mk-btn-sm';
+        emptyBtn.disabled = true;
+        emptyBtn.style.opacity = '0.5';
+        emptyBtn.style.cursor = 'not-allowed';
+        emptyBtn.textContent = "Graphic Pending Generation";
+        mediaActions.appendChild(emptyBtn);
+      };
+    }
+
+    // ── Dynamic Trending Posts Logic ──
+    const trendingContainer = document.getElementById('mk-trending-container');
+
+    fetch('media-kit/trending/index.json')
+      .then(res => {
+        if (!res.ok) throw new Error("Trending JSON load failed");
+        return res.json();
+      })
+      .then(trendingPosts => {
+        if (!trendingPosts || trendingPosts.length === 0) return;
+
+        // Clear container and replace with grid
+        trendingContainer.parentElement.innerHTML = `
+          <div class="mk-trending-grid" id="mk-trending-grid-container"></div>
+        `;
+        
+        const grid = document.getElementById('mk-trending-grid-container');
+
+        trendingPosts.forEach((post, postIdx) => {
+          const card = document.createElement('div');
+          card.className = 'mk-trending-card';
+
+          const catClass = `cat-${post.category || 'event'}`;
+          const catLabel = post.category ? post.category.charAt(0).toUpperCase() + post.category.slice(1) : "Trending";
+
+          card.innerHTML = `
+            <div class="mk-trending-meta">
+              <span class="mk-trending-date">📅 ${post.date || 'Today'}</span>
+              <span class="mk-trending-badge ${catClass}">${catLabel}</span>
+            </div>
+            <h4 class="mk-trending-title">${post.topic || 'Trending Topic'}</h4>
+            <div class="mk-trending-tabs" id="mk-trend-tabs-${postIdx}">
+              <!-- Render platform tabs -->
+            </div>
+            <div class="mk-trending-box">
+              <div class="mk-trending-body" id="mk-trend-body-${postIdx}"></div>
+              <div class="mk-trending-actions">
+                <button class="mk-btn mk-btn-outline mk-btn-sm" id="mk-trend-copy-${postIdx}">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:12px;height:12px;" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                  Copy Text
+                </button>
+              </div>
+            </div>
+          `;
+
+          grid.appendChild(card);
+
+          const cardTabs = document.getElementById(`mk-trend-tabs-${postIdx}`);
+          const cardBody = document.getElementById(`mk-trend-body-${postIdx}`);
+          const cardCopy = document.getElementById(`mk-trend-copy-${postIdx}`);
+
+          // Available platforms in the post
+          const availablePlatforms = ["linkedin", "twitter", "instagram", "facebook", "whatsapp"].filter(p => post[p]);
+          let activeTrendPlatform = availablePlatforms[0] || "linkedin";
+
+          function updateTrendCardContent() {
+            let text = post[activeTrendPlatform] || "";
+            if (activeTrendPlatform === "twitter" && Array.isArray(text)) {
+              text = text.join('\n\n---\n\n');
+            }
+            cardBody.textContent = text;
+          }
+
+          availablePlatforms.forEach((p, idx) => {
+            const tabBtn = document.createElement('button');
+            tabBtn.className = `mk-trend-tab-btn ${p === activeTrendPlatform ? 'active' : ''}`;
+            tabBtn.textContent = p.charAt(0).toUpperCase() + p.slice(1);
+            tabBtn.addEventListener('click', () => {
+              cardTabs.querySelectorAll('.mk-trend-tab-btn').forEach(b => b.classList.remove('active'));
+              tabBtn.classList.add('active');
+              activeTrendPlatform = p;
+              updateTrendCardContent();
+            });
+            cardTabs.appendChild(tabBtn);
+          });
+
+          // Setup initial content
+          updateTrendCardContent();
+
+          // Setup copy button
+          cardCopy.addEventListener('click', () => {
+            copyToClipboard(cardBody.textContent);
+          });
+        });
+      })
+      .catch(err => {
+        console.log("No dynamic trending posts loaded: ", err);
+      });
+  });
+</script>
 
 <div id="site-footer-inject"></div>
 <script defer src="assets/js/components.js"></script>

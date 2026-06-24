@@ -109,6 +109,34 @@ jobs:
             touch "${NEW_DIR}/social-posts/${platform}-posts.txt"
           done
 
+          # Initialize empty social-posts.json for the new quarter
+          echo '{}' > "${NEW_DIR}/social-posts/social-posts.json"
+          echo "Initialized empty social-posts.json for ${NEW_Q}"
+
+      - name: Trim trending index
+        run: |
+          python3 << 'PYEOF'
+          import json, os
+
+          index_file = "media-kit/trending/index.json"
+          if os.path.exists(index_file):
+              try:
+                  with open(index_file, "r", encoding="utf-8") as f:
+                      data = json.load(f)
+                  # Keep only the 10 most recent posts after a quarterly rotation
+                  data = data[-10:]
+                  with open(index_file, "w", encoding="utf-8") as f:
+                      json.dump(data, f, indent=2, ensure_ascii=False)
+                  print(f"Trimmed trending index.json to {len(data)} entries")
+              except Exception as e:
+                  print(f"Warning: Could not trim trending index: {e}")
+          else:
+              os.makedirs("media-kit/trending", exist_ok=True)
+              with open(index_file, "w", encoding="utf-8") as f:
+                  json.dump([], f)
+              print("Created fresh trending index.json")
+          PYEOF
+
       - name: Generate press release and newsletter
         run: |
           python3 << 'PYEOF'

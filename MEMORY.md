@@ -25,6 +25,17 @@
 
 ## Recent Changes (Reverse Chronological)
 
+### 2026-06-24 — Update Media Kit UI & Workflow JSON Automation
+- **Changed:** 
+  - Updated `media-kit.html` with a fully interactive Post Viewer UI, complete with tab switching for platforms, week selection, dynamic image preview logic, and "copy to clipboard" functionality.
+  - Implemented client-side dynamic loading for trending posts in `media-kit.html` using `trending/index.json`.
+  - Refactored `.github/workflows/media-kit-weekly.yml` to compile generated weekly posts into a single `social-posts.json`.
+  - Updated `.github/workflows/media-kit-trending.yml` to parse and append trending posts into `trending/index.json`.
+  - Updated `.github/workflows/media-kit-quarterly.yml` to initialize an empty `social-posts.json` and trim the `trending/index.json` to 10 entries upon quarter rotation.
+- **Reason:** Implement structured JSON-driven UI as requested.
+- **Files:** `media-kit.html`, `.github/workflows/*.yml`
+- **Commit:** Pending
+
 ### 2026-06-24 — Add complete Media Kit system
 - **Changed:** Created entire Media Kit system with 16 new files across 3 components:
   - `media-kit.html` — New page matching site design with 6 sections (press release, social posts, trending, assets, archive, download)
