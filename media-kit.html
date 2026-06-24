@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Media Kit &mdash; IJMEER</title>
-  <meta name="description" content="IJMEER Media Kit — Press resources, social media posts, media assets, and brand materials for the International Journal of Multidisciplinary Educational Excellence and Research.">
+  <meta name="description" content="IJMEER Media Kit — Press resources, social media posts, media assets, and brand materials for the INTERNATIONAL JOURNAL OF MULTIDISCIPLINARY EXPLICATION AND EMERGING RESEARCH.">
   <link rel="canonical" href="https://www.ijmeer.com/media-kit.html">
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="Media Kit — IJMEER">
-  <meta property="og:description" content="Press resources, social media posts, and media assets for IJMEER — the International Journal of Multidisciplinary Educational Excellence and Research.">
+  <meta property="og:description" content="Press resources, social media posts, and media assets for IJMEER — the INTERNATIONAL JOURNAL OF MULTIDISCIPLINARY EXPLICATION AND EMERGING RESEARCH.">
   <meta property="og:url" content="https://www.ijmeer.com/media-kit.html">
   <meta property="og:site_name" content="IJMEER">
   <meta property="og:image" content="https://www.ijmeer.com/assets/images/social/share-preview.png">
@@ -855,8 +855,9 @@
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:16px;height:16px;" aria-hidden="true"><path d="M4 22h14a2 2 0 0 0 2-2V7.5L14.5 2H6a2 2 0 0 0-2 2v4"/><polyline points="14 2 14 8 20 8"/><path d="m3 15 2 2 4-4"/></svg>
         Media Kit
       </div>
+      <img src="assets/images/logo/ijmeer-favicon.webp" alt="IJMEER Logo" style="width: 80px; height: 80px; border-radius: 8px; margin-bottom: 20px;">
       <h1 id="mk-heading">Media Kit</h1>
-      <p>Press resources, social media posts, and media assets for the International Journal of Multidisciplinary Educational Excellence and Research (IJMEER).</p>
+      <p>Press resources, social media posts, and media assets for the INTERNATIONAL JOURNAL OF MULTIDISCIPLINARY EXPLICATION AND EMERGING RESEARCH (IJMEER).</p>
     </div>
   </section>
 
@@ -885,7 +886,7 @@
         </div>
         <h3 class="mk-press-title">IJMEER Announces Call for Papers for Volume 1, Issue 2 (October 2026)</h3>
         <p class="mk-press-excerpt">
-          The International Journal of Multidisciplinary Educational Excellence and Research (IJMEER) is pleased to announce its Call for Papers for Volume 1, Issue 2, scheduled for publication in October 2026. IJMEER invites original research articles, review papers, and case studies across multidisciplinary fields including Law, Education, Management, Social Sciences, and Technology.
+          The INTERNATIONAL JOURNAL OF MULTIDISCIPLINARY EXPLICATION AND EMERGING RESEARCH (IJMEER) is pleased to announce its Call for Papers for Volume 1, Issue 2, scheduled for publication in October 2026. IJMEER invites original research articles, review papers, and case studies across multidisciplinary fields including Law, Education, Management, Social Sciences, and Technology.
         </p>
         <div style="display:flex;gap:12px;flex-wrap:wrap;">
           <a href="media-kit/quarter-2026-Q3/press-release.md" class="mk-btn mk-btn-primary" id="mk-read-press-release">
@@ -1319,17 +1320,30 @@
       topicHeader.textContent = `Week ${activeWeek} — ${activePlatform.toUpperCase()}`;
       topicTitle.textContent = weekData.topic || "Media Update";
 
+      function format5W(text, topic) {
+        if (!text) return "";
+        if (text.includes("WHO: IJMEER")) return text; // Prevent duplicates
+        const w5 = [
+          "WHO: IJMEER — INTERNATIONAL JOURNAL OF MULTIDISCIPLINARY EXPLICATION AND EMERGING RESEARCH",
+          `WHAT: ${topic || 'Updates and Announcements'}`,
+          "WHEN: See current announcements on our website",
+          "WHY: Open access, double-blind peer review, global visibility, multidisciplinary scope",
+          "HOW: Submit via ijmeerj@gmail.com or visit www.ijmeer.com"
+        ].join('\n');
+        return `${w5}\n\n---\n\n${text}`;
+      }
+
       let textContent = "";
       const rawVal = weekData[activePlatform];
 
       if (activePlatform === "twitter") {
         if (Array.isArray(rawVal)) {
-          textContent = rawVal.map((t, idx) => `TWEET ${idx + 1}:\n${t}`).join('\n\n───────────────────────────────────\n\n');
+          textContent = rawVal.map((t, idx) => `TWEET ${idx + 1}:\n${format5W(t, weekData.topic)}`).join('\n\n───────────────────────────────────\n\n');
         } else {
-          textContent = rawVal || "";
+          textContent = format5W(rawVal, weekData.topic) || "";
         }
       } else {
-        textContent = rawVal || "";
+        textContent = format5W(rawVal, weekData.topic) || "";
       }
 
       textbox.textContent = textContent;
