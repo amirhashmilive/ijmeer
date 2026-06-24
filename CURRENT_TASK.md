@@ -7,20 +7,20 @@
 
 ## Current Task
 
-**Task:** Restructure editorial board layout: move Managing Editor to bottom, expand EIC card with enhanced profile content
+**Task:** Add Dr. Hafid Zakariya and remove Prof. Mona Purohit from Editorial Board
 **Status:** [x] Done
 **Started:** 2026-06-24
 **Completed:** 2026-06-24
-**Agent:** Antigravity (Gemini 3.1 Pro (High))
+**Agent:** Antigravity (Gemini 3.1 Pro)
 
 ### Steps:
-- [x] Move Sayed Amir Mustafa Hashmi (Managing Editor) from the top to the BOTTOM of the page.
-- [x] Expand Dr. Nusrat Ali Hashmi (EIC) card to full width.
-- [x] Increase EIC avatar image size.
-- [x] Add more content to Dr. Nusrat's profile (bio, research interests, achievements).
-- [x] Work ONLY on editorial-board.html.
-- [x] Update MEMORY.md and CURRENT_TASK.md.
-- [x] Commit and push changes.
+- [x] Remove Prof. Mona Purohit from `editorial-board.html`
+- [x] Add Dr. Hafid Zakariya to `editorial-board.html`
+- [x] Convert Dr. Hafid Zakariya image to `.webp` format
+- [x] Remove Prof. Mona Purohit from `editorial-portfolio.html`
+- [x] Add Dr. Hafid Zakariya to `editorial-portfolio.html`
+- [x] Update MEMORY.md and CURRENT_TASK.md
+- [ ] Commit and push changes
 
 ---
 

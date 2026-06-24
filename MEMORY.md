@@ -25,6 +25,12 @@
 
 ## Recent Changes (Reverse Chronological)
 
+### 2026-06-24 — Add Dr. Hafid Zakariya, remove Prof. Mona Purohit
+- **Changed:** Removed Prof. (Dr.) Mona Purohit from the Advisory Board. Added Dr. Hafid Zakariya to the Editorial Board Members.
+- **Reason:** User request.
+- **Files:** `editorial-board.html`, `editorial-portfolio.html`, `images/editorial/dr-hafid-zakariya.webp`
+- **Commit:** Pending
+
 ### 2026-06-24 — Restructure editorial board layout
 - **Changed:** Expanded Editor-in-Chief card to occupy full width and enhanced profile details. Moved Managing Editor to the bottom of the page, after the Advisory Board.
 - **Reason:** User request for layout adjustments.
