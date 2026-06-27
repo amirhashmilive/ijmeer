@@ -7,11 +7,11 @@
 
 ## Current Task
 
-**Task:** Finalize Media Kit Interactive UI & JSON Workflow Automation.
-**Status:** ✅ Review & Commit
-**Started:** 2026-06-24
-**Completed:** ⏳ Pending
-**Agent:** Antigravity (Gemini 3.5 Flash)
+**Task:** Update Dr. Hafid Zakariya's institutional email to hafidzakariya@uibs.ac.id
+**Status:** ✅ Done
+**Started:** 2026-06-27
+**Completed:** 2026-06-27
+**Agent:** Antigravity (Claude Sonnet 4.6)
 
 ### Progress:
 - [x] Parse raw text posts into `media-kit/quarter-2026-Q3/social-posts/social-posts.json`

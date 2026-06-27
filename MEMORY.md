@@ -25,6 +25,12 @@
 
 ## Recent Changes (Reverse Chronological)
 
+### 2026-06-27 — Update Dr. Hafid Zakariya's institutional email
+- **Changed:** Replaced `info@uniba.ac.id` with `hafidzakariya@uibs.ac.id` for Dr. Hafid Zakariya across all pages where it appeared.
+- **Reason:** User request — correct institutional email address.
+- **Files:** `editorial-board.html`, `editorial-portfolio.html`
+- **Commit:** `update: Dr. Hafid Zakariya institutional email to hafidzakariya@uibs.ac.id`
+
 ### 2026-06-24 — Update Media Kit UI & Workflow JSON Automation
 - **Changed:** 
   - Updated `media-kit.html` with a fully interactive Post Viewer UI, complete with tab switching for platforms, week selection, dynamic image preview logic, and "copy to clipboard" functionality.
