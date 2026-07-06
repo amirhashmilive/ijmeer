@@ -25,6 +25,24 @@
 
 ## Recent Changes (Reverse Chronological)
 
+### 2026-07-06 — Remove Media Kit system
+- **Changed:** Deleted `media-kit.html`, the entire `media-kit/` directory, and all associated GitHub Action workflows (`media-kit-*.yml`). Note: The footer link in `components.js` was never added in previous tasks, so no change was needed there.
+- **Reason:** User request to completely remove the Media Kit system.
+- **Files:** `media-kit.html`, `media-kit/*`, `.github/workflows/media-kit-*.yml`
+- **Commit:** `remove: Media Kit page and all related integrations`
+
+### 2026-07-04 — Generate Website Reverse Engineering Report (Re-run)
+- **Changed:** No code modifications made to the core project. Ran an automated Python script to extract directory structure, file inventory, and source code into a single Markdown file.
+- **Reason:** User request for a complete technical blueprint of the application (audit report).
+- **Files:** Output exported to `C:\Users\hashm\Desktop\RE IJMEER\Website_Reverse_Engineering_Report.md`.
+- **Commit:** None (Read-only session).
+
+### 2026-06-30 — Generate Website Reverse Engineering Report
+- **Changed:** No code modifications made. Executed a read-only analysis of the entire repository to generate a massive 30-section "Website Reverse Engineering Report".
+- **Reason:** User request for a complete technical blueprint of the application.
+- **Files:** Output strictly isolated to external directory (`C:\Users\hashm\Desktop\RE IJMEER\Website_Reverse_Engineering_Report.md`).
+- **Commit:** None (Read-only session).
+
 ### 2026-06-27 — Update Dr. Hafid Zakariya's institutional email
 - **Changed:** Replaced `info@uniba.ac.id` with `hafidzakariya@uibs.ac.id` for Dr. Hafid Zakariya across all pages where it appeared.
 - **Reason:** User request — correct institutional email address.
