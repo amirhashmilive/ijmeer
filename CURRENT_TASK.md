@@ -7,6 +7,28 @@
 
 ## Current Task
 
+**Task:** Fix SEO issues: render-blocking resources, image alt tags, email encoding, and cross-origin links
+**Status:** ✅ Done
+**Started:** 2026-07-14
+**Completed:** 2026-07-14
+**Agent:** Antigravity (Gemini 3.1 Pro)
+
+### Progress:
+- [x] Fix CSS Preload in `<noscript>` tags across all HTML files
+- [x] Verified missing `alt` attributes on images
+- [x] Encode `mailto:` emails using HTML entities
+- [x] Add `rel="noopener noreferrer"` to `target="_blank"` links
+- [x] Verify `404.html` exists and is functional
+- [x] Update MEMORY.md and CURRENT_TASK.md
+- [x] Commit and push changes
+
+### Next Steps:
+1. Continue with other pending tasks (e.g., adding institutional emails).
+
+---
+
+## Previous Task
+
 **Task:** Update Online ISSN to 3139-6003
 **Status:** ✅ Done
 **Started:** 2026-07-14
