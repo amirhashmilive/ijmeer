@@ -25,6 +25,12 @@
 
 ## Recent Changes (Reverse Chronological)
 
+### 2026-07-14 — Update Online ISSN
+- **Changed:** Replaced "E-ISSN: XXXX-XXXX" placeholder with official Online ISSN "3139-6003" across all HTML files, `components.js`, and `config.json`. Left Print ISSN placeholder intact.
+- **Reason:** Online ISSN application approved.
+- **Files:** `index.html`, `journal.html`, `citations.html`, `archive.html`, `contact.html`, `assets/js/components.js`, `data/config.json`
+- **Commit:** `update: Update Online ISSN: 3139-6003 approved for IJMEER`
+
 ### 2026-07-06 — Remove Media Kit system
 - **Changed:** Deleted `media-kit.html`, the entire `media-kit/` directory, and all associated GitHub Action workflows (`media-kit-*.yml`). Note: The footer link in `components.js` was never added in previous tasks, so no change was needed there.
 - **Reason:** User request to completely remove the Media Kit system.

@@ -7,6 +7,31 @@
 
 ## Current Task
 
+**Task:** Update Online ISSN to 3139-6003
+**Status:** ✅ Done
+**Started:** 2026-07-14
+**Completed:** 2026-07-14
+**Agent:** Antigravity (Gemini 3.1 Pro (High))
+
+### Progress:
+- [x] Replace E-ISSN in `index.html`
+- [x] Replace ISSN (Online) in `journal.html`
+- [x] Replace ISSN (Online) in `contact.html`
+- [x] Replace `citation_issn` in `index.html`, `journal.html`, `citations.html`, `archive.html`
+- [x] Replace `issn_online` in `data/config.json`
+- [x] Replace ISSN (Online) in `assets/js/components.js`
+- [x] Keep Print ISSN as XXXX-XXXX
+- [x] Update MEMORY.md and CURRENT_TASK.md
+- [x] Commit and push changes
+
+### Next Steps:
+1. Complete Print ISSN updates when received.
+2. Continue with other pending tasks (e.g., adding institutional emails).
+
+---
+
+## Previous Task
+
 **Task:** COMPLETELY REMOVE the Media Kit system from the IJMEER website
 **Status:** ✅ Done
 **Started:** 2026-07-06
@@ -20,9 +45,6 @@
 - [x] Check `assets/js/components.js` for "Media Kit" footer link (verified it was never added)
 - [x] Update MEMORY.md and CURRENT_TASK.md
 - [x] Commit and push changes
-
-### Next Steps:
-1. Continue with other pending tasks (e.g., adding institutional emails).
 
 ### Notes:
 - The footer link in `assets/js/components.js` was never actually added during the creation of the Media Kit, so no deletion was required there.
