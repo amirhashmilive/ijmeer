@@ -25,6 +25,12 @@
 
 ## Recent Changes (Reverse Chronological)
 
+### 2026-07-17 — Fix remaining SEO issues
+- **Changed:** Eliminated render-blocking Google Fonts by moving them from CSS `@import` to HTML `<head>` preloads across all pages. Added `srcset` and `alt` attributes to logo images in JS. Encoded three plaintext emails in footer using HTML entities. Upgraded three `target="_blank"` links to include `rel="noopener noreferrer"`.
+- **Reason:** Resolve HIGH, MEDIUM, and WARNING issues from SEO Site Checkup report.
+- **Files:** `*.html` (all HTML files), `assets/css/style.css`, `assets/js/components.js`
+- **Commit:** `fix: remaining SEO issues (render-blocking resources, image sizing, plaintext emails, cross-origin links)`
+
 ### 2026-07-14 — Update Online ISSN
 - **Changed:** Replaced "E-ISSN: XXXX-XXXX" placeholder with official Online ISSN "3139-6003" across all HTML files, `components.js`, and `config.json`. Left Print ISSN placeholder intact.
 - **Reason:** Online ISSN application approved.

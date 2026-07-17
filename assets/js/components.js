@@ -16,7 +16,7 @@
 <header class="site-header" id="site-header" role="banner">
   <div class="container header-inner">
     <a href="/" class="brand" aria-label="IJMEER Home">
-      <img src="assets/images/logo/ijmeer-favicon.webp" alt="" class="brand-mark-img" aria-hidden="true" width="40" height="40" style="border-radius:6px;object-fit:contain;">
+      <img src="assets/images/logo/ijmeer-favicon.webp" srcset="assets/images/logo/ijmeer-favicon.webp 1x, assets/images/logo/ijmeer-favicon.webp 2x" alt="IJMEER Logo" class="brand-mark-img" aria-hidden="false" width="40" height="40" style="border-radius:6px;object-fit:contain;">
       <div class="brand-text">
         <span class="brand-name">IJMEER</span>
         <span class="brand-sub">Open Access Journal</span>
@@ -57,7 +57,7 @@
       <li><a href="peer-review.html">Peer Review</a></li>
       <li><a href="archive.html">Archives</a></li>
       <li><a href="citations.html">Citations</a></li>
-      <li style="margin-top: 30px;"><a href="${S}" class="submit-btn" target="_blank" rel="noopener">Submit Manuscript</a></li>
+      <li style="margin-top: 30px;"><a href="${S}" class="submit-btn" target="_blank" rel="noopener noreferrer">Submit Manuscript</a></li>
     </ul>
   </nav>
 </header>`;
@@ -72,7 +72,7 @@
       <!-- Brand column -->
       <div class="footer-brand">
         <a href="/" class="brand" style="margin-bottom:16px;" aria-label="IJMEER Home">
-          <img src="assets/images/logo/ijmeer-favicon.webp" alt="" class="brand-mark-img" aria-hidden="true" width="40" height="40" style="border-radius:6px;object-fit:contain;">
+          <img src="assets/images/logo/ijmeer-favicon.webp" srcset="assets/images/logo/ijmeer-favicon.webp 1x, assets/images/logo/ijmeer-favicon.webp 2x" alt="IJMEER Logo" class="brand-mark-img" aria-hidden="false" width="40" height="40" style="border-radius:6px;object-fit:contain;">
           <div class="brand-text">
             <span class="brand-name">IJMEER</span>
             <span class="brand-sub">Open Access Journal</span>
@@ -81,7 +81,7 @@
         <p class="footer-desc">INTERNATIONAL JOURNAL OF MULTIDISCIPLINARY EXPLICATION AND EMERGING RESEARCH (IJMEER).</p>
         <div style="margin-top:20px;">
           <div style="font-size:0.82rem;font-weight:700;color:rgba(255,255,255,0.5);text-transform:uppercase;letter-spacing:1px;margin-bottom:6px;">
-            Publisher: <a href="https://www.meerfoundation.co.in/" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;">Meer Foundation</a>
+            Publisher: <a href="https://www.meerfoundation.co.in/" target="_blank" rel="noopener noreferrer" style="color:inherit;text-decoration:underline;">Meer Foundation</a>
           </div>
           <div style="font-size:0.82rem;color:rgba(255,255,255,0.7);line-height:1.7;">
             Address: House No. 103, Housing Board Colony, Hatkeshar, Dhamtari – 493773, Chhattisgarh, India
@@ -90,15 +90,15 @@
         <div style="margin-top:16px;">
           <div style="font-size:0.72rem;font-weight:700;color:rgba(255,255,255,0.5);text-transform:uppercase;letter-spacing:1px;margin-bottom:6px;">Contact IJMEER</div>
           <div style="font-size:0.82rem;color:rgba(255,255,255,0.7);line-height:1.7;">
-            Email: <a href="mailto:ijmeerj@gmail.com" style="color:inherit;">ijmeerj@gmail.com</a><br>
-            Email: <a href="mailto:editor@ijmeer.com" style="color:inherit;">editor@ijmeer.com</a>
+            Email: <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#105;&#106;&#109;&#101;&#101;&#114;&#106;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;" style="color:inherit;">&#105;&#106;&#109;&#101;&#101;&#114;&#106;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;</a><br>
+            Email: <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#101;&#100;&#105;&#116;&#111;&#114;&#64;&#105;&#106;&#109;&#101;&#101;&#114;&#46;&#99;&#111;&#109;" style="color:inherit;">&#101;&#100;&#105;&#116;&#111;&#114;&#64;&#105;&#106;&#109;&#101;&#101;&#114;&#46;&#99;&#111;&#109;</a>
           </div>
         </div>
         <div style="margin-top:16px;">
           <div style="font-size:0.72rem;font-weight:700;color:rgba(255,255,255,0.5);text-transform:uppercase;letter-spacing:1px;margin-bottom:6px;">Grievance Officer</div>
           <div style="font-size:0.82rem;color:rgba(255,255,255,0.7);line-height:1.7;">
             Grievance Officer: Deputy Secretary, Meer Foundation<br>
-            Email: <a href="mailto:grievance@ijmeer.com" style="color:inherit;">grievance@ijmeer.com</a>
+            Email: <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#103;&#114;&#105;&#101;&#118;&#97;&#110;&#99;&#101;&#64;&#105;&#106;&#109;&#101;&#101;&#114;&#46;&#99;&#111;&#109;" style="color:inherit;">&#103;&#114;&#105;&#101;&#118;&#97;&#110;&#99;&#101;&#64;&#105;&#106;&#109;&#101;&#101;&#114;&#46;&#99;&#111;&#109;</a>
           </div>
         </div>
         <div class="social-links" style="margin-top:36px;" aria-label="Social media links">
@@ -142,7 +142,7 @@
       <div>
         <h3 class="footer-head">Authors</h3>
         <nav class="footer-links" aria-label="Author resources">
-          <a href="${S}" target="_blank" rel="noopener">Submit Paper</a>
+          <a href="${S}" target="_blank" rel="noopener noreferrer">Submit Paper</a>
           <a href="authors.html">Author Instructions</a>
           <a href="authors.html#preparing">Preparing Materials</a>
           <a href="authors.html#fees">Fees &amp; Pricing</a>

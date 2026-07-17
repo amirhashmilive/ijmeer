@@ -30,10 +30,16 @@
   <meta name="citation_journal_title" content="International Journal of Multidisciplinary Explication and Emerging Research">
   <meta name="citation_issn" content="3139-6003">
   <meta name="citation_language" content="en">
+
+  <!-- Google Fonts (non-render-blocking) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600&family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600&family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap"></noscript>
   <link rel="preload" href="assets/css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="assets/css/style.css"></noscript>
   <style>
-    /* ── Journal page: sticky section nav ── */
+    /* â”€â”€ Journal page: sticky section nav â”€â”€ */
     .journal-nav {
       position: sticky;
       top: 64px;
@@ -65,7 +71,7 @@
     .journal-nav-link:hover { color: var(--blue, #0071e3); border-bottom-color: var(--blue, #0071e3); }
     .journal-nav-link.active { color: var(--blue, #0071e3); border-bottom-color: var(--blue, #0071e3); }
     .journal-section { scroll-margin-top: 130px; }
-    /* ── Index cards ── */
+    /* â”€â”€ Index cards â”€â”€ */
     .index-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -92,14 +98,14 @@
     .index-card-badge { display: inline-block; margin-top: 10px; font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; padding: 3px 10px; border-radius: 50px; }
     .badge-active { background: rgba(16,185,129,0.1); color: #059669; }
     .badge-pending { background: rgba(245,158,11,0.1); color: #d97706; }
-    /* ── Metrics stat cards ── */
+    /* â”€â”€ Metrics stat cards â”€â”€ */
     .metrics-row {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
       gap: 20px;
       margin-bottom: 52px;
     }
-    /* ── Book review ── */
+    /* â”€â”€ Book review â”€â”€ */
     .book-review-card {
       background: linear-gradient(135deg, #0f2744 0%, #1a3a6a 100%);
       border-radius: 20px;
@@ -172,9 +178,9 @@
     </div>
   </nav>
 
-  <!-- ════════════════════════════════════════════════════════
+  <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
        SECTION 1: ABOUT THIS JOURNAL
-  ═══════════════════════════════════════════════════════════ -->
+  â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
   <section id="about" class="section journal-section" aria-labelledby="h-about">
     <div class="container">
       <div class="with-sidebar">
@@ -204,32 +210,32 @@
           </div>
           <div class="grid-3 reveal" style="gap:14px;margin-bottom:36px;">
             <div class="feature-card" style="padding:18px 16px;">
-              <div class="feature-icon" style="width:38px;height:38px;" aria-hidden="true">🔬</div>
+              <div class="feature-icon" style="width:38px;height:38px;" aria-hidden="true">ðŸ”¬</div>
               <div class="feature-title" style="font-size:0.9rem;">Sciences &amp; Technology</div>
               <div class="feature-desc" style="font-size:0.78rem;">Biology, Chemistry, Physics, Computer Science, Engineering, Biotechnology, Environmental Science</div>
             </div>
             <div class="feature-card" style="padding:18px 16px;">
-              <div class="feature-icon" style="width:38px;height:38px;" aria-hidden="true">🏥</div>
+              <div class="feature-icon" style="width:38px;height:38px;" aria-hidden="true">ðŸ¥</div>
               <div class="feature-title" style="font-size:0.9rem;">Health &amp; Medicine</div>
               <div class="feature-desc" style="font-size:0.78rem;">Public Health, Nursing, Pharmacy, Medical Research, Clinical Studies, Allied Health Sciences</div>
             </div>
             <div class="feature-card" style="padding:18px 16px;">
-              <div class="feature-icon" style="width:38px;height:38px;" aria-hidden="true">⚙️</div>
+              <div class="feature-icon" style="width:38px;height:38px;" aria-hidden="true">âš™ï¸</div>
               <div class="feature-title" style="font-size:0.9rem;">Engineering</div>
               <div class="feature-desc" style="font-size:0.78rem;">Mechanical, Civil, Electrical, Chemical, Industrial, Software, and Systems Engineering</div>
             </div>
             <div class="feature-card" style="padding:18px 16px;">
-              <div class="feature-icon" style="width:38px;height:38px;" aria-hidden="true">⚖️</div>
+              <div class="feature-icon" style="width:38px;height:38px;" aria-hidden="true">âš–ï¸</div>
               <div class="feature-title" style="font-size:0.9rem;">Law &amp; Social Sciences</div>
               <div class="feature-desc" style="font-size:0.78rem;">Law, Political Science, Sociology, Anthropology, Psychology, Social Work, Public Policy</div>
             </div>
             <div class="feature-card" style="padding:18px 16px;">
-              <div class="feature-icon" style="width:38px;height:38px;" aria-hidden="true">💼</div>
+              <div class="feature-icon" style="width:38px;height:38px;" aria-hidden="true">ðŸ’¼</div>
               <div class="feature-title" style="font-size:0.9rem;">Business &amp; Economics</div>
               <div class="feature-desc" style="font-size:0.78rem;">Management, Finance, Marketing, Economics, Entrepreneurship, HRM, International Business</div>
             </div>
             <div class="feature-card" style="padding:18px 16px;">
-              <div class="feature-icon" style="width:38px;height:38px;" aria-hidden="true">🎨</div>
+              <div class="feature-icon" style="width:38px;height:38px;" aria-hidden="true">ðŸŽ¨</div>
               <div class="feature-title" style="font-size:0.9rem;">Arts, Humanities &amp; Education</div>
               <div class="feature-desc" style="font-size:0.78rem;">Literature, History, Philosophy, Linguistics, Education, Cultural Studies, Fine Arts</div>
             </div>
@@ -322,9 +328,9 @@
     </div>
   </section>
 
-  <!-- ════════════════════════════════════════════════════════
+  <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
        SECTION 2: ABSTRACTING & INDEXING
-  ═══════════════════════════════════════════════════════════ -->
+  â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
   <section id="indexing" class="section journal-section" style="background:var(--bg-2);" aria-labelledby="h-indexing">
     <div class="container">
       <div class="section-header reveal">
@@ -336,42 +342,42 @@
       <div class="index-grid reveal" style="margin-bottom:48px;">
 
         <div class="index-card">
-          <div class="index-card-logo" style="background:rgba(66,133,244,0.1);">🔍</div>
+          <div class="index-card-logo" style="background:rgba(66,133,244,0.1);">ðŸ”</div>
           <div class="index-card-name">Google Scholar</div>
           <div class="index-card-desc">Freely indexed and fully searchable in Google&#39;s academic search engine. All articles discoverable via title, author, and keyword.</div>
           <span class="index-card-badge badge-pending">Pending</span>
         </div>
 
         <div class="index-card">
-          <div class="index-card-logo" style="background:rgba(245,158,11,0.1);">📋</div>
+          <div class="index-card-logo" style="background:rgba(245,158,11,0.1);">ðŸ“‹</div>
           <div class="index-card-name">UGC CARE</div>
           <div class="index-card-desc">Application submitted under UGC-CARE List. ISSN registration currently under process; listing expected upon confirmation.</div>
           <span class="index-card-badge badge-pending">Pending</span>
         </div>
 
         <div class="index-card">
-          <div class="index-card-logo" style="background:rgba(124,58,237,0.1);">🌐</div>
+          <div class="index-card-logo" style="background:rgba(124,58,237,0.1);">ðŸŒ</div>
           <div class="index-card-name">Index Copernicus International</div>
           <div class="index-card-desc">Listed with ICI Journals Master List, providing broad international visibility and quality-based indexing for multidisciplinary journals.</div>
           <span class="index-card-badge badge-pending">Pending</span>
         </div>
 
         <div class="index-card">
-          <div class="index-card-logo" style="background:rgba(16,185,129,0.1);">📖</div>
+          <div class="index-card-logo" style="background:rgba(16,185,129,0.1);">ðŸ“–</div>
           <div class="index-card-name">Indian Citation Index (ICI)</div>
           <div class="index-card-desc">Indexed in the Indian Citation Index, supporting visibility within the Indian academic publishing ecosystem.</div>
           <span class="index-card-badge badge-pending">Pending</span>
         </div>
 
         <div class="index-card">
-          <div class="index-card-logo" style="background:rgba(239,68,68,0.1);">🗃️</div>
+          <div class="index-card-logo" style="background:rgba(239,68,68,0.1);">ðŸ—ƒï¸</div>
           <div class="index-card-name">EBSCO Discovery Service</div>
           <div class="index-card-desc">Accessible via EBSCO&rsquo;s global discovery platform, enabling library users worldwide to find IJMEER content through institutional subscriptions.</div>
           <span class="index-card-badge badge-pending">Pending</span>
         </div>
 
         <div class="index-card">
-          <div class="index-card-logo" style="background:rgba(14,116,144,0.1);">🗄️</div>
+          <div class="index-card-logo" style="background:rgba(14,116,144,0.1);">ðŸ—„ï¸</div>
           <div class="index-card-name">Zenodo Archive</div>
           <div class="index-card-desc">Permanently archived on Zenodo (Journal DOI: 10.5281/zenodo.19565393), ensuring long-term open access preservation.</div>
           <span class="index-card-badge badge-active">Active</span>
@@ -381,7 +387,7 @@
 
       <div class="alert-box reveal" style="max-width:720px;margin:0 auto 24px; background-color:#ef4444; color:#ffffff; padding:20px; border-radius:10px; border:2px solid #dc2626;">
         <div style="font-weight:800; margin-bottom:8px; font-size:1.1rem; display:flex; align-items:center; gap:8px;">
-          ⚠️ IMPORTANT DISCLAIMER
+          âš ï¸ IMPORTANT DISCLAIMER
         </div>
         <div style="line-height:1.6; font-size:0.95rem;">
           IJMEER is currently NOT ACTIVE with any indexing services listed above (except Zenodo). These are future goals and applications are pending. We do not claim active indexing in any database at this time.
@@ -395,9 +401,9 @@
     </div>
   </section>
 
-  <!-- ════════════════════════════════════════════════════════
+  <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
        SECTION 3: JOURNAL METRICS
-  ═══════════════════════════════════════════════════════════ -->
+  â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
   <section id="metrics" class="section journal-section" aria-labelledby="h-metrics">
     <div class="container">
       <div class="section-header reveal">
@@ -483,9 +489,9 @@
     </div>
   </section>
 
-  <!-- ════════════════════════════════════════════════════════
+  <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
        SECTION 4: BOOK REVIEWS
-  ═══════════════════════════════════════════════════════════ -->
+  â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
   <section id="book-reviews" class="section journal-section" style="background:var(--bg-2);" aria-labelledby="h-book-reviews">
     <div class="container">
       <div class="section-header reveal">

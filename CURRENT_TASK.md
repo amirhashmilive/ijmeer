@@ -7,6 +7,27 @@
 
 ## Current Task
 
+**Task:** Fix remaining SEO issues: render-blocking resources, image sizing, plaintext emails, cross-origin links
+**Status:** ✅ Done
+**Started:** 2026-07-17
+**Completed:** 2026-07-17
+**Agent:** Antigravity
+
+### Progress:
+- [x] Fix Render-blocking resources: Moved Google Fonts from CSS `@import` to `preload` links in all HTML files.
+- [x] Fix Images not properly sized: Added `srcset` and `alt` to logo image in `components.js`.
+- [x] Fix Plaintext emails: Encoded the 3 `mailto:` emails using HTML entities in `components.js`.
+- [x] Fix Unsafe cross-origin links: Added `noreferrer` to 3 target="_blank" links with `rel="noopener"` in `components.js`.
+- [x] Update MEMORY.md and CURRENT_TASK.md
+- [ ] Commit and push changes
+
+### Next Steps:
+1. Continue with other pending tasks (e.g., adding institutional emails).
+
+---
+
+## Previous Task
+
 **Task:** Fix SEO issues: render-blocking resources, image alt tags, email encoding, and cross-origin links
 **Status:** ✅ Done
 **Started:** 2026-07-14
@@ -34,73 +55,6 @@
 **Started:** 2026-07-14
 **Completed:** 2026-07-14
 **Agent:** Antigravity (Gemini 3.1 Pro (High))
-
-### Progress:
-- [x] Replace E-ISSN in `index.html`
-- [x] Replace ISSN (Online) in `journal.html`
-- [x] Replace ISSN (Online) in `contact.html`
-- [x] Replace `citation_issn` in `index.html`, `journal.html`, `citations.html`, `archive.html`
-- [x] Replace `issn_online` in `data/config.json`
-- [x] Replace ISSN (Online) in `assets/js/components.js`
-- [x] Keep Print ISSN as XXXX-XXXX
-- [x] Update MEMORY.md and CURRENT_TASK.md
-- [x] Commit and push changes
-
-### Next Steps:
-1. Complete Print ISSN updates when received.
-2. Continue with other pending tasks (e.g., adding institutional emails).
-
----
-
-## Previous Task
-
-**Task:** COMPLETELY REMOVE the Media Kit system from the IJMEER website
-**Status:** ✅ Done
-**Started:** 2026-07-06
-**Completed:** 2026-07-06
-**Agent:** Antigravity (Gemini 3.1 Pro (High))
-
-### Progress:
-- [x] Delete `media-kit.html`
-- [x] Delete `/media-kit/` folder
-- [x] Delete `.github/workflows/media-kit-*.yml` workflows
-- [x] Check `assets/js/components.js` for "Media Kit" footer link (verified it was never added)
-- [x] Update MEMORY.md and CURRENT_TASK.md
-- [x] Commit and push changes
-
-### Notes:
-- The footer link in `assets/js/components.js` was never actually added during the creation of the Media Kit, so no deletion was required there.
-
----
-
-## Previous Task
-
-**Task:** Generate comprehensive Website Reverse Engineering Report
-**Status:** ✅ Done
-**Started:** 2026-07-04
-**Completed:** 2026-07-04
-**Agent:** Antigravity (Gemini 3.1 Pro (High))
-
-### Progress:
-- [x] Create Implementation Plan for Reverse Engineering Report
-- [x] Run automated Python script to extract directory structure, file inventory, URLs, and project statistics
-- [x] Generate semantic Markdown for Architecture, Business Logic, Routing, UI, and Deployment
-- [x] Assemble massive 30-section Markdown report
-- [x] Export report to `C:\Users\hashm\Desktop\RE IJMEER\Website_Reverse_Engineering_Report.md`
-- [x] Update MEMORY.md and CURRENT_TASK.md
-
-### Notes:
-- No original source code files were modified during this read-only operation.
-
----
-
-## Previous Task
-
-**Task:** Update Dr. Hafid Zakariya's institutional email to hafidzakariya@uibs.ac.id
-**Status:** ✅ Done
-**Started:** 2026-06-27
-**Completed:** 2026-06-27
-**Agent:** Antigravity (Claude Sonnet 4.6)
 
 ---
 

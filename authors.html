@@ -26,10 +26,16 @@
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-NWHDPZRK');</script>
   <script defer src="https://www.googletagmanager.com/gtag/js?id=G-2FNJ68WF8J"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-2FNJ68WF8J');</script>
+
+  <!-- Google Fonts (non-render-blocking) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600&family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600&family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap"></noscript>
   <link rel="preload" href="assets/css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="assets/css/style.css"></noscript>
   <style>
-    /* ── Authors page: sticky section nav ── */
+    /* â”€â”€ Authors page: sticky section nav â”€â”€ */
     .authors-nav {
       position: sticky;
       top: 64px;
@@ -74,13 +80,13 @@
       flex-shrink: 0;
       transition: background 0.2s;
     }
-    /* ── Section anchors ── */
+    /* â”€â”€ Section anchors â”€â”€ */
     .authors-section {
       border-bottom: 2px solid var(--bg-2, #f3f4f6);
       scroll-margin-top: 130px;
     }
     .authors-section:last-of-type { border-bottom: none; }
-    /* ── Spec grid ── */
+    /* â”€â”€ Spec grid â”€â”€ */
     .spec-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
@@ -107,7 +113,7 @@
       color: var(--navy, #0f2744);
       line-height: 1.5;
     }
-    /* ── Reference style badges ── */
+    /* â”€â”€ Reference style badges â”€â”€ */
     .ref-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
@@ -124,7 +130,7 @@
       color: var(--navy, #0f2744);
       border: 1px solid var(--border, #e5e7eb);
     }
-    /* ── Razorpay button ── */
+    /* â”€â”€ Razorpay button â”€â”€ */
     .btn-razorpay {
       display: inline-flex;
       align-items: center;
@@ -142,7 +148,7 @@
       cursor: pointer;
     }
     .btn-razorpay:hover { background: #005a8e; transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,114,178,0.3); }
-    /* ── Pricing cards ── */
+    /* â”€â”€ Pricing cards â”€â”€ */
     .pricing-row {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -199,13 +205,13 @@
       line-height: 1.5;
     }
     .pcard-features li::before {
-      content: '✓';
+      content: 'âœ“';
       color: #059669;
       font-weight: 800;
       flex-shrink: 0;
       margin-top: 1px;
     }
-    /* ── Email submission cards ── */
+    /* â”€â”€ Email submission cards â”€â”€ */
     .email-card {
       display: flex;
       align-items: center;
@@ -228,7 +234,7 @@
     .email-icon svg { width: 18px; height: 18px; stroke: var(--blue, #0071e3); fill: none; }
     .email-lbl { font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; color: var(--text-3, #9ca3af); margin-bottom: 4px; }
     .email-addr { font-weight: 700; color: var(--navy, #0f2744); font-size: 0.95rem; }
-    /* ── Impact steps ── */
+    /* â”€â”€ Impact steps â”€â”€ */
     .impact-icon {
       width: 52px; height: 52px;
       background: rgba(0,113,227,0.08);
@@ -237,7 +243,7 @@
       flex-shrink: 0;
     }
     .impact-icon svg { width: 22px; height: 22px; stroke: var(--blue, #0071e3); fill: none; }
-    /* ── Responsive ── */
+    /* â”€â”€ Responsive â”€â”€ */
     @media (max-width: 768px) {
       .authors-nav-link { padding: 12px 14px; font-size: 0.8rem; }
       .spec-grid { grid-template-columns: 1fr 1fr; }
