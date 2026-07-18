@@ -25,6 +25,12 @@
 
 ## Recent Changes (Reverse Chronological)
 
+### 2026-07-18 � Fix 'Page with redirect' indexing issue (2 pages)
+- **Changed:** Removed <meta http-equiv="refresh"> and window.location.replace() from 9 placeholder redirect HTML files (including the 2 flagged by GSC). Updated all internal links across 10 HTML files that pointed to these redirects to point directly to their final destination anchors (e.g., journal.html#about). Regenerated sitemap.xml with the current date.
+- **Reason:** Resolve Google Search Console CRITICAL ISSUE: "Page with redirect".
+- **Files:** *.html (19 files modified), sitemap.xml
+- **Commit:** ix: 'Page with redirect' indexing issue (2 pages)
+
 ### 2026-07-17 — Fix remaining SEO issues
 - **Changed:** Eliminated render-blocking Google Fonts by moving them from CSS `@import` to HTML `<head>` preloads across all pages. Added `srcset` and `alt` attributes to logo images in JS. Encoded three plaintext emails in footer using HTML entities. Upgraded three `target="_blank"` links to include `rel="noopener noreferrer"`.
 - **Reason:** Resolve HIGH, MEDIUM, and WARNING issues from SEO Site Checkup report.
@@ -210,3 +216,4 @@
 | **International Members** | 3 (Dr. Mary Lou Frank 🇺🇸, Prof. Jyotirmaya Thakur 🇬🇧, Lect. Ayşegül Akkaya 🇹🇷) | 2026-06-23 |
 | **Board Members Total** | 15 | 2026-06-23 |
 | **Volume 1 Issue 1** | Published April 2026 | 2026-04-01 |
+
