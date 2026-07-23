@@ -25,7 +25,19 @@
 
 ## Recent Changes (Reverse Chronological)
 
-### 2026-07-18 � Fix 'Page with redirect' indexing issue (2 pages)
+### 2026-07-23 - Address all SEO Site Checkup issues & indexing optimizations
+- **Changed:**
+  1. Eliminated render-blocking resources: loaded Google Fonts asynchronously with `media="print" onload="this.media='all'"` and preconnect tags, preloaded `assets/css/style.css`, and set `async` attribute on Google Tag Manager scripts across all HTML files.
+  2. Fixed character encoding anomalies: replaced all double-encoded UTF-8 artifacts (`Â·`, `â€“`, etc.) with standard HTML entities (`&middot;`, `&ndash;`, etc.) to resolve malformed encoding warnings and eliminate CLS layout shifts.
+  3. Obfuscated plaintext email addresses across HTML source code into HTML entities to protect against spam harvesters while preserving full clickability and copy-to-clipboard functionality.
+  4. Expanded JSON-LD Structured Data Schema: injected `ScholarlyArticle` schemas for featured articles (with DOI placeholders and reference list citations), `ItemList`/`EditorialBoard` bios schema, `ScholarlyJournal` indexing properties, and `BreadcrumbList` schemas across all inner pages to boost AI Visibility and Google Rich Results.
+  5. Created `ads.txt` at root to validate non-commercial open access journal ad policy.
+  6. Updated `sitemap.xml` `lastmod` timestamps to `2026-07-23`.
+- **Reason:** Resolve HIGH, MEDIUM, and WARNING issues from latest SEO Site Checkup report.
+- **Files:** `*.html` (31 files), `ads.txt`, `sitemap.xml`, `MEMORY.md`, `CURRENT_TASK.md`
+- **Commit:** `SEO optimization: address all issues identified in Site Checkup report`
+
+### 2026-07-18  Fix 'Page with redirect' indexing issue (2 pages)
 - **Changed:** Removed <meta http-equiv="refresh"> and window.location.replace() from 9 placeholder redirect HTML files (including the 2 flagged by GSC). Updated all internal links across 10 HTML files that pointed to these redirects to point directly to their final destination anchors (e.g., journal.html#about). Regenerated sitemap.xml with the current date.
 - **Reason:** Resolve Google Search Console CRITICAL ISSUE: "Page with redirect".
 - **Files:** *.html (19 files modified), sitemap.xml
