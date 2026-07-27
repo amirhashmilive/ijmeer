@@ -25,6 +25,16 @@
 
 ## Recent Changes (Reverse Chronological)
 
+### 2026-07-28 — Create individual article pages and fix Google Scholar indexing issues
+- **Changed:**
+  1. Created 5 dedicated HTML landing pages (`article-v1i1p01.html` through `article-v1i1p05.html`) for all published articles with complete Highwire Press citation meta tags (`citation_title`, `citation_author`, `citation_publication_date`, `citation_journal_title`, `citation_volume`, `citation_issue`, `citation_firstpage`, `citation_lastpage`, `citation_pdf_url`, `citation_abstract`, `citation_issn`, `citation_language`) and canonical links.
+  2. Removed stacked per-article citation meta tags from `index.html`, `archive.html`, and `citations.html` to prevent crawler ambiguity.
+  3. Cleaned up `sitemap.xml`: removed legacy `/pdfs/` links, added new `article-v1i1p0*.html` page URLs (priority 0.8), and updated `/papers/*.pdf` URLs (priority 0.7).
+  4. Linked article cards in `archive.html` to their respective dedicated article HTML pages.
+- **Reason:** Implement all structural requirements for Google Scholar indexing readiness.
+- **Files:** `article-v1i1p01.html`, `article-v1i1p02.html`, `article-v1i1p03.html`, `article-v1i1p04.html`, `article-v1i1p05.html`, `index.html`, `archive.html`, `citations.html`, `sitemap.xml`, `MEMORY.md`, `CURRENT_TASK.md`
+- **Commit:** `Create individual article pages and fix Google Scholar indexing issues`
+
 ### 2026-07-28 — Google Scholar indexing audit report
 - **Changed:** Conducted full audit of Google Scholar indexing readiness. Identified missing dedicated per-article landing pages, incorrect `citation_pdf_url` paths in `citations.html`, missing `citation_abstract` and `citation_doi` tags, and unindexed status in Google search/Scholar.
 - **Reason:** User request for Google Scholar readiness audit (analysis only).

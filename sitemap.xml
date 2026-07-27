@@ -198,70 +198,72 @@
   </url>
 
   <!-- ════════════════════════════════════════════════════════ -->
+  <!-- Individual Article Pages — Vol 1, Issue 1 (April 2026)    -->
+  <!-- ════════════════════════════════════════════════════════ -->
+  <url>
+    <loc>https://www.ijmeer.com/article-v1i1p01.html</loc>
+    <lastmod>2026-07-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.ijmeer.com/article-v1i1p02.html</loc>
+    <lastmod>2026-07-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.ijmeer.com/article-v1i1p03.html</loc>
+    <lastmod>2026-07-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.ijmeer.com/article-v1i1p04.html</loc>
+    <lastmod>2026-07-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.ijmeer.com/article-v1i1p05.html</loc>
+    <lastmod>2026-07-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- ════════════════════════════════════════════════════════ -->
   <!-- PDF Articles — Volume 1, Issue 1 (April 2026)           -->
-  <!-- /papers/ directory (formatted articles)                  -->
+  <!-- /papers/ directory (canonical formatted articles)        -->
   <!-- ════════════════════════════════════════════════════════ -->
   <url>
     <loc>https://www.ijmeer.com/papers/ijmeer_v1_i1_p01_2026.pdf</loc>
-    <lastmod>2026-07-23</lastmod>
+    <lastmod>2026-07-28</lastmod>
     <changefreq>never</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.ijmeer.com/papers/ijmeer_v1_i1_p02_2026.pdf</loc>
-    <lastmod>2026-07-23</lastmod>
+    <lastmod>2026-07-28</lastmod>
     <changefreq>never</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.ijmeer.com/papers/ijmeer_v1_i1_p03_2026.pdf</loc>
-    <lastmod>2026-07-23</lastmod>
+    <lastmod>2026-07-28</lastmod>
     <changefreq>never</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.ijmeer.com/papers/ijmeer_v1_i1_p04_2026.pdf</loc>
-    <lastmod>2026-07-23</lastmod>
+    <lastmod>2026-07-28</lastmod>
     <changefreq>never</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.ijmeer.com/papers/ijmeer_v1_i1_p05_2026.pdf</loc>
-    <lastmod>2026-07-23</lastmod>
+    <lastmod>2026-07-28</lastmod>
     <changefreq>never</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <!-- /pdfs/ directory (legacy article links)                  -->
-  <url>
-    <loc>https://www.ijmeer.com/pdfs/vol1-issue1-article1.pdf</loc>
-    <lastmod>2026-07-23</lastmod>
-    <changefreq>never</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.ijmeer.com/pdfs/vol1-issue1-article2.pdf</loc>
-    <lastmod>2026-07-23</lastmod>
-    <changefreq>never</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.ijmeer.com/pdfs/vol1-issue1-article3.pdf</loc>
-    <lastmod>2026-07-23</lastmod>
-    <changefreq>never</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.ijmeer.com/pdfs/vol1-issue1-article4.pdf</loc>
-    <lastmod>2026-07-23</lastmod>
-    <changefreq>never</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.ijmeer.com/pdfs/vol1-issue1-article5.pdf</loc>
-    <lastmod>2026-07-23</lastmod>
-    <changefreq>never</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
 
 </urlset>
