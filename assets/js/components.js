@@ -134,7 +134,6 @@
           <a href="archive.html">Archives</a>
           <a href="citations.html">Citations</a>
           <a href="library.html">Library Subscription</a>
-          <a href="media-kit.html">Media Kit</a>
         </nav>
       </div>
 

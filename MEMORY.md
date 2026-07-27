@@ -25,6 +25,12 @@
 
 ## Recent Changes (Reverse Chronological)
 
+### 2026-07-27 — Remove Media Kit page and all related files
+- **Changed:** Verified deletion of `media-kit.html` and `/media-kit/` directory. Removed "Media Kit" footer link from `assets/js/components.js`.
+- **Reason:** User request to completely remove Media Kit page and all related files.
+- **Files:** `assets/js/components.js`, `MEMORY.md`, `CURRENT_TASK.md`
+- **Commit:** `Remove Media Kit page and all related files`
+
 ### 2026-07-23 - Address all SEO Site Checkup issues & indexing optimizations
 - **Changed:**
   1. Eliminated render-blocking resources: loaded Google Fonts asynchronously with `media="print" onload="this.media='all'"` and preconnect tags, preloaded `assets/css/style.css`, and set `async` attribute on Google Tag Manager scripts across all HTML files.
