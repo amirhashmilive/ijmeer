@@ -6,7 +6,7 @@
   'use strict';
 
   const QUARTERS = [
-    { id: 'Q1', label: 'Quarter 1 (Jan–Mar)', deadlineMonth: 2, deadlineDay: 15, pubMonth: 3, pubLabel: 'April 25–31' },
+    { id: 'Q1', label: 'Quarter 1 (Jan–Mar)', deadlineMonth: 2, deadlineDay: 15, pubMonth: 3, pubLabel: 'April 25–30' },
     { id: 'Q2', label: 'Quarter 2 (Apr–Jun)', deadlineMonth: 5, deadlineDay: 15, pubMonth: 6, pubLabel: 'July 25–31' },
     { id: 'Q3', label: 'Quarter 3 (Jul–Sep)', deadlineMonth: 8, deadlineDay: 15, pubMonth: 9, pubLabel: 'October 25–31' },
     { id: 'Q4', label: 'Quarter 4 (Oct–Dec)', deadlineMonth: 11, deadlineDay: 15, pubMonth: 0, pubLabel: 'January 25–31' },

@@ -25,6 +25,20 @@
 
 ## Recent Changes (Reverse Chronological)
 
+### 2026-07-28 — Update quarterly publication dates across all pages and automation logic
+- **Changed:**
+  1. Audited all date references across HTML, JS, JSON, and documentation files.
+  2. Updated `assets/js/timeline.js` Q1 publication label from `April 25–31` to `April 25–30` (matching the 30-day length of April).
+  3. Standardized all 4 quarterly issue publication windows:
+     - Issue 1 (Jan–Mar): 25–30 April
+     - Issue 2 (Apr–Jun): 25–31 July
+     - Issue 3 (Jul–Sep): 25–31 October
+     - Issue 4 (Oct–Dec): 25–31 January
+  4. Updated publication frequency cards in `journal.html` and publication date detail fields in `call-for-papers.html`.
+- **Reason:** Standardize exact publication date windows across static HTML, JS timeline logic, JSON configuration, and documentation.
+- **Files:** `assets/js/timeline.js`, `journal.html`, `call-for-papers.html`, `MEMORY.md`, `CURRENT_TASK.md`
+- **Commit:** `Update quarterly publication dates across all pages and automation logic`
+
 ### 2026-07-28 — Remove APC timing statements and Print ISSN references
 - **Changed:**
   1. Removed all APC timing statements ("APC payable only after final acceptance", "Pay before publication", "Pay only after acceptance") across all pages (`index.html`, `journal.html`, `authors.html`, `peer-review.html`, `open-access.html`). Fee structures now display without timing info.
