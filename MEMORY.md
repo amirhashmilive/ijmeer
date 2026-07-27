@@ -25,6 +25,12 @@
 
 ## Recent Changes (Reverse Chronological)
 
+### 2026-07-28 — Google Scholar indexing audit report
+- **Changed:** Conducted full audit of Google Scholar indexing readiness. Identified missing dedicated per-article landing pages, incorrect `citation_pdf_url` paths in `citations.html`, missing `citation_abstract` and `citation_doi` tags, and unindexed status in Google search/Scholar.
+- **Reason:** User request for Google Scholar readiness audit (analysis only).
+- **Files:** `MEMORY.md`, `CURRENT_TASK.md`
+- **Commit:** `Google Scholar indexing audit report`
+
 ### 2026-07-28 — Remove hero tagline and adjust landing page spacing
 - **Changed:** Removed hero tagline paragraph (`.hero-desc`) from `index.html` and adjusted subtitle margin-bottom to `32px` for balanced vertical alignment with CTA action buttons.
 - **Reason:** User request to remove hero tagline and maintain clean landing page spacing.

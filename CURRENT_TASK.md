@@ -7,23 +7,26 @@
 
 ## Current Task
 
-**Task:** Remove hero tagline and adjust landing page spacing
+**Task:** Google Scholar indexing audit report
 **Status:** ✅ Done
 **Started:** 2026-07-28
 **Completed:** 2026-07-28
 **Agent:** Antigravity
 
 ### Progress:
-- [x] Remove hero tagline paragraph (`.hero-desc`) from index.html
-- [x] Adjust subtitle margin-bottom to maintain clean vertical rhythm
+- [x] Audit Google Scholar indexing status
+- [x] Audit citation meta tags across all pages
+- [x] Audit PDF formats and size compliance
+- [x] Audit sitemap.xml and robots.txt
+- [x] Compile detailed audit report & recommendations
 - [x] Update MEMORY.md and CURRENT_TASK.md
-- [x] Git commit and push to main
+- [x] Commit and push audit report record
 
 ---
 
 ## Previous Task
 
-**Task:** Update quarterly publication dates across all pages and automation logic
+**Task:** Remove hero tagline and adjust landing page spacing
 **Status:** ✅ Done
 **Started:** 2026-07-28
 **Completed:** 2026-07-28
