@@ -25,6 +25,12 @@
 
 ## Recent Changes (Reverse Chronological)
 
+### 2026-07-28 — Remove hero tagline and adjust landing page spacing
+- **Changed:** Removed hero tagline paragraph (`.hero-desc`) from `index.html` and adjusted subtitle margin-bottom to `32px` for balanced vertical alignment with CTA action buttons.
+- **Reason:** User request to remove hero tagline and maintain clean landing page spacing.
+- **Files:** `index.html`, `MEMORY.md`, `CURRENT_TASK.md`
+- **Commit:** `Remove hero tagline and adjust landing page spacing`
+
 ### 2026-07-28 — Update quarterly publication dates across all pages and automation logic
 - **Changed:**
   1. Audited all date references across HTML, JS, JSON, and documentation files.

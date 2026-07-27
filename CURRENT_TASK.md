@@ -7,19 +7,15 @@
 
 ## Current Task
 
-**Task:** Update quarterly publication dates across all pages and automation logic
+**Task:** Remove hero tagline and adjust landing page spacing
 **Status:** ✅ Done
 **Started:** 2026-07-28
 **Completed:** 2026-07-28
 **Agent:** Antigravity
 
 ### Progress:
-- [x] Scan codebase for all publication date references
-- [x] Audit HTML, JS, JSON, and documentation files
-- [x] Report code scan findings
-- [x] Update timeline.js (Q1 April 25-30 fix)
-- [x] Update journal.html publication frequency cards
-- [x] Update call-for-papers.html publication date fields
+- [x] Remove hero tagline paragraph (`.hero-desc`) from index.html
+- [x] Adjust subtitle margin-bottom to maintain clean vertical rhythm
 - [x] Update MEMORY.md and CURRENT_TASK.md
 - [x] Git commit and push to main
 
@@ -27,7 +23,7 @@
 
 ## Previous Task
 
-**Task:** Remove APC timing statements and Print ISSN references
+**Task:** Update quarterly publication dates across all pages and automation logic
 **Status:** ✅ Done
 **Started:** 2026-07-28
 **Completed:** 2026-07-28
