@@ -168,7 +168,7 @@
       <p>
         &copy; <span data-year></span> IJMEER. Published by
         <a href="https://www.meerfoundation.co.in/" target="_blank" rel="noopener noreferrer">Meer Foundation (Registered Non-Profit Organization)</a>.
-        All rights reserved. &nbsp;|&nbsp; Print ISSN: Applied For &nbsp;|&nbsp; ISSN (Online): 3139-6003 &nbsp;|&nbsp; Since 2026
+        All rights reserved. &nbsp;|&nbsp; ISSN (Online): 3139-6003 &nbsp;|&nbsp; Since 2026
       </p>
     </div>
   </div>

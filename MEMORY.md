@@ -25,6 +25,14 @@
 
 ## Recent Changes (Reverse Chronological)
 
+### 2026-07-28 — Remove APC timing statements and Print ISSN references
+- **Changed:**
+  1. Removed all APC timing statements ("APC payable only after final acceptance", "Pay before publication", "Pay only after acceptance") across all pages (`index.html`, `journal.html`, `authors.html`, `peer-review.html`, `open-access.html`). Fee structures now display without timing info.
+  2. Removed all references to Print ISSN (`Print ISSN: Applied For`, `P-ISSN: XXXX-XXXX`) from `index.html`, `journal.html`, `contact.html`, `assets/js/components.js`, and `data/config.json`. Only Online ISSN (`E-ISSN: 3139-6003`) is displayed.
+- **Reason:** User request to eliminate all APC timing and Print ISSN mentions across the website.
+- **Files:** `index.html`, `journal.html`, `contact.html`, `authors.html`, `peer-review.html`, `open-access.html`, `assets/js/components.js`, `data/config.json`, `MEMORY.md`, `CURRENT_TASK.md`
+- **Commit:** `Remove APC timing statements and Print ISSN references`
+
 ### 2026-07-28 — Fix all issues identified in IJMEER homepage audit
 - **Changed:**
   1. Fixed all UTF-8 double-encoding artifacts across homepage (`4×`, `📄`, `→`, `✅`, `⏱`, `📢`, `📚`, `📅`, `📖`, `↗`).
