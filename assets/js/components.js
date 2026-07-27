@@ -81,7 +81,7 @@
         <p class="footer-desc">INTERNATIONAL JOURNAL OF MULTIDISCIPLINARY EXPLICATION AND EMERGING RESEARCH (IJMEER).</p>
         <div style="margin-top:20px;">
           <div style="font-size:0.82rem;font-weight:700;color:rgba(255,255,255,0.5);text-transform:uppercase;letter-spacing:1px;margin-bottom:6px;">
-            Publisher: <a href="https://www.meerfoundation.co.in/" target="_blank" rel="noopener noreferrer" style="color:inherit;text-decoration:underline;">Meer Foundation</a>
+            Publisher: <a href="https://www.meerfoundation.co.in/" target="_blank" rel="noopener noreferrer" style="color:inherit;text-decoration:underline;">Meer Foundation (Registered Non-Profit Organization)</a>
           </div>
           <div style="font-size:0.82rem;color:rgba(255,255,255,0.7);line-height:1.7;">
             Address: House No. 103, Housing Board Colony, Hatkeshar, Dhamtari – 493773, Chhattisgarh, India
@@ -167,8 +167,8 @@
     <div class="footer-bottom">
       <p>
         &copy; <span data-year></span> IJMEER. Published by
-        <a href="https://www.meerfoundation.co.in/" target="_blank" rel="noopener noreferrer">Meer Foundation</a>.
-        All rights reserved. &nbsp;|&nbsp; ISSN (Print): XXXX-XXXX &nbsp;|&nbsp; ISSN (Online): 3139-6003 &nbsp;|&nbsp; Since 2026
+        <a href="https://www.meerfoundation.co.in/" target="_blank" rel="noopener noreferrer">Meer Foundation (Registered Non-Profit Organization)</a>.
+        All rights reserved. &nbsp;|&nbsp; Print ISSN: Applied For &nbsp;|&nbsp; ISSN (Online): 3139-6003 &nbsp;|&nbsp; Since 2026
       </p>
     </div>
   </div>

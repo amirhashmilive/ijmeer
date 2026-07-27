@@ -7,31 +7,33 @@
 
 ## Current Task
 
-**Task:** Remove Media Kit page and all related files
+**Task:** Fix all issues identified in the IJMEER homepage audit
 **Status:** ✅ Done
-**Started:** 2026-07-27
-**Completed:** 2026-07-27
+**Started:** 2026-07-28
+**Completed:** 2026-07-28
 **Agent:** Antigravity
 
 ### Progress:
-- [x] Verified non-existence of `media-kit.html` and `/media-kit/` directory
-- [x] Removed "Media Kit" footer link from `assets/js/components.js`
-- [x] Updated `CURRENT_TASK.md` and `MEMORY.md`
-- [x] Commit and push to GitHub
+- [x] Read AGENTS.md, MEMORY.md, and CURRENT_TASK.md
+- [x] Created Implementation Plan
+- [x] Fix UTF-8 encoding errors across index.html
+- [x] Remove fake ISSN (P-ISSN: XXXX-XXXX -> Print ISSN: Applied For)
+- [x] Remove misleading claims (100% Digital Indexing, from 50+ countries, hide 0 citations)
+- [x] Add missing credibility badges (Open Access, Double-Blind Peer Review, DOI, ORCID, CC BY 4.0)
+- [x] Update footer publisher line in components.js
+- [x] Update hero tagline and statistics
+- [x] Update benefits section (Timely Peer Review, Research Impact & Discoverability, Transparent APC)
+- [x] Standardize APC statements to "APC payable only after final acceptance."
+- [x] Verify changes
+- [x] Update MEMORY.md and CURRENT_TASK.md
+- [x] Git commit and push to main
 
 ---
 
 ## Previous Task
 
-**Task:** SEO Optimization & Indexing Fixes (SEO Site Checkup Report)
+**Task:** Remove Media Kit page and all related files
 **Status:** ✅ Done
-**Started:** 2026-07-23
-**Completed:** 2026-07-23
+**Started:** 2026-07-27
+**Completed:** 2026-07-27
 **Agent:** Antigravity
-
----
-
-## Next Recommended Actions
-
-1. Monitor ISSN approval status (Online ISSN: 3139-6003 approved; awaiting print ISSN).
-2. Create individual article pages in /papers/ for Vol 1 Issue 1.

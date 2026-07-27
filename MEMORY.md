@@ -25,6 +25,21 @@
 
 ## Recent Changes (Reverse Chronological)
 
+### 2026-07-28 — Fix all issues identified in IJMEER homepage audit
+- **Changed:**
+  1. Fixed all UTF-8 double-encoding artifacts across homepage (`4×`, `📄`, `→`, `✅`, `⏱`, `📢`, `📚`, `📅`, `📖`, `↗`).
+  2. Removed `P-ISSN: XXXX-XXXX` fake ISSN from homepage and footer, replacing with `Print ISSN: Applied For` while keeping valid `E-ISSN: 3139-6003`.
+  3. Removed misleading claims: removed "100% Digital Indexing", removed "from 50+ countries", conditionally hid "0 citations" badge on articles, and updated metrics section title to "IJMEER Journal Statistics & Editorial Performance".
+  4. Added missing credibility badges: Open Access, Double-Blind Peer Review, DOI for Every Article, ORCID Supported, CC BY 4.0 License.
+  5. Updated footer publisher line in `components.js` to `Published by Meer Foundation (Registered Non-Profit Organization)`.
+  6. Updated hero tagline to: "An international, peer-reviewed, open-access journal dedicated to publishing high-quality multidisciplinary research that advances scholarship, innovation, and evidence-based practice across diverse academic fields."
+  7. Updated metrics section cards to showcase stable statistics (Founded: 2026, Frequency: Quarterly, Review Model: Double-Blind, Access: Open Access).
+  8. Updated Benefits section (`why-publish`): renamed to "Timely Peer Review and Publication", "Research Impact & Discoverability" ("Increase the accessibility and visibility of your published research"), and "Transparent Article Processing Charges".
+  9. Standardized APC statements across homepage to "APC payable only after final acceptance."
+- **Reason:** Resolve all compliance, accuracy, and presentation issues identified in the IJMEER homepage audit.
+- **Files:** `index.html`, `assets/js/components.js`, `MEMORY.md`, `CURRENT_TASK.md`
+- **Commit:** `Fix homepage issues: encoding errors, remove fake ISSN, misleading claims, add missing credibility badges`
+
 ### 2026-07-27 — Remove Media Kit page and all related files
 - **Changed:** Verified deletion of `media-kit.html` and `/media-kit/` directory. Removed "Media Kit" footer link from `assets/js/components.js`.
 - **Reason:** User request to completely remove Media Kit page and all related files.
