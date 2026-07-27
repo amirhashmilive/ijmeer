@@ -25,6 +25,18 @@
 
 ## Recent Changes (Reverse Chronological)
 
+### 2026-07-28 — Fix page redirect issues for Google Search Console validation
+- **Changed:**
+  1. Fixed 9 stub HTML pages (`about-this-journal.html`, `abstracting-indexing.html`, `book-reviews.html`, `fees-pricing.html`, `metrics.html`, `post-publication-impact.html`, `preparing-materials.html`, `publishing-agreement.html`, `submitting-materials.html`) that had "Redirecting..." titles causing Google Search Console "Page with redirect" validation errors.
+  2. Added `<meta name="robots" content="noindex, follow">` to all 9 stubs to tell Google to stop indexing them.
+  3. Added proper `<meta http-equiv="refresh" content="0; url=...">` for clean instant redirects.
+  4. Replaced "Redirecting..." titles with proper descriptive titles (e.g., "About This Journal | IJMEER").
+  5. Removed orphaned BreadcrumbList JSON-LD schema from `fees-pricing.html` and `abstracting-indexing.html`.
+  6. Verified: no stub pages are in `sitemap.xml`, no internal links point to stub pages.
+- **Reason:** Resolve Google Search Console "Page with redirect" validation issue (2 pages flagged).
+- **Files:** `about-this-journal.html`, `abstracting-indexing.html`, `book-reviews.html`, `fees-pricing.html`, `metrics.html`, `post-publication-impact.html`, `preparing-materials.html`, `publishing-agreement.html`, `submitting-materials.html`, `MEMORY.md`, `CURRENT_TASK.md`
+- **Commit:** `Fix page redirect issues for Google Search Console validation`
+
 ### 2026-07-28 — Create individual article pages and fix Google Scholar indexing issues
 - **Changed:**
   1. Created 5 dedicated HTML landing pages (`article-v1i1p01.html` through `article-v1i1p05.html`) for all published articles with complete Highwire Press citation meta tags (`citation_title`, `citation_author`, `citation_publication_date`, `citation_journal_title`, `citation_volume`, `citation_issue`, `citation_firstpage`, `citation_lastpage`, `citation_pdf_url`, `citation_abstract`, `citation_issn`, `citation_language`) and canonical links.
