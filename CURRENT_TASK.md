@@ -19,7 +19,7 @@
 
 ## Previous Task
 
-**Task:** Suggest comprehensive safety and security features for the IJMEER website.
+**Task:** Fix the remaining UTF-8 encoding issues identified in the audit report.
 **Status:** ✅ Done
 **Started:** 2026-07-29
 **Completed:** 2026-07-29

@@ -25,6 +25,12 @@
 
 ## Recent Changes (Reverse Chronological)
 
+### 2026-07-29 — Fix UTF-8 encoding issues: Turkish characters in editorial board pages
+- **Changed:** Fixed 11 instances of broken Turkish characters (`Ayşegül` and `ğ`) across `editorial-board.html` and `editorial-portfolio.html`.
+- **Reason:** Resolve remaining encoding artifacts flagged in the UTF-8 audit report.
+- **Files:** `editorial-board.html`, `editorial-portfolio.html`, `MEMORY.md`, `CURRENT_TASK.md`
+- **Commit:** `Fix UTF-8 encoding issues: Turkish characters in editorial board pages`
+
 ### 2026-07-29 — UTF-8 encoding audit report
 - **Changed:** Ran a full UTF-8 encoding scan across all 45 HTML files in the project. Verified `<meta charset="UTF-8">` is present on all files. Identified 11 remaining localized mojibake issues affecting Turkish characters (ş, ğ) in `editorial-board.html` and `editorial-portfolio.html`. Generated `UTF8_AUDIT_REPORT.md` with findings. No files were modified.
 - **Reason:** User requested a complete UTF-8 encoding audit without making changes.
