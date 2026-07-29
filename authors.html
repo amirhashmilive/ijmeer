@@ -36,7 +36,7 @@
   <link rel="stylesheet" href="assets/css/style.css">
   <noscript><link rel="stylesheet" href="assets/css/style.css"></noscript>
   <style>
-    /* â”€â”€ Authors page: sticky section nav â”€â”€ */
+    /* ── Authors page: sticky section nav ── */
     .authors-nav {
       position: sticky;
       top: 64px;
@@ -81,13 +81,13 @@
       flex-shrink: 0;
       transition: background 0.2s;
     }
-    /* â”€â”€ Section anchors â”€â”€ */
+    /* ── Section anchors ── */
     .authors-section {
       border-bottom: 2px solid var(--bg-2, #f3f4f6);
       scroll-margin-top: 130px;
     }
     .authors-section:last-of-type { border-bottom: none; }
-    /* â”€â”€ Spec grid â”€â”€ */
+    /* ── Spec grid ── */
     .spec-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
@@ -114,7 +114,7 @@
       color: var(--navy, #0f2744);
       line-height: 1.5;
     }
-    /* â”€â”€ Reference style badges â”€â”€ */
+    /* ── Reference style badges ── */
     .ref-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
@@ -131,7 +131,7 @@
       color: var(--navy, #0f2744);
       border: 1px solid var(--border, #e5e7eb);
     }
-    /* â”€â”€ Razorpay button â”€â”€ */
+    /* ── Razorpay button ── */
     .btn-razorpay {
       display: inline-flex;
       align-items: center;
@@ -149,7 +149,7 @@
       cursor: pointer;
     }
     .btn-razorpay:hover { background: #005a8e; transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,114,178,0.3); }
-    /* â”€â”€ Pricing cards â”€â”€ */
+    /* ── Pricing cards ── */
     .pricing-row {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -206,13 +206,13 @@
       line-height: 1.5;
     }
     .pcard-features li::before {
-      content: 'âœ“';
+      content: '✓';
       color: #059669;
       font-weight: 800;
       flex-shrink: 0;
       margin-top: 1px;
     }
-    /* â”€â”€ Email submission cards â”€â”€ */
+    /* ── Email submission cards ── */
     .email-card {
       display: flex;
       align-items: center;
@@ -235,7 +235,7 @@
     .email-icon svg { width: 18px; height: 18px; stroke: var(--blue, #0071e3); fill: none; }
     .email-lbl { font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; color: var(--text-3, #9ca3af); margin-bottom: 4px; }
     .email-addr { font-weight: 700; color: var(--navy, #0f2744); font-size: 0.95rem; }
-    /* â”€â”€ Impact steps â”€â”€ */
+    /* ── Impact steps ── */
     .impact-icon {
       width: 52px; height: 52px;
       background: rgba(0,113,227,0.08);
@@ -244,7 +244,7 @@
       flex-shrink: 0;
     }
     .impact-icon svg { width: 22px; height: 22px; stroke: var(--blue, #0071e3); fill: none; }
-    /* â”€â”€ Responsive â”€â”€ */
+    /* ── Responsive ── */
     @media (max-width: 768px) {
       .authors-nav-link { padding: 12px 14px; font-size: 0.8rem; }
       .spec-grid { grid-template-columns: 1fr 1fr; }

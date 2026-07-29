@@ -36,7 +36,7 @@
   <link rel="stylesheet" href="assets/css/style.css">
   <noscript><link rel="stylesheet" href="assets/css/style.css"></noscript>
   <style>
-    /* â”€â”€ Page-level sticky nav â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+    /* ── Page-level sticky nav ──────────────────────────── */
     .pr-sticky-nav {
       position: sticky; top: var(--header-h, 72px); z-index: 90;
       background: var(--bg); border-bottom: 1px solid var(--border);
@@ -56,7 +56,7 @@
     .pr-nav-link:hover { color: var(--blue); border-bottom-color: rgba(37,99,235,0.3); }
     .pr-nav-link.active { color: var(--blue); border-bottom-color: var(--blue); }
 
-    /* â”€â”€ Stat badges strip â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+    /* ── Stat badges strip ──────────────────────────────── */
     .pr-stats-strip {
       display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
       gap: 16px; margin-bottom: 56px;
@@ -75,7 +75,7 @@
     }
     .pr-stat-label { font-size: 0.75rem; font-weight: 700; color: var(--text-3); text-transform: uppercase; letter-spacing: 0.6px; }
 
-    /* â”€â”€ Section title style â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+    /* ── Section title style ────────────────────────────── */
     .pr-section-label {
       display: inline-flex; align-items: center; gap: 10px;
       background: var(--grad-brand); color: #fff;
@@ -84,7 +84,7 @@
       letter-spacing: 1px; margin-bottom: 12px;
     }
 
-    /* â”€â”€ Policy blocks â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+    /* ── Policy blocks ──────────────────────────────────── */
     .policy-accordion { display: flex; flex-direction: column; gap: 12px; }
     .pol-item {
       border: 1px solid var(--border); border-radius: var(--r-xl);
@@ -114,7 +114,7 @@
     }
     .pol-item.open .pol-body { max-height: 800px; padding: 20px 24px; }
 
-    /* â”€â”€ Vertical timeline â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+    /* ── Vertical timeline ──────────────────────────────── */
     .timeline-v { position: relative; padding-left: 52px; border-left: 3px solid var(--border); margin-left: 20px; }
     .timeline-v-item { position: relative; margin-bottom: 40px; }
     .timeline-v-item:last-child { margin-bottom: 0; }
@@ -130,7 +130,7 @@
     .timeline-v-meta { font-size: 0.75rem; font-weight: 700; color: var(--blue); margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.5px; }
     .timeline-v-desc { font-size: 0.9rem; color: var(--text-2); line-height: 1.75; }
 
-    /* â”€â”€ Decision cards â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+    /* ── Decision cards ─────────────────────────────────── */
     .decision-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; }
     .decision-card { padding: 22px; border-radius: var(--r-lg); border: 2px solid; }
     .decision-card.accept { border-color: rgba(5,150,105,0.3); background: rgba(5,150,105,0.05); }
@@ -144,7 +144,7 @@
     .decision-card.reject .decision-label { color: var(--rose); }
     .decision-desc { font-size: 0.82rem; color: var(--text-3); line-height: 1.6; }
 
-    /* â”€â”€ Benefits grid â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+    /* ── Benefits grid ──────────────────────────────────── */
     .benefits-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
     .benefit-card {
       background: var(--bg); border: 1px solid var(--border);
@@ -160,16 +160,16 @@
     .benefit-title { font-weight: 800; font-size: 1rem; color: var(--text-1); }
     .benefit-desc { font-size: 0.875rem; color: var(--text-3); line-height: 1.7; }
 
-    /* â”€â”€ Checklist â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+    /* ── Checklist ──────────────────────────────────────── */
     .check-item { display: flex; align-items: flex-start; gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--border); font-size: 0.9rem; color: var(--text-2); }
     .check-item:last-child { border-bottom: none; }
     .check-icon { width: 22px; height: 22px; border-radius: 50%; background: var(--emerald); color: #fff; display: flex; align-items: center; justify-content: center; font-size: 0.7rem; font-weight: 900; flex-shrink: 0; margin-top: 1px; }
 
-    /* â”€â”€ Tag cloud â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+    /* ── Tag cloud ──────────────────────────────────────── */
     .tag-cloud { display: flex; flex-wrap: wrap; gap: 8px; }
     .tag { padding: 5px 14px; background: rgba(37,99,235,0.07); color: var(--blue); border: 1px solid rgba(37,99,235,0.15); border-radius: var(--r-full); font-size: 0.78rem; font-weight: 700; }
 
-    /* â”€â”€ Review criteria table â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+    /* ── Review criteria table ──────────────────────────── */
     .criteria-table { width: 100%; border-collapse: collapse; font-size: 0.87rem; }
     .criteria-table th { background: var(--bg-2); padding: 12px 16px; text-align: left; font-size: 0.72rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.8px; color: var(--text-3); border-bottom: 2px solid var(--border); }
     .criteria-table td { padding: 12px 16px; border-bottom: 1px solid var(--border); color: var(--text-2); vertical-align: top; }
@@ -177,7 +177,7 @@
     .criteria-table tr:hover td { background: var(--bg-2); }
     .criteria-weight { font-weight: 800; color: var(--navy); font-size: 0.93rem; }
 
-    /* â”€â”€ CTA join strip â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+    /* ── CTA join strip ─────────────────────────────────── */
     .join-hero {
       background: var(--grad-brand); border-radius: var(--r-2xl);
       padding: 48px; text-align: center; position: relative; overflow: hidden;
@@ -192,7 +192,7 @@
     .join-hero p { color: rgba(255,255,255,0.8); max-width: 520px; margin: 0 auto 28px; line-height: 1.75; position: relative; }
     .join-hero .cta-actions { position: relative; }
 
-    /* â”€â”€ Scroll offset for anchors â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+    /* ── Scroll offset for anchors ──────────────────────── */
     [id] { scroll-margin-top: calc(var(--header-h, 72px) + 48px); }
 
     @media (max-width: 640px) {
@@ -229,12 +229,12 @@
 
 <main id="main-content">
 
-  <!-- â•â• PAGE HEADER â•â• -->
+  <!-- ══ PAGE HEADER ══ -->
   <section class="page-header" aria-labelledby="page-heading">
     <div class="container">
       <nav class="breadcrumb" aria-label="Page navigation">
         <a href="/">Home</a>
-        <span class="breadcrumb-sep" aria-hidden="true">â€º</span>
+        <span class="breadcrumb-sep" aria-hidden="true">›</span>
         <span aria-current="page">Peer Review</span>
       </nav>
       <h1 class="page-title" id="page-heading">Peer Review</h1>
@@ -242,7 +242,7 @@
     </div>
   </section>
 
-  <!-- â•â• STICKY IN-PAGE NAV â•â• -->
+  <!-- ══ STICKY IN-PAGE NAV ══ -->
   <nav class="pr-sticky-nav" aria-label="Page sections">
     <div class="container pr-sticky-inner">
       <a href="#policy"       class="pr-nav-link active" id="nav-policy">
@@ -268,7 +268,7 @@
     </div>
   </nav>
 
-  <!-- â•â• STATS STRIP â•â• -->
+  <!-- ══ STATS STRIP ══ -->
   <section style="background:var(--bg-2);padding:40px 0;" aria-label="Key metrics">
     <div class="container">
       <div class="pr-stats-strip">
@@ -300,9 +300,9 @@
     </div>
   </section>
 
-  <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+  <!-- ══════════════════════════════════════════════
        SECTION 1 &mdash; PEER REVIEW POLICY
-  â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+  ══════════════════════════════════════════════ -->
   <section class="section" id="policy" style="background:var(--bg);" aria-labelledby="policy-heading">
     <div class="container">
       <div class="section-header reveal" style="text-align:left;margin-bottom:12px;">
@@ -316,9 +316,9 @@
 
       <!-- ISSN compliance badge -->
       <div class="reveal" style="display:flex;flex-wrap:wrap;gap:10px;margin-bottom:40px;">
-        <div style="display:inline-flex;align-items:center;gap:8px;padding:8px 18px;background:rgba(5,150,105,0.08);border:1px solid rgba(5,150,105,0.25);border-radius:var(--r-full);font-size:0.78rem;font-weight:800;color:var(--emerald);">âœ“ ISSN India Compliant</div>
-        <div style="display:inline-flex;align-items:center;gap:8px;padding:8px 18px;background:rgba(37,99,235,0.07);border:1px solid rgba(37,99,235,0.2);border-radius:var(--r-full);font-size:0.78rem;font-weight:800;color:var(--blue);">âœ“ COPE Guidelines Aligned</div>
-        <div style="display:inline-flex;align-items:center;gap:8px;padding:8px 18px;background:rgba(124,58,237,0.07);border:1px solid rgba(124,58,237,0.2);border-radius:var(--r-full);font-size:0.78rem;font-weight:800;color:var(--violet);">âœ“ UGC Requirements Met</div>
+        <div style="display:inline-flex;align-items:center;gap:8px;padding:8px 18px;background:rgba(5,150,105,0.08);border:1px solid rgba(5,150,105,0.25);border-radius:var(--r-full);font-size:0.78rem;font-weight:800;color:var(--emerald);">✓ ISSN India Compliant</div>
+        <div style="display:inline-flex;align-items:center;gap:8px;padding:8px 18px;background:rgba(37,99,235,0.07);border:1px solid rgba(37,99,235,0.2);border-radius:var(--r-full);font-size:0.78rem;font-weight:800;color:var(--blue);">✓ COPE Guidelines Aligned</div>
+        <div style="display:inline-flex;align-items:center;gap:8px;padding:8px 18px;background:rgba(124,58,237,0.07);border:1px solid rgba(124,58,237,0.2);border-radius:var(--r-full);font-size:0.78rem;font-weight:800;color:var(--violet);">✓ UGC Requirements Met</div>
       </div>
 
       <div class="policy-accordion reveal">
@@ -520,9 +520,9 @@
     </div>
   </section>
 
-  <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+  <!-- ══════════════════════════════════════════════
        SECTION 2 &mdash; PEER REVIEW PROCESS
-  â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+  ══════════════════════════════════════════════ -->
   <section class="section" id="process" style="background:var(--bg-2);" aria-labelledby="process-heading">
     <div class="container">
       <div class="section-header reveal" style="text-align:left;margin-bottom:12px;">
@@ -598,28 +598,28 @@
       </div>
       <div class="decision-grid reveal">
         <div class="decision-card accept">
-          <div class="decision-label">âœ“ Accept</div>
+          <div class="decision-label">✓ Accept</div>
           <div class="decision-desc">Manuscript accepted as-is or with only minor typographical corrections. Proceeds directly to production. Tiered APC starting from &#8377;2,000.</div>
         </div>
         <div class="decision-card minor">
-          <div class="decision-label">âŸ³ Minor Revision</div>
+          <div class="decision-label">⟳ Minor Revision</div>
           <div class="decision-desc">Small, specific improvements required. Author responds within 2 weeks. Re-review by original reviewers is typically not required.</div>
         </div>
         <div class="decision-card major">
-          <div class="decision-label">âš  Major Revision</div>
+          <div class="decision-label">⚠ Major Revision</div>
           <div class="decision-desc">Significant rework required &mdash; methodology, analysis, or framing. Author responds within 4 weeks. Second peer review by original reviewers may be required.</div>
         </div>
         <div class="decision-card reject">
-          <div class="decision-label">âœ• Reject</div>
+          <div class="decision-label">✕ Reject</div>
           <div class="decision-desc">Manuscript does not meet IJMEER's standards. No APC is charged. Detailed reviewer feedback provided. Author may appeal within 30 days.</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+  <!-- ══════════════════════════════════════════════
        SECTION 3 &mdash; INSTRUCTIONS FOR REVIEWERS
-  â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+  ══════════════════════════════════════════════ -->
   <section class="section" id="instructions" style="background:var(--bg);" aria-labelledby="instructions-heading">
     <div class="container">
       <div class="section-header reveal" style="text-align:left;margin-bottom:12px;">
@@ -646,10 +646,10 @@
           <h3 style="font-family:var(--font-serif);font-size:1.25rem;font-weight:700;color:var(--navy);margin-bottom:16px;">Before You Accept a Review Invitation</h3>
           <p style="color:var(--text-2);margin-bottom:16px;">When you receive a review invitation, confirm all four points below before accepting:</p>
           <div class="checklist">
-            <div class="check-item"><div class="check-icon">âœ“</div>The manuscript is within your genuine area of subject expertise</div>
-            <div class="check-item"><div class="check-icon">âœ“</div>You have no conflict of interest with the authors or the research</div>
-            <div class="check-item"><div class="check-icon">âœ“</div>You can meet the review deadline (typically 2&ndash;3 weeks from receipt)</div>
-            <div class="check-item"><div class="check-icon">âœ“</div>You can provide a thorough, unbiased, and constructive evaluation</div>
+            <div class="check-item"><div class="check-icon">✓</div>The manuscript is within your genuine area of subject expertise</div>
+            <div class="check-item"><div class="check-icon">✓</div>You have no conflict of interest with the authors or the research</div>
+            <div class="check-item"><div class="check-icon">✓</div>You can meet the review deadline (typically 2&ndash;3 weeks from receipt)</div>
+            <div class="check-item"><div class="check-icon">✓</div>You can provide a thorough, unbiased, and constructive evaluation</div>
           </div>
           <div style="margin-top:16px;padding:14px 18px;background:rgba(245,158,11,0.08);border:1px solid rgba(245,158,11,0.25);border-radius:var(--r-lg);display:flex;gap:12px;font-size:0.875rem;color:var(--text-2);">
             <svg viewBox="0 0 24 24" fill="none" stroke="var(--amber)" stroke-width="2" style="width:20px;height:20px;flex-shrink:0;margin-top:1px;"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
@@ -753,9 +753,9 @@
           <div style="margin-top:24px;padding:20px;background:var(--bg-2);border-radius:var(--r-lg);border:1px solid var(--border);">
             <div style="font-size:0.72rem;font-weight:800;text-transform:uppercase;letter-spacing:1px;color:var(--text-3);margin-bottom:14px;">Key Reviewer Deadlines</div>
             <div style="display:flex;flex-wrap:wrap;gap:20px;">
-              <div>â± <strong>Invitation response:</strong> 48 hours</div>
-              <div>ðŸ“‹ <strong>Review submission:</strong> 2&ndash;3 weeks</div>
-              <div>ðŸ“ <strong>Revised manuscript review:</strong> 1 week</div>
+              <div>⏱ <strong>Invitation response:</strong> 48 hours</div>
+              <div>📋 <strong>Review submission:</strong> 2&ndash;3 weeks</div>
+              <div>📝 <strong>Revised manuscript review:</strong> 1 week</div>
             </div>
           </div>
         </div>
@@ -764,9 +764,9 @@
     </div>
   </section>
 
-  <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+  <!-- ══════════════════════════════════════════════
        SECTION 4 &mdash; REVIEWER BENEFITS
-  â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+  ══════════════════════════════════════════════ -->
   <section class="section" id="benefits" style="background:var(--bg-2);" aria-labelledby="benefits-heading">
     <div class="container">
       <div class="section-header reveal" style="text-align:left;margin-bottom:12px;">
@@ -798,7 +798,7 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
           </div>
           <div class="benefit-title">APC Publication Discount</div>
-          <div class="benefit-desc">Active reviewers who complete â‰¥2 reviews per year are eligible for a discount on Article Processing Charges when they submit their own research to IJMEER. Applied automatically on request.</div>
+          <div class="benefit-desc">Active reviewers who complete ≥2 reviews per year are eligible for a discount on Article Processing Charges when they submit their own research to IJMEER. Applied automatically on request.</div>
         </div>
         <div class="benefit-card">
           <div class="benefit-icon" style="background:rgba(124,58,237,0.1);color:var(--violet);">
@@ -825,9 +825,9 @@
     </div>
   </section>
 
-  <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+  <!-- ══════════════════════════════════════════════
        SECTION 5 &mdash; JOIN AS A REVIEWER
-  â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+  ══════════════════════════════════════════════ -->
   <section class="section" id="join" style="background:var(--bg);" aria-labelledby="join-heading">
     <div class="container">
       <div class="section-header reveal" style="text-align:left;margin-bottom:12px;">
@@ -847,11 +847,11 @@
             <h3 style="font-family:var(--font-serif);font-size:1.2rem;font-weight:700;color:var(--navy);margin-bottom:16px;">Who Can Apply?</h3>
             <p style="color:var(--text-2);line-height:1.8;font-size:0.9rem;margin-bottom:16px;">IJMEER welcomes applications from qualified academics, researchers, and subject-matter experts in any of our 70+ covered disciplines. Expertise and academic integrity matter most.</p>
             <div class="checklist">
-              <div class="check-item"><div class="check-icon">âœ“</div>Minimum Master's degree or equivalent in a relevant field</div>
-              <div class="check-item"><div class="check-icon">âœ“</div>At least one peer-reviewed publication in your area of expertise</div>
-              <div class="check-item"><div class="check-icon">âœ“</div>Committed to timely, constructive, and unbiased reviews</div>
-              <div class="check-item"><div class="check-icon">âœ“</div>PhD scholars, faculty, industry researchers, and independent experts welcome</div>
-              <div class="check-item"><div class="check-icon">âœ“</div>International reviewers especially encouraged to apply</div>
+              <div class="check-item"><div class="check-icon">✓</div>Minimum Master's degree or equivalent in a relevant field</div>
+              <div class="check-item"><div class="check-icon">✓</div>At least one peer-reviewed publication in your area of expertise</div>
+              <div class="check-item"><div class="check-icon">✓</div>Committed to timely, constructive, and unbiased reviews</div>
+              <div class="check-item"><div class="check-icon">✓</div>PhD scholars, faculty, industry researchers, and independent experts welcome</div>
+              <div class="check-item"><div class="check-icon">✓</div>International reviewers especially encouraged to apply</div>
             </div>
           </div>
         </div>
@@ -905,7 +905,7 @@
           </div>
           <a href="https://wa.me/919826121177" class="btn btn-lg" style="background:rgba(37,211,102,0.15);color:#25D366;border:1px solid rgba(37,211,102,0.35);height:fit-content;"
              target="_blank" rel="noopener noreferrer">
-            ðŸ’¬ WhatsApp Us
+            💬 WhatsApp Us
           </a>
         </div>
       </div>
@@ -919,7 +919,7 @@
 <script defer src="assets/js/components.js"></script>
 <script defer src="assets/js/core.js"></script>
 <script>
-/* â”€â”€ In-page sticky nav active state â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+/* ── In-page sticky nav active state ──────────────── */
 (function () {
   const sections = ['policy','process','instructions','benefits','join'];
   const links = {};
@@ -939,7 +939,7 @@
   onScroll();
 })();
 
-/* â”€â”€ Policy accordion toggle â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+/* ── Policy accordion toggle ──────────────────────── */
 function togglePol(btn) {
   const item = btn.closest('.pol-item');
   const wasOpen = item.classList.contains('open');

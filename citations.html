@@ -127,7 +127,7 @@
     <div class="container">
       <nav class="breadcrumb" aria-label="Page navigation">
         <a href="/">Home</a>
-        <span class="breadcrumb-sep" aria-hidden="true">â€º</span>
+        <span class="breadcrumb-sep" aria-hidden="true">›</span>
         <span aria-current="page">Articles &amp; Citations</span>
       </nav>
       <h1 class="page-title" id="page-heading">Articles &amp; Citation Index</h1>
@@ -148,7 +148,7 @@
           </div>
           <select class="sort-select" id="sort-select" onchange="renderCitations()" aria-label="Sort articles">
             <option value="subject">Group by Subject</option>
-            <option value="citations">Sort by Citations (High â†’ Low)</option>
+            <option value="citations">Sort by Citations (High → Low)</option>
             <option value="title">Sort A&ndash;Z</option>
           </select>
         </div>
@@ -156,7 +156,7 @@
           <div class="search-wrap" style="width:240px;">
             <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
             <input type="search" class="search-input" id="cite-search"
-                   placeholder="Searchâ€¦" aria-label="Filter citations"
+                   placeholder="Search…" aria-label="Filter citations"
                    style="padding:10px 16px 10px 44px;font-size:0.85rem;" oninput="renderCitations()">
           </div>
           <button class="btn btn-outline" onclick="copyAll()" id="copy-all-btn"
@@ -176,7 +176,7 @@
 
       <!-- Citation list -->
       <div id="citation-container" role="list" aria-label="Citation list">
-        <div style="padding:40px;text-align:center;color:var(--text-4);">Loading citationsâ€¦</div>
+        <div style="padding:40px;text-align:center;color:var(--text-4);">Loading citations…</div>
       </div>
 
     </div>
@@ -310,11 +310,11 @@ function copySingle(id, btn) {
   const text = el.innerText.replace(/\n/g, ' ');
   navigator.clipboard.writeText(text).then(() => {
     const orig = btn.innerHTML;
-    btn.textContent = 'âœ“ Copied!';
+    btn.textContent = '✓ Copied!';
     btn.classList.add('copied');
     setTimeout(() => { btn.innerHTML = orig; btn.classList.remove('copied'); }, 2000);
     if (window.showToast) window.showToast('Citation copied to clipboard!');
-  }).catch(() => { btn.textContent = 'âš  Failed'; });
+  }).catch(() => { btn.textContent = '⚠ Failed'; });
 }
 
 function copyAll() {
@@ -323,7 +323,7 @@ function copyAll() {
     .map(p => formatCitation(p, currentFormat).replace(/<em>/g,'').replace(/<\/em>/g,''))
     .join('\n\n');
   navigator.clipboard.writeText(texts).then(() => {
-    btn.textContent = 'âœ“ Copied All!';
+    btn.textContent = '✓ Copied All!';
     setTimeout(() => btn.innerHTML = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:16px;height:16px;"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg> Copy All`, 2500);
     if (window.showToast) window.showToast(`${allPapers.length} citations copied!`);
   });

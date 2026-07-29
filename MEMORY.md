@@ -25,6 +25,14 @@
 
 ## Recent Changes (Reverse Chronological)
 
+### 2026-07-29 — Fix UTF-8 encoding errors (broken emojis) across all HTML files
+- **Changed:**
+  1. Fixed all remaining UTF-8 double-encoding artifacts (mojibake) across 10 HTML files, including `journal.html`, `editorial-portfolio.html`, `editorial-board.html`, `archive.html`, `peer-review.html`, etc.
+  2. Reversed CP1252 misinterpretations at the byte level to correctly restore original Unicode emojis (e.g., 🔬, 🏥, ⚙️, 🌐).
+- **Reason:** Resolve broken emojis resulting from encoding errors (mojibake) requested by the user.
+- **Files:** `archive.html`, `authors.html`, `citations.html`, `editorial-board.html`, `editorial-portfolio.html`, `index.html`, `journal.html`, `peer-review.html`, `privacy-policy.html`, `rights-permissions.html`, `MEMORY.md`, `CURRENT_TASK.md`
+- **Commit:** `Fix UTF-8 encoding errors (broken emojis) on journal.html`
+
 ### 2026-07-29 — Migrate license from CC BY 4.0 to CC BY-NC 4.0 site-wide
 - **Changed:**
   1. Added CC BY-NC 4.0 license badge, text, and full notice section to all 5 published articles (`article-v1i1p01.html` through `article-v1i1p05.html`).

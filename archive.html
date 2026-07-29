@@ -277,7 +277,7 @@
     <div class="container">
       <nav class="breadcrumb" aria-label="Page navigation">
         <a href="/">Home</a>
-        <span class="breadcrumb-sep" aria-hidden="true">â€º</span>
+        <span class="breadcrumb-sep" aria-hidden="true">›</span>
         <span aria-current="page">Archives</span>
       </nav>
       <h1 class="page-title" id="page-heading">Archives</h1>
@@ -285,7 +285,7 @@
     </div>
   </section>
 
-  <!-- â•â• LATEST ISSUE (top) â•â• -->
+  <!-- ══ LATEST ISSUE (top) ══ -->
   <section class="latest-hero" aria-labelledby="latest-heading">
     <div class="container">
       <div class="latest-hero-inner">
@@ -313,7 +313,7 @@
     </div>
   </section>
 
-  <!-- â•â• LATEST PAPERS â•â• -->
+  <!-- ══ LATEST PAPERS ══ -->
   <section class="section" id="latest-papers" style="background:var(--bg);" aria-labelledby="latest-papers-heading">
     <!-- 5 Articles Section -->
     <div class="articles-container">
@@ -408,7 +408,7 @@
     </div>
   </section>
 
-  <!-- â•â• ARCHIVE (all issues) â•â• -->
+  <!-- ══ ARCHIVE (all issues) ══ -->
   <section class="section" style="background:var(--bg-2);" id="archive" aria-labelledby="archive-heading">
     <div class="container">
       <div class="section-header reveal">
@@ -427,7 +427,7 @@
 <script defer src="assets/js/components.js"></script>
 <script defer src="assets/js/core.js"></script>
 <script>
-/* â”€â”€ Load Issues Data â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+/* ── Load Issues Data ──────────────────────────────────── */
 let allPapers = [];
 
 async function loadIssuesData() {
@@ -443,7 +443,7 @@ async function loadIssuesData() {
     // Sort by id descending (newest first)
     const sortedIssues = issuesData.sort((a, b) => b.id - a.id);
 
-    // â”€â”€ Latest Issue Identification â”€â”€
+    // ── Latest Issue Identification ──
     const latestIssue = sortedIssues[0];
     if (latestIssue) {
       const headingEl = document.getElementById('latest-heading');
@@ -467,7 +467,7 @@ async function loadIssuesData() {
       // renderLatestPapers(papersInIssue); // Disabled as we are hardcoding the latest section
     }
 
-    // â”€â”€ Archive â”€â”€
+    // ── Archive ──
     const archiveGrid = document.getElementById('archive-grid');
     archiveGrid.innerHTML = '';
     sortedIssues.forEach((issue, i) => {
@@ -481,10 +481,10 @@ async function loadIssuesData() {
         <p style="font-size:0.85rem;color:var(--text-3);margin-bottom:20px;line-height:1.65;">${issue.description}</p>
         <div style="padding-top:16px;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;">
           <span style="font-size:0.75rem;font-weight:700;color:var(--text-4);">
-            ðŸ“… Published: ${issue.publication_date}
+            📅 Published: ${issue.publication_date}
           </span>
           <a href="citations.html" class="btn btn-sm btn-ghost" aria-label="View articles from ${issue.quarter} ${issue.year}">
-            View Articles â†’
+            View Articles →
           </a>
         </div>`;
       archiveGrid.appendChild(card);
@@ -558,7 +558,7 @@ function toggleAbstract(btn) {
     : `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg> View Abstract`;
 }
 
-/* â”€â”€ Search filter â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+/* ── Search filter ──────────────────────────────────── */
 document.addEventListener('DOMContentLoaded', () => {
   loadIssuesData();
   const searchInput = document.getElementById('paper-search');
