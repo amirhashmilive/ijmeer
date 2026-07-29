@@ -25,6 +25,12 @@
 
 ## Recent Changes (Reverse Chronological)
 
+### 2026-07-29 — UTF-8 encoding audit report
+- **Changed:** Ran a full UTF-8 encoding scan across all 45 HTML files in the project. Verified `<meta charset="UTF-8">` is present on all files. Identified 11 remaining localized mojibake issues affecting Turkish characters (ş, ğ) in `editorial-board.html` and `editorial-portfolio.html`. Generated `UTF8_AUDIT_REPORT.md` with findings. No files were modified.
+- **Reason:** User requested a complete UTF-8 encoding audit without making changes.
+- **Files:** `UTF8_AUDIT_REPORT.md`, `MEMORY.md`
+- **Commit:** `UTF-8 encoding audit report`
+
 ### 2026-07-29 — Security Audit and Recommendations Report
 - **Changed:** Generated comprehensive safety and security recommendations report (`SECURITY_AUDIT.md`), analyzing Security Headers, Cloudflare features, GitHub Pages configurations, Form submissions, GDPR compliance, Spam prevention, and Backup strategies. Categorized into High, Medium, and Low priorities. No changes made to the live website files.
 - **Reason:** User request for a complete security and safety audit.
