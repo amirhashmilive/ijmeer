@@ -60,7 +60,7 @@ Phase 4 (Year 2+)       → Scale & Technology
   - Complete DOAJ questionnaire
   - Ensure all compliance requirements are met:
     - Copyright policy clear
-    - CC BY 4.0 stated
+    - CC BY-NC 4.0 stated
     - APC information (free / Diamond OA) explicit
     - ISSN present
     - At least 5 research articles published

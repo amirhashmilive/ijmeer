@@ -165,6 +165,14 @@
     </div>
 
     <div class="footer-bottom">
+      <div style="display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:10px;flex-wrap:wrap;">
+        <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="license noopener" style="display:inline-flex;align-items:center;">
+          <img src="https://licensebuttons.net/l/by-nc/4.0/88x31.png" alt="CC BY-NC 4.0 Badge" style="border:0;height:24px;width:auto;">
+        </a>
+        <span style="font-size:0.8rem;color:rgba(255,255,255,0.7);">
+          Licensed under <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="license noopener" style="color:inherit;text-decoration:underline;">CC BY-NC 4.0</a>
+        </span>
+      </div>
       <p>
         &copy; <span data-year></span> IJMEER. Published by
         <a href="https://www.meerfoundation.co.in/" target="_blank" rel="noopener noreferrer">Meer Foundation (Registered Non-Profit Organization)</a>.

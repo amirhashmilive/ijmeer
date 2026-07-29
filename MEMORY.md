@@ -11,7 +11,7 @@
 |---|---|---|
 | **ISSN Starting Year** | **2026** | ISSN application ID 75192 shows Year: 2026. Website must match exactly. |
 | **International Members Minimum** | **2** | ISSN requires at least 2 members from outside India |
-| **Access Model** | Diamond Open Access | Free to read, free to publish. No APC. |
+| **Access Model** | Diamond Open Access (CC BY-NC 4.0) | Free to read, free to publish. NonCommercial license. |
 | **Pricing (Indian authors)** | INR only | No GST, no USD for Indian authors |
 | **Pricing (International)** | USD | Standard international |
 | **Dark Mode** | ❌ Never | Brand decision |
@@ -24,6 +24,21 @@
 ---
 
 ## Recent Changes (Reverse Chronological)
+
+### 2026-07-29 — Migrate license from CC BY 4.0 to CC BY-NC 4.0 site-wide
+- **Changed:**
+  1. Added CC BY-NC 4.0 license badge, text, and full notice section to all 5 published articles (`article-v1i1p01.html` through `article-v1i1p05.html`).
+  2. Updated `open-access.html` — replaced all CC BY 4.0 references with CC BY-NC 4.0 (badge, text, links, meta tags).
+  3. Updated `open-access-options.html` — replaced all CC BY 4.0 references with CC BY-NC 4.0 (badge, text, links, meta tags).
+  4. Updated `journal.html` — replaced CC BY 4.0 text and links with CC BY-NC 4.0.
+  5. Updated `authors.html` — replaced CC BY 4.0 references in publishing agreement section and copyright badge with CC BY-NC 4.0.
+  6. Updated `policies.html` — changed Open Access Policy and Rights & Permissions card descriptions from CC BY 4.0 to CC BY-NC 4.0.
+  7. Updated `publication-process.html` — changed Copyright Agreement step from CC BY 4.0 to CC BY-NC 4.0.
+  8. Updated `research-transparency.html` — changed FAIR Accessible card from CC BY 4.0 to CC BY-NC 4.0.
+  9. Updated `rights-permissions.html` — changed meta description, og:description, and twitter:description from CC BY 4.0 to CC BY-NC 4.0.
+  10. Updated `index.html` — changed credibility badge text and all 3 JSON-LD structured data license URLs from CC BY 4.0 to CC BY-NC 4.0.
+  11. Updated `CONTENT_RULES.md`, `POST_ISSN_ROADMAP.md`, and `MEMORY.md` documentation files.
+- **Reason:** Align all license references to CC BY-NC 4.0 (Attribution-NonCommercial) per publisher decision. All old CC BY 4.0 references and URLs verified eliminated.
 
 ### 2026-07-28 — Fix page redirect issues for Google Search Console validation
 - **Changed:**
@@ -86,7 +101,7 @@
   1. Fixed all UTF-8 double-encoding artifacts across homepage (`4×`, `📄`, `→`, `✅`, `⏱`, `📢`, `📚`, `📅`, `📖`, `↗`).
   2. Removed `P-ISSN: XXXX-XXXX` fake ISSN from homepage and footer, replacing with `Print ISSN: Applied For` while keeping valid `E-ISSN: 3139-6003`.
   3. Removed misleading claims: removed "100% Digital Indexing", removed "from 50+ countries", conditionally hid "0 citations" badge on articles, and updated metrics section title to "IJMEER Journal Statistics & Editorial Performance".
-  4. Added missing credibility badges: Open Access, Double-Blind Peer Review, DOI for Every Article, ORCID Supported, CC BY 4.0 License.
+  4. Added missing credibility badges: Open Access, Double-Blind Peer Review, DOI for Every Article, ORCID Supported, CC BY-NC 4.0 License.
   5. Updated footer publisher line in `components.js` to `Published by Meer Foundation (Registered Non-Profit Organization)`.
   6. Updated hero tagline to: "An international, peer-reviewed, open-access journal dedicated to publishing high-quality multidisciplinary research that advances scholarship, innovation, and evidence-based practice across diverse academic fields."
   7. Updated metrics section cards to showcase stable statistics (Founded: 2026, Frequency: Quarterly, Review Model: Double-Blind, Access: Open Access).

@@ -7,41 +7,28 @@
 
 ## Current Task
 
+**Task:** Add CC BY-NC 4.0 license information with icon/badge to all existing articles and enforce for future article creation
+**Status:** 🔄 In Progress
+**Started:** 2026-07-29
+**Agent:** Antigravity
+
+### Progress:
+- [ ] Update existing 5 articles (article-v1i1p01.html to article-v1i1p05.html) with CC BY-NC 4.0 badge & license box
+- [ ] Update open-access.html with full license explanation and badge
+- [ ] Update authors.html with license requirements
+- [ ] Update journal.html with license details
+- [ ] Update footer in components.js with short license notice and badge icon
+- [ ] Add enforcement rule to MEMORY.md for future articles
+- [ ] Align remaining policy pages to CC BY-NC 4.0 for consistency
+- [ ] Commit and push to origin main
+
+---
+
+## Previous Task
+
 **Task:** Fix page redirect issues for Google Search Console validation
 **Status:** ✅ Done
 **Started:** 2026-07-28
 **Completed:** 2026-07-28
 **Agent:** Antigravity
 
-### Progress:
-- [x] Scan entire codebase for meta refresh redirects, JS redirects, and redirect text
-- [x] Identify 9 stub HTML pages with "Redirecting" titles causing GSC issues
-- [x] Add `<meta name="robots" content="noindex, follow">` to all 9 stubs
-- [x] Add proper `<meta http-equiv="refresh">` for clean instant redirect
-- [x] Replace "Redirecting..." titles with proper descriptive titles
-- [x] Remove orphaned BreadcrumbList schema from stub pages
-- [x] Verify no stub pages exist in sitemap.xml
-- [x] Verify no internal links point to stub pages
-- [x] Update MEMORY.md and CURRENT_TASK.md
-- [x] Commit and push to origin main
-
-### Files Changed:
-- `about-this-journal.html` → redirects to `journal.html#about`
-- `abstracting-indexing.html` → redirects to `journal.html#indexing`
-- `book-reviews.html` → redirects to `journal.html#book-reviews`
-- `fees-pricing.html` → redirects to `authors.html#fees`
-- `metrics.html` → redirects to `journal.html#metrics`
-- `post-publication-impact.html` → redirects to `authors.html#impact`
-- `preparing-materials.html` → redirects to `authors.html#preparing`
-- `publishing-agreement.html` → redirects to `authors.html#agreement`
-- `submitting-materials.html` → redirects to `authors.html#submitting`
-
----
-
-## Previous Task
-
-**Task:** Create individual article pages and fix Google Scholar indexing issues
-**Status:** ✅ Done
-**Started:** 2026-07-28
-**Completed:** 2026-07-28
-**Agent:** Antigravity

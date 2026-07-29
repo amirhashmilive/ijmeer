@@ -137,7 +137,7 @@ Until ISSN numbers are officially assigned, use:
 
 ## 7. Copyright and Attribution
 
-- All published articles carry a **CC BY 4.0** license unless otherwise stated
+- All published articles carry a **CC BY-NC 4.0** license unless otherwise stated
 - Authors retain copyright
 - IJMEER retains right of first publication
 - Do not remove author names or affiliations from any published content
