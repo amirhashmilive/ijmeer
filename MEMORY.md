@@ -25,6 +25,12 @@
 
 ## Recent Changes (Reverse Chronological)
 
+### 2026-07-30 — Fix remaining Turkish characters for Ayşegül Akkaya
+- **Changed:** Fixed remaining broken Turkish characters for Lect. Ayşegül Akkaya in `editorial-board.html` and `editorial-portfolio.html` (`AYÅžEGÃœL` → `AYŞEGÜL`, `Ä°stanbul` → `İstanbul`, `BeyazÄ±t` → `Beyazıt`).
+- **Reason:** Resolve UTF-8 encoding issues for Lect. Ayşegül Akkaya per user directive.
+- **Files:** `editorial-board.html`, `editorial-portfolio.html`, `MEMORY.md`, `CURRENT_TASK.md`
+- **Commit:** `Fix remaining Turkish characters for Ayşegül Akkaya`
+
 ### 2026-07-29 — Fix UTF-8 encoding issues: Turkish characters in editorial board pages
 - **Changed:** Fixed 11 instances of broken Turkish characters (`Ayşegül` and `ğ`) across `editorial-board.html` and `editorial-portfolio.html`.
 - **Reason:** Resolve remaining encoding artifacts flagged in the UTF-8 audit report.
