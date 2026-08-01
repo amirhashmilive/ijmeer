@@ -26,6 +26,12 @@
 
 ## Recent Changes (Reverse Chronological)
 
+### 2026-08-01 — Update Dr. Mukti Chauhan biography on editorial portfolio page
+- **Changed:** Updated Dr. Mukti Chauhan's biography section in `editorial-portfolio.html` with her full biography detailing her 10 years of yoga & wellness work, Bharatiya Yogini Sangh membership, Yoga Sansad appointment, Mukti Mantra Yoga Kendra AIIMS services, awards (MP Gaurav Ratna, State Yogini, Mahila Audyogik), social initiatives (Madad Foundation, Saket Nari Shakti Sangh), and Meer Foundation Yoga Kutumb coordination.
+- **Reason:** User request to replace brief bio with full biography.
+- **Files:** `editorial-portfolio.html`, `MEMORY.md`, `CURRENT_TASK.md`
+- **Commit:** `Update Dr. Mukti Chauhan biography on editorial portfolio page`
+
 ### 2026-08-01 — Add Dr. Mukti Chauhan to Advisory Board
 - **Changed:**
   1. Converted `dr mukti chauhan.png` from Downloads to `images/editorial/dr-mukti-chauhan.webp`.
