@@ -19,10 +19,12 @@
 
 ## Previous Task
 
-**Task:** Fix remaining Turkish characters for Ayşegül Akkaya in editorial-board.html and editorial-portfolio.html
+**Task:** Add Dr. Mukti Chauhan to the Advisory Board in editorial-board.html and editorial-portfolio.html
 **Status:** ✅ Done
-**Started:** 2026-07-30
-**Completed:** 2026-07-30
+**Started:** 2026-08-01
+**Completed:** 2026-08-01
 **Agent:** Antigravity
+
+
 
 

@@ -16,6 +16,7 @@
 | "UGC Care Listed" | — | Only after official listing |
 | "Impact Factor: X.X" | — | Only after official assignment |
 | "GST" / "Service Tax" / "VAT" | — | Not to be mentioned anywhere |
+| "Yog" | "Yoga" | Always use "Yoga" instead of "Yog" across all site content |
 | Jokes, slang, casual phrases | Formal academic language | Brand voice must remain professional |
 | First-person plural ("we are great") | Third-person or neutral | Avoid self-promotion without evidence |
 

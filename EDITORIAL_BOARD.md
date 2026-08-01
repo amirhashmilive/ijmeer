@@ -281,6 +281,19 @@
 
 ---
 
+### 16. Advisory Board Member
+
+| Field | Value |
+|---|---|
+| **Full Name** | Dr. Mukti Chauhan |
+| **Designation** | Advisory Board Member; Yoga & Wellness Expert |
+| **Institution** | Mukti Mantra Yoga Kendra |
+| **Photo** | `images/editorial/dr-mukti-chauhan.webp` |
+| **Profile ID** | `mukti-chauhan` |
+| **Expertise** | Yoga & Wellness Expert, Ph.D. in Yoga, 10 Years Experience |
+
+---
+
 ## Summary Count
 
 | Category | Count | Members |
@@ -290,8 +303,8 @@
 | International Board | 3 | Dr. Mary Lou Frank 🇺🇸, Lect. Ayşegül Akkaya 🇹🇷, Prof. Jyotirmaya Thakur 🇬🇧 |
 | Special Board | 2 | Prof. (Dr.) Nuzhat Parveen Khan, Dr. Anupama Patel |
 | Editorial Board | 6 | Sunatkari, Yende, Malviya, Salim Khan, Sargar, Momin Ali |
-| Advisory Board | 2 | Prof. Mona Purohit, Dr. Ranu Shukla |
-| **Total** | **15** | |
+| Advisory Board | 3 | Prof. Mona Purohit, Dr. Ranu Shukla, Dr. Mukti Chauhan |
+| **Total** | **16** | |
 
 ---
 
@@ -311,6 +324,7 @@
 { id: 'jyotirmaya-thakur', pill: 'pill-9' },
 { id: 'anupama-patel',     pill: 'pill-10' },
 { id: 'mona-purohit',      pill: 'pill-11' },
-{ id: 'ranu-shukla',       pill: 'pill-12' }
+{ id: 'ranu-shukla',       pill: 'pill-12' },
+{ id: 'mukti-chauhan',     pill: 'pill-mukti' }
 // aysegul-akkaya: pill-aysegul, nuzhat-khan: pill-nuzhat (inserted after mary-frank in nav)
 ```

@@ -19,11 +19,23 @@
 | **Grid Layout** | Single column (1fr) | All profile cards horizontal, full-width |
 | **Reference profile card** | Ashok Sunatkari | Standard DOM structure all others must follow |
 | **Image format** | WebP mandatory | Performance and modern standard |
+| **Term enforcement** | Yog = Yoga | Always use "Yoga" instead of "Yog" across all pages and documentation |
 | **Branch** | main | All deployments to main branch |
 
 ---
 
 ## Recent Changes (Reverse Chronological)
+
+### 2026-08-01 — Add Dr. Mukti Chauhan to Advisory Board
+- **Changed:**
+  1. Converted `dr mukti chauhan.png` from Downloads to `images/editorial/dr-mukti-chauhan.webp`.
+  2. Added Dr. Mukti Chauhan card to Advisory Board section in `editorial-board.html` (after Dr. Anupama Patel).
+  3. Added Dr. Mukti Chauhan detailed profile, tab switching, quick-nav pill, and scroll-spy entry in `editorial-portfolio.html`.
+  4. Updated `EDITORIAL_BOARD.md` master list (total members: 16).
+  5. Added rule enforcing "Yog" = "Yoga" across all site content in `CONTENT_RULES.md` and `MEMORY.md`.
+- **Reason:** User request to add Dr. Mukti Chauhan to Advisory Board with exact display formatting and Yog=Yoga rule.
+- **Files:** `editorial-board.html`, `editorial-portfolio.html`, `images/editorial/dr-mukti-chauhan.webp`, `EDITORIAL_BOARD.md`, `CONTENT_RULES.md`, `MEMORY.md`, `CURRENT_TASK.md`
+- **Commit:** `Add Dr. Mukti Chauhan to Advisory Board`
 
 ### 2026-07-30 — Fix remaining Turkish characters for Ayşegül Akkaya
 - **Changed:** Fixed remaining broken Turkish characters for Lect. Ayşegül Akkaya in `editorial-board.html` and `editorial-portfolio.html` (`AYÅžEGÃœL` → `AYŞEGÜL`, `Ä°stanbul` → `İstanbul`, `BeyazÄ±t` → `Beyazıt`).
