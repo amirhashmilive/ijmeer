@@ -26,6 +26,12 @@
 
 ## Recent Changes (Reverse Chronological)
 
+### 2026-08-02 — Fix CDN usage: ensure all static assets are served via Cloudflare
+- **Changed:** Downloaded and localized Creative Commons CC BY-NC 4.0 license badge (`assets/images/logo/cc-by-nc-4.0.png`). Replaced all external `https://licensebuttons.net/l/by-nc/4.0/88x31.png` image URLs across 9 HTML pages (`open-access.html`, `open-access-options.html`, `journal.html`, `authors.html`, `article-v1i1p01.html` through `article-v1i1p05.html`) and `assets/js/components.js` footer with relative paths (`assets/images/logo/cc-by-nc-4.0.png`).
+- **Reason:** Resolve SEO Site Checkup issue ("This webpage is not serving all resources from CDNs"). Ensuring all static assets are relative paths guarantees they are served through Cloudflare CDN on `ijmeer.com`.
+- **Files:** `open-access.html`, `open-access-options.html`, `journal.html`, `authors.html`, `article-v1i1p01.html` to `article-v1i1p05.html`, `assets/js/components.js`, `assets/images/logo/cc-by-nc-4.0.png`, `MEMORY.md`, `CURRENT_TASK.md`
+- **Commit:** `Fix CDN usage: ensure all static assets are served via Cloudflare`
+
 ### 2026-08-02 — Fix Yoga Kutumb text in Dr. Mukti Chauhan's profile
 - **Changed:** Fixed typo in Dr. Mukti Chauhan's biography in `editorial-portfolio.html` ("Yoga Kutumb Intuitive" → "Yoga Kutumb Initiative").
 - **Reason:** User directive to correct text.
