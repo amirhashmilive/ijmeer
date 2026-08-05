@@ -26,6 +26,17 @@
 
 ## Recent Changes (Reverse Chronological)
 
+### 2026-08-05 — Update Volume 1, Issue 2 DOI: 10.5281/zenodo.21809155
+- **Changed:**
+  1. Updated `data/papers.json` — added `"doi": "10.5281/zenodo.21809155"` to all 15 Volume 1, Issue 2 article objects.
+  2. Updated `data/issues.json` — added `"doi": "10.5281/zenodo.21809155"` to Issue 2 metadata.
+  3. Updated `archive.html` — added clickable DOI link (`10.5281/zenodo.21809155`) to hero metadata, Issue 2 section header, and all 15 article cards.
+  4. Updated `journal.html` — added Issue 2 DOI reference in Zenodo Archive card description.
+  5. Updated 15 article HTML pages (`article-v1i2p01.html` through `article-v1i2p15.html`) — added `<meta name="citation_doi">` Google Scholar tag, JSON-LD `identifier` and `sameAs` properties, sub-header DOI link, sidebar table DOI row, and updated citation box.
+- **Reason:** Integrate official Zenodo release DOI `10.5281/zenodo.21809155` for Volume 1, Issue 2 across the website.
+- **Files:** `data/papers.json`, `data/issues.json`, `archive.html`, `journal.html`, `article-v1i2p01.html` to `article-v1i2p15.html`, `MEMORY.md`, `CURRENT_TASK.md`
+- **Commit:** `Update Volume 1, Issue 2 DOI: 10.5281/zenodo.21809155`
+
 ### 2026-08-05 — Publish Volume 1, Issue 2 with 15 articles
 - **Changed:**
   1. Extracted article metadata from `Vol1_Issue2.pdf` (70 pages) and `Vol1_Issue2.docx` — parsed 15 articles with titles, authors, affiliations, abstracts, keywords, and page ranges.

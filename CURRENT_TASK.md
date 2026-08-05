@@ -7,32 +7,27 @@
 
 ## Current Task
 
-**Task:** Publish Volume 1, Issue 2 with 15 articles following established publication workflow
-**Status:** ✅ Done
-**Started:** 2026-08-05
-**Completed:** 2026-08-05
+**Task:** Update Volume 1, Issue 2 with Zenodo DOI `10.5281/zenodo.21809155`  
+**Status:** ✅ Done  
+**Started:** 2026-08-05  
+**Completed:** 2026-08-05  
 **Agent:** Antigravity
 
 ### Progress:
-- [x] Read memory files (AGENTS.md, MEMORY.md, CURRENT_TASK.md, WORKFLOW.md)
-- [x] Extract article metadata from Vol1_Issue2.pdf and Vol1_Issue2.docx
-- [x] Parse all 15 articles: titles, authors, affiliations, abstracts, keywords, page ranges
-- [x] Split source PDF into 15 individual article PDFs in papers/volume_1/issue_2/
-- [x] Generate 15 article HTML landing pages (article-v1i2p01.html to article-v1i2p15.html) with Google Scholar meta tags, JSON-LD, OG/Twitter cards
-- [x] Update data/papers.json with 15 new article entries (total: 20 papers)
-- [x] Update data/issues.json with Volume 1, Issue 2 entry
-- [x] Update archive.html with Vol 1 Issue 2 hero section and 15 article cards
-- [x] Update sitemap.xml with 30 new URLs (15 HTML + 15 PDF)
-- [x] Update MEMORY.md with session changes
-- [x] Update CURRENT_TASK.md with current status
-- [x] Commit and push to GitHub
+- [x] Update `data/papers.json` — add `"doi": "10.5281/zenodo.21809155"` to all 15 Issue 2 articles
+- [x] Update `data/issues.json` — add `"doi": "10.5281/zenodo.21809155"` for Issue 2
+- [x] Update `archive.html` — display DOI in hero metadata, section header, and 15 article cards
+- [x] Update `journal.html` — add Issue 2 DOI reference in Zenodo Archive card
+- [x] Update 15 article HTML pages (`article-v1i2p01.html` to `article-v1i2p15.html`) — add Google Scholar `citation_doi`, JSON-LD `identifier`/`sameAs`, sub-header DOI link, sidebar DOI row, and citation box DOI link
+- [x] Update memory files (`MEMORY.md`, `CURRENT_TASK.md`)
+- [x] Commit and push to GitHub (`origin/main`)
 
 ---
 
 ## Previous Task
 
-**Task:** Fix CDN Usage issue by ensuring all static assets are served through Cloudflare CDN
-**Status:** ✅ Done
-**Started:** 2026-08-02
-**Completed:** 2026-08-02
+**Task:** Publish Volume 1, Issue 2 with 15 articles following established publication workflow  
+**Status:** ✅ Done  
+**Started:** 2026-08-05  
+**Completed:** 2026-08-05  
 **Agent:** Antigravity
