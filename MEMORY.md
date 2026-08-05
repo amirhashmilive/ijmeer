@@ -26,6 +26,15 @@
 
 ## Recent Changes (Reverse Chronological)
 
+### 2026-08-05 — Update cover pages for Volume 1, Issue 1 and Volume 1, Issue 2 with new designs
+- **Changed:**
+  1. Updated `papers/volume_1/issue_2/ijmeer_v1_i2_complete_issue.pdf` — replaced Page 1 (cover) with new cover design from `cover issue 02.png` (preserved all 67 pages, front matter, and 15 articles).
+  2. Updated `papers/volume_1/issue_1/ijmeer_v1_i1_complete_issue.pdf` — replaced Page 1 (cover) with new cover design from `cover issue 01.png` (preserved all 29 pages, front matter, and 5 articles).
+  3. Created WebP thumbnails in `assets/images/covers/` (`ijmeer-cover-v1i2.webp`, `ijmeer-cover-v1i1.webp`) and updated `print-archive.html` cards to display new visual cover previews.
+- **Reason:** Update complete issue PDF packages with official new cover page designs for Volume 1 Issue 1 and Volume 1 Issue 2.
+- **Files:** `papers/volume_1/issue_2/ijmeer_v1_i2_complete_issue.pdf`, `papers/volume_1/issue_1/ijmeer_v1_i1_complete_issue.pdf`, `assets/images/covers/ijmeer-cover-v1i2.webp` (NEW), `assets/images/covers/ijmeer-cover-v1i1.webp` (NEW), `print-archive.html`, `MEMORY.md`, `CURRENT_TASK.md`
+- **Commit:** `Update cover pages for Volume 1, Issue 1 and Volume 1, Issue 2 with new designs`
+
 ### 2026-08-05 — Add Print Archive page and footer link
 - **Changed:**
   1. Created `print-archive.html` — dedicated print version archive page with card-based layout for downloading complete issue PDFs. Displays Vol 1 Issue 2 (67 pages, 15 articles, DOI: 10.5281/zenodo.21809155) and Vol 1 Issue 1 (29 pages, 5 articles, DOI: 10.5281/zenodo.19565393).

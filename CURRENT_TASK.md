@@ -7,17 +7,18 @@
 
 ## Current Task
 
-**Task:** Add Print Archive page (`print-archive.html`) and footer link for print version downloads  
+**Task:** Update cover pages for Volume 1, Issue 1 and Volume 1, Issue 2 with new designs  
 **Status:** ✅ Done  
 **Started:** 2026-08-05  
 **Completed:** 2026-08-05  
 **Agent:** Antigravity
 
 ### Progress:
-- [x] Create `print-archive.html` dedicated print version archive page displaying Volume 1 Issue 2 (15 articles, 67 pages, DOI: 10.5281/zenodo.21809155) and Volume 1 Issue 1 (5 articles, 29 pages, DOI: 10.5281/zenodo.19565393)
-- [x] Update `assets/js/components.js` footer navigation with "Print Archive" link target `print-archive.html`
-- [x] Update `sitemap.xml` with `print-archive.html` and Issue 1 complete issue PDF
-- [x] Update `archive.html` with "Download Print Versions" button pointing to `print-archive.html`
+- [x] Converted new cover images (`cover issue 02.png` and `cover issue 01.png`) into A4 cover PDF pages
+- [x] Replaced Page 1 (cover) in `papers/volume_1/issue_2/ijmeer_v1_i2_complete_issue.pdf` (67 pages total preserved)
+- [x] Replaced Page 1 (cover) in `papers/volume_1/issue_1/ijmeer_v1_i1_complete_issue.pdf` (29 pages total preserved)
+- [x] Generated WebP cover thumbnails in `assets/images/covers/` (`ijmeer-cover-v1i2.webp`, `ijmeer-cover-v1i1.webp`)
+- [x] Updated `print-archive.html` issue cards to display new visual cover thumbnails
 - [x] Update memory files (`MEMORY.md`, `CURRENT_TASK.md`)
 - [x] Commit and push to GitHub (`origin/main`)
 
@@ -25,7 +26,7 @@
 
 ## Previous Task
 
-**Task:** Build ISSN-compliant Volume 1, Issue 2 complete issue package PDF  
+**Task:** Add Print Archive page (`print-archive.html`) and footer link for print version downloads  
 **Status:** ✅ Done  
 **Started:** 2026-08-05  
 **Completed:** 2026-08-05  
