@@ -26,6 +26,17 @@
 
 ## Recent Changes (Reverse Chronological)
 
+### 2026-08-05 — Build ISSN-compliant Volume 1, Issue 2 complete issue package
+- **Changed:**
+  1. Removed `cover-design-samples/` directory as requested.
+  2. Built 5 front matter pages: Cover Page (using `ijmeer cover page vol 1 issue 2.png`), Title Page & Journal Profile Specifications, From the Editor-in-Chief's Desk (Dr. Nusrat Ali Hashmi), Table of Contents listing all 15 articles with titles, authors, categories, and page numbers, and Publisher Details (Meer Foundation) with Editorial Board Master List and Governance Policies.
+  3. Merged front matter with all 15 individual article PDFs into a single 67-page ISSN-compliant issue PDF: `papers/volume_1/issue_2/ijmeer_v1_i2_complete_issue.pdf` (4.64 MB).
+  4. Verified 100% ISSN compliance checklist items (E-ISSN 3139-6003, Publisher Meer Foundation address, Editor-in-Chief, Editorial Board, Peer Review statement, Open Access statement, TOC, Editorial Desk message, page numbers, references).
+  5. Updated `data/issues.json`, `archive.html`, and `sitemap.xml` with complete issue PDF link.
+- **Reason:** Provide single complete PDF issue package for Volume 1, Issue 2 for physical printing, archiving, and library distribution.
+- **Files:** `papers/volume_1/issue_2/ijmeer_v1_i2_complete_issue.pdf`, `data/issues.json`, `archive.html`, `sitemap.xml`, `MEMORY.md`, `CURRENT_TASK.md`
+- **Commit:** `Build ISSN-compliant Volume 1, Issue 2 complete issue package with cover, title page, editorial, TOC, and 15 articles`
+
 ### 2026-08-05 — Update Volume 1, Issue 2 DOI: 10.5281/zenodo.21809155
 - **Changed:**
   1. Updated `data/papers.json` — added `"doi": "10.5281/zenodo.21809155"` to all 15 Volume 1, Issue 2 article objects.
