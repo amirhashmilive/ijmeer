@@ -48,6 +48,7 @@
 - Test all links and structural changes before committing
 - Verify ISSN compliance after any editorial board or content changes
 - Use WebP format for all new images
+- ENFORCEMENT: When creating ANY new issue, ALWAYS reference ISSUE_STANDARDS.md for volume, issue, and publication dates. Do NOT create new issues without checking this file.
 
 ---
 
@@ -150,3 +151,4 @@ D:\DRIVE (Ai) Agents\00 Projects\Workplace IJMEER
 | `DEPLOYMENT.md` | Deployment process |
 | `REMINDERS.md` | Active reminders and their status |
 | `POST_ISSN_ROADMAP.md` | Post-approval indexing and growth roadmap |
+| `docs/ISSUE_STANDARDS.md` | Volume, issue, and publication schedule master standards |

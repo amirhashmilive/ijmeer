@@ -26,6 +26,15 @@
 
 ## Recent Changes (Reverse Chronological)
 
+### 2026-08-05 — Create ISSUE_STANDARDS.md for agentic memory and enforcement
+- **Changed:**
+  1. Created `docs/ISSUE_STANDARDS.md` — master volume, issue, quarter, coverage period, submission deadline, and publication schedule standards file with strict enforcement rules and checklist.
+  2. Updated `AGENTS.md` — added explicit enforcement instruction requiring agents to reference `ISSUE_STANDARDS.md` before creating or modifying any journal issue.
+  3. ISSUE_STANDARDS.md — Created and enforced. All future Volume/Issue numbering must follow the master schedule. Any deviation requires explicit approval.
+- **Reason:** Prevent volume, issue, date, or quarter mismatches across website content, PDFs, metadata, and print packages.
+- **Files:** `docs/ISSUE_STANDARDS.md` (NEW), `AGENTS.md`, `MEMORY.md`, `CURRENT_TASK.md`
+- **Commit:** `Create ISSUE_STANDARDS.md for agentic memory and enforcement of volume/issue numbering and publication schedule`
+
 ### 2026-08-05 — Update second page (Title Page & Journal Specifications) for Volume 1, Issue 1 and Issue 2
 - **Changed:**
   1. Updated Page 2 of `papers/volume_1/issue_2/ijmeer_v1_i2_complete_issue.pdf` with corrected Journal Specifications & Profile table for Volume 1, Issue 2 (April – June 2026, E-ISSN: 3139-6003, DOI: 10.5281/zenodo.21809155). Preserved total 67 pages.
