@@ -26,6 +26,17 @@
 
 ## Recent Changes (Reverse Chronological)
 
+### 2026-08-05 — Add Print Archive page and footer link
+- **Changed:**
+  1. Created `print-archive.html` — dedicated print version archive page with card-based layout for downloading complete issue PDFs. Displays Vol 1 Issue 2 (67 pages, 15 articles, DOI: 10.5281/zenodo.21809155) and Vol 1 Issue 1 (29 pages, 5 articles, DOI: 10.5281/zenodo.19565393).
+  2. Built `papers/volume_1/issue_1/ijmeer_v1_i1_complete_issue.pdf` — compiled 29-page complete issue PDF for Vol 1 Issue 1 (4 front matter pages + 25 article pages) so both issues have real downloadable print packages.
+  3. Updated `assets/js/components.js` — added "Print Archive" link (`print-archive.html`) to footer Journal navigation column.
+  4. Updated `sitemap.xml` — added `print-archive.html` under Core Pages and `ijmeer_v1_i1_complete_issue.pdf` entry.
+  5. Updated `archive.html` — replaced "Download Complete Issue (PDF)" button with "Download Print Versions" button pointing to `print-archive.html`.
+- **Reason:** Provide a dedicated page for libraries, institutions, and readers to download complete print-ready issue PDFs.
+- **Files:** `print-archive.html` (NEW), `papers/volume_1/issue_1/ijmeer_v1_i1_complete_issue.pdf` (NEW), `assets/js/components.js`, `sitemap.xml`, `archive.html`, `MEMORY.md`, `CURRENT_TASK.md`
+- **Commit:** `Add Print Archive page and footer link for print version downloads`
+
 ### 2026-08-05 — Build ISSN-compliant Volume 1, Issue 2 complete issue package
 - **Changed:**
   1. Removed `cover-design-samples/` directory as requested.
