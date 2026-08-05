@@ -8,9 +8,18 @@
       "year": 2026,
       "title": "Implementation of Three New Criminal Laws in India: A Study of Police Preparedness in Uttar Pradesh",
       "authors": "Arjun Singh",
-      "affiliations": ["Assistant Professor, Faculty of Law, University of Lucknow, Uttar Pradesh"],
+      "affiliations": [
+        "Assistant Professor, Faculty of Law, University of Lucknow, Uttar Pradesh"
+      ],
       "abstract": "The enactment of the Bharatiya Nyaya Sanhita (BNS) 2023, the Bharatiya Nagarik Suraksha Sanhita (BNSS) 2023, and the Bharatiya Sakshya Adhiniyam (BSA) 2023, which replaced the Indian Penal Code, the Code of Criminal Procedure, and the Indian Evidence Act respectively, marks the most comprehensive overhaul of India's criminal justice system since independence. This paper examines the state of preparedness among the Uttar Pradesh Police—India's largest state police force—in implementing these transformative legislations. The study reveals significant gaps in awareness, infrastructure, and inter-agency coordination, recommending a phased capacity-building approach and enhanced digital infrastructure.",
-      "keywords": ["BNS 2023", "BNSS 2023", "Criminal Law Reform", "Police Preparedness", "Uttar Pradesh Police", "Criminal Justice System"],
+      "keywords": [
+        "BNS 2023",
+        "BNSS 2023",
+        "Criminal Law Reform",
+        "Police Preparedness",
+        "Uttar Pradesh Police",
+        "Criminal Justice System"
+      ],
       "first_page": 1,
       "last_page": 6,
       "page_range": "1-6",
@@ -29,9 +38,20 @@
       "year": 2026,
       "title": "Mental Health Awareness Among College Students in Kerala Post-COVID: Prevalence, Perceptions, and Help-Seeking Behaviour",
       "authors": "Priya Menon & Anitha Krishnan",
-      "affiliations": ["PhD Scholar, Department of Psychology, University of Kerala", "Assistant Professor, Department of Psychology, University of Kerala"],
+      "affiliations": [
+        "PhD Scholar, Department of Psychology, University of Kerala",
+        "Assistant Professor, Department of Psychology, University of Kerala"
+      ],
       "abstract": "This paper investigates mental health awareness levels, perceived stigma toward help-seeking, and the prevalence of self-reported psychological distress among college students in Kerala in the post-COVID period. A survey of 340 students revealed that 41.2% showed moderate to severe psychological distress, with stigma remaining a major barrier to seeking professional help. The study recommends strengthening college counselling infrastructure and community-level de-stigmatisation campaigns.",
-      "keywords": ["Mental Health Awareness", "COVID-19", "College Students", "Kerala", "Help-Seeking", "Psychological Distress", "Stigma"],
+      "keywords": [
+        "Mental Health Awareness",
+        "COVID-19",
+        "College Students",
+        "Kerala",
+        "Help-Seeking",
+        "Psychological Distress",
+        "Stigma"
+      ],
       "first_page": 7,
       "last_page": 10,
       "page_range": "7-10",
@@ -50,9 +70,19 @@
       "year": 2026,
       "title": "Farmers' Adoption of Sustainable Agricultural Practices in Punjab: Barriers, Motivators, and Policy Implications",
       "authors": "Gurpreet Kaur",
-      "affiliations": ["Research Associate, Department of Agronomy, Punjab Agricultural University, Ludhiana, Punjab"],
+      "affiliations": [
+        "Research Associate, Department of Agronomy, Punjab Agricultural University, Ludhiana, Punjab"
+      ],
       "abstract": "Punjab faces a severe agrarian crisis characterised by depleting groundwater and soil health degradation. This paper examines the factors influencing farmers' adoption of sustainable agricultural practices (SAPs) in three agro-ecological zones of Punjab. Analysis of survey data from 280 farm households identifies knowledge access, farm size, and peer influence as significant positive predictors of adoption, while debt burden and fragmented holdings are negative predictors.",
-      "keywords": ["Sustainable Agriculture", "Punjab", "Paddy Stubble Burning", "Adoption Factors", "Logistic Regression", "Agrarian Crisis", "Crop Diversification"],
+      "keywords": [
+        "Sustainable Agriculture",
+        "Punjab",
+        "Paddy Stubble Burning",
+        "Adoption Factors",
+        "Logistic Regression",
+        "Agrarian Crisis",
+        "Crop Diversification"
+      ],
       "first_page": 11,
       "last_page": 14,
       "page_range": "11-14",
@@ -71,9 +101,20 @@
       "year": 2026,
       "title": "Digital Literacy and Access to Online Education in Rural Maharashtra: A Study of Learner Experiences and Infrastructural Gaps",
       "authors": "Rajesh Deshmukh & Sunita Wagh",
-      "affiliations": ["College Lecturer, Department of Education & Information Technology, Pune", "Lecturer, Department of Sociology, Amravati"],
+      "affiliations": [
+        "College Lecturer, Department of Education & Information Technology, Pune",
+        "Lecturer, Department of Sociology, Amravati"
+      ],
       "abstract": "Evidence from rural Maharashtra suggests that the 'digital divide' remains a profound barrier to equitable learning. This survey-based study involving 380 students reveals significant intra-state disparities in internet access and digital literacy. Fewer than 30% of rural students met basic digital competency thresholds. The study identifies gaps between policy intent and ground reality, recommending improved device access and teacher training.",
-      "keywords": ["Digital Literacy", "Online Education", "Rural Maharashtra", "Digital Divide", "E-Learning Access", "Educational Technology", "PM eVIDYA"],
+      "keywords": [
+        "Digital Literacy",
+        "Online Education",
+        "Rural Maharashtra",
+        "Digital Divide",
+        "E-Learning Access",
+        "Educational Technology",
+        "PM eVIDYA"
+      ],
       "first_page": 15,
       "last_page": 20,
       "page_range": "15-20",
@@ -92,9 +133,19 @@
       "year": 2026,
       "title": "Impact of MSME Schemes on Women Entrepreneurs in Tamil Nadu: Evidence from Madurai and Tirunelveli Districts",
       "authors": "Meena Rajan",
-      "affiliations": ["Assistant Professor, Department of Commerce, Madurai Kamaraj University, Madurai, Tamil Nadu"],
+      "affiliations": [
+        "Assistant Professor, Department of Commerce, Madurai Kamaraj University, Madurai, Tamil Nadu"
+      ],
       "abstract": "Women entrepreneurs in India's MSME sector remain significantly underrepresented. This paper examines the impact of various government schemes on women-led enterprises in Madurai and Tirunelveli districts. Findings indicate that while scheme participation has a positive impact on short-term business establishment, it has limited impact on long-term sustainability. Mentorship and market access emerge as the most critical unmet needs.",
-      "keywords": ["Women Entrepreneurs", "MSME", "Tamil Nadu", "PMEGP", "Mudra Yojana", "Enterprise Sustainability", "Gender and Development"],
+      "keywords": [
+        "Women Entrepreneurs",
+        "MSME",
+        "Tamil Nadu",
+        "PMEGP",
+        "Mudra Yojana",
+        "Enterprise Sustainability",
+        "Gender and Development"
+      ],
       "first_page": 21,
       "last_page": 25,
       "page_range": "21-25",
@@ -103,6 +154,481 @@
       "citation_count": 0,
       "published_date": "2026-04-30",
       "subject": "Economics / Management Studies",
+      "citations": 0
+    },
+    {
+      "id": "IJMEER_1_2_01",
+      "volume": 1,
+      "issue": 2,
+      "paper_number": 1,
+      "year": 2026,
+      "title": "Implementation of the Prohibition of Child Marriage Act, 2006 in Rural Rajasthan: An Empirical Evaluation of Institutional Deficiencies and Judicial Responses",
+      "authors": "Dr. Ramesh Kumar & Sunita Sharma",
+      "affiliations": [
+        "Assistant Professor, Department of Law, Rajkiya Mahavidyalaya, Tonk, Rajasthan",
+        "Research Scholar, Faculty of Law, Jai Narain Vyas University, Jodhpur, Rajasthan"
+      ],
+      "abstract": "Despite comprehensive legislative prohibition under the Prohibition of Child Marriage Act (PCMA) 2006, child marriage remains prevalent in several rural pockets of Rajasthan. This paper presents an empirical evaluation of the operational effectiveness of Child Marriage Prohibition Officers (CMPOs), grassroots law enforcement challenges, and judicial responses across three districts (Tonk, Sawai Madhopur, and Baran). Utilizing court case data, CMPO performance metrics, and structured interviews with 18 stakeholders, the study highlights critical institutional deficiencies including multi-tasking CMPO roles without dedicated budget, procedural delays in obtaining ex parte injunctions, and persistent conflicts between personal laws and the PCMA. The study outlines targeted policy recommendations to strengthen enforcement mechanisms and community legal awareness.",
+      "keywords": [
+        "PCMA 2006",
+        "Child Marriage Prohibition",
+        "Rajasthan",
+        "CMPO Effectiveness",
+        "Judicial Responses",
+        "Personal Law Conflict"
+      ],
+      "first_page": 1,
+      "last_page": 12,
+      "page_range": "1-12",
+      "pdf_filename": "ijmeer_v1_i2_p01_2026.pdf",
+      "pdf_url": "papers/volume_1/issue_2/ijmeer_v1_i2_p01_2026.pdf",
+      "html_url": "article-v1i2p01.html",
+      "citation_count": 0,
+      "published_date": "2026-07-31",
+      "subject": "Law / Political Science",
+      "citations": 0
+    },
+    {
+      "id": "IJMEER_1_2_02",
+      "volume": 1,
+      "issue": 2,
+      "paper_number": 2,
+      "year": 2026,
+      "title": "Prevalence and Determinants of Anaemia Among Adolescent Girls in Tribal Districts of Chhattisgarh: A Cross-Sectional Study",
+      "authors": "Dr. Sunita Verma & Kavita Sahu",
+      "affiliations": [
+        "Lecturer, Department of Community Medicine, Government Medical College, Dhamtari, Chhattisgarh",
+        "Research Scholar, Department of Public Health, Pt. Ravishankar Shukla University, Raipur, Chhattisgarh"
+      ],
+      "abstract": "Anaemia remains a persistent public health burden in India, disproportionately affecting adolescent girls in tribal and rural populations. This cross-sectional study was conducted across three tribal-majority districts of Chhattisgarh — Bastar, Narayanpur, and Bijapur — to assess the prevalence and determinants of anaemia among adolescent girls aged 10 to 19 years. A total of 450 participants were enrolled through cluster sampling from government school and Anganwadi settings. Blood haemoglobin levels were measured using a calibrated digital haemoglobinometer, and a validated structured questionnaire gathered data on dietary habits, menstrual patterns, household socioeconomic characteristics, and awareness of the POSHAN Abhiyaan. The study found an overall anaemia prevalence of 67.6% by WHO haemoglobin cut-offs. Findings underscore the urgent need for targeted nutritional interventions, improved IFA distribution mechanisms, and community-level health education in Chhattisgarh's tribal districts.",
+      "keywords": [
+        "Anaemia",
+        "Adolescent Girls",
+        "Tribal Population",
+        "Chhattisgarh",
+        "POSHAN Abhiyaan",
+        "Iron-Folic Acid"
+      ],
+      "first_page": 13,
+      "last_page": 24,
+      "page_range": "13-24",
+      "pdf_filename": "ijmeer_v1_i2_p02_2026.pdf",
+      "pdf_url": "papers/volume_1/issue_2/ijmeer_v1_i2_p02_2026.pdf",
+      "html_url": "article-v1i2p02.html",
+      "citation_count": 0,
+      "published_date": "2026-07-31",
+      "subject": "Public Health / Community Medicine",
+      "citations": 0
+    },
+    {
+      "id": "IJMEER_1_2_03",
+      "volume": 1,
+      "issue": 2,
+      "paper_number": 3,
+      "year": 2026,
+      "title": "Digital Financial Inclusion and Financial Literacy Among Rural Women: Evidence from Self-Help Group Members in North Odisha",
+      "authors": "Dr. Anupam Sahoo & Dr. Bijay Kumar Swain",
+      "affiliations": [
+        "Assistant Professor, Department of Economics, Fakir Mohan University, Balasore, Odisha",
+        "Associate Professor, Department of Commerce, Maharaja Sriram Chandra Bhanja Deo University, Baripada, Odisha"
+      ],
+      "abstract": "Digital financial services have expanded dramatically in rural India under the PMJDY and UPI ecosystems, yet gender disparities in digital financial literacy persist. This empirical study evaluates the extent of digital financial inclusion and financial literacy among 320 women Self-Help Group (SHG) members across Mayurbhanj and Balasore districts of North Odisha. Using a multidimensional financial literacy index encompassing digital knowledge, usage frequency, and risk perception, the study finds that while account ownership is near-universal (94.4%), active digital usage remains low (31.2%). Regression analysis reveals that educational attainment, smartphone ownership, and SHG training frequency are significant positive determinants of digital financial competency.",
+      "keywords": [
+        "Digital Financial Inclusion",
+        "Financial Literacy",
+        "Self-Help Groups",
+        "Rural Women",
+        "Odisha",
+        "UPI Adoption"
+      ],
+      "first_page": 25,
+      "last_page": 37,
+      "page_range": "25-37",
+      "pdf_filename": "ijmeer_v1_i2_p03_2026.pdf",
+      "pdf_url": "papers/volume_1/issue_2/ijmeer_v1_i2_p03_2026.pdf",
+      "html_url": "article-v1i2p03.html",
+      "citation_count": 0,
+      "published_date": "2026-07-31",
+      "subject": "Economics / Finance",
+      "citations": 0
+    },
+    {
+      "id": "IJMEER_1_2_04",
+      "volume": 1,
+      "issue": 2,
+      "paper_number": 4,
+      "year": 2026,
+      "title": "Academic Stress and Coping Strategies Among Undergraduate Students of Arts Colleges in Marathwada Region, Maharashtra",
+      "authors": "Dr. Meena Kulkarni",
+      "affiliations": [
+        "Assistant Professor, Department of Psychology, Shri Shivaji College, Akola, Maharashtra"
+      ],
+      "abstract": "Academic stress is a major psychological concern affecting higher education students in India, influenced by examination pressure, career uncertainty, and socio-economic expectations. This study investigates the sources of academic stress and coping mechanisms among 280 undergraduate arts students across three degree colleges in Marathwada region, Maharashtra. Utilizing the Perceived Stress Scale (PSS-10) and the Brief COPE inventory, the study identified examination burden and future employability as primary stressors. Problem-focused coping strategies were associated with lower stress levels, whereas avoidance coping correlated with higher anxiety.",
+      "keywords": [
+        "Academic Stress",
+        "Coping Strategies",
+        "Undergraduate Students",
+        "Psychology",
+        "Marathwada",
+        "Maharashtra"
+      ],
+      "first_page": 38,
+      "last_page": 49,
+      "page_range": "38-49",
+      "pdf_filename": "ijmeer_v1_i2_p04_2026.pdf",
+      "pdf_url": "papers/volume_1/issue_2/ijmeer_v1_i2_p04_2026.pdf",
+      "html_url": "article-v1i2p04.html",
+      "citation_count": 0,
+      "published_date": "2026-07-31",
+      "subject": "Psychology / Education",
+      "citations": 0
+    },
+    {
+      "id": "IJMEER_1_2_05",
+      "volume": 1,
+      "issue": 2,
+      "paper_number": 5,
+      "year": 2026,
+      "title": "Impact of Organic Farming Practices on Soil Health and Crop Yield in Small Landholdings of Western Uttar Pradesh",
+      "authors": "Dr. Ramesh Yadav & Manju Devi",
+      "affiliations": [
+        "Assistant Professor, Department of Agriculture, Chaudhary Devi Lal Degree College, Muzaffarnagar, Uttar Pradesh",
+        "Research Scholar, Department of Agronomy, Chaudhary Charan Singh University, Meerut, Uttar Pradesh"
+      ],
+      "abstract": "Long-term chemical fertilizer application has led to soil organic carbon depletion and declining micro-nutrient availability in the intensive agricultural belt of Western Uttar Pradesh. This study assesses the comparative impact of organic farming practices (vermicompost, green manuring, and bio-fertilizers) versus conventional chemical farming on soil health parameters and crop yield over three cropping cycles among 120 smallholder farmers in Muzaffarnagar and Meerut districts. Results show significant improvements in soil organic carbon (SOC), microbial biomass nitrogen, and water retention capacity in organic plots.",
+      "keywords": [
+        "Organic Farming",
+        "Soil Health",
+        "Crop Yield",
+        "Smallholders",
+        "Western Uttar Pradesh",
+        "Agronomy"
+      ],
+      "first_page": 50,
+      "last_page": 62,
+      "page_range": "50-62",
+      "pdf_filename": "ijmeer_v1_i2_p05_2026.pdf",
+      "pdf_url": "papers/volume_1/issue_2/ijmeer_v1_i2_p05_2026.pdf",
+      "html_url": "article-v1i2p05.html",
+      "citation_count": 0,
+      "published_date": "2026-07-31",
+      "subject": "Agriculture / Environmental Science",
+      "citations": 0
+    },
+    {
+      "id": "IJMEER_1_2_06",
+      "volume": 1,
+      "issue": 2,
+      "paper_number": 6,
+      "year": 2026,
+      "title": "Water Quality Assessment of Urban Lakes in Bhopal: A Physico-Chemical Study",
+      "authors": "Dr. Shyam Sundar Patel",
+      "affiliations": [
+        "Associate Professor, Department of Environmental Science, Sagar Government Science College, Sagar, Madhya Pradesh"
+      ],
+      "abstract": "Urbanization, untreated sewage discharge, and anthropogenic pressures threaten freshwater ecosystems in Central India. This study evaluated the physico-chemical water quality parameters of Upper Lake (Bada Talab) and Lower Lake (Chhota Talab) in Bhopal, Madhya Pradesh, across pre-monsoon, monsoon, and post-monsoon seasons. Parameters including pH, Dissolved Oxygen (DO), Biochemical Oxygen Demand (BOD), Chemical Oxygen Demand (COD), nitrate, phosphate, and heavy metals were analyzed. Lower Lake exhibited severe eutrophication and high BOD levels exceeding CPCB standards.",
+      "keywords": [
+        "Water Quality",
+        "Urban Lakes",
+        "Bhopal",
+        "Limnology",
+        "Physico-Chemical Analysis",
+        "Eutrophication"
+      ],
+      "first_page": 63,
+      "last_page": 74,
+      "page_range": "63-74",
+      "pdf_filename": "ijmeer_v1_i2_p06_2026.pdf",
+      "pdf_url": "papers/volume_1/issue_2/ijmeer_v1_i2_p06_2026.pdf",
+      "html_url": "article-v1i2p06.html",
+      "citation_count": 0,
+      "published_date": "2026-07-31",
+      "subject": "Environmental Science / Limnology",
+      "citations": 0
+    },
+    {
+      "id": "IJMEER_1_2_07",
+      "volume": 1,
+      "issue": 2,
+      "paper_number": 7,
+      "year": 2026,
+      "title": "Effectiveness of Activity-Based Learning in Improving Literacy Outcomes in Primary Schools of Backward Districts in Odisha",
+      "authors": "Sudha Panda & Dr. Bijaya Kumar Sahoo",
+      "affiliations": [
+        "Lecturer, Department of Education, Women's College, Sambalpur, Odisha",
+        "Assistant Professor, Department of Education, Government College, Phulbani, Odisha"
+      ],
+      "abstract": "Activity-Based Learning (ABL) pedagogy has been adopted across several Indian states to foster child-centered learning and reduce foundational learning deficits. This quasi-experimental study evaluated the efficacy of ABL intervention on reading comprehension, vocabulary, and numeracy skills among 360 Grade 3 and 5 students in primary schools across Sambalpur and Kandhamal districts of Odisha. Pre- and post-test scores demonstrated statistically significant improvements in student learning outcomes in ABL classrooms compared to traditional rote-learning control groups.",
+      "keywords": [
+        "Activity-Based Learning",
+        "Literacy Outcomes",
+        "Primary Education",
+        "Odisha",
+        "Pedagogy",
+        "Foundational Literacy"
+      ],
+      "first_page": 75,
+      "last_page": 86,
+      "page_range": "75-86",
+      "pdf_filename": "ijmeer_v1_i2_p07_2026.pdf",
+      "pdf_url": "papers/volume_1/issue_2/ijmeer_v1_i2_p07_2026.pdf",
+      "html_url": "article-v1i2p07.html",
+      "citation_count": 0,
+      "published_date": "2026-07-31",
+      "subject": "Education / Pedagogy",
+      "citations": 0
+    },
+    {
+      "id": "IJMEER_1_2_08",
+      "volume": 1,
+      "issue": 2,
+      "paper_number": 8,
+      "year": 2026,
+      "title": "Social Exclusion and Marginalisation of Scheduled Castes in Semi-Urban Areas of Bihar: An Empirical Study",
+      "authors": "Dr. Renu Devi",
+      "affiliations": [
+        "Assistant Professor, Department of Sociology, Patna Women's College, Patna, Bihar"
+      ],
+      "abstract": "While urbanisation is often presumed to erode traditional caste-based social hierarchies, semi-urban spaces in North India frequently witness mutated forms of social exclusion. This empirical sociological study investigates the multi-dimensional nature of caste-based exclusion among 250 Scheduled Caste households in semi-urban belts of Patna and Gaya districts, Bihar. The study examines spatial segregation, discrimination in informal labor markets, access to municipal services, and political representation.",
+      "keywords": [
+        "Social Exclusion",
+        "Scheduled Castes",
+        "Marginalisation",
+        "Semi-Urbanisation",
+        "Bihar",
+        "Sociology"
+      ],
+      "first_page": 87,
+      "last_page": 98,
+      "page_range": "87-98",
+      "pdf_filename": "ijmeer_v1_i2_p08_2026.pdf",
+      "pdf_url": "papers/volume_1/issue_2/ijmeer_v1_i2_p08_2026.pdf",
+      "html_url": "article-v1i2p08.html",
+      "citation_count": 0,
+      "published_date": "2026-07-31",
+      "subject": "Sociology / Social Justice",
+      "citations": 0
+    },
+    {
+      "id": "IJMEER_1_2_09",
+      "volume": 1,
+      "issue": 2,
+      "paper_number": 9,
+      "year": 2026,
+      "title": "Financial Inclusion Through Self-Help Groups: A Study of Women's Economic Empowerment in North Karnataka",
+      "authors": "Dr. Shobha Patil & Rekha Hadimani",
+      "affiliations": [
+        "Assistant Professor, Department of Economics, Shri Basaveshwara Degree College, Bagalkot, Karnataka",
+        "Lecturer, Department of Economics, Government First Grade College, Vijayapur, Karnataka"
+      ],
+      "abstract": "Microfinance and Self-Help Group (SHG) bank linkage programmes have served as vital instruments for socio-economic empowerment among rural women in South India. This study assesses the role of SHG participation in enhancing financial autonomy, household decision-making power, and income-generating asset creation among 300 women members across Bagalkot and Vijayapur districts of North Karnataka. Empirical findings confirm positive correlations between duration of SHG membership and credit accumulation, enterprise startup, and financial decision-making involvement.",
+      "keywords": [
+        "Financial Inclusion",
+        "Self-Help Groups",
+        "Women Empowerment",
+        "Microfinance",
+        "North Karnataka",
+        "Economics"
+      ],
+      "first_page": 99,
+      "last_page": 110,
+      "page_range": "99-110",
+      "pdf_filename": "ijmeer_v1_i2_p09_2026.pdf",
+      "pdf_url": "papers/volume_1/issue_2/ijmeer_v1_i2_p09_2026.pdf",
+      "html_url": "article-v1i2p09.html",
+      "citation_count": 0,
+      "published_date": "2026-07-31",
+      "subject": "Economics / Development Studies",
+      "citations": 0
+    },
+    {
+      "id": "IJMEER_1_2_10",
+      "volume": 1,
+      "issue": 2,
+      "paper_number": 10,
+      "year": 2026,
+      "title": "Corporate Social Responsibility Practices of Small and Medium Enterprises in Tirunelveli District, Tamil Nadu: An Empirical Investigation",
+      "authors": "Dr. K. Muthuvel",
+      "affiliations": [
+        "Assistant Professor, Department of Commerce, Sri Paramakalyani College, Alwarkurichi, Tamil Nadu"
+      ],
+      "abstract": "While Corporate Social Responsibility (CSR) is legislatively mandated for large corporations under Section 135 of the Indian Companies Act 2013, Small and Medium Enterprises (SMEs) frequently practice informal, community-oriented CSR. This study empirically investigates the CSR engagement patterns, motivations, and operational barriers among 150 SMEs in Tirunelveli district, Tamil Nadu. Results indicate that 43.3% of SMEs engage in philanthropic CSR activities, with community development and local educational support being primary focus areas.",
+      "keywords": [
+        "CSR",
+        "SMEs",
+        "Companies Act 2013",
+        "Tamil Nadu",
+        "Tirunelveli",
+        "Business Ethics"
+      ],
+      "first_page": 111,
+      "last_page": 122,
+      "page_range": "111-122",
+      "pdf_filename": "ijmeer_v1_i2_p10_2026.pdf",
+      "pdf_url": "papers/volume_1/issue_2/ijmeer_v1_i2_p10_2026.pdf",
+      "html_url": "article-v1i2p10.html",
+      "citation_count": 0,
+      "published_date": "2026-07-31",
+      "subject": "Management / Commerce",
+      "citations": 0
+    },
+    {
+      "id": "IJMEER_1_2_11",
+      "volume": 1,
+      "issue": 2,
+      "paper_number": 11,
+      "year": 2026,
+      "title": "Comparative Analysis of Machine Learning Algorithms for Crop Disease Detection Using Leaf Image Data",
+      "authors": "Dr. Anoop Kumar Sharma & Dr. James Osei",
+      "affiliations": [
+        "Assistant Professor, Department of Computer Science, Government Degree College, Rampur, Uttar Pradesh",
+        "Lecturer, Department of Computer Science, University of Ghana, Legon, Accra, Ghana"
+      ],
+      "abstract": "Timely and accurate detection of crop diseases is critical for minimising agricultural yield losses and reducing the overuse of chemical pesticides. This study conducted a comparative performance evaluation of three machine learning approaches — Convolutional Neural Network (CNN), Support Vector Machine (SVM), and Random Forest (RF) — for the automatic detection and classification of nine common crop diseases across four crop species using leaf image data drawn from the PlantVillage dataset (54,306 images). The fine-tuned CNN architecture achieved the highest overall classification accuracy of 94.2%, outperforming SVM (87.1%) and RF (82.3%).",
+      "keywords": [
+        "Crop Disease Detection",
+        "Convolutional Neural Network",
+        "Support Vector Machine",
+        "PlantVillage",
+        "Transfer Learning",
+        "Precision Agriculture"
+      ],
+      "first_page": 123,
+      "last_page": 134,
+      "page_range": "123-134",
+      "pdf_filename": "ijmeer_v1_i2_p11_2026.pdf",
+      "pdf_url": "papers/volume_1/issue_2/ijmeer_v1_i2_p11_2026.pdf",
+      "html_url": "article-v1i2p11.html",
+      "citation_count": 0,
+      "published_date": "2026-07-31",
+      "subject": "Computer Science / Precision Agriculture",
+      "citations": 0
+    },
+    {
+      "id": "IJMEER_1_2_12",
+      "volume": 1,
+      "issue": 2,
+      "paper_number": 12,
+      "year": 2026,
+      "title": "Synthesis and Characterisation of Zinc Oxide Nanoparticles by Chemical Precipitation Method and Investigation of Optical Properties",
+      "authors": "Dr. Fatima Begum & Dr. Nguyen Van Minh",
+      "affiliations": [
+        "Associate Professor, Department of Physics, Deccan College of Arts and Science, Hyderabad, Telangana",
+        "Associate Professor, Department of Materials Science, Hanoi University of Science, Vietnam National University, Hanoi, Vietnam"
+      ],
+      "abstract": "Zinc Oxide (ZnO) nanoparticles possess exceptional optoelectronic properties making them suitable for solar cells, UV photodetectors, and photocatalytic applications. In this study, ZnO nanoparticles were synthesized via a cost-effective chemical precipitation route using zinc acetate dihydrate and sodium hydroxide precursors. Structural characterization via X-ray Diffraction (XRD) confirmed a hexagonal wurtzite crystal structure with an average crystallite size of 24.5 nm. UV-Visible spectroscopy revealed a direct optical band gap of 3.28 eV.",
+      "keywords": [
+        "Zinc Oxide Nanoparticles",
+        "Chemical Precipitation",
+        "XRD",
+        "Band Gap",
+        "Optoelectronics",
+        "Physics"
+      ],
+      "first_page": 135,
+      "last_page": 146,
+      "page_range": "135-146",
+      "pdf_filename": "ijmeer_v1_i2_p12_2026.pdf",
+      "pdf_url": "papers/volume_1/issue_2/ijmeer_v1_i2_p12_2026.pdf",
+      "html_url": "article-v1i2p12.html",
+      "citation_count": 0,
+      "published_date": "2026-07-31",
+      "subject": "Physics / Materials Science",
+      "citations": 0
+    },
+    {
+      "id": "IJMEER_1_2_13",
+      "volume": 1,
+      "issue": 2,
+      "paper_number": 13,
+      "year": 2026,
+      "title": "Green Synthesis of Silver Nanoparticles Using Hibiscus rosa-sinensis Leaf Extract and Evaluation of Antibacterial Activity",
+      "authors": "Dr. Mary Joseph & Sr. Anitha Thomas",
+      "affiliations": [
+        "Associate Professor, Department of Chemistry, St. Aloysius College, Mangalore, Karnataka",
+        "Lecturer, Department of Chemistry, Sacred Heart College, Chalakudy, Kerala"
+      ],
+      "abstract": "Eco-friendly bio-synthesis of metallic nanoparticles using plant extracts offers significant advantages over hazardous chemical synthesis routes. This study demonstrates the rapid green synthesis of silver nanoparticles (AgNPs) using aqueous leaf extract of Hibiscus rosa-sinensis as both reducing and capping agent. Formation of AgNPs was confirmed by UV-Vis surface plasmon resonance peak at 425 nm. Synthesized AgNPs exhibited potent antibacterial activity against Gram-negative (E. coli, P. aeruginosa) and Gram-positive (S. aureus) bacterial strains.",
+      "keywords": [
+        "Green Synthesis",
+        "Silver Nanoparticles",
+        "Hibiscus rosa-sinensis",
+        "Antibacterial Activity",
+        "Nanotechnology",
+        "Chemistry"
+      ],
+      "first_page": 147,
+      "last_page": 158,
+      "page_range": "147-158",
+      "pdf_filename": "ijmeer_v1_i2_p13_2026.pdf",
+      "pdf_url": "papers/volume_1/issue_2/ijmeer_v1_i2_p13_2026.pdf",
+      "html_url": "article-v1i2p13.html",
+      "citation_count": 0,
+      "published_date": "2026-07-31",
+      "subject": "Chemistry / Nanotechnology",
+      "citations": 0
+    },
+    {
+      "id": "IJMEER_1_2_14",
+      "volume": 1,
+      "issue": 2,
+      "paper_number": 14,
+      "year": 2026,
+      "title": "Postcolonial Identity and Hybrid Consciousness in Arundhati Roy's The Ministry of Utmost Happiness",
+      "authors": "Dr. Deepa Rani",
+      "affiliations": [
+        "Assistant Professor, Department of English, Maharani Banka Bihari College, Hazaribag, Jharkhand"
+      ],
+      "abstract": "Arundhati Roy's second novel, The Ministry of Utmost Happiness (2017), offers a profound engagement with postcolonial nationhood, marginality, and hybrid identities in contemporary India. Applying Homi Bhabha's concepts of 'third space', 'hybridity', and 'mimicry', this paper analyzes how Roy subverts monolithic nationalistic discourses through marginal characters such as Anjum, a hijra who establishes a sanctuary in a Delhi graveyard, and Tilo, an architecture student caught in the turmoil of Kashmir. The study demonstrates how Roy's fragmented narrative structure mirrors the contested geopolitical landscapes of postcolonial South Asia.",
+      "keywords": [
+        "Postcolonialism",
+        "Arundhati Roy",
+        "Hybridity",
+        "Third Space",
+        "Indian English Literature",
+        "Subaltern Studies"
+      ],
+      "first_page": 159,
+      "last_page": 170,
+      "page_range": "159-170",
+      "pdf_filename": "ijmeer_v1_i2_p14_2026.pdf",
+      "pdf_url": "papers/volume_1/issue_2/ijmeer_v1_i2_p14_2026.pdf",
+      "html_url": "article-v1i2p14.html",
+      "citation_count": 0,
+      "published_date": "2026-07-31",
+      "subject": "English Literature / Cultural Studies",
+      "citations": 0
+    },
+    {
+      "id": "IJMEER_1_2_15",
+      "volume": 1,
+      "issue": 2,
+      "paper_number": 15,
+      "year": 2026,
+      "title": "Social Media and Political Mobilisation: A Study of Twitter Usage Among Youth Voters in Tier-2 Cities of Gujarat",
+      "authors": "Harshad Trivedi & Dr. Maria Elena Santos",
+      "affiliations": [
+        "Lecturer, Department of Journalism and Mass Communication, Gujarat Vidyasabha, Ahmedabad, Gujarat",
+        "Associate Professor, Department of Communication and Media Studies, University of Cebu, Cebu City, Philippines"
+      ],
+      "abstract": "Social media platforms, particularly Twitter (X), have transformed political communication and youth voter mobilisation in urban India. This study examines Twitter usage patterns, information verification habits, and political participation among 350 youth voters aged 18-25 in tier-2 cities of Gujarat (Vadodara, Rajkot, and Bhavnagar). Through survey analysis and content analysis of political hashtag campaigns, the study evaluates how social media exposure shapes political efficacy, online activism, and electoral turnout.",
+      "keywords": [
+        "Social Media",
+        "Twitter",
+        "Political Mobilisation",
+        "Youth Voters",
+        "Gujarat",
+        "Mass Communication"
+      ],
+      "first_page": 171,
+      "last_page": 182,
+      "page_range": "171-182",
+      "pdf_filename": "ijmeer_v1_i2_p15_2026.pdf",
+      "pdf_url": "papers/volume_1/issue_2/ijmeer_v1_i2_p15_2026.pdf",
+      "html_url": "article-v1i2p15.html",
+      "citation_count": 0,
+      "published_date": "2026-07-31",
+      "subject": "Mass Communication / Political Science",
       "citations": 0
     }
   ]

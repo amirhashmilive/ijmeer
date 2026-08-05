@@ -1,5 +1,141 @@
 [
   {
+    "id": 2,
+    "volume": 1,
+    "issue": 2,
+    "quarter": "April–June",
+    "year": 2026,
+    "title": "Volume 1, Issue 2 (April–June 2026)",
+    "theme": "Multidisciplinary Explication and Emerging Research in Legal, Social, Natural and Applied Sciences",
+    "publication_date": "July 2026",
+    "status": "published",
+    "papers": [
+      "IJMEER_1_2_01",
+      "IJMEER_1_2_02",
+      "IJMEER_1_2_03",
+      "IJMEER_1_2_04",
+      "IJMEER_1_2_05",
+      "IJMEER_1_2_06",
+      "IJMEER_1_2_07",
+      "IJMEER_1_2_08",
+      "IJMEER_1_2_09",
+      "IJMEER_1_2_10",
+      "IJMEER_1_2_11",
+      "IJMEER_1_2_12",
+      "IJMEER_1_2_13",
+      "IJMEER_1_2_14",
+      "IJMEER_1_2_15"
+    ],
+    "description": "Volume 1, Issue 2 of IJMEER presents fifteen peer-reviewed multidisciplinary articles spanning law, public health, economics, education, computer science, chemistry, physics, literature, and social sciences.",
+    "articles": [
+      {
+        "title": "Implementation of the Prohibition of Child Marriage Act, 2006 in Rural Rajasthan: An Empirical Evaluation of Institutional Deficiencies and Judicial Responses",
+        "authors": "Dr. Ramesh Kumar & Sunita Sharma",
+        "pdf_url": "papers/volume_1/issue_2/ijmeer_v1_i2_p01_2026.pdf",
+        "html_url": "article-v1i2p01.html",
+        "pages": "1-12"
+      },
+      {
+        "title": "Prevalence and Determinants of Anaemia Among Adolescent Girls in Tribal Districts of Chhattisgarh: A Cross-Sectional Study",
+        "authors": "Dr. Sunita Verma & Kavita Sahu",
+        "pdf_url": "papers/volume_1/issue_2/ijmeer_v1_i2_p02_2026.pdf",
+        "html_url": "article-v1i2p02.html",
+        "pages": "13-24"
+      },
+      {
+        "title": "Digital Financial Inclusion and Financial Literacy Among Rural Women: Evidence from Self-Help Group Members in North Odisha",
+        "authors": "Dr. Anupam Sahoo & Dr. Bijay Kumar Swain",
+        "pdf_url": "papers/volume_1/issue_2/ijmeer_v1_i2_p03_2026.pdf",
+        "html_url": "article-v1i2p03.html",
+        "pages": "25-37"
+      },
+      {
+        "title": "Academic Stress and Coping Strategies Among Undergraduate Students of Arts Colleges in Marathwada Region, Maharashtra",
+        "authors": "Dr. Meena Kulkarni",
+        "pdf_url": "papers/volume_1/issue_2/ijmeer_v1_i2_p04_2026.pdf",
+        "html_url": "article-v1i2p04.html",
+        "pages": "38-49"
+      },
+      {
+        "title": "Impact of Organic Farming Practices on Soil Health and Crop Yield in Small Landholdings of Western Uttar Pradesh",
+        "authors": "Dr. Ramesh Yadav & Manju Devi",
+        "pdf_url": "papers/volume_1/issue_2/ijmeer_v1_i2_p05_2026.pdf",
+        "html_url": "article-v1i2p05.html",
+        "pages": "50-62"
+      },
+      {
+        "title": "Water Quality Assessment of Urban Lakes in Bhopal: A Physico-Chemical Study",
+        "authors": "Dr. Shyam Sundar Patel",
+        "pdf_url": "papers/volume_1/issue_2/ijmeer_v1_i2_p06_2026.pdf",
+        "html_url": "article-v1i2p06.html",
+        "pages": "63-74"
+      },
+      {
+        "title": "Effectiveness of Activity-Based Learning in Improving Literacy Outcomes in Primary Schools of Backward Districts in Odisha",
+        "authors": "Sudha Panda & Dr. Bijaya Kumar Sahoo",
+        "pdf_url": "papers/volume_1/issue_2/ijmeer_v1_i2_p07_2026.pdf",
+        "html_url": "article-v1i2p07.html",
+        "pages": "75-86"
+      },
+      {
+        "title": "Social Exclusion and Marginalisation of Scheduled Castes in Semi-Urban Areas of Bihar: An Empirical Study",
+        "authors": "Dr. Renu Devi",
+        "pdf_url": "papers/volume_1/issue_2/ijmeer_v1_i2_p08_2026.pdf",
+        "html_url": "article-v1i2p08.html",
+        "pages": "87-98"
+      },
+      {
+        "title": "Financial Inclusion Through Self-Help Groups: A Study of Women's Economic Empowerment in North Karnataka",
+        "authors": "Dr. Shobha Patil & Rekha Hadimani",
+        "pdf_url": "papers/volume_1/issue_2/ijmeer_v1_i2_p09_2026.pdf",
+        "html_url": "article-v1i2p09.html",
+        "pages": "99-110"
+      },
+      {
+        "title": "Corporate Social Responsibility Practices of Small and Medium Enterprises in Tirunelveli District, Tamil Nadu: An Empirical Investigation",
+        "authors": "Dr. K. Muthuvel",
+        "pdf_url": "papers/volume_1/issue_2/ijmeer_v1_i2_p10_2026.pdf",
+        "html_url": "article-v1i2p10.html",
+        "pages": "111-122"
+      },
+      {
+        "title": "Comparative Analysis of Machine Learning Algorithms for Crop Disease Detection Using Leaf Image Data",
+        "authors": "Dr. Anoop Kumar Sharma & Dr. James Osei",
+        "pdf_url": "papers/volume_1/issue_2/ijmeer_v1_i2_p11_2026.pdf",
+        "html_url": "article-v1i2p11.html",
+        "pages": "123-134"
+      },
+      {
+        "title": "Synthesis and Characterisation of Zinc Oxide Nanoparticles by Chemical Precipitation Method and Investigation of Optical Properties",
+        "authors": "Dr. Fatima Begum & Dr. Nguyen Van Minh",
+        "pdf_url": "papers/volume_1/issue_2/ijmeer_v1_i2_p12_2026.pdf",
+        "html_url": "article-v1i2p12.html",
+        "pages": "135-146"
+      },
+      {
+        "title": "Green Synthesis of Silver Nanoparticles Using Hibiscus rosa-sinensis Leaf Extract and Evaluation of Antibacterial Activity",
+        "authors": "Dr. Mary Joseph & Sr. Anitha Thomas",
+        "pdf_url": "papers/volume_1/issue_2/ijmeer_v1_i2_p13_2026.pdf",
+        "html_url": "article-v1i2p13.html",
+        "pages": "147-158"
+      },
+      {
+        "title": "Postcolonial Identity and Hybrid Consciousness in Arundhati Roy's The Ministry of Utmost Happiness",
+        "authors": "Dr. Deepa Rani",
+        "pdf_url": "papers/volume_1/issue_2/ijmeer_v1_i2_p14_2026.pdf",
+        "html_url": "article-v1i2p14.html",
+        "pages": "159-170"
+      },
+      {
+        "title": "Social Media and Political Mobilisation: A Study of Twitter Usage Among Youth Voters in Tier-2 Cities of Gujarat",
+        "authors": "Harshad Trivedi & Dr. Maria Elena Santos",
+        "pdf_url": "papers/volume_1/issue_2/ijmeer_v1_i2_p15_2026.pdf",
+        "html_url": "article-v1i2p15.html",
+        "pages": "171-182"
+      }
+    ]
+  },
+  {
     "id": 1,
     "volume": 1,
     "issue": 1,
@@ -9,7 +145,13 @@
     "theme": "Multidisciplinary Perspectives on Legal, Social and Agricultural Transformation",
     "publication_date": "April 2026",
     "status": "published",
-    "papers": ["IJMEER_1_1_01", "IJMEER_1_1_02", "IJMEER_1_1_03", "IJMEER_1_1_04", "IJMEER_1_1_05"],
+    "papers": [
+      "IJMEER_1_1_01",
+      "IJMEER_1_1_02",
+      "IJMEER_1_1_03",
+      "IJMEER_1_1_04",
+      "IJMEER_1_1_05"
+    ],
     "description": "The inaugural issue of IJMEER presents foundational research across law, public health, agriculture, education, and economics, featuring case studies from across India (Uttar Pradesh, Kerala, Punjab, Maharashtra, and Tamil Nadu).",
     "articles": [
       {

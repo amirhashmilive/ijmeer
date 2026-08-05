@@ -26,6 +26,37 @@
 
 ## Recent Changes (Reverse Chronological)
 
+### 2026-08-05 — Publish Volume 1, Issue 2 with 15 articles
+- **Changed:**
+  1. Extracted article metadata from `Vol1_Issue2.pdf` (70 pages) and `Vol1_Issue2.docx` — parsed 15 articles with titles, authors, affiliations, abstracts, keywords, and page ranges.
+  2. Split source PDF into 15 individual article PDFs placed in `papers/volume_1/issue_2/` (`ijmeer_v1_i2_p01_2026.pdf` to `ijmeer_v1_i2_p15_2026.pdf`).
+  3. Generated 15 individual article HTML landing pages (`article-v1i2p01.html` to `article-v1i2p15.html`) with complete Highwire Press Google Scholar meta tags, Open Graph/Twitter Card tags, JSON-LD ScholarlyArticle structured data, CC BY-NC 4.0 license badges, and citation formatting.
+  4. Updated `data/papers.json` with 15 new article entries (total: 20 papers).
+  5. Updated `data/issues.json` with Volume 1, Issue 2 entry (id: 2, quarter: April–June, publication_date: July 2026).
+  6. Updated `archive.html`: new hero section for Vol 1 Issue 2 (15 articles), 15 article cards with abstracts, Vol 1 Issue 1 moved to previous release section, JSON-LD schema graph updated.
+  7. Updated `sitemap.xml` with 30 new URLs (15 article HTML pages + 15 PDF files), all lastmod dates updated to 2026-08-05.
+  8. `citations.html` loads dynamically from `data/papers.json` — no manual update needed, automatically shows all 20 articles.
+- **Reason:** Publish Volume 1, Issue 2 (April–June 2026) following the established 10-step publication workflow.
+- **Articles Published (15):**
+  1. Implementation of the Prohibition of Child Marriage Act, 2006 in Rural Rajasthan (Dr. Ramesh Kumar & Sunita Sharma) — Law
+  2. Prevalence and Determinants of Anaemia Among Adolescent Girls in Tribal Districts of Chhattisgarh (Dr. Sunita Verma & Kavita Sahu) — Public Health
+  3. Digital Financial Inclusion and Financial Literacy Among Rural Women in North Odisha (Dr. Anupam Sahoo & Dr. Bijay Kumar Swain) — Economics
+  4. Academic Stress and Coping Strategies Among Undergraduate Students in Marathwada (Dr. Meena Kulkarni) — Psychology
+  5. Impact of Organic Farming Practices on Soil Health in Western Uttar Pradesh (Dr. Ramesh Yadav & Manju Devi) — Agriculture
+  6. Water Quality Assessment of Urban Lakes in Bhopal (Dr. Shyam Sundar Patel) — Environmental Science
+  7. Effectiveness of Activity-Based Learning in Primary Schools of Odisha (Sudha Panda & Dr. Bijaya Kumar Sahoo) — Education
+  8. Social Exclusion and Marginalisation of Scheduled Castes in Semi-Urban Bihar (Dr. Renu Devi) — Sociology
+  9. Financial Inclusion Through Self-Help Groups in North Karnataka (Dr. Shobha Patil & Rekha Hadimani) — Economics
+  10. Corporate Social Responsibility Practices of SMEs in Tirunelveli (Dr. K. Muthuvel) — Management
+  11. Comparative Analysis of Machine Learning Algorithms for Crop Disease Detection (Dr. Anoop Kumar Sharma & Dr. James Osei 🇬🇭) — Computer Science
+  12. Synthesis and Characterisation of Zinc Oxide Nanoparticles (Dr. Fatima Begum & Dr. Nguyen Van Minh 🇻🇳) — Physics
+  13. Green Synthesis of Silver Nanoparticles Using Hibiscus rosa-sinensis (Dr. Mary Joseph & Sr. Anitha Thomas) — Chemistry
+  14. Postcolonial Identity and Hybrid Consciousness in Arundhati Roy (Dr. Deepa Rani) — English Literature
+  15. Social Media and Political Mobilisation Among Youth Voters in Gujarat (Harshad Trivedi & Dr. Maria Elena Santos 🇵🇭) — Mass Communication
+- **International Authors:** 3 (Dr. James Osei — Ghana, Dr. Nguyen Van Minh — Vietnam, Dr. Maria Elena Santos — Philippines)
+- **Files:** `papers/volume_1/issue_2/ijmeer_v1_i2_p01_2026.pdf` to `ijmeer_v1_i2_p15_2026.pdf`, `article-v1i2p01.html` to `article-v1i2p15.html`, `data/papers.json`, `data/issues.json`, `archive.html`, `sitemap.xml`, `MEMORY.md`, `CURRENT_TASK.md`
+- **Commit:** `add: Volume 1 Issue 2 with 15 articles following established publication workflow`
+
 ### 2026-08-02 — Fix CDN usage: ensure all static assets are served via Cloudflare
 - **Changed:** Downloaded and localized Creative Commons CC BY-NC 4.0 license badge (`assets/images/logo/cc-by-nc-4.0.png`). Replaced all external `https://licensebuttons.net/l/by-nc/4.0/88x31.png` image URLs across 9 HTML pages (`open-access.html`, `open-access-options.html`, `journal.html`, `authors.html`, `article-v1i1p01.html` through `article-v1i1p05.html`) and `assets/js/components.js` footer with relative paths (`assets/images/logo/cc-by-nc-4.0.png`).
 - **Reason:** Resolve SEO Site Checkup issue ("This webpage is not serving all resources from CDNs"). Ensuring all static assets are relative paths guarantees they are served through Cloudflare CDN on `ijmeer.com`.
@@ -381,5 +412,8 @@
 | **Google Pages Indexed** | 7 / 27 discovered | 2026-06-22 |
 | **International Members** | 3 (Dr. Mary Lou Frank 🇺🇸, Prof. Jyotirmaya Thakur 🇬🇧, Lect. Ayşegül Akkaya 🇹🇷) | 2026-06-23 |
 | **Board Members Total** | 15 | 2026-06-23 |
-| **Volume 1 Issue 1** | Published April 2026 | 2026-04-01 |
+| **Volume 1 Issue 1** | Published April 2026 (5 articles) | 2026-04-30 |
+| **Volume 1 Issue 2** | Published July 2026 (15 articles) | 2026-07-31 |
+| **Total Published Articles** | 20 | 2026-08-05 |
+
 
