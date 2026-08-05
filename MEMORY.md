@@ -26,6 +26,14 @@
 
 ## Recent Changes (Reverse Chronological)
 
+### 2026-08-05 — Update second page (Title Page & Journal Specifications) for Volume 1, Issue 1 and Issue 2
+- **Changed:**
+  1. Updated Page 2 of `papers/volume_1/issue_2/ijmeer_v1_i2_complete_issue.pdf` with corrected Journal Specifications & Profile table for Volume 1, Issue 2 (April – June 2026, E-ISSN: 3139-6003, DOI: 10.5281/zenodo.21809155). Preserved total 67 pages.
+  2. Updated Page 2 of `papers/volume_1/issue_1/ijmeer_v1_i1_complete_issue.pdf` with corrected Journal Specifications & Profile table for Volume 1, Issue 1 (January – March 2026, E-ISSN: 3139-6003, DOI: 10.5281/zenodo.19565393). Preserved total 29 pages.
+- **Reason:** Update complete issue PDF front matter with official journal specifications table for Volume 1 Issue 1 and Issue 2.
+- **Files:** `papers/volume_1/issue_2/ijmeer_v1_i2_complete_issue.pdf`, `papers/volume_1/issue_1/ijmeer_v1_i1_complete_issue.pdf`, `MEMORY.md`, `CURRENT_TASK.md`
+- **Commit:** `Update second page (Title Page & Journal Specifications) for Volume 1, Issue 1 and Issue 2`
+
 ### 2026-08-05 — Update cover pages for Volume 1, Issue 1 and Volume 1, Issue 2 with new designs
 - **Changed:**
   1. Updated `papers/volume_1/issue_2/ijmeer_v1_i2_complete_issue.pdf` — replaced Page 1 (cover) with new cover design from `cover issue 02.png` (preserved all 67 pages, front matter, and 15 articles).
