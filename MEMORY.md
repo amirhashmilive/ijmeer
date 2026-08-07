@@ -26,6 +26,15 @@
 
 ## Recent Changes (Reverse Chronological)
 
+### 2026-08-08 — Reorder pages: Editorial Board after Editor's Desk, fix TOC page numbers
+- **Changed:**
+  1. Reordered preliminary pages in Volume 1, Issue 1 complete PDF: Cover (P1) → Title Page (P2) → Editorial Board (P3) → Table of Contents (P4) → Articles (P5+).
+  2. Reordered preliminary pages in Volume 1, Issue 2 complete PDF: Cover (P1) → Title Page (P2) → From Editor-in-Chief's Desk (P3) → Editorial Board (P4) → Table of Contents (P5) → Articles (P6+).
+  3. Verified Table of Contents article start page numbers across both Issue 1 and Issue 2.
+- **Reason:** User request to place Editorial Board page immediately after Editor's Desk and before Table of Contents in complete print PDFs.
+- **Files:** `papers/volume_1/issue_1/ijmeer_v1_i1_complete_issue.pdf`, `papers/volume_1/issue_2/ijmeer_v1_i2_complete_issue.pdf`, `MEMORY.md`, `CURRENT_TASK.md`
+- **Commit:** `Reorder pages: Editorial Board after Editor's Desk, fix TOC page numbers`
+
 ### 2026-08-08 — Enhance Editorial Board page: larger EIC/ME prominence, Advisory Board 1-row with photos
 - **Changed:**
   1. Enhanced Journal Leadership section (EIC Dr. Nusrat Ali Hashmi & ME Sayed Amir Mustafa Hashmi) with larger card heights, bigger 58x58 portraits, subtitle tags, and bold role badges.
