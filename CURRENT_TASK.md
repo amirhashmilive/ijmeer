@@ -7,22 +7,23 @@
 
 ## Current Task
 
-**Task:** Add Advisory Board (5 members) at bottom of Editorial Board page in print PDFs  
+**Task:** Enhance Editorial Board page: larger EIC/ME prominence, Advisory Board 1-row with photos  
 **Status:** ✅ Done  
 **Started:** 2026-08-08  
 **Completed:** 2026-08-08  
 **Agent:** Antigravity
 
 ### Progress:
-- [x] Added compact text-only Advisory Board section (5 members) at the bottom of the Editorial Board page in print PDFs:
-  1. Rajhans Yeshwant Gaikwad (Principal, Dept. of Law · Hitkarni College of Law, Mumbai)
-  2. Dr. Ranu Shukla (Project Officer · Guru Ghasidas Vishwavidyalaya, Bilaspur)
-  3. Prof. (Dr.) Jyotirmaya Thakur (Consultant & Trainer · United Kingdom)
-  4. Dr. Anupama Patel (Asst. Professor, Dept. of Law · Kanker, Chhattisgarh)
-  5. Dr. Mukti Chauhan (Yoga & Wellness Expert · Ph.D. in Yoga · Bhopal, Madhya Pradesh)
-- [x] Tightened vertical spacing across Leadership, International, and Editorial Board sections to fit Advisory Board cleanly above footer line.
+- [x] Increased prominence of Journal Leadership (EIC Dr. Nusrat Ali Hashmi & ME Sayed Amir Mustafa Hashmi) with larger cards, bigger portraits (58x58), bold role banners, and subtitle tags.
+- [x] Built compact 1-row Advisory Board layout (5 members) at the bottom with 36x36 rounded portrait photos, bold names, and concise designations:
+  1. Rajhans Y. Gaikwad (Principal, Dept. of Law, Hitkarni College, Mumbai)
+  2. Dr. Ranu Shukla (Project Officer, GGU, Bilaspur)
+  3. Prof. (Dr.) J. Thakur (Consultant & Trainer, United Kingdom)
+  4. Dr. Anupama Patel (Asst. Prof., Dept. of Law, Kanker, Chhattisgarh)
+  5. Dr. Mukti Chauhan (Yoga & Wellness Expert, Ph.D. Yoga, Bhopal)
+- [x] Preserved exact 12-member order for Leadership, International, and Editorial Board members.
 - [x] Regenerated complete issue PDFs for Volume 1, Issue 1 (29 pages) and Volume 1, Issue 2 (67 pages).
-- [x] Verified rendering via high-resolution output preview image.
+- [x] Verified high-resolution visual layout (`scratch/verify_ed_board_v3.png`).
 - [x] Updated MEMORY.md and CURRENT_TASK.md.
 - [x] Committed and pushed to GitHub (`origin/main`).
 
@@ -37,7 +38,7 @@
 
 ## Previous Task
 
-**Task:** Build ISSN-compliant print issues with correct editorial board order and updated emails  
+**Task:** Add Advisory Board (5 members) at bottom of Editorial Board page in print PDFs  
 **Status:** ✅ Done  
 **Started:** 2026-08-08  
 **Completed:** 2026-08-08  

@@ -26,6 +26,16 @@
 
 ## Recent Changes (Reverse Chronological)
 
+### 2026-08-08 — Enhance Editorial Board page: larger EIC/ME prominence, Advisory Board 1-row with photos
+- **Changed:**
+  1. Enhanced Journal Leadership section (EIC Dr. Nusrat Ali Hashmi & ME Sayed Amir Mustafa Hashmi) with larger card heights, bigger 58x58 portraits, subtitle tags, and bold role badges.
+  2. Redesigned Advisory Board into a single 1-row compact grid across the bottom with 36x36 rounded photo portraits for all 5 members (Rajhans Gaikwad, Dr. Ranu Shukla, Prof. Jyotirmaya Thakur, Dr. Anupama Patel, Dr. Mukti Chauhan).
+  3. Maintained 3 International members and 7 Editorial Board members with exact sequence and official emails.
+  4. Regenerated and updated complete issue PDFs: `papers/volume_1/issue_1/ijmeer_v1_i1_complete_issue.pdf` (29 pages) and `papers/volume_1/issue_2/ijmeer_v1_i2_complete_issue.pdf` (67 pages).
+- **Reason:** User request to increase EIC/ME prominence and add 1-row Advisory Board with photos in print PDFs.
+- **Files:** `papers/volume_1/issue_1/ijmeer_v1_i1_complete_issue.pdf`, `papers/volume_1/issue_2/ijmeer_v1_i2_complete_issue.pdf`, `MEMORY.md`, `CURRENT_TASK.md`
+- **Commit:** `Enhance Editorial Board page: larger EIC/ME prominence, Advisory Board 1-row with photos`
+
 ### 2026-08-08 — Add Advisory Board (5 members) at bottom of Editorial Board page in print PDFs
 - **Changed:**
   1. Added compact text-only Advisory Board section (5 members) in a 2-column grid at the bottom of the Editorial Board page in print PDFs:
