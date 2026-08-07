@@ -26,6 +26,18 @@
 
 ## Recent Changes (Reverse Chronological)
 
+### 2026-08-07 — Correction: Remove ISSN from Volume 1, Issue 1 and Issue 2; ISSN applies from Issue 3 onwards
+- **Changed:**
+  1. Updated `papers/volume_1/issue_1/ijmeer_v1_i1_complete_issue.pdf` — blacked out `E-ISSN: 3139-6003` line from cover image and redacted all ISSN references from internal title page and footers.
+  2. Updated `papers/volume_1/issue_2/ijmeer_v1_i2_complete_issue.pdf` — blacked out `E-ISSN: 3139-6003` line from cover image and redacted all ISSN references from internal title page, editorial pages, TOC, and running headers.
+  3. Updated 15 individual article PDFs in `papers/volume_1/issue_2/` — redacted ISSN from running headers.
+  4. Regenerated WebP cover thumbnails in `assets/images/covers/` (`ijmeer-cover-v1i1.webp`, `ijmeer-cover-v1i2.webp`).
+  5. Created `docs/generate_future_cover_template.py` — python generator script for future issue cover pages (Issue 3 onwards) enforcing ISSN placement in the right-hand top corner.
+  6. Updated `docs/ISSUE_STANDARDS.md` — documented ISSN placement rules (No ISSN for Issue 1 & 2; ISSN in right-hand top corner for Issue 3+).
+- **Reason:** Volume 1 Issue 1 (April 2026) and Issue 2 (July 2026) were published BEFORE ISSN was officially assigned (August 2026). ISSN 3139-6003 will apply starting from Volume 1 Issue 3 (October 2026).
+- **Files:** `papers/volume_1/issue_1/ijmeer_v1_i1_complete_issue.pdf`, `papers/volume_1/issue_2/ijmeer_v1_i2_complete_issue.pdf`, `papers/volume_1/issue_2/*.pdf`, `assets/images/covers/ijmeer-cover-v1i1.webp`, `assets/images/covers/ijmeer-cover-v1i2.webp`, `docs/generate_future_cover_template.py` (NEW), `docs/ISSUE_STANDARDS.md`, `MEMORY.md`, `CURRENT_TASK.md`
+- **Commit:** `Correction: Remove ISSN from Volume 1, Issue 1 and Issue 2; ISSN applies from Issue 3 onwards`
+
 ### 2026-08-05 — Create ISSUE_STANDARDS.md for agentic memory and enforcement
 - **Changed:**
   1. Created `docs/ISSUE_STANDARDS.md` — master volume, issue, quarter, coverage period, submission deadline, and publication schedule standards file with strict enforcement rules and checklist.
