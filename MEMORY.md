@@ -26,6 +26,17 @@
 
 ## Recent Changes (Reverse Chronological)
 
+### 2026-08-08 — Correct editorial board order and update Dr. Nusrat Ali Hashmi email to eic@ijmeer.com
+- **Changed:**
+  1. Updated Dr. Nusrat Ali Hashmi's email to official `eic@ijmeer.com` (removed personal `dr.nusrathashmi@live.com`) across `editorial-board.html`, `editorial-portfolio.html`, `EDITORIAL_BOARD.md`, and print PDFs.
+  2. Standardized exact Editorial Board order: 3 International Members (Frank, Zakariya, Akkaya) followed by 7 members in exact order: 4. Sunatkari, 5. Malviya, 6. Nuzhat Khan, 7. Yende, 8. Salim Khan, 9. Sargar, 10. Momin Ali.
+  3. Updated member designations & institutions: Karuna Malviya (Director, School of Law, D Y Patil University School of Law, Navi Mumbai), Nuzhat Khan (Professor & Former Dean, Faculty of Law, Jamia Millia Islamia, New Delhi), Ashok Yende (Professor & Dean, School of Law; Mediator, ATLAS SkillTech University, Mumbai), Mohammed Salim Khan (Assistant Professor – Senior Scale, Presidency University, Bangalore).
+  4. Updated `editorial-board.html` cards, `editorial-portfolio.html` grid profiles, quick-nav pills, and scroll-spy JS array.
+  5. Regenerated complete issue print PDFs (`papers/volume_1/issue_1/ijmeer_v1_i1_complete_issue.pdf` & `papers/volume_1/issue_2/ijmeer_v1_i2_complete_issue.pdf`).
+- **Reason:** User directive to align editorial board order and institutional designations site-wide and set EIC official email.
+- **Files:** `editorial-board.html`, `editorial-portfolio.html`, `EDITORIAL_BOARD.md`, `papers/volume_1/issue_1/ijmeer_v1_i1_complete_issue.pdf`, `papers/volume_1/issue_2/ijmeer_v1_i2_complete_issue.pdf`, `MEMORY.md`, `CURRENT_TASK.md`
+- **Commit:** `Correct editorial board order and update Dr. Nusrat Ali Hashmi email to eic@ijmeer.com`
+
 ### 2026-08-08 — Add Editorial Board page with photos to Volume 1, Issue 1 and Issue 2 print versions
 - **Changed:**
   1. Built dedicated visual Editorial Board page titled "Meet the Minds Behind IJMEER" with photographs, institutional emails, and designations for 12 members.

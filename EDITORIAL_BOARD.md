@@ -16,7 +16,7 @@
 | **Designation** | Editor-in-Chief, IJMEER; High Court Advocate; Ph.D. in Law |
 | **Additional Roles** | Legal Advisor, Meer Foundation; Former Principal, Shivajirao S. Jondhle Institute of Law and Research, Mumbai |
 | **Institution** | Meer Foundation / IJMEER |
-| **Institutional Email** | *(pending — to be added)* |
+| **Institutional Email** | eic@ijmeer.com |
 | **Postal Address** | *(to be confirmed)* |
 | **ORCID** | *(to be confirmed)* |
 | **Institutional Profile** | *(to be confirmed)* |
