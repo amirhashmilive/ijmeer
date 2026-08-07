@@ -26,6 +26,20 @@
 
 ## Recent Changes (Reverse Chronological)
 
+### 2026-08-08 — Deep clean: Remove ISSN from all Volume 1, Issue 1 and Issue 2 HTML pages
+- **Changed:**
+  1. Removed `<meta name="citation_issn" content="3139-6003">` from all 20 article HTML pages (5 Issue 1 + 15 Issue 2).
+  2. Removed `"issn": "3139-6003"` from JSON-LD structured data (`Periodical` object) in all 20 article pages.
+  3. Removed `ISSN: 3139-6003` from sub-header text line in all 20 article pages (preserving DOI for Issue 2 articles).
+  4. Removed `ISSN (Online)` table row from sidebar "Article Details" table in all 20 article pages.
+  5. Removed `<meta name="citation_issn">` from `archive.html`.
+  6. Removed E-ISSN grid items from both Issue 1 and Issue 2 cards in `print-archive.html`.
+  7. Verified: zero references to `3139-6003` remain in any Issue 1/2 file. Remaining references are journal-level only (index.html, journal.html, contact.html, components.js, config.json) — correct and intentional.
+  8. Confirmed: `papers.json`, `issues.json`, `sitemap.xml` were already clean (no ISSN field present).
+- **Reason:** Volume 1 Issue 1 (April 2026) and Issue 2 (July 2026) were published BEFORE ISSN was officially assigned (August 2026). ISSN 3139-6003 must not appear on pre-assignment issues.
+- **Files:** `article-v1i1p01.html` to `article-v1i1p05.html`, `article-v1i2p01.html` to `article-v1i2p15.html`, `archive.html`, `print-archive.html`, `MEMORY.md`, `CURRENT_TASK.md`
+- **Commit:** `Deep clean: Remove ISSN from all Volume 1, Issue 1 and Issue 2 PDFs and HTML pages`
+
 ### 2026-08-07 — Correction: Remove ISSN from Volume 1, Issue 1 and Issue 2; ISSN applies from Issue 3 onwards
 - **Changed:**
   1. Updated `papers/volume_1/issue_1/ijmeer_v1_i1_complete_issue.pdf` — blacked out `E-ISSN: 3139-6003` line from cover image and redacted all ISSN references from internal title page and footers.
