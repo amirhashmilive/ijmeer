@@ -26,6 +26,19 @@
 
 ## Recent Changes (Reverse Chronological)
 
+### 2026-08-08 — Add Editorial Board page with photos to Volume 1, Issue 1 and Issue 2 print versions
+- **Changed:**
+  1. Built dedicated visual Editorial Board page titled "Meet the Minds Behind IJMEER" with photographs, institutional emails, and designations for 12 members.
+  2. Top Section: Editor-in-Chief Dr. Nusrat Ali Hashmi (`dr.nusrathashmi@live.com`) and Managing Editor Sayed Amir Mustafa Hashmi (`editor@ijmeer.com`).
+  3. Middle Section: Prominent "INTERNATIONAL" badges for 3 international board members (Dr. Mary Lou Frank — USA `marylou.frank@mga.edu`, Dr. Hafid Zakariya — Indonesia `hafidzakariya@uibs.ac.id`, Lect. Ayşegül Akkaya — Türkiye `aysegulunal@istanbul.edu.tr`).
+  4. Bottom Section: 7 Editorial Board members grid (Prof. Nuzhat Parveen Khan, Prof. Ashok L. Sunatkari, Adv. Ashok Yende, Prof. Karuna A. Malviya, Dr. Mohammed Salim Khan, Dr. Shivaji Dhondiram Sargar, Dr. Momin Ali).
+  5. Excluded Advisory Board members per instructions.
+  6. Updated `papers/volume_1/issue_1/ijmeer_v1_i1_complete_issue.pdf` (Page 4, preserved 29 total pages).
+  7. Updated `papers/volume_1/issue_2/ijmeer_v1_i2_complete_issue.pdf` (Page 5, preserved 67 total pages).
+- **Reason:** User directive to add dedicated Editorial Board page with photos and institutional emails in print version complete issue PDFs.
+- **Files:** `papers/volume_1/issue_1/ijmeer_v1_i1_complete_issue.pdf`, `papers/volume_1/issue_2/ijmeer_v1_i2_complete_issue.pdf`, `MEMORY.md`, `CURRENT_TASK.md`
+- **Commit:** `Add Editorial Board page with photos to Volume 1, Issue 1 and Issue 2 print versions`
+
 ### 2026-08-08 — Deep clean: Remove ISSN from all Volume 1, Issue 1 and Issue 2 HTML pages
 - **Changed:**
   1. Removed `<meta name="citation_issn" content="3139-6003">` from all 20 article HTML pages (5 Issue 1 + 15 Issue 2).

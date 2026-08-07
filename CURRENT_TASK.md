@@ -7,35 +7,36 @@
 
 ## Current Task
 
-**Task:** Deep clean: Remove ISSN (3139-6003) from all Volume 1, Issue 1 and Issue 2 HTML pages  
+**Task:** Add Editorial Board page with photos to Volume 1, Issue 1 and Issue 2 print versions  
 **Status:** ✅ Done  
 **Started:** 2026-08-08  
 **Completed:** 2026-08-08  
 **Agent:** Antigravity
 
 ### Progress:
-- [x] Scan entire codebase for "3139-6003" — found 80+ occurrences across 20 article HTML pages + archive.html + print-archive.html
-- [x] Remove ISSN from 5 Issue 1 article HTML pages (article-v1i1p01 to p05): citation_issn meta, JSON-LD issn, sub-header text, sidebar table row
-- [x] Remove ISSN from 15 Issue 2 article HTML pages (article-v1i2p01 to p15): citation_issn meta, JSON-LD issn, sub-header text, sidebar table row
-- [x] Remove citation_issn meta tag from archive.html
-- [x] Remove E-ISSN grid items from both Issue 1 and Issue 2 cards in print-archive.html
-- [x] Verify zero 3139-6003 references remain in Issue 1/2 article files, archive.html, and print-archive.html
-- [x] Confirm remaining references are journal-level only (index.html, journal.html, contact.html, components.js, config.json) — correct, these stay
+- [x] Create ReportLab generator script (`scratch/update_editorial_board_in_complete_pdfs.py`) to render single-page visual Editorial Board page titled "Meet the Minds Behind IJMEER"
+- [x] Process all 12 member photographs (Editor-in-Chief, Managing Editor, 3 International Members, 7 Editorial Board Members) with Pillow into crisp 300x300 anti-aliased square portrait images with rounded corners
+- [x] Enforce TrueType fonts (Segoe UI / Arial) to render special characters cleanly (`Ayşegül Akkaya`, `İstanbul University`, `Türkiye`)
+- [x] Include Editor-in-Chief (Dr. Nusrat Ali Hashmi) and Managing Editor (Sayed Amir Mustafa Hashmi) in top prominent leadership section
+- [x] Highlight 3 International members prominently in middle section (Dr. Mary Lou Frank — USA, Dr. Hafid Zakariya — Indonesia, Lect. Ayşegül Akkaya — Türkiye) with country badges
+- [x] Include 7 Editorial Board members in bottom section grid with photographs, titles, institutions, and emails
+- [x] Explicitly exclude Advisory Board members as requested
+- [x] Insert page into `papers/volume_1/issue_1/ijmeer_v1_i1_complete_issue.pdf` at Page 4 (after TOC Page 3, before articles)
+- [x] Insert page into `papers/volume_1/issue_2/ijmeer_v1_i2_complete_issue.pdf` at Page 5 (after TOC Page 4, before articles)
+- [x] Verify total page counts (Issue 1: 29 pages, Issue 2: 67 pages) and visual quality
 - [x] Update MEMORY.md and CURRENT_TASK.md
-- [x] Commit and push to GitHub
+- [x] Commit and push to GitHub (`origin/main`)
 
-### Files Modified (22):
-- `article-v1i1p01.html` to `article-v1i1p05.html` (5 files)
-- `article-v1i2p01.html` to `article-v1i2p15.html` (15 files)
-- `archive.html`
-- `print-archive.html`
+### Files Modified:
+- `papers/volume_1/issue_1/ijmeer_v1_i1_complete_issue.pdf`
+- `papers/volume_1/issue_2/ijmeer_v1_i2_complete_issue.pdf`
 
 ---
 
 ## Previous Task
 
-**Task:** Remove ISSN from Volume 1, Issue 1 & Issue 2 complete issue PDFs and cover images; update future cover page templates  
+**Task:** Deep clean: Remove ISSN (3139-6003) from all Volume 1, Issue 1 and Issue 2 HTML pages  
 **Status:** ✅ Done  
-**Started:** 2026-08-07  
-**Completed:** 2026-08-07  
+**Started:** 2026-08-08  
+**Completed:** 2026-08-08  
 **Agent:** Antigravity
