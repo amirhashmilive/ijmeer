@@ -26,6 +26,20 @@
 
 ## Recent Changes (Reverse Chronological)
 
+### 2026-08-08 — Add Advisory Board (5 members) at bottom of Editorial Board page in print PDFs
+- **Changed:**
+  1. Added compact text-only Advisory Board section (5 members) in a 2-column grid at the bottom of the Editorial Board page in print PDFs:
+     - Rajhans Yeshwant Gaikwad (Principal, Dept. of Law, Hitkarni College of Law, Mumbai)
+     - Dr. Ranu Shukla (Project Officer, Guru Ghasidas Vishwavidyalaya, Bilaspur)
+     - Prof. (Dr.) Jyotirmaya Thakur (Consultant & Trainer, United Kingdom)
+     - Dr. Anupama Patel (Asst. Professor, Dept. of Law, Kanker, Chhattisgarh)
+     - Dr. Mukti Chauhan (Yoga & Wellness Expert, Ph.D. in Yoga, Bhopal, Madhya Pradesh)
+  2. Applied separator line, subtle "ADVISORY BOARD" header, and smaller font sizes.
+  3. Re-generated and updated `papers/volume_1/issue_1/ijmeer_v1_i1_complete_issue.pdf` (29 pages preserved) and `papers/volume_1/issue_2/ijmeer_v1_i2_complete_issue.pdf` (67 pages preserved).
+- **Reason:** User request to include compact 5-member Advisory Board at bottom of print issue Editorial Board page.
+- **Files:** `papers/volume_1/issue_1/ijmeer_v1_i1_complete_issue.pdf`, `papers/volume_1/issue_2/ijmeer_v1_i2_complete_issue.pdf`, `MEMORY.md`, `CURRENT_TASK.md`
+- **Commit:** `Add Advisory Board (5 members) at bottom of Editorial Board page in print PDFs`
+
 ### 2026-08-08 — Build ISSN-compliant print issues with correct editorial board order and updated emails
 - **Changed:**
   1. Rebuilt complete issue print PDFs with final ISSN-compliant editorial board page using exact member order, updated designations, and institutional emails.

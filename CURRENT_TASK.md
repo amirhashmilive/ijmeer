@@ -7,48 +7,37 @@
 
 ## Current Task
 
-**Task:** Correct editorial board order and update Dr. Nusrat Ali Hashmi email to eic@ijmeer.com  
+**Task:** Add Advisory Board (5 members) at bottom of Editorial Board page in print PDFs  
 **Status:** ✅ Done  
 **Started:** 2026-08-08  
 **Completed:** 2026-08-08  
 **Agent:** Antigravity
 
 ### Progress:
-- [x] Update Dr. Nusrat Ali Hashmi's email to `eic@ijmeer.com` (removed `dr.nusrathashmi@live.com`) in `editorial-board.html`, `editorial-portfolio.html`, `EDITORIAL_BOARD.md`, and print version PDFs
-- [x] Correct chronological/hierarchical order of Editorial Board members:
-  - 1. Dr. Mary Lou Frank (USA)
-  - 2. Dr. Hafid Zakariya (Indonesia)
-  - 3. Lect. Ayşegül Akkaya (Türkiye)
-  - 4. Prof. (Dr.) Ashok L. Sunatkari
-  - 5. Prof. (Dr.) Karuna Akshay Malviya
-  - 6. Prof. (Dr.) Nuzhat Parveen Khan
-  - 7. Adv. (Dr.) Ashok Yende
-  - 8. Dr. Mohammed Salim Khan
-  - 9. Dr. Shivaji Dhondiram Sargar
-  - 10. Dr. Momin Ali
-- [x] Update designations and institutional affiliations as specified:
-  - Prof. (Dr.) Karuna Akshay Malviya: Director, School of Law (D Y Patil University School of Law, Navi Mumbai)
-  - Prof. (Dr.) Nuzhat Parveen Khan: Professor & Former Dean, Faculty of Law (Jamia Millia Islamia, New Delhi)
-  - Adv. (Dr.) Ashok Yende: Professor & Dean, School of Law; Mediator (Supreme Court & Bombay High Court) (ATLAS SkillTech University, Mumbai)
-  - Dr. Mohammed Salim Khan: Assistant Professor – Senior Scale (Presidency University, Bangalore)
-- [x] Update `editorial-board.html` cards order and content
-- [x] Update `editorial-portfolio.html` profile sections order, quick-nav pills, and scroll-spy array
-- [x] Regenerate complete issue print PDFs (`papers/volume_1/issue_1/ijmeer_v1_i1_complete_issue.pdf` & `papers/volume_1/issue_2/ijmeer_v1_i2_complete_issue.pdf`)
-- [x] Update MEMORY.md and CURRENT_TASK.md
-- [x] Commit and push to GitHub (`origin/main`)
+- [x] Added compact text-only Advisory Board section (5 members) at the bottom of the Editorial Board page in print PDFs:
+  1. Rajhans Yeshwant Gaikwad (Principal, Dept. of Law · Hitkarni College of Law, Mumbai)
+  2. Dr. Ranu Shukla (Project Officer · Guru Ghasidas Vishwavidyalaya, Bilaspur)
+  3. Prof. (Dr.) Jyotirmaya Thakur (Consultant & Trainer · United Kingdom)
+  4. Dr. Anupama Patel (Asst. Professor, Dept. of Law · Kanker, Chhattisgarh)
+  5. Dr. Mukti Chauhan (Yoga & Wellness Expert · Ph.D. in Yoga · Bhopal, Madhya Pradesh)
+- [x] Tightened vertical spacing across Leadership, International, and Editorial Board sections to fit Advisory Board cleanly above footer line.
+- [x] Regenerated complete issue PDFs for Volume 1, Issue 1 (29 pages) and Volume 1, Issue 2 (67 pages).
+- [x] Verified rendering via high-resolution output preview image.
+- [x] Updated MEMORY.md and CURRENT_TASK.md.
+- [x] Committed and pushed to GitHub (`origin/main`).
 
 ### Files Modified:
-- `editorial-board.html`
-- `editorial-portfolio.html`
-- `EDITORIAL_BOARD.md`
 - `papers/volume_1/issue_1/ijmeer_v1_i1_complete_issue.pdf`
 - `papers/volume_1/issue_2/ijmeer_v1_i2_complete_issue.pdf`
+- `scratch/update_editorial_board_in_complete_pdfs.py`
+- `CURRENT_TASK.md`
+- `MEMORY.md`
 
 ---
 
 ## Previous Task
 
-**Task:** Add Editorial Board page with photos to Volume 1, Issue 1 and Issue 2 print versions  
+**Task:** Build ISSN-compliant print issues with correct editorial board order and updated emails  
 **Status:** ✅ Done  
 **Started:** 2026-08-08  
 **Completed:** 2026-08-08  
