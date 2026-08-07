@@ -26,6 +26,16 @@
 
 ## Recent Changes (Reverse Chronological)
 
+### 2026-08-08 — Build ISSN-compliant print issues with correct editorial board order and updated emails
+- **Changed:**
+  1. Rebuilt complete issue print PDFs with final ISSN-compliant editorial board page using exact member order, updated designations, and institutional emails.
+  2. Updated Hafid Zakariya institution to "Islamic Batik University of Surakarta (UNIBA), Indonesia" and title to "Assistant Professor".
+  3. Confirmed exact 12-member order: EIC (eic@ijmeer.com) → ME → Frank → Zakariya → Akkaya → Sunatkari → Malviya → Nuzhat Khan → Yende → Sargar → Salim Khan → Momin Ali.
+  4. Full audit: ISSN 3139-6003 confirmed absent from all V1I1 and V1I2 PDFs and HTML article pages. Old email dr.nusrathashmi@live.com confirmed absent from entire codebase.
+- **Reason:** User directive to build complete ISSN-compliant print issue package with correct board order and emails.
+- **Files:** `papers/volume_1/issue_1/ijmeer_v1_i1_complete_issue.pdf`, `papers/volume_1/issue_2/ijmeer_v1_i2_complete_issue.pdf`, `MEMORY.md`, `CURRENT_TASK.md`
+- **Commit:** `Build ISSN-compliant print issues with correct editorial board order and updated emails`
+
 ### 2026-08-08 — Correct editorial board order and update Dr. Nusrat Ali Hashmi email to eic@ijmeer.com
 - **Changed:**
   1. Updated Dr. Nusrat Ali Hashmi's email to official `eic@ijmeer.com` (removed personal `dr.nusrathashmi@live.com`) across `editorial-board.html`, `editorial-portfolio.html`, `EDITORIAL_BOARD.md`, and print PDFs.
