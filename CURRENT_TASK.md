@@ -7,35 +7,26 @@
 
 ## Current Task
 
-**Task:** Reorder pages: Editorial Board after Editor's Desk, fix TOC page numbers  
+**Task:** Create Generic Publishing Engine (`scratch/generate_issues.py`)  
 **Status:** ✅ Done  
-**Started:** 2026-08-08  
-**Completed:** 2026-08-08  
+**Started:** 2026-08-18  
+**Completed:** 2026-08-18  
 **Agent:** Antigravity
 
 ### Progress:
-- [x] Reordered preliminary pages in Volume 1, Issue 1 (29 pages total):
-  - Page 1: Cover Page
-  - Page 2: Title Page & Journal Specifications
-  - Page 3: Editorial Board Page (Meet the Minds Behind IJMEER)
-  - Page 4: Table of Contents (TOC)
-  - Page 5+: Articles 1 to 5
-- [x] Reordered preliminary pages in Volume 1, Issue 2 (67 pages total):
-  - Page 1: Cover Page
-  - Page 2: Title Page & Journal Specifications
-  - Page 3: From the Editor-in-Chief's Desk
-  - Page 4: Editorial Board Page (Meet the Minds Behind IJMEER)
-  - Page 5: Table of Contents (TOC)
-  - Page 6+: Articles 1 to 15
-- [x] Verified TOC article page numbers in both complete issue PDFs.
-- [x] Updated MEMORY.md and CURRENT_TASK.md.
-- [x] Committed and pushed to GitHub (`origin/main`).
+- [x] Phase 1: Review existing scripts & `data/papers.json`
+- [x] Phase 2: Create `scratch/templates/article_template.html`
+- [x] Phase 3: Create `scratch/generate_issues.py`
+- [x] Phase 4: Test with `--dry-run` and generate all 20 article pages
+- [x] Phase 5: Create `scratch/README.md` documentation
+- [x] Phase 6: Update `MEMORY.md` and commit changes
 
-### Files Modified:
-- `papers/volume_1/issue_1/ijmeer_v1_i1_complete_issue.pdf`
-- `papers/volume_1/issue_2/ijmeer_v1_i2_complete_issue.pdf`
-- `scratch/update_editorial_board_in_complete_pdfs.py`
-- `scratch/reorder_pdf_pages.py`
+### Files Created/Modified:
+- `scratch/generate_issues.py` (Created)
+- `scratch/templates/article_template.html` (Created)
+- `scratch/README.md` (Created)
+- `article-v1i1p01.html` through `article-v1i1p05.html` (Regenerated)
+- `article-v1i2p01.html` through `article-v1i2p15.html` (Regenerated)
 - `CURRENT_TASK.md`
 - `MEMORY.md`
 
@@ -43,7 +34,7 @@
 
 ## Previous Task
 
-**Task:** Enhance Editorial Board page: larger EIC/ME prominence, Advisory Board 1-row with photos  
+**Task:** Reorder pages: Editorial Board after Editor's Desk, fix TOC page numbers  
 **Status:** ✅ Done  
 **Started:** 2026-08-08  
 **Completed:** 2026-08-08  

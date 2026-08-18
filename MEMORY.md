@@ -26,6 +26,17 @@
 
 ## Recent Changes (Reverse Chronological)
 
+### 2026-08-18 — Create generic publishing engine (`scratch/generate_issues.py`)
+- **Changed:**
+  1. Created `scratch/generate_issues.py` — a generic, reusable publishing engine that reads `data/papers.json` + `data/issues.json` and generates all article HTML pages from a template.
+  2. Created `scratch/templates/article_template.html` — HTML template with `{{ PLACEHOLDER }}` syntax for all article metadata (title, authors, abstract, DOI, keywords, affiliations, Schema.org JSON-LD, OG/Twitter, Google Scholar meta tags).
+  3. Created `scratch/README.md` — documentation for the `scratch/` directory and usage instructions for the publishing engine.
+  4. Regenerated all 20 article HTML pages (5 from Vol 1 Issue 1, 15 from Vol 1 Issue 2) using the new engine.
+  5. Engine supports `--all`, `--issue v1i2`, and `--dry-run` command-line flags.
+- **Reason:** Replace hardcoded, one-off scripts (e.g., `publish_vol1_issue2.py`) with a single reusable tool for future issues.
+- **Files:** `scratch/generate_issues.py`, `scratch/templates/article_template.html`, `scratch/README.md`, `article-v1i1p01.html` through `article-v1i1p05.html`, `article-v1i2p01.html` through `article-v1i2p15.html`, `CURRENT_TASK.md`, `MEMORY.md`
+- **Commit:** `add: generic publishing engine (scratch/generate_issues.py)`
+
 ### 2026-08-08 — Reorder pages: Editorial Board after Editor's Desk, fix TOC page numbers
 - **Changed:**
   1. Reordered preliminary pages in Volume 1, Issue 1 complete PDF: Cover (P1) → Title Page (P2) → Editorial Board (P3) → Table of Contents (P4) → Articles (P5+).
