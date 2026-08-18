@@ -26,6 +26,16 @@
 
 ## Recent Changes (Reverse Chronological)
 
+### 2026-08-18 — Add automated image optimization pipeline
+- **Changed:**
+  1. Created `scratch/optimize_images.py` — script to recursively convert raster images (PNG, JPG, JPEG, GIF) to WebP format, enforce lowercase filenames, limit stem to ≤ 50 characters, and update code references across HTML, CSS, JS, JSON, and MD files.
+  2. Converted remaining PNG images (`cc-by-nc-4.0.png`, `share-preview.png`) to `.webp` format and updated all 52 code references across the project.
+  3. Created `.git/hooks/pre-commit` to block commits containing non-WebP or non-compliant image files.
+  4. Updated `.github/workflows/deploy.yml` with an Image Optimization Audit step to fail CI if unoptimized raster images are pushed.
+- **Reason:** Enforce fast loading WebP images, consistent naming rules, and prevent non-compliant images from being committed.
+- **Files:** `scratch/optimize_images.py` (Created), `.git/hooks/pre-commit` (Created), `.github/workflows/deploy.yml` (Modified), `assets/images/logo/cc-by-nc-4-0.webp` (Created), `assets/images/social/share-preview.webp` (Created), `scratch/README.md`, `CURRENT_TASK.md`, `MEMORY.md`
+- **Commit:** `feat: Add automated image optimization pipeline`
+
 ### 2026-08-18 — Add DOI metadata generator for CrossRef submission
 - **Changed:**
   1. Created `scratch/generate_doi_metadata.py` — script to generate CrossRef-compliant XML metadata files (`doi_batch` v4.4.2 schema) from `data/papers.json` and `data/issues.json`.
@@ -241,9 +251,9 @@
 - **Commit:** `add: Volume 1 Issue 2 with 15 articles following established publication workflow`
 
 ### 2026-08-02 — Fix CDN usage: ensure all static assets are served via Cloudflare
-- **Changed:** Downloaded and localized Creative Commons CC BY-NC 4.0 license badge (`assets/images/logo/cc-by-nc-4.0.png`). Replaced all external `https://licensebuttons.net/l/by-nc/4.0/88x31.png` image URLs across 9 HTML pages (`open-access.html`, `open-access-options.html`, `journal.html`, `authors.html`, `article-v1i1p01.html` through `article-v1i1p05.html`) and `assets/js/components.js` footer with relative paths (`assets/images/logo/cc-by-nc-4.0.png`).
+- **Changed:** Downloaded and localized Creative Commons CC BY-NC 4.0 license badge (`assets/images/logo/cc-by-nc-4-0.webp`). Replaced all external `https://licensebuttons.net/l/by-nc/4.0/88x31.png` image URLs across 9 HTML pages (`open-access.html`, `open-access-options.html`, `journal.html`, `authors.html`, `article-v1i1p01.html` through `article-v1i1p05.html`) and `assets/js/components.js` footer with relative paths (`assets/images/logo/cc-by-nc-4-0.webp`).
 - **Reason:** Resolve SEO Site Checkup issue ("This webpage is not serving all resources from CDNs"). Ensuring all static assets are relative paths guarantees they are served through Cloudflare CDN on `ijmeer.com`.
-- **Files:** `open-access.html`, `open-access-options.html`, `journal.html`, `authors.html`, `article-v1i1p01.html` to `article-v1i1p05.html`, `assets/js/components.js`, `assets/images/logo/cc-by-nc-4.0.png`, `MEMORY.md`, `CURRENT_TASK.md`
+- **Files:** `open-access.html`, `open-access-options.html`, `journal.html`, `authors.html`, `article-v1i1p01.html` to `article-v1i1p05.html`, `assets/js/components.js`, `assets/images/logo/cc-by-nc-4-0.webp`, `MEMORY.md`, `CURRENT_TASK.md`
 - **Commit:** `Fix CDN usage: ensure all static assets are served via Cloudflare`
 
 ### 2026-08-02 — Fix Yoga Kutumb text in Dr. Mukti Chauhan's profile

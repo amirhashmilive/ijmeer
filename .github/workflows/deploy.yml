@@ -145,6 +145,18 @@ jobs:
           fi
           echo "✅ No incorrect founding year references found"
 
+      # ── Image Optimization Audit ─────────────────────────────────────────
+      - name: Verify all raster images are WebP format
+        run: |
+          echo "── Checking image formats and naming compliance ──"
+          NON_WEBP=$(find images/ assets/images/ -type f \( -name "*.png" -o -name "*.jpg" -o -name "*.jpeg" -o -name "*.gif" \) ! -name "*.bak" | wc -l)
+          if [ "$NON_WEBP" -gt 0 ]; then
+            echo "::error::Found $NON_WEBP unoptimized non-WebP image(s). Convert to WebP using scratch/optimize_images.py."
+            find images/ assets/images/ -type f \( -name "*.png" -o -name "*.jpg" -o -name "*.jpeg" -o -name "*.gif" \) ! -name "*.bak"
+            exit 1
+          fi
+          echo "✅ All raster images are in WebP format"
+
       # ── Sitemap Check ────────────────────────────────────────────────────
       - name: Validate sitemap.xml is well-formed
         run: |
