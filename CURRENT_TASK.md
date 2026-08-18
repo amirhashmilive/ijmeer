@@ -7,22 +7,24 @@
 
 ## Current Task
 
-**Task:** Implement GitHub Actions CI/CD pipeline  
+**Task:** Automated DOI Metadata Generation (`scratch/generate_doi_metadata.py`)  
 **Status:** ✅ Done  
 **Started:** 2026-08-18  
 **Completed:** 2026-08-18  
 **Agent:** Antigravity
 
 ### Progress:
-- [x] Phase 1: Review current deployment process (DEPLOYMENT.md, .gitignore, CNAME)
-- [x] Phase 2: Create `.github/workflows/deploy.yml` with Audit + Deploy jobs
-- [x] Phase 3: Add CI/CD badge to `readme.md`
-- [x] Phase 4: Update MEMORY.md and CURRENT_TASK.md
-- [x] Phase 5: Commit and push
+- [x] Phase 1: Analysis of CrossRef XML schema requirements & papers.json
+- [x] Phase 2: Create `scratch/generate_doi_metadata.py`
+- [x] Phase 3: XML validation logic & structural checks
+- [x] Phase 4: Integrate `--doi-metadata` flag in `generate_issues.py`
+- [x] Phase 5: Testing & verification (single article, batch, and full issue generation)
+- [x] Phase 6: Documentation (`scratch/README.md`, `MEMORY.md`) & Commit/Push
 
 ### Files Created/Modified:
-- `.github/workflows/deploy.yml` (Created)
-- `readme.md` (Modified — added CI/CD badge)
+- `scratch/generate_doi_metadata.py` (Created)
+- `scratch/generate_issues.py` (Modified — added `--doi-metadata` flag)
+- `scratch/README.md` (Modified — added usage instructions)
 - `CURRENT_TASK.md`
 - `MEMORY.md`
 
@@ -30,7 +32,7 @@
 
 ## Previous Task
 
-**Task:** Create Generic Publishing Engine (`scratch/generate_issues.py`)  
+**Task:** Implement GitHub Actions CI/CD pipeline  
 **Status:** ✅ Done  
 **Started:** 2026-08-18  
 **Completed:** 2026-08-18  

@@ -26,6 +26,16 @@
 
 ## Recent Changes (Reverse Chronological)
 
+### 2026-08-18 — Add DOI metadata generator for CrossRef submission
+- **Changed:**
+  1. Created `scratch/generate_doi_metadata.py` — script to generate CrossRef-compliant XML metadata files (`doi_batch` v4.4.2 schema) from `data/papers.json` and `data/issues.json`.
+  2. Supports single article XML generation (`--paper`), issue-level XML generation (`--issue`), and consolidated batch deposit XML generation (`--batch-xml`).
+  3. Integrated `--doi-metadata` flag into `scratch/generate_issues.py` to optionally generate CrossRef XML files alongside article HTML pages.
+  4. Updated `scratch/README.md` with usage instructions and output structure.
+- **Reason:** Automate CrossRef DOI XML deposit preparation for published articles.
+- **Files:** `scratch/generate_doi_metadata.py` (Created), `scratch/generate_issues.py` (Modified), `scratch/README.md` (Modified), `CURRENT_TASK.md`, `MEMORY.md`
+- **Commit:** `feat: Add DOI metadata generator for CrossRef submission`
+
 ### 2026-08-18 — Implement GitHub Actions CI/CD pipeline
 - **Changed:**
   1. Created `.github/workflows/deploy.yml` — CI/CD pipeline with two jobs: **Audit** (JSON validation, critical file checks, CNAME integrity, article count consistency, ISSN year compliance, sitemap validation) and **Deploy** (GitHub Pages deployment using `actions/deploy-pages@v4`).
