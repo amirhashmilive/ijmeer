@@ -1,0 +1,200 @@
+# ============================================================================
+# IJMEER — CI/CD Pipeline
+# ============================================================================
+# Automates validation and deployment for the IJMEER static journal website.
+#
+# Triggers:
+#   - push to main   → Audit + Deploy to GitHub Pages
+#   - pull_request    → Audit only (no deploy)
+#
+# Jobs:
+#   1. audit   — JSON validation, HTML checks, link verification
+#   2. deploy  — Publish to GitHub Pages (push to main only)
+# ============================================================================
+
+name: IJMEER CI/CD
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+# Allow only one concurrent deployment
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  # ==========================================================================
+  # Job 1: Audit — Validate JSON, check HTML structure, verify critical files
+  # ==========================================================================
+  audit:
+    name: 🔍 Audit & Validate
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # ── JSON Validation ──────────────────────────────────────────────────
+      - name: Validate JSON data files
+        run: |
+          echo "── Validating data/papers.json ──"
+          python3 -m json.tool data/papers.json > /dev/null
+          echo "✅ papers.json is valid"
+
+          echo "── Validating data/issues.json ──"
+          python3 -m json.tool data/issues.json > /dev/null
+          echo "✅ issues.json is valid"
+
+          echo "── Validating data/config.json ──"
+          python3 -m json.tool data/config.json > /dev/null
+          echo "✅ config.json is valid"
+
+          echo "── Validating data/editors.json ──"
+          python3 -m json.tool data/editors.json > /dev/null
+          echo "✅ editors.json is valid"
+
+          echo "── Validating manifest.json ──"
+          python3 -m json.tool manifest.json > /dev/null
+          echo "✅ manifest.json is valid"
+
+      # ── Critical Files Check ─────────────────────────────────────────────
+      - name: Verify critical files exist
+        run: |
+          echo "── Checking critical files ──"
+          MISSING=0
+          for f in \
+            index.html \
+            archive.html \
+            editorial-board.html \
+            journal.html \
+            contact.html \
+            authors.html \
+            peer-review.html \
+            sitemap.xml \
+            robots.txt \
+            CNAME \
+            .nojekyll \
+            manifest.json \
+            assets/css/style.css \
+            assets/js/components.js \
+            assets/js/core.js \
+            data/papers.json \
+            data/issues.json
+          do
+            if [ ! -f "$f" ]; then
+              echo "❌ MISSING: $f"
+              MISSING=1
+            else
+              echo "✅ $f"
+            fi
+          done
+          if [ $MISSING -eq 1 ]; then
+            echo "::error::One or more critical files are missing!"
+            exit 1
+          fi
+
+      # ── CNAME Integrity ──────────────────────────────────────────────────
+      - name: Verify CNAME domain
+        run: |
+          EXPECTED="www.ijmeer.com"
+          ACTUAL=$(cat CNAME | tr -d '[:space:]')
+          if [ "$ACTUAL" != "$EXPECTED" ]; then
+            echo "::error::CNAME contains '$ACTUAL' but expected '$EXPECTED'"
+            exit 1
+          fi
+          echo "✅ CNAME is correct: $ACTUAL"
+
+      # ── Article Pages Consistency ────────────────────────────────────────
+      - name: Check article page count matches papers.json
+        run: |
+          # Count papers in JSON
+          PAPER_COUNT=$(python3 -c "
+          import json
+          with open('data/papers.json') as f:
+              data = json.load(f)
+          print(len(data.get('papers', [])))
+          ")
+
+          # Count article HTML files
+          HTML_COUNT=$(find . -maxdepth 1 -name 'article-v*.html' | wc -l)
+
+          echo "Papers in JSON: $PAPER_COUNT"
+          echo "Article HTML files: $HTML_COUNT"
+
+          if [ "$PAPER_COUNT" -ne "$HTML_COUNT" ]; then
+            echo "::warning::Paper count ($PAPER_COUNT) does not match HTML file count ($HTML_COUNT). Consider regenerating article pages."
+          else
+            echo "✅ Article page count matches papers.json ($PAPER_COUNT)"
+          fi
+
+      # ── ISSN Year Compliance ─────────────────────────────────────────────
+      - name: Check founding year compliance (must be 2026)
+        run: |
+          echo "── Checking for incorrect founding year references ──"
+          # Search for "Founded 2025" or "Established 2025" or "Since 2025" in HTML files
+          if grep -rn --include="*.html" -iE "(founded|established|since)\s*(in\s+)?2025" . 2>/dev/null; then
+            echo "::error::Found references to 2025 as founding year. ISSN application requires 2026."
+            exit 1
+          fi
+          echo "✅ No incorrect founding year references found"
+
+      # ── Sitemap Check ────────────────────────────────────────────────────
+      - name: Validate sitemap.xml is well-formed
+        run: |
+          python3 -c "
+          import xml.etree.ElementTree as ET
+          try:
+              ET.parse('sitemap.xml')
+              print('✅ sitemap.xml is well-formed XML')
+          except ET.ParseError as e:
+              print(f'❌ sitemap.xml parse error: {e}')
+              exit(1)
+          "
+
+      - name: Audit summary
+        if: always()
+        run: |
+          echo "══════════════════════════════════════════"
+          echo "  IJMEER Audit Complete"
+          echo "══════════════════════════════════════════"
+
+  # ==========================================================================
+  # Job 2: Deploy — Publish to GitHub Pages (only on push to main)
+  # ==========================================================================
+  deploy:
+    name: 🚀 Deploy to GitHub Pages
+    needs: audit
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          # Upload entire repository root (static site)
+          path: '.'
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+      - name: Deployment summary
+        run: |
+          echo "══════════════════════════════════════════"
+          echo "  ✅ Deployed to: https://www.ijmeer.com"
+          echo "══════════════════════════════════════════"

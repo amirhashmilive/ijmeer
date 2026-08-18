@@ -1,5 +1,7 @@
 # IJMEER Website
 
+[![IJMEER CI/CD](https://github.com/amirhashmilive/ijmeer/actions/workflows/deploy.yml/badge.svg)](https://github.com/amirhashmilive/ijmeer/actions/workflows/deploy.yml)
+
 ---
 
 ## ℹ️ OPTIONAL: Backup Recommendations

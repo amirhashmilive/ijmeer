@@ -26,6 +26,16 @@
 
 ## Recent Changes (Reverse Chronological)
 
+### 2026-08-18 — Implement GitHub Actions CI/CD pipeline
+- **Changed:**
+  1. Created `.github/workflows/deploy.yml` — CI/CD pipeline with two jobs: **Audit** (JSON validation, critical file checks, CNAME integrity, article count consistency, ISSN year compliance, sitemap validation) and **Deploy** (GitHub Pages deployment using `actions/deploy-pages@v4`).
+  2. Audit runs on every push to `main` and on pull requests. Deploy runs only on push to `main`.
+  3. Added CI/CD status badge to `readme.md`.
+- **Reason:** Automate validation and deployment, replacing the fully manual `git push` + wait workflow.
+- **Files:** `.github/workflows/deploy.yml` (Created), `readme.md` (Modified), `CURRENT_TASK.md`, `MEMORY.md`
+- **Commit:** `add: GitHub Actions CI/CD pipeline`
+- **Note:** After this push, GitHub Pages source setting must be changed from "Deploy from branch" to "GitHub Actions" in repo Settings → Pages.
+
 ### 2026-08-18 — Create generic publishing engine (`scratch/generate_issues.py`)
 - **Changed:**
   1. Created `scratch/generate_issues.py` — a generic, reusable publishing engine that reads `data/papers.json` + `data/issues.json` and generates all article HTML pages from a template.
